@@ -76,4 +76,15 @@ $(document).ready(function () {
         $(".tab_cont > div").eq(idx).css("display", "flex");
     });
 
+    $(".main_content7 .image_area .row_wrapper .row3 .box").click(function () {
+
+        var idx = $(this).index();
+
+        console.log(idx);
+
+        $(".main_content7 .image_area .row_wrapper .row2 .content").removeClass("on").hide();
+        $(".main_content7 .image_area .row_wrapper .row2 .content").eq(idx).addClass("on").fadeIn(300);
+
+    });
+
 });
