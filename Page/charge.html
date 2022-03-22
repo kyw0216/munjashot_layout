@@ -16,6 +16,9 @@
 
     <script src='../javascript/base/util.js'></script>
 
+    <script src="../javascript/polyfill/main.min.js"></script>
+    <script src="../javascript/polyfill/promise.min.js"></script>
+
     <script src="../javascript/external/swiper-4.5.1.min.js"></script>
     <link rel="stylesheet" href="../stylesheet/external/swiper-4.5.1.min.css">
 
@@ -36,18 +39,150 @@
 
     <!-- Body -->
 
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/service-message.css'> -->
-    <!-- <script src='../javascript/Page/service-message.js'></script> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/charge.css'>
+    <script src='../javascript/Page/charge.js'></script>
 
     <div id="main-body-wrapper" style="min-height: 50% !important;">
         <div id="main-body" style="display: flex; justify-content: center; align-items: center;">
             <main class="body-section">
 
+                <!-- Slider main container -->
                 <div class="main_content main_content1">
-                    <div class="wrapper clearfix" style="display: flex; justify-content: center; align-items: center;">
-                        <span style="font-size:100px;">요금제</span>
+                    <div class="wrapper clearfix">
+                        <div class="text_area">
+                            <span class="introduce_title">문자샷은 업계 최저가를 제공합니다.</span>
+                            <span class=" introduce_content" style="margin-top:16px;">나에게 맞는 유형의 요금제를 확인해보세요.</span>
+                        </div>
                     </div>
                 </div>
+
+                <div class="main_content main_content2">
+                    <div class="wrapper clearfix">
+                        <div class="row_wrapper">
+                            <div class="contents" onclick="showsubimg(0)">
+                                <span class="introduce_title">기업</span>
+                            </div>
+
+                            <div class="contents" onclick="showsubimg(1)">
+                                <span class="introduce_title">개인</span>
+                            </div>
+
+                            <div class="contents" onclick="showsubimg(2)">
+                                <span class="introduce_title">대량발송</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main_content main_content3">
+                    <div class="banner-bottom-area">
+                        <div class="banner-bottom-container swiper-container">
+                            <!-- Slider main container -->
+                            <!-- Additional required wrapper -->
+                            <div class="banner-bottom-wrapper swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide banner-bottom-slide">
+                                    <img class="banner-bottom-img" src="../image/banner_bottom/security.png"></img>
+                                </div>
+                                <div class="swiper-slide banner-bottom-slide">
+                                    <img class="banner-bottom-img" src="../image/banner_bottom/convenience.png"></img>
+                                </div>
+                                <div class="swiper-slide banner-bottom-slide">
+                                    <img class="banner-bottom-img" src="../image/banner_bottom/communication.png"></img>
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <!-- <div class="swiper-pagination"></div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main_content main_content4">
+                    <div class="wrapper clearfix">
+                        <div class="text_area">
+                            <span class="introduce_title">함께하면 좋은 부가서비스</span>
+                        </div>
+
+                        <div class="image_area">
+                            <div class="row_wrapper">
+                                <div class="box box1">
+                                    080 수신거부 서비스
+                                </div>
+                                <div class="box box2">
+                                    팩스 수신 서비스
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text_area">
+                            <span class="introduce_title" style="font-size:22px;">회원가입 시 무료로 1,000 포인트를 지급해 드리고
+                                있습니다.</span>
+                            <span class="introduce_content" style="font-size:16px;margin-top:8px;">지금 바로 회원가입하고 무료 메시지를
+                                발송해보세요.</span>
+                        </div>
+
+                        <div class="button_area">
+                            <button class="btn">회원가입</button>
+                            <button class="btn" style="margin-left:20px;">대량발송 간가협의</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="main_content main_content5">
+                    <div class="wrapper clearfix">
+                        <div class="text_area">
+                            <span class="introduce_title">상담 신청</span>
+                            <span class="introduce_content" style="margin-top:30px;">문자샷 담당자가 고객님의 문의에 빠르고 정확하게 답변해드립니다.
+                            </span>
+                        </div>
+
+                        <div class="inquiry_box">
+                            <div class="column">
+                                <div class="row">
+                                    <label style="flex-basis: 150px;">상담 분류*</label>
+                                    <input type="text" style="width:100%;">
+                                </div>
+                                <div class="row">
+                                    <label style="flex-basis: 150px;">이름(회사명)*</label>
+                                    <input type="text" style="width:100%;">
+                                </div>
+                                <div class="row">
+                                    <label style="flex-basis: 150px;">이메일 주소*</label>
+                                    <input type="text" style="width:100%;">
+                                </div>
+                                <div class="row">
+                                    <label style="flex-basis: 150px;">연락처</label>
+                                    <input type="text" style="width:100%;">
+                                </div>
+                                <div class="row">
+                                    <label style="flex-basis: 150px;">문의 내용</label>
+                                    <textarea style="width:100%;height:100px;"></textarea>
+                                </div>
+                                <div class="row" style="justify-content: left;">
+                                    <label>개인정보 수집 및 이용 동의</label>
+                                </div>
+                                <div class="row">
+                                    <input type="text" style="width:100%;" value="본문내용">
+                                </div>
+                                <div class="row" style="justify-content: right;">
+                                    <input type="checkbox">
+                                    <label style="margin-left:10px;">개인정보 수집 및 이용에 동의합니다.</label>
+                                </div>
+                                <div class="row">
+                                    <button class="btn">상담 요청하기</button>
+                                </div>
+
+                            </div>
+
+                            <div class="column">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
 
             </main>
         </div>
