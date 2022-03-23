@@ -8,11 +8,18 @@
 
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
+
     <script src="../javascript/external/jquery-3.5.1.min.js"></script>
     <!-- <script src="/javascript/Common/include.js"></script> -->
 
     <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/common.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/base.css'>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-regular.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-solid.min.css">
 
     <script src='../javascript/base/util.js'></script>
 
@@ -36,16 +43,735 @@
 
     <!-- Body -->
 
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/service-message.css'> -->
-    <!-- <script src='../javascript/Page/service-message.js'></script> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/send.css'>
+    <script src='../javascript/Page/send.js'></script>
 
     <div id="main-body-wrapper" style="min-height: 50% !important;">
         <div id="main-body" style="display: flex; justify-content: center; align-items: center;">
             <main class="body-section">
 
                 <div class="main_content main_content1">
-                    <div class="wrapper clearfix" style="display: flex; justify-content: center; align-items: center;">
-                        <span style="font-size:100px;">전송</span>
+                    <div class="wrapper clearfix">
+                        <div class="container">
+                            <ul class="tab_title">
+                                <li class="on">문자</li>
+                                <li>카카오</li>
+                                <li>바코드</li>
+                                <li>해외문자</li>
+                                <li>팩스</li>
+                            </ul>
+                            <div class="tab_cont">
+                                <div class="tab_in_content munja_content on">
+                                    <!-- <div class="tab_in_content munja_content"> -->
+
+                                    <div class="row_wrapper">
+                                        <div class="column_wrapper">
+
+                                            <div class="row">
+                                                <button class="btn"
+                                                    style="min-width: 150px; margin-right:20px;">발신번호</button>
+                                                <select style="width:100%;">
+                                                    <option>발신번호</option>
+                                                </select>
+                                            </div>
+                                            <div class="row" style="justify-content: flex-end;">
+                                                <input type="radio" style="margin-right: 10px;">
+                                                <label>광고규칙 추가</label>
+                                            </div>
+                                            <div class="row" style="background-color: #fff;">
+                                                <div class="column">
+                                                    <div class="row">
+                                                        <label style="min-width:80px;margin-right:10px;">(발송제목)</label>
+                                                        <input type="text" style="width: 100%;">
+                                                    </div>
+
+                                                    <div class="row" style="justify-content: flex-start;">
+                                                        <label>(발송내용)</label>
+                                                    </div>
+                                                    <div class="row">
+                                                        <textarea style="width: 100%; height:200px;">발송내용</textarea>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <button class="btn"
+                                                            style="min-width: 150px; margin-right:20px;">이미지 첨부</button>
+                                                        <button class="btn"
+                                                            style="min-width: 150px; margin-right:20px;">문구저장</button>
+                                                        <button class="btn"
+                                                            style="min-width: 150px; margin-right:20px;">불러오기</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <button class="btn" style="width:100%;">변수
+                                                    추가</button>
+                                            </div>
+                                            <div class="row">
+                                                <button class="btn"
+                                                    style="width:100%; min-width: 100px; margin-right:20px;">[이름]</button>
+                                                <button class="btn"
+                                                    style="width:100%; min-width: 100px; margin-right:20px;">[메모1]</button>
+                                                <button class="btn"
+                                                    style="width:100%; min-width: 100px; margin-right:20px;">[메모2]</button>
+                                                <button class="btn"
+                                                    style="width:100%; min-width: 100px; margin-right:20px;">[메모3]</button>
+                                                <button class="btn"
+                                                    style="width:100%; min-width: 100px; margin-right:20px;">[메모4]</button>
+                                                <button class="btn" style="width:100%; min-width: 100px;">[메모5]</button>
+                                            </div>
+
+                                            <div class="row">
+                                                <button class="btn"
+                                                    style="min-width: 100px; margin-right:20px;">수신번호</button>
+                                                <input type="text" style="width:100%;margin-right:20px;" value="(직접입력)">
+                                                <button class="btn" style="min-width: 100px;">추가</button>
+                                            </div>
+
+                                            <div class="row">
+                                                <button class="btn"
+                                                    style="width:100%; min-width: 150px; margin-right:20px;">주소록에서
+                                                    추가</button>
+                                                <button class="btn"
+                                                    style="width:100%; min-width: 150px; margin-right:20px;">클립보드
+                                                    붙여넣기</button>
+                                                <button class="btn" style="width:100%; min-width: 150px;">엑셀
+                                                    불러오기</button>
+                                            </div>
+
+                                            <div class="row" style="background-color: #fff;">
+                                                <div class="column">
+                                                    <div class="row" style="justify-content: flex-start;">
+                                                        <label>수신번호 리스트</label>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div
+                                                            style="width: 100%; height:120px; border-bottom: 1px solid black;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="justify-content: flex-end;">
+                                                        <button class="btn" style="min-width: 150px;">전체 삭제</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <button class="btn"
+                                                    style="min-width: 150px; margin-right:20px;">발송시간</button>
+                                                <div style="width:100%; border: 1px solid black; padding:8px;">
+                                                    <input type="radio"></input>
+                                                    <label>즉시발송</label>
+                                                    <input type="radio"></input>
+                                                    <label>예약발송</label>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <button class="btn"
+                                                    style="min-width: 150px; margin-right:20px;">간격발송</button>
+                                                <div style="width:100%; border: 1px solid black; padding:8px;">
+                                                    <input type="radio"></input>
+                                                    <label>적용</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="column_wrapper basis_500">
+                                            <div class="row" style="height:100%; border: 1px solid black">스마트폰 미리보기
+                                            </div>
+
+                                            <div class="row" style="align-items: end;">
+                                                <button class="btn" style="min-width: 150px; margin-right:20px;">테스트
+                                                    전송</button>
+                                                <button class="btn" style="min-width: 150px;">전송</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- <div class=" tab_in_content kakao_content on"> -->
+                                <div class=" tab_in_content kakao_content">
+                                    <div class="container">
+                                        <ul class="sub_tab_title">
+                                            <li class="on">알림톡</li>
+                                            <li>친구톡</li>
+                                        </ul>
+
+                                        <div class="sub_tab_cont">
+                                            <div class="sub_tab_in_content alimtalk_content on">
+                                                <div class="column_wrapper">
+                                                    <div class="row_wrapper">
+                                                        <div class="column_wrapper">
+
+                                                            <div class="row">
+                                                                <button class="btn"
+                                                                    style="min-width: 150px; margin-right:20px;">프로필
+                                                                    채널</button>
+                                                                <select style="width:100%;">
+                                                                    <option>발신번호</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <button class="btn"
+                                                                    style="min-width: 150px; margin-right:20px;">발송
+                                                                    템플릿</button>
+                                                                <select style="width:100%;">
+                                                                    <option>발송 템플릿</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="row" style="background-color: #fff;">
+                                                                <div class="column">
+
+                                                                    <div class="row"
+                                                                        style="justify-content: flex-start;">
+                                                                        <label>(발송내용)</label>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <textarea
+                                                                            style="width: 100%; height:200px;">발송내용</textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row" style="justify-content: flex-start;">
+                                                                <input id="alim_fail_msg_chk" type="checkbox"
+                                                                    style="margin-right: 10px;">
+                                                                <label>실패 건 문자 재발송</label>
+                                                            </div>
+
+                                                            <div class="msg_layout">
+
+                                                                <div class="row">
+                                                                    <button class="btn"
+                                                                        style="min-width: 150px; margin-right:20px;">발신번호</button>
+                                                                    <select style="width:100%;">
+                                                                        <option>발신번호</option>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div class="row" style="background-color: #fff;">
+                                                                    <div class="column">
+                                                                        <div class="row">
+                                                                            <label
+                                                                                style="min-width:80px;margin-right:10px;">(발송제목)</label>
+                                                                            <input type="text" style="width: 100%;">
+                                                                        </div>
+
+                                                                        <div class="row"
+                                                                            style="justify-content: flex-start;">
+                                                                            <label>(발송내용)</label>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <textarea
+                                                                                style="width: 100%; height:200px;">발송내용</textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    <button class="btn" style="width:100%;">변수
+                                                                        추가</button>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <button class="btn"
+                                                                        style="width:100%; min-width: 100px; margin-right:20px;">[이름]</button>
+                                                                    <button class="btn"
+                                                                        style="width:100%; min-width: 100px; margin-right:20px;">[메모1]</button>
+                                                                    <button class="btn"
+                                                                        style="width:100%; min-width: 100px; margin-right:20px;">[메모2]</button>
+                                                                    <button class="btn"
+                                                                        style="width:100%; min-width: 100px; margin-right:20px;">[메모3]</button>
+                                                                    <button class="btn"
+                                                                        style="width:100%; min-width: 100px; margin-right:20px;">[메모4]</button>
+                                                                    <button class="btn"
+                                                                        style="width:100%; min-width: 100px;">[메모5]</button>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <button class="btn"
+                                                                    style="min-width: 100px; margin-right:20px;">수신번호</button>
+                                                                <input type="text" style="width:100%;margin-right:20px;"
+                                                                    value="(직접입력)">
+                                                                <button class="btn"
+                                                                    style="min-width: 100px;">추가</button>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <button class="btn"
+                                                                    style="width:100%; min-width: 150px; margin-right:20px;">주소록에서
+                                                                    추가</button>
+                                                                <button class="btn"
+                                                                    style="width:100%; min-width: 150px; margin-right:20px;">클립보드
+                                                                    붙여넣기</button>
+                                                                <button class="btn"
+                                                                    style="width:100%; min-width: 150px;">엑셀
+                                                                    불러오기</button>
+                                                            </div>
+
+                                                            <div class="row" style="background-color: #fff;">
+                                                                <div class="column">
+                                                                    <div class="row"
+                                                                        style="justify-content: flex-start;">
+                                                                        <label>수신번호 리스트</label>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div
+                                                                            style="width: 100%; height:120px; border-bottom: 1px solid black;">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row" style="justify-content: flex-end;">
+                                                                        <button class="btn" style="min-width: 150px;">전체
+                                                                            삭제</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <button class="btn"
+                                                                    style="min-width: 150px; margin-right:20px;">발송시간</button>
+                                                                <div
+                                                                    style="width:100%; border: 1px solid black; padding:8px;">
+                                                                    <input type="radio"></input>
+                                                                    <label>즉시발송</label>
+                                                                    <input type="radio"></input>
+                                                                    <label>예약발송</label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="row">
+                                                                <button class="btn"
+                                                                    style="min-width: 150px; margin-right:20px;">간격발송</button>
+                                                                <div
+                                                                    style="width:100%; border: 1px solid black; padding:8px;">
+                                                                    <input type="radio"></input>
+                                                                    <label>적용</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="column_wrapper basis_500">
+                                                            <div class="row"
+                                                                style="height:100%; border: 1px solid black">
+                                                                스마트폰 미리보기
+                                                            </div>
+
+                                                            <div class="column_wrapper">
+                                                                <button class="btn" style="width:100%;">변수
+                                                                    매칭</button>
+                                                                <div class="row">
+                                                                    <label style="min-width: 70px;">#(이름)</label>
+                                                                    <select style="width:100%;">
+                                                                        <option>(선택)</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <label style="min-width: 70px;">#(날짜)</label>
+                                                                    <select style="width:100%;">
+                                                                        <option>(선택)</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row" style="align-items: end;">
+                                                                <button class="btn"
+                                                                    style="min-width: 150px; margin-right:20px;">테스트
+                                                                    전송</button>
+                                                                <button class="btn"
+                                                                    style="min-width: 150px;">전송</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="sub_tab_in_content friendtalk_content">
+                                                <div class="column_wrapper">
+                                                    <div class="row_wrapper">
+                                                        <div class="column_wrapper">
+
+                                                            <div class="row">
+                                                                <button class="btn"
+                                                                    style="min-width: 150px; margin-right:20px;">프로필
+                                                                    채널</button>
+                                                                <select style="width:100%;">
+                                                                    <option>발신번호</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="row" style="background-color: #fff;">
+                                                                <div class="column">
+
+                                                                    <div class="row"
+                                                                        style="justify-content: flex-start;">
+                                                                        <label>(발송내용)</label>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <textarea
+                                                                            style="width: 100%; height:200px;">발송내용</textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <button class="btn"
+                                                                    style="min-width: 150px; margin-right:20px;">이미지
+                                                                    추가</button>
+                                                                <select style="width:100%;">
+                                                                    <option>이미지</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="row" style="justify-content: flex-start;">
+                                                                <button class="add_btn btn"
+                                                                    style="min-width: 150px; margin-right:20px;">버튼
+                                                                    추가</button>
+                                                            </div>
+
+                                                            <div class="row" style="justify-content: flex-start;">
+                                                                <table class="btn_table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>버튼 타입</th>
+                                                                            <th>버튼명</th>
+                                                                            <th>버튼링크</th>
+                                                                            <th>삭제</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                    </tbody>
+                                                                    </thead>
+                                                                </table>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <button class="btn" style="width:100%;">변수
+                                                                    추가</button>
+                                                            </div>
+                                                            <div class="row">
+                                                                <button class="btn"
+                                                                    style="width:100%; min-width: 100px; margin-right:20px;">[이름]</button>
+                                                                <button class="btn"
+                                                                    style="width:100%; min-width: 100px; margin-right:20px;">[메모1]</button>
+                                                                <button class="btn"
+                                                                    style="width:100%; min-width: 100px; margin-right:20px;">[메모2]</button>
+                                                                <button class="btn"
+                                                                    style="width:100%; min-width: 100px; margin-right:20px;">[메모3]</button>
+                                                                <button class="btn"
+                                                                    style="width:100%; min-width: 100px; margin-right:20px;">[메모4]</button>
+                                                                <button class="btn"
+                                                                    style="width:100%; min-width: 100px;">[메모5]</button>
+                                                            </div>
+
+                                                            <div class="row" style="justify-content: flex-start;">
+                                                                <input id="friend_fail_msg_chk" type="checkbox"
+                                                                    style="margin-right: 10px;">
+                                                                <label>실패 건 문자 재발송</label>
+                                                            </div>
+
+                                                            <div class="msg_layout">
+
+                                                                <div class="row">
+                                                                    <button class="btn"
+                                                                        style="min-width: 150px; margin-right:20px;">발신번호</button>
+                                                                    <select style="width:100%;">
+                                                                        <option>발신번호</option>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div class="row" style="background-color: #fff;">
+                                                                    <div class="column">
+                                                                        <div class="row">
+                                                                            <label
+                                                                                style="min-width:80px;margin-right:10px;">(발송제목)</label>
+                                                                            <input type="text" style="width: 100%;">
+                                                                        </div>
+
+                                                                        <div class="row"
+                                                                            style="justify-content: flex-start;">
+                                                                            <label>(발송내용)</label>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <textarea
+                                                                                style="width: 100%; height:200px;">발송내용</textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    <button class="btn" style="width:100%;">변수
+                                                                        추가</button>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <button class="btn"
+                                                                        style="width:100%; min-width: 100px; margin-right:20px;">[이름]</button>
+                                                                    <button class="btn"
+                                                                        style="width:100%; min-width: 100px; margin-right:20px;">[메모1]</button>
+                                                                    <button class="btn"
+                                                                        style="width:100%; min-width: 100px; margin-right:20px;">[메모2]</button>
+                                                                    <button class="btn"
+                                                                        style="width:100%; min-width: 100px; margin-right:20px;">[메모3]</button>
+                                                                    <button class="btn"
+                                                                        style="width:100%; min-width: 100px; margin-right:20px;">[메모4]</button>
+                                                                    <button class="btn"
+                                                                        style="width:100%; min-width: 100px;">[메모5]</button>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <button class="btn"
+                                                                    style="min-width: 100px; margin-right:20px;">수신번호</button>
+                                                                <input type="text" style="width:100%;margin-right:20px;"
+                                                                    value="(직접입력)">
+                                                                <button class="btn"
+                                                                    style="min-width: 100px;">추가</button>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <button class="btn"
+                                                                    style="width:100%; min-width: 150px; margin-right:20px;">주소록에서
+                                                                    추가</button>
+                                                                <button class="btn"
+                                                                    style="width:100%; min-width: 150px; margin-right:20px;">클립보드
+                                                                    붙여넣기</button>
+                                                                <button class="btn"
+                                                                    style="width:100%; min-width: 150px;">엑셀
+                                                                    불러오기</button>
+                                                            </div>
+
+                                                            <div class="row" style="background-color: #fff;">
+                                                                <div class="column">
+                                                                    <div class="row"
+                                                                        style="justify-content: flex-start;">
+                                                                        <label>수신번호 리스트</label>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div
+                                                                            style="width: 100%; height:120px; border-bottom: 1px solid black;">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row" style="justify-content: flex-end;">
+                                                                        <button class="btn" style="min-width: 150px;">전체
+                                                                            삭제</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <button class="btn"
+                                                                    style="min-width: 150px; margin-right:20px;">발송시간</button>
+                                                                <div
+                                                                    style="width:100%; border: 1px solid black; padding:8px;">
+                                                                    <input type="radio"></input>
+                                                                    <label>즉시발송</label>
+                                                                    <input type="radio"></input>
+                                                                    <label>예약발송</label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="row">
+                                                                <button class="btn"
+                                                                    style="min-width: 150px; margin-right:20px;">간격발송</button>
+                                                                <div
+                                                                    style="width:100%; border: 1px solid black; padding:8px;">
+                                                                    <input type="radio"></input>
+                                                                    <label>적용</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="column_wrapper basis_500">
+                                                            <div class="row"
+                                                                style="height:100%; border: 1px solid black">
+                                                                스마트폰 미리보기
+                                                            </div>
+
+                                                            <div class="column_wrapper">
+                                                                <button class="btn" style="width:100%;">변수
+                                                                    매칭</button>
+                                                                <div class="row">
+                                                                    <label style="min-width: 70px;">#(이름)</label>
+                                                                    <select style="width:100%;">
+                                                                        <option>(선택)</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <label style="min-width: 70px;">#(날짜)</label>
+                                                                    <select style="width:100%;">
+                                                                        <option>(선택)</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row" style="align-items: end;">
+                                                                <button class="btn"
+                                                                    style="min-width: 150px; margin-right:20px;">테스트
+                                                                    전송</button>
+                                                                <button class="btn"
+                                                                    style="min-width: 150px;">전송</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="tab_in_content barcode_content">
+                                    <div class="row_wrapper">
+                                        <div class="column_wrapper">
+
+                                            <div class="row">
+                                                <button class="btn"
+                                                    style="min-width: 150px; margin-right:20px;">발신번호</button>
+                                                <select style="width:100%;">
+                                                    <option>발신번호</option>
+                                                </select>
+                                            </div>
+                                            <div class="row" style="justify-content: flex-start;">
+                                                <button class="btn" style="min-width: 150px; margin-right:20px;">바코드
+                                                    선택</button>
+                                                <button class="btn" style="min-width: 150px; margin-right:20px;">바코드
+                                                    보관함</button>
+                                            </div>
+                                            <div class="row" style="background-color: #fff;">
+                                                <div class="column">
+                                                    <div class="row">
+                                                        <label style="min-width:80px;margin-right:10px;">(발송제목)</label>
+                                                        <input type="text" style="width: 100%;">
+                                                    </div>
+
+                                                    <div class="row" style="justify-content: flex-start;">
+                                                        <label>(발송내용)</label>
+                                                    </div>
+                                                    <div class="row">
+                                                        <textarea style="width: 100%; height:200px;">발송내용</textarea>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <button class="btn"
+                                                            style="min-width: 150px; margin-right:20px;">문구저장</button>
+                                                        <button class="btn"
+                                                            style="min-width: 150px; margin-right:20px;">불러오기</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <button class="btn" style="width:100%;">변수
+                                                    추가</button>
+                                            </div>
+                                            <div class="row">
+                                                <button class="btn"
+                                                    style="width:100%; min-width: 100px; margin-right:20px;">[이름]</button>
+                                                <button class="btn"
+                                                    style="width:100%; min-width: 100px; margin-right:20px;">[메모1]</button>
+                                                <button class="btn"
+                                                    style="width:100%; min-width: 100px; margin-right:20px;">[메모2]</button>
+                                                <button class="btn"
+                                                    style="width:100%; min-width: 100px; margin-right:20px;">[메모3]</button>
+                                                <button class="btn"
+                                                    style="width:100%; min-width: 100px; margin-right:20px;">[메모4]</button>
+                                                <button class="btn" style="width:100%; min-width: 100px;">[메모5]</button>
+                                            </div>
+
+                                            <div class="row">
+                                                <button class="btn"
+                                                    style="min-width: 100px; margin-right:20px;">수신번호</button>
+                                                <input type="text" style="width:100%;margin-right:20px;" value="(직접입력)">
+                                                <button class="btn" style="min-width: 100px;">추가</button>
+                                            </div>
+
+                                            <div class="row">
+                                                <button class="btn"
+                                                    style="width:100%; min-width: 150px; margin-right:20px;">주소록에서
+                                                    추가</button>
+                                                <button class="btn"
+                                                    style="width:100%; min-width: 150px; margin-right:20px;">클립보드
+                                                    붙여넣기</button>
+                                                <button class="btn" style="width:100%; min-width: 150px;">엑셀
+                                                    불러오기</button>
+                                            </div>
+
+                                            <div class="row" style="background-color: #fff;">
+                                                <div class="column">
+                                                    <div class="row" style="justify-content: flex-start;">
+                                                        <label>수신번호 리스트</label>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div
+                                                            style="width: 100%; height:120px; border-bottom: 1px solid black;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="justify-content: flex-end;">
+                                                        <button class="btn" style="min-width: 150px;">전체 삭제</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <button class="btn"
+                                                    style="min-width: 150px; margin-right:20px;">발송시간</button>
+                                                <div style="width:100%; border: 1px solid black; padding:8px;">
+                                                    <input type="radio"></input>
+                                                    <label>즉시발송</label>
+                                                    <input type="radio"></input>
+                                                    <label>예약발송</label>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <button class="btn"
+                                                    style="min-width: 150px; margin-right:20px;">간격발송</button>
+                                                <div style="width:100%; border: 1px solid black; padding:8px;">
+                                                    <input type="radio"></input>
+                                                    <label>적용</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="column_wrapper basis_500" style="height:auto;"> -->
+                                        <div class="column_wrapper basis_500">
+                                            <div class="row" style="height:100%; border: 1px solid black">스마트폰 미리보기
+                                            </div>
+
+                                            <div class="row" style="height:auto;">
+                                                <button class="btn" style="min-width: 150px; margin-right:20px;">바코드 값
+                                                </button>
+                                                <select style="width:100%;">
+                                                    <option>(선택)</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="row" style="align-items: end;">
+                                                <button class="btn" style="min-width: 150px; margin-right:20px;">테스트
+                                                    전송</button>
+                                                <button class="btn" style="min-width: 150px;">전송</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab_in_content globalmsg_content">
+                                    해외문자
+                                </div>
+                                <div class="tab_in_content fax_content">
+                                    팩스
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -53,9 +779,22 @@
         </div>
     </div>
 
+    <section id="leftBar">
+        왼쪽 Bar
+    </section>
+
+    <section id="rightBar">
+
+        <a href="javascript:;" class="right-bar-open-btn trans300"><span class="inner"><img
+                    src="../image/send/close_txt.jpg" class="close-txt-img" alt="close 텍스트 이미지"><img
+                    src="../image/send/open_txt.jpg" class="open-txt-img" alt="open 텍스트 이미지"><i
+                    class="xi-angle-right-min"></i></span></a>
+    </section>
+
     <!-- Footer -->
     <div id="footer"></div>
     <!-- <div data-include-path="footer.html"></div> -->
+
 </body>
 
 
