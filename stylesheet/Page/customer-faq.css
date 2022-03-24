@@ -1,0 +1,227 @@
+﻿main .main_content .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main_content1 {
+    background: white;
+    padding: 50px 0;
+}
+
+main .main_content .text_area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+main .main_content .text_area .introduce_title {
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+}
+
+main .main_content .text_area .introduce_content {
+    font-size: 18px;
+    display: block;
+}
+
+main .main_content .notice_box {
+    width: 100%;
+    height: 250px;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #bebebe;
+}
+
+main .main_content1 .container {
+    width: 100%;
+}
+
+main .main_content1 .tab_title {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    padding: 0 30px;
+    margin-bottom: 20px;
+    ;
+}
+
+main .main_content1 .tab_title li {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    list-style: none;
+    padding: 15px 15px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #bebebe;
+}
+
+main .main_content1 .tab_title li.on {
+    background-color: #bebebe;
+    font-weight: bold;
+}
+
+main .main_content1 .tab_cont {
+    clear: both;
+    border: 1px solid #dedede;
+    height: 100%;
+    background-color: #cecece;
+    padding: 30px;
+}
+
+main .main_content1 .tab_cont .tab_in_content.on {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+main .main_content1 .tab_cont .tab_in_content {
+    background-color: white;
+    display: none;
+}
+
+#main-menu-body {
+    position: relative;
+    width: 100%;
+}
+
+#main-menu-body .customer-support-faq-list>.header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+#main-menu-body .customer-support-faq-list>.header>* {
+    flex: 1;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#main-menu-body .customer-support-faq-list>.header>*>i {
+    margin-right: 4px;
+}
+
+#main-menu-body .customer-support-faq-list>.item {
+    width: 100%;
+    border: 1px solid #eaeaea;
+    margin-bottom: 12px;
+    padding: 12px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#main-menu-body .customer-support-faq-list>.item.open>.header>.icon {
+    transform: rotate(-180deg);
+}
+
+#main-menu-body .customer-support-faq-list>.item>.header {
+    display: flex;
+    align-items: center;
+}
+
+#main-menu-body .customer-support-faq-list>.item>.header>.category {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#main-menu-body .customer-support-faq-list>.item>.header>.question {
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+#main-menu-body .customer-support-faq-list>.item>.header>.icon {
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out;
+    margin-left: auto;
+}
+
+#main-menu-body .customer-support-faq-list>.item>.answer {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-right: 10px;
+}
+
+#main-menu-body .customer-support-faq-page-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-menu-body .customer-support-faq-page-list>.previous {
+    margin-right: 12px;
+}
+
+#main-menu-body .customer-support-faq-page-list>.next {
+    margin-left: 6px;
+}
+
+#main-menu-body .customer-support-faq-page-list>.item {
+    padding: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-right: 6px;
+    color: black;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+#main-menu-body .customer-support-faq-page-list>.item.selected {
+    background-color: #646464;
+    color: white;
+}
+
+
+
+.column_wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 100%;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.row_wrapper {
+    display: flex;
+    flex-grow: 1;
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-grow: 1;
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}

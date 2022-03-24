@@ -76,4 +76,19 @@
     </tr>`);
     });
 
+
+
+    $("input:radio[name=fax_cover_chk]").click(function () {
+
+        console.log('fax_cover_chk');
+        console.log($(this).val());
+
+        if ($(this).val() === 'Y') {
+            $(".fax_content .fax_cover_layout").css("display", "flex");
+        } else {
+            $(".fax_content .fax_cover_layout").hide();
+        }
+
+    });
+
 });

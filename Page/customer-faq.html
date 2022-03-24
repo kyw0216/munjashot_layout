@@ -9,12 +9,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <script src="../javascript/external/jquery-3.5.1.min.js"></script>
-    <!-- <script src="/javascript/Common/include.js"></script> -->
+    <script src="/javascript/Common/modal.js"></script>
 
     <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/common.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/base.css'>
 
     <script src='../javascript/base/util.js'></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-regular.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-solid.min.css">
 
     <script src="../javascript/external/swiper-4.5.1.min.js"></script>
     <link rel="stylesheet" href="../stylesheet/external/swiper-4.5.1.min.css">
@@ -36,20 +42,731 @@
 
     <!-- Body -->
 
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/service-message.css'> -->
-    <!-- <script src='../javascript/Page/service-message.js'></script> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/customer-faq.css'>
+    <script src='../javascript/Page/customer-faq.js'></script>
 
     <div id="main-body-wrapper" style="min-height: 50% !important;">
         <div id="main-body" style="display: flex; justify-content: center; align-items: center;">
             <main class="body-section">
 
                 <div class="main_content main_content1">
-                    <div class="wrapper clearfix" style="display: flex; justify-content: center; align-items: center;">
-                        <span style="font-size:100px;">고객센터 - FAQ</span>
+                    <div class="wrapper clearfix">
+
+                        <div class="column" style="background-color:#f7f7f7;">
+                            <div class="text_area">
+                                <span class="introduce_title">FAQ</span>
+                            </div>
+
+                            <div class="container">
+                                <ul class="tab_title">
+                                    <li class="on">전체</li>
+                                    <li>서비스</li>
+                                    <li>전송</li>
+                                    <li>충전</li>
+                                    <li>주소록</li>
+                                    <li>회원정보</li>
+                                    <li>기타</li>
+
+                                    <input type="text" style="margin-left:20px;">
+                                    <button class="btn">검색</button>
+                                </ul>
+                                <div class="tab_cont">
+                                    <div class="tab_in_content all on">
+                                        <div id="main-menu-body" class="customer-support-faq">
+
+                                            <!-- <div class="ctrl-lazyList mypage-faq-list"> -->
+                                            <div class="content_area ctrl-lazyList customer-support-faq-list">
+                                                <!-- <div class="loading"></div> -->
+                                                <div class="header">
+                                                    <div class="item number_item">
+                                                        번호
+                                                    </div>
+
+                                                    <div class="item">
+                                                        내용
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>서비스</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>전송</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>충전</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>주소록</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="customer-support-faq-page-list" style="margin-bottom:10px;">
+                                                <button class="btn previous" data-type="previous">
+                                                    <i class="fas fa-chevron-left"></i>
+                                                    이전
+                                                </button>
+
+                                                <button class="btn next" data-type="next">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                    다음
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab_in_content service">
+                                        <div id="main-menu-body" class="customer-support-faq">
+
+                                            <!-- <div class="ctrl-lazyList mypage-faq-list"> -->
+                                            <div class="content_area ctrl-lazyList customer-support-faq-list">
+                                                <!-- <div class="loading"></div> -->
+                                                <div class="header">
+                                                    <div class="item number_item">
+                                                        번호
+                                                    </div>
+
+                                                    <div class="item">
+                                                        내용
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>서비스</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>서비스</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>서비스</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>서비스</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="customer-support-faq-page-list" style="margin-bottom:10px;">
+                                                <button class="btn previous" data-type="previous">
+                                                    <i class="fas fa-chevron-left"></i>
+                                                    이전
+                                                </button>
+
+                                                <button class="btn next" data-type="next">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                    다음
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab_in_content send">
+                                        <div id="main-menu-body" class="customer-support-faq">
+
+                                            <!-- <div class="ctrl-lazyList mypage-faq-list"> -->
+                                            <div class="content_area ctrl-lazyList customer-support-faq-list">
+                                                <!-- <div class="loading"></div> -->
+                                                <div class="header">
+                                                    <div class="item number_item">
+                                                        번호
+                                                    </div>
+
+                                                    <div class="item">
+                                                        내용
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>전송</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>전송</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>전송</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>전송</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="customer-support-faq-page-list" style="margin-bottom:10px;">
+                                                <button class="btn previous" data-type="previous">
+                                                    <i class="fas fa-chevron-left"></i>
+                                                    이전
+                                                </button>
+
+                                                <button class="btn next" data-type="next">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                    다음
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab_in_content charge">
+                                        <div id="main-menu-body" class="customer-support-faq">
+
+                                            <!-- <div class="ctrl-lazyList mypage-faq-list"> -->
+                                            <div class="content_area ctrl-lazyList customer-support-faq-list">
+                                                <!-- <div class="loading"></div> -->
+                                                <div class="header">
+                                                    <div class="item number_item">
+                                                        번호
+                                                    </div>
+
+                                                    <div class="item">
+                                                        내용
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>충전</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>충전</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>충전</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>충전</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="customer-support-faq-page-list" style="margin-bottom:10px;">
+                                                <button class="btn previous" data-type="previous">
+                                                    <i class="fas fa-chevron-left"></i>
+                                                    이전
+                                                </button>
+
+                                                <button class="btn next" data-type="next">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                    다음
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab_in_content address">
+                                        <div id="main-menu-body" class="customer-support-faq">
+
+                                            <!-- <div class="ctrl-lazyList mypage-faq-list"> -->
+                                            <div class="content_area ctrl-lazyList customer-support-faq-list">
+                                                <!-- <div class="loading"></div> -->
+                                                <div class="header">
+                                                    <div class="item number_item">
+                                                        번호
+                                                    </div>
+
+                                                    <div class="item">
+                                                        내용
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>주소록</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>주소록</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>주소록</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>주소록</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="customer-support-faq-page-list" style="margin-bottom:10px;">
+                                                <button class="btn previous" data-type="previous">
+                                                    <i class="fas fa-chevron-left"></i>
+                                                    이전
+                                                </button>
+
+                                                <button class="btn next" data-type="next">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                    다음
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab_in_content memInfo">
+                                        <div id="main-menu-body" class="customer-support-faq">
+
+                                            <!-- <div class="ctrl-lazyList mypage-faq-list"> -->
+                                            <div class="content_area ctrl-lazyList customer-support-faq-list">
+                                                <!-- <div class="loading"></div> -->
+                                                <div class="header">
+                                                    <div class="item number_item">
+                                                        번호
+                                                    </div>
+
+                                                    <div class="item">
+                                                        내용
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>회원정보</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>회원정보</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>회원정보</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>회원정보</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="customer-support-faq-page-list" style="margin-bottom:10px;">
+                                                <button class="btn previous" data-type="previous">
+                                                    <i class="fas fa-chevron-left"></i>
+                                                    이전
+                                                </button>
+
+                                                <button class="btn next" data-type="next">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                    다음
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab_in_content etc">
+                                        <div id="main-menu-body" class="customer-support-faq">
+
+                                            <!-- <div class="ctrl-lazyList mypage-faq-list"> -->
+                                            <div class="content_area ctrl-lazyList customer-support-faq-list">
+                                                <!-- <div class="loading"></div> -->
+                                                <div class="header">
+                                                    <div class="item number_item">
+                                                        번호
+                                                    </div>
+
+                                                    <div class="item">
+                                                        내용
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>기타</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>기타</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>기타</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="item">
+                                                    <div class="header">
+                                                        <div class="category">
+                                                            <p>기타</p>
+                                                        </div>
+
+                                                        <p class="question">내용</p>
+
+                                                        <i class="fas fa-caret-down icon"></i>
+                                                    </div>
+
+                                                    <div class="answer" style="display: none;">
+                                                        답변입니다.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="customer-support-faq-page-list" style="margin-bottom:10px;">
+                                                <button class="btn previous" data-type="previous">
+                                                    <i class="fas fa-chevron-left"></i>
+                                                    이전
+                                                </button>
+
+                                                <button class="btn next" data-type="next">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                    다음
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </main>
+        </div>
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="title">
+                <h2>모달</h2>
+            </div>
+            <div class="close-area">X</div>
+            <div class="content" style="display: flex; justify-content: center; align-items: center;">
+                <p>모달입니다.</p>
+            </div>
         </div>
     </div>
 

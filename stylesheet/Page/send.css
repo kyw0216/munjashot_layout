@@ -248,6 +248,11 @@ main .main_content1 .sub_tab_cont .sub_tab_in_content .msg_layout {
     flex-direction: column;
 }
 
+main .main_content1 .fax_content .fax_cover_layout {
+    display: none;
+    flex-direction: column;
+}
+
 .btn_table {
     width: 100%;
 }
@@ -260,6 +265,25 @@ main .main_content1 .sub_tab_cont .sub_tab_in_content .msg_layout {
 }
 
 .btn_table td {
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+.fax_table {
+    width: 100%;
+}
+
+.fax_table .th {
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #333;
+    padding: 10px;
+    min-width: 100px;
+    background-color: #bebebe;
+}
+
+.fax_table .td {
+    text-align: center;
     border: 1px solid #333;
     padding: 10px;
 }
