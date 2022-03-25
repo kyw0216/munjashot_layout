@@ -9,7 +9,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <script src="../javascript/external/jquery-3.5.1.min.js"></script>
-    <!-- <script src="/javascript/Common/include.js"></script> -->
+    <script src="../javascript/Common/modal.js"></script>
 
     <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/common.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/base.css'>
@@ -36,26 +36,176 @@
 
     <!-- Body -->
 
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/service-message.css'> -->
-    <!-- <script src='../javascript/Page/service-message.js'></script> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/service-kakao.css'>
+    <script src='../javascript/Page/service-kakao.js'></script>
 
-    <div id="main-body-wrapper" style="min-height: 50% !important;">
-        <div id="main-body" style="display: flex; justify-content: center; align-items: center;">
+    <div id="main-body-wrapper">
+        <div id="main-body">
             <main class="body-section">
 
+                <!-- Slider main container -->
                 <div class="main_content main_content1">
-                    <div class="wrapper clearfix" style="display: flex; justify-content: center; align-items: center;">
-                        <span style="font-size:100px;">서비스 - 카카오</span>
+                    <div class="wrapper clearfix">
+                        <div class="content_wrapper">
+                            <div class="text_area">
+                                <span class="introduce_title">저렴한 발송 수단 카카오</span>
+                                <span class="introduce_title">알림톡, 친구톡</span>
+                                <span class="introduce_content">고객에게 익숙한 알림톡, 친구톡으로 메시지를 발송해보세요.</span>
+                            </div>
+
+                            <div class="image_area">
+                                <div class="row_wrapper">
+                                    <div class="box_wrapper box_wrapper1">
+                                        <div class="box box1">
+                                        </div>
+                                        <div class="text_area" style="margin:10px 0;">
+                                            <span class="introduce_title">알림톡</span>
+                                            <span class="introduce_content">1,000자 이내</span>
+                                            <span class="introduce_content" style="margin-top:0px;">광고성 메시지</span>
+                                        </div>
+                                    </div>
+                                    <div class="box_wrapper box_wrapper2">
+                                        <div class="box box2">
+                                        </div>
+                                        <div class="text_area" style="margin:10px 0;">
+                                            <span class="introduce_title">친구톡</span>
+                                            <span class="introduce_content">1,000자 이내</span>
+                                            <span class="introduce_content" style="margin-top:0px;">광고성 메시지</span>
+                                        </div>
+                                    </div>
+                                    <div class="box_wrapper box_wrapper3">
+                                        <div class="box box3">
+                                        </div>
+                                        <div class="text_area" style="margin:10px 0;">
+                                            <span class="introduce_title">친구톡이미지</span>
+                                            <span class="introduce_content">400자 이내</span>
+                                            <span class="introduce_content" style="margin-top:0px;">이미지 포함 메시지</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
 
+                <div class="main_content main_content2">
+                    <div class="wrapper clearfix">
+
+                        <div class="content_wrapper">
+                            <div class="text_area">
+                                <span class="introduce_title">[사이트명]의 문자는 다릅니다</span>
+                            </div>
+
+                            <div class="image_area">
+                                <div class="row_wrapper">
+                                    <div class="box box1">
+                                        개발자 없어도 이용 가능
+                                    </div>
+                                    <div class="box box2">
+                                        서버 연동 모듈 무료 제공
+                                    </div>
+                                </div>
+                                <div class="row_wrapper">
+                                    <div class="box box3">
+                                        대체문자 발송 지원
+                                    </div>
+                                    <div class="box box4">
+                                        다양한 대행 서비스 제공
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="main_content main_content3">
+                    <div class="wrapper clearfix">
+                        <div class="content_wrapper">
+                            <div class="text_area">
+                                <span class="introduce_title">저렴한 발송 수단 카카오</span>
+                                <span class="introduce_title">알림톡, 친구톡</span>
+                                <span class="introduce_content">고객에게 익숙한 알림톡, 친구톡으로 메시지를 발송해보세요.</span>
+                            </div>
+
+                            <div class="image_area">
+                                <div class="row_wrapper">
+                                    <div class="box box1">
+                                        <span class="introduce_title">알림톡</span>
+                                    </div>
+                                    <div class="box box2">
+                                        <span class="introduce_title">친구톡</span>
+                                    </div>
+                                    <div class="box box3">
+                                        <span class="introduce_title">친구톡</span>
+                                        <span class="introduce_title">이미지</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="button_area"><button class="btn"
+                                    onclick="javascript:alert('단가 확인 팝업 Or 모달창 등장');">내
+                                    단가 확인하기</button></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main_content main_content4">
+                    <div class="wrapper clearfix">
+
+                        <div class="text_area">
+                            <span class="introduce_title">자주 묻는 질문</span>
+                        </div>
+
+                        <!-- Slider main container -->
+                        <div class="swiper-container swiper-container4">
+                            <!-- Additional required wrapper -->
+
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="slide">슬라이드1</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide">슬라이드2</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide">슬라이드3</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide">슬라이드4</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide">슬라이드5</div>
+                                </div>
+                            </div>
+
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
+                            <!-- If we need scrollbar -->
+                            <!-- <div class="swiper-scrollbar"></div> -->
+                        </div>
+                    </div>
+
+                </div>
+
             </main>
+
         </div>
     </div>
 
     <!-- Footer -->
     <div id="footer"></div>
     <!-- <div data-include-path="footer.html"></div> -->
+
 </body>
 
 

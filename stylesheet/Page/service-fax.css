@@ -105,10 +105,11 @@ main .main_content2 .content_wrapper {
 
 main .main_content2 .wrapper .image_area {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: 20px 0;
 }
 
 main .main_content2 .wrapper .image_area .row_wrapper {
@@ -117,23 +118,22 @@ main .main_content2 .wrapper .image_area .row_wrapper {
     justify-content: center;
     align-content: center;
     flex-grow: 1;
-    width: 100%;
 }
 
 main .main_content2 .wrapper .image_area .box {
-    width: 100%;
-    height: 200px;
+    height: 250px;
     background: #888888;
+    /* margin: 20px; */
     padding: 20px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 15px;
-    border-radius: 5px;
-    margin: 30px;
 }
+
 
 main .main_content3 {
     background: #f7f7f7;
@@ -146,17 +146,15 @@ main .main_content3 .content_wrapper {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 120px;
-    border: 1px solid black;
+    padding: 30px;
 }
 
 main .main_content3 .wrapper .image_area {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 20px 0;
+    background-color: #bebebe;
 }
 
 main .main_content3 .wrapper .image_area .row_wrapper {
@@ -167,18 +165,26 @@ main .main_content3 .wrapper .image_area .row_wrapper {
     flex-grow: 1;
 }
 
+main .main_content3 .wrapper .image_area .box_wrapper {
+    width: 100%;
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
 main .main_content3 .wrapper .image_area .box {
     height: 250px;
     background: #888888;
-    /* margin: 20px; */
     padding: 20px;
-    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     color: white;
     font-size: 15px;
+    border-radius: 50%;
 }
 
 main .main_content4 {

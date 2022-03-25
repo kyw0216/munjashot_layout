@@ -122,7 +122,7 @@ main .main_content2 .wrapper .image_area .row_wrapper {
 
 main .main_content2 .wrapper .image_area .box {
     width: 100%;
-    height: 200px;
+    height: 80px;
     background: #888888;
     padding: 20px;
     display: flex;
@@ -146,7 +146,7 @@ main .main_content3 .content_wrapper {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 120px;
+    padding: 30px 30px;
     border: 1px solid black;
 }
 
@@ -156,7 +156,9 @@ main .main_content3 .wrapper .image_area {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 20px 0;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
 }
 
 main .main_content3 .wrapper .image_area .row_wrapper {
@@ -170,7 +172,7 @@ main .main_content3 .wrapper .image_area .row_wrapper {
 main .main_content3 .wrapper .image_area .box {
     height: 250px;
     background: #888888;
-    /* margin: 20px; */
+    margin: 20px;
     padding: 20px;
     width: 100%;
     display: flex;
@@ -179,7 +181,29 @@ main .main_content3 .wrapper .image_area .box {
     align-items: center;
     color: white;
     font-size: 15px;
+    border-radius: 50%;
 }
+
+
+.charge_table {
+    width: 100%;
+}
+
+.charge_table .th {
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #333;
+    padding: 10px;
+    min-width: 100px;
+    background-color: #bebebe;
+}
+
+.charge_table .td {
+    text-align: center;
+    border: 1px solid #333;
+    padding: 10px;
+}
+
 
 main .main_content4 {
     background: white;

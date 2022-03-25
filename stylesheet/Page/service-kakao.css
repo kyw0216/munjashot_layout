@@ -170,7 +170,7 @@ main .main_content3 .wrapper .image_area .row_wrapper {
 main .main_content3 .wrapper .image_area .box {
     height: 250px;
     background: #888888;
-    /* margin: 20px; */
+    margin: 20px;
     padding: 20px;
     width: 100%;
     display: flex;
@@ -179,6 +179,7 @@ main .main_content3 .wrapper .image_area .box {
     align-items: center;
     color: white;
     font-size: 15px;
+    border-radius: 50%;
 }
 
 main .main_content4 {
