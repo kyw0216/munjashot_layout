@@ -1,7 +1,8 @@
 ﻿/* Common Header Start */
 header {
     width: 100%;
-    background: none;
+    background: white;
+    position: fixed;
 }
 
 /* Common Header End */
@@ -10,8 +11,6 @@ header {
     header {
         min-width: 1320px;
         z-index: 2;
-        /* Navigation Start */
-        /* Navigation End */
     }
 
     header .mobile_nav {

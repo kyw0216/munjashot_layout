@@ -62,6 +62,7 @@ main {
 }
 
 #main-body-wrapper {
+  margin-top:54.8px;
   position: relative;
   flex: 1 0 auto;
   min-height: 100%;
@@ -669,7 +670,10 @@ textarea.ctrl-input {
 }
 
 
-
+.trans200{-webkit-transition:all 0.2s;-moz-transition:all 0.2s;-o-transition:all 0.2s;-ms-transition:all 0.2s;transition:all 0.2s}
+.trans300{-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;-ms-transition:all 0.3s;transition:all 0.3s}
+.trans400{-webkit-transition:all 0.4s;-moz-transition:all 0.4s;-o-transition:all 0.4s;-ms-transition:all 0.4s;transition:all 0.4s}
+.trans500{-webkit-transition:all 0.5s;-moz-transition:all 0.5s;-o-transition:all 0.5s;-ms-transition:all 0.5s;transition:all 0.5s}
 
 /* Common End */
 /* PC Start */

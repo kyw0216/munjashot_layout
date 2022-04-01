@@ -29,6 +29,8 @@
         $(document).ready(function () {
             $("#header").load("header.html"); //헤더 인클루드
             $("#footer").load("footer.html"); //푸터부분 인클루드
+            $("#leftBar_div").load("leftBar.html"); //푸터부분 인클루드
+            $("#rightBar_div").load("rightBar.html"); //푸터부분 인클루드
         });
     </script>
 
@@ -1065,7 +1067,7 @@
         </div>
     </div>
 
-    <section id="leftBar">
+    <!-- <section id="leftBar">
         왼쪽 Bar
     </section>
 
@@ -1075,7 +1077,13 @@
                     src="../image/send/close_txt.jpg" class="close-txt-img" alt="close 텍스트 이미지"><img
                     src="../image/send/open_txt.jpg" class="open-txt-img" alt="open 텍스트 이미지"><i
                     class="xi-angle-right-min"></i></span></a>
-    </section>
+    </section> -->
+
+    <!-- leftBar -->
+    <div id="leftBar_div"></div>
+
+    <!-- rightBar -->
+    <div id="rightBar_div"></div>
 
     <!-- Footer -->
     <div id="footer"></div>

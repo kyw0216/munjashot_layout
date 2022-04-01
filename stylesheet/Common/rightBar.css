@@ -1,0 +1,17 @@
+﻿#rightBar{position: fixed; top: 0; right: 0; bottom: 0; width: 300px; background-color: #fff; z-index: 9999; -webkit-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.13); box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.13);}
+/* 열림 버튼 */
+.right-bar-open-btn{position: absolute; top: 110px; left: -40px; display: block; width: 40px; height: 150px; background: url("../../image/send/right_bar_open_bg.png") 0 0 no-repeat; opacity: 0; visibility: hidden;}
+.right-bar-open-btn .inner{position: relative; display: block; padding: 0 15.5px; height: 150px;}
+.right-bar-open-btn img{padding-top: 38px; width: 9px;}
+.right-bar-open-btn img.close-txt-img{display: block;}
+.right-bar-open-btn img.open-txt-img{display: none;}
+.right-bar-open-btn i{position: absolute; bottom: 36px; left: 10px; font-size: 24px; color: #33d0ad;}
+
+@media (max-width: 1850px) {
+	#rightBar.close{right: -300px;}
+	.right-bar-open-btn{opacity: 1; visibility: visible;}
+    #rightBar.close .right-bar-open-btn i {-webkit-transform: rotate(180deg);transform: rotate(180deg);}
+	#rightBar.close .right-bar-open-btn img.close-txt-img{display: none;}
+	#rightBar.close .right-bar-open-btn img.open-txt-img{display: block;}
+
+}

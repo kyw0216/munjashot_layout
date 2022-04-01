@@ -1,122 +1,4 @@
-﻿#leftBar {
-    position: fixed;
-    top: 50px;
-    left: 0;
-    bottom: 0;
-    width: 300px;
-    background-color: #4a4adb;
-    z-index: 9999;
-    -webkit-border-radius: 0 30px 0 0;
-    border-radius: 0 30px 0 0;
-}
-
-#rightBar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 300px;
-    background-color: #fff;
-    z-index: 9999;
-    -webkit-box-shadow: 5px 5px 20px 0px rgb(0 0 0 / 13%);
-    box-shadow: 5px 5px 20px 0px rgb(0 0 0 / 13%);
-}
-
-.trans300 {
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.trans500 {
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    transition: all 0.5s;
-}
-
-.right-bar-open-btn {
-    position: absolute;
-    top: 110px;
-    left: -40px;
-    display: block;
-    width: 40px;
-    height: 150px;
-    background: url(../../image/send/right_bar_open_bg.png) 0 0 no-repeat;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.right-bar-open-btn .inner {
-    position: relative;
-    display: block;
-    padding: 0 15.5px;
-    height: 150px;
-}
-
-.right-bar-open-btn i {
-    position: absolute;
-    bottom: 36px;
-    left: 10px;
-    font-size: 24px;
-    color: #33d0ad;
-}
-
-.right-bar-open-btn img {
-    padding-top: 38px;
-    width: 9px;
-}
-
-.right-bar-open-btn img.close-txt-img {
-    display: none;
-}
-
-.right-bar-open-btn img.open-txt-img {
-    display: open;
-}
-
-.right-bar-open-btn img {
-    padding-top: 38px;
-    width: 9px;
-}
-
-@media (max-width: 1580px) {
-    .right-bar-open-btn {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    /* #rightBar .close {
-        right: -300px;
-    } */
-
-    #rightBar {
-        right: -300px;
-    }
-
-    /* #rightBar .close .right-bar-open-btn i {
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
-    } */
-
-    #rightBar .right-bar-open-btn i {
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
-    }
-
-    /* #rightBar .right-bar-open-btn img.close-txt-img {
-        display: block;
-    }
-
-    #rightBar .right-bar-open-btn img.close-txt-img {
-        display: none;
-    } */
-}
-
-/* Common Introduction Start */
+﻿/* Common Introduction Start */
 main .main_content .wrapper {
     display: flex;
     flex-direction: column;
@@ -329,4 +211,11 @@ main .main_content1 .fax_content .fax_cover_layout {
 
 .basis_500 {
     flex-basis: 500px;
+}
+
+
+@media (max-width: 1850px){
+    .main_content .wrapper {
+        margin-left: 270px;
+    }
 }

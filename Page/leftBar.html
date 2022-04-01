@@ -1,0 +1,262 @@
+﻿<link rel="stylesheet" href="../stylesheet/Common/leftBar.css">
+<script src="../javascript/Common/leftBar.js"></script>
+<script src="../javascript/external/jquery-custom-content-scroller-3.1.5.js"></script>
+
+
+
+
+<section id="leftBar">
+    <div class="gs-left-bar-top">
+
+        <p class="user-id" id="lnbUserId">emfoplus</p>
+        <a href="/my/pwcheck" class="setting"><i class="xi-cog"></i></a>
+        <div class="alarm side-alarm-open-btn" id="alarmBtn"><span><i class="xi-bell"></i></span></div>
+        <!-- 새로운 알림이 있을시 new 클래스 붙혀주세요. -->
+
+        <div class="side-alarm-con" style="width: 410px; top: 70px; left:240px;">
+            <!-- 툴팁 가로 직접지정. top,left 값 임의 조절 가능(기본 top:30px, left:0px) -->
+            <a href="javascript:;" class="alarm-close-btn"><i class="xi-close-min"></i></a>
+            <div class="side-alarm-inner">
+                <p class="side-alarm-txt">최근 알림 내역이 없습니다.</p>
+                <a href="/info/alarm" class="alarm-more-view cm-move-link-arrow">알림 더보기</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="gs-left-bar-bottom">
+        <div class="custom-scrollbar-wrapper">
+            <div class="scroll-object-box-outside mCustomScrollbar _mCS_8 mCS_no_scrollbar"
+                style="position: relative; overflow: visible;">
+                <div id="mCSB_8" class="mCustomScrollBox mCS-dark mCSB_vertical mCSB_outside" tabindex="0"
+                    style="max-height: none;">
+                    <div id="mCSB_8_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                        style="position:relative; top:0; left:0;" dir="ltr">
+                        <div class="gs-left-bar-inner">
+                            <div class="gs-left-bar-info">
+                                <table>
+
+                                    <tbody>
+                                        <tr>
+                                            <th>충전금</th>
+                                            <td>
+                                                <a href="/payment/detail" class="userCash">0</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>포인트</th>
+                                            <td><a href="/payment/detail" class="userPoint">200</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>사용요금제</th>
+                                            <td><a href="/info/price" class="pricePlanName">기본</a></td>
+                                            <!-- 요금제 페이지로 이동(아직 링크x) -->
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="gs-left-bar-transmit">
+                                <div class="tit">전송가능여부
+                                    <span class="cm-tooltip-open-btn"><i class="xi-help-o"></i>
+                                        <div class="cm-tooltip-con transmit" style="width: 240px;">
+                                            <!-- 툴팁 가로 직접지정. top 값 임의 조절 가능(기본 30px) -->
+                                            <div class="cm-tooltip-inner">
+                                                <p class="cm-tooltip-tit">메시지 전송가능여부를 표시합니다.</p>
+                                                <p class="cm-tooltip-txt use">전송 가능</p>
+                                                <p class="cm-tooltip-txt">전송 불가</p>
+                                                <p class="cm-tooltip-txt none">(마이페이지 &gt; 메시지전송안내 참고)</p>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </div>
+                                <p class="txt message use">문자</p>
+                                <p class="txt kakaoTalk">카카오톡</p>
+                            </div>
+                            <div class="gs-left-bar-lnb">
+                                <div class="lnb-list-item">
+                                    <dl class="lnb-list-item-inner clearfix lnb1">
+                                        <a href="/payment/charge" class="lnb-tit">
+                                            <i class="xi-battery-60 icon"></i>
+                                            <p>충전</p>
+                                        </a>
+                                    </dl>
+                                </div>
+                                <div class="lnb-list-item">
+                                    <dl class="lnb-list-item-inner clearfix lnb2">
+                                        <dt class="lnb-tit">
+                                            <i class="xi-lock-o icon"></i>
+                                            <p>충전관리</p>
+                                            <i class="xi-angle-up-min arrow"></i>
+                                        </dt>
+                                        <dd class="lnb-con" style="display: none;">
+                                            <a href="/payment/receipt" class="clearfix lnb2-1">
+                                                <p>충전내역</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+                                            <a href="/payment/detail" class="clearfix lnb2-2">
+                                                <p>사용내역</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="lnb-list-item">
+                                    <dl class="lnb-list-item-inner clearfix lnb3">
+                                        <dt class="lnb-tit">
+                                            <i class="xi-call-outgoing icon"></i>
+                                            <p>발신정보관리</p>
+                                            <i class="xi-angle-up-min arrow"></i>
+                                        </dt>
+                                        <dd class="lnb-con" style="display: none;">
+
+
+
+                                            <a href="/callback/callbackper" class="clearfix lnb3-1">
+                                                <p>문자 발신번호</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:corpMsg();" class="clearfix lnb3-2">
+                                                <p>카카오톡 채널ID</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+
+
+
+
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="lnb-list-item">
+                                    <dl class="lnb-list-item-inner clearfix lnb4">
+                                        <dt class="lnb-tit">
+                                            <i class="xi-layout-snb-o icon"></i>
+                                            <p>템플릿관리</p>
+                                            <i class="xi-angle-up-min arrow"></i>
+                                        </dt>
+                                        <dd class="lnb-con" style="display: none;">
+                                            <a href="/box/message" class="clearfix lnb4-1">
+                                                <p>문자</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+
+
+                                            <a href="javascript:corpMsg();" class="clearfix lnb4-2">
+                                                <p>카카오톡 알림톡</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+
+
+
+
+
+
+
+                                            <a href="javascript:corpMsg();" class="clearfix lnb4-3">
+                                                <p>카카오톡 친구톡</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+
+
+
+
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="lnb-list-item">
+                                    <dl class="lnb-list-item-inner clearfix lnb5">
+                                        <a href="/address" class="lnb-tit">
+                                            <i class="xi-users-o icon"></i>
+                                            <p>주소록</p>
+                                        </a>
+                                    </dl>
+                                </div>
+                                <div class="lnb-list-item">
+                                    <dl class="lnb-list-item-inner clearfix lnb6">
+                                        <dt class="lnb-tit">
+                                            <i class="xi-central-router icon"></i>
+                                            <p>전송결과</p>
+                                            <i class="xi-angle-up-min arrow"></i>
+                                        </dt>
+                                        <dd class="lnb-con" style="display: none;">
+                                            <a href="/message/list" class="clearfix lnb6-1">
+                                                <p>전송내역</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+                                            <a href="/message/reservation" class="clearfix lnb6-2">
+                                                <p>예약내역</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+                                            <a href="/refuse" class="clearfix lnb6-3">
+                                                <p>080수신거부</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="lnb-list-item">
+                                    <dl class="lnb-list-item-inner clearfix">
+                                        <a href="javascript:_lnb.func.guideLink();" class="lnb-tit">
+                                            <i class="xi-help icon"></i>
+                                            <p>이용가이드</p>
+                                        </a>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="mCSB_8_scrollbar_vertical"
+                    class="mCSB_scrollTools mCSB_8_scrollbar mCS-dark mCSB_scrollTools_vertical" style="display: none;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_8_dragger_vertical" class="mCSB_dragger"
+                            style="position: absolute; min-height: 30px; height: 0px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                        </div>
+                        <div class="mCSB_draggerRail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
