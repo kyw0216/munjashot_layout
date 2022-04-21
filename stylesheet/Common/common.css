@@ -429,10 +429,16 @@ textarea.ctrl-input {
   height: 100%;
 }
 
-.clearfix:after {
+/* .clearfix:after {
   clear: both;
   content: " ";
   display: table;
+} */
+
+.clearfix:after {
+  clear: both;
+  content: " ";
+  display: block;
 }
 
 .main_content .title_area {

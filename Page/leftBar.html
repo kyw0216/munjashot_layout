@@ -9,7 +9,7 @@
     <div class="gs-left-bar-top">
 
         <p class="user-id" id="lnbUserId">emfoplus</p>
-        <a href="/my/pwcheck" class="setting"><i class="xi-cog"></i></a>
+        <a href="myInfo.html" class="setting"><i class="xi-cog"></i></a>
         <div class="alarm side-alarm-open-btn" id="alarmBtn"><span><i class="xi-bell"></i></span></div>
         <!-- 새로운 알림이 있을시 new 클래스 붙혀주세요. -->
 
@@ -76,30 +76,22 @@
                             <div class="gs-left-bar-lnb">
                                 <div class="lnb-list-item">
                                     <dl class="lnb-list-item-inner clearfix lnb1">
-                                        <a href="/payment/charge" class="lnb-tit">
+                                        <dt class="lnb-tit">
                                             <i class="xi-battery-60 icon"></i>
                                             <p>충전</p>
-                                        </a>
-                                    </dl>
-                                </div>
-                                <div class="lnb-list-item">
-                                    <dl class="lnb-list-item-inner clearfix lnb2">
-                                        <dt class="lnb-tit">
-                                            <i class="xi-lock-o icon"></i>
-                                            <p>충전관리</p>
                                             <i class="xi-angle-up-min arrow"></i>
                                         </dt>
                                         <dd class="lnb-con" style="display: none;">
-                                            <a href="/payment/receipt" class="clearfix lnb2-1">
-                                                <p>충전내역</p>
+                                            <a href="/payment/receipt" class="clearfix lnb1-1">
+                                                <p>충전하기</p>
                                                 <div class="loader">
                                                     <div class="circle cir01"></div>
                                                     <div class="circle cir02"></div>
                                                     <div class="circle cir03"></div>
                                                 </div>
                                             </a>
-                                            <a href="/payment/detail" class="clearfix lnb2-2">
-                                                <p>사용내역</p>
+                                            <a href="/payment/detail" class="clearfix lnb1-2">
+                                                <p>충전/사용 내역</p>
                                                 <div class="loader">
                                                     <div class="circle cir01"></div>
                                                     <div class="circle cir02"></div>
@@ -110,17 +102,15 @@
                                     </dl>
                                 </div>
                                 <div class="lnb-list-item">
-                                    <dl class="lnb-list-item-inner clearfix lnb3">
+                                    <dl class="lnb-list-item-inner clearfix lnb2">
                                         <dt class="lnb-tit">
                                             <i class="xi-call-outgoing icon"></i>
-                                            <p>발신정보관리</p>
+                                            <p>발신번호 관리</p>
                                             <i class="xi-angle-up-min arrow"></i>
                                         </dt>
                                         <dd class="lnb-con" style="display: none;">
 
-
-
-                                            <a href="/callback/callbackper" class="clearfix lnb3-1">
+                                            <a href="/callback/callbackper" class="clearfix lnb2-1">
                                                 <p>문자 발신번호</p>
                                                 <div class="loader">
                                                     <div class="circle cir01"></div>
@@ -128,7 +118,7 @@
                                                     <div class="circle cir03"></div>
                                                 </div>
                                             </a>
-                                            <a href="javascript:corpMsg();" class="clearfix lnb3-2">
+                                            <a href="javascript:corpMsg();" class="clearfix lnb2-2">
                                                 <p>카카오톡 채널ID</p>
                                                 <div class="loader">
                                                     <div class="circle cir01"></div>
@@ -137,78 +127,70 @@
                                                 </div>
                                             </a>
 
-
-
-
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="lnb-list-item">
+                                    <dl class="lnb-list-item-inner clearfix lnb3">
+                                        <dt class="lnb-tit">
+                                            <i class="xi-layout-snb-o icon"></i>
+                                            <p>카카오 발송 관리</p>
+                                            <i class="xi-angle-up-min arrow"></i>
+                                        </dt>
+                                        <dd class="lnb-con" style="display: none;">
+                                            <a href="/box/message" class="clearfix lnb3-1">
+                                                <p>카카오 채널 관리</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:corpMsg();" class="clearfix lnb3-2">
+                                                <p>알림톡 템플릿 관리</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:corpMsg();" class="clearfix lnb3-3">
+                                                <p>친구톡 이미지 관리</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
                                         </dd>
                                     </dl>
                                 </div>
                                 <div class="lnb-list-item">
                                     <dl class="lnb-list-item-inner clearfix lnb4">
-                                        <dt class="lnb-tit">
-                                            <i class="xi-layout-snb-o icon"></i>
-                                            <p>템플릿관리</p>
-                                            <i class="xi-angle-up-min arrow"></i>
-                                        </dt>
-                                        <dd class="lnb-con" style="display: none;">
-                                            <a href="/box/message" class="clearfix lnb4-1">
-                                                <p>문자</p>
-                                                <div class="loader">
-                                                    <div class="circle cir01"></div>
-                                                    <div class="circle cir02"></div>
-                                                    <div class="circle cir03"></div>
-                                                </div>
-                                            </a>
-
-
-                                            <a href="javascript:corpMsg();" class="clearfix lnb4-2">
-                                                <p>카카오톡 알림톡</p>
-                                                <div class="loader">
-                                                    <div class="circle cir01"></div>
-                                                    <div class="circle cir02"></div>
-                                                    <div class="circle cir03"></div>
-                                                </div>
-                                            </a>
-
-
-
-
-
-
-
-                                            <a href="javascript:corpMsg();" class="clearfix lnb4-3">
-                                                <p>카카오톡 친구톡</p>
-                                                <div class="loader">
-                                                    <div class="circle cir01"></div>
-                                                    <div class="circle cir02"></div>
-                                                    <div class="circle cir03"></div>
-                                                </div>
-                                            </a>
-
-
-
-
-                                        </dd>
+                                        <a href="/address" class="lnb-tit">
+                                            <i class="xi-barcode icon"></i>
+                                            <p>바코드 관리</p>
+                                        </a>
                                     </dl>
                                 </div>
                                 <div class="lnb-list-item">
                                     <dl class="lnb-list-item-inner clearfix lnb5">
                                         <a href="/address" class="lnb-tit">
                                             <i class="xi-users-o icon"></i>
-                                            <p>주소록</p>
+                                            <p>주소록 관리</p>
                                         </a>
                                     </dl>
                                 </div>
                                 <div class="lnb-list-item">
                                     <dl class="lnb-list-item-inner clearfix lnb6">
                                         <dt class="lnb-tit">
-                                            <i class="xi-central-router icon"></i>
-                                            <p>전송결과</p>
+                                            <i class="xi-warning icon"></i>
+                                            <p>수신거부 관리</p>
                                             <i class="xi-angle-up-min arrow"></i>
                                         </dt>
                                         <dd class="lnb-con" style="display: none;">
                                             <a href="/message/list" class="clearfix lnb6-1">
-                                                <p>전송내역</p>
+                                                <p>080번호 관리</p>
                                                 <div class="loader">
                                                     <div class="circle cir01"></div>
                                                     <div class="circle cir02"></div>
@@ -216,7 +198,7 @@
                                                 </div>
                                             </a>
                                             <a href="/message/reservation" class="clearfix lnb6-2">
-                                                <p>예약내역</p>
+                                                <p>수신거부 리스트</p>
                                                 <div class="loader">
                                                     <div class="circle cir01"></div>
                                                     <div class="circle cir02"></div>
@@ -224,7 +206,7 @@
                                                 </div>
                                             </a>
                                             <a href="/refuse" class="clearfix lnb6-3">
-                                                <p>080수신거부</p>
+                                                <p>관리</p>
                                                 <div class="loader">
                                                     <div class="circle cir01"></div>
                                                     <div class="circle cir02"></div>
@@ -232,6 +214,49 @@
                                                 </div>
                                             </a>
                                         </dd>
+                                    </dl>
+                                </div>
+                                <div class="lnb-list-item">
+                                    <dl class="lnb-list-item-inner clearfix lnb7">
+                                        <dt class="lnb-tit">
+                                            <i class="xi-central-router icon"></i>
+                                            <p>전송결과</p>
+                                            <i class="xi-angle-up-min arrow"></i>
+                                        </dt>
+                                        <dd class="lnb-con" style="display: none;">
+                                            <a href="/message/list" class="clearfix lnb7-1">
+                                                <p>월별통계</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+                                            <a href="/message/reservation" class="clearfix lnb7-2">
+                                                <p>전송내역</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+                                            <a href="/refuse" class="clearfix lnb7-3">
+                                                <p>예약내역</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="lnb-list-item">
+                                    <dl class="lnb-list-item-inner clearfix lnb8">
+                                        <a href="/address" class="lnb-tit">
+                                            <i class="xi-fax icon"></i>
+                                            <p>팩스 수신함</p>
+                                        </a>
                                     </dl>
                                 </div>
                                 <div class="lnb-list-item">

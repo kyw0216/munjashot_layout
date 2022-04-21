@@ -12,6 +12,24 @@
 
 $("document").ready(function () {
     _lnb.init();
+
+    /* *********************** lnb 펼치기 ************************ */
+    $('.gs-left-bar-inner').each(function () {
+        var $lnbItem = $(this).find('.lnb-list-item-inner');
+
+        $lnbItem.children('dt').click(function () {
+            var $lnbItem = $(this).closest('dt').siblings();
+            if ($lnbItem.css('display') == 'block') {
+                $(this).closest('dt').siblings().slideUp();
+                $('.lnb-list-item-inner').removeClass('open');
+            } else {
+                $('.lnb-list-item-inner > dd:visible').slideUp();
+                $('.lnb-list-item-inner').removeClass('open');
+                $(this).closest('dt').parent('dl').addClass('open');
+                $lnbItem.slideDown();
+            }
+        });
+    });
 });
 
 var _lnb = {
