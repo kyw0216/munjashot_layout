@@ -358,6 +358,10 @@
     transition: all 0.3s;
 }
 
+.lnb-list-item-inner .lnb-con a:hover {
+    background-color: #7474ee;
+}
+
 .lnb-list-item-inner .lnb-con a .loader {
     float: right;
     margin-top: 10px;
@@ -394,10 +398,22 @@
 }
 
 
+.lnb-list-item-inner .lnb-con a p {
+    float: left;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    color: #a6a6f1;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
 
 
-
-
+.gs-left-bar-lnb .lnb-list-item-inner.open .lnb-tit .arrow {
+    color: #fff;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
 
 
 
@@ -508,7 +524,12 @@
 
 
 
-
+.lnb-list-item-inner .lnb-con .on{background-color: #7474ee;}
+.lnb-list-item-inner .lnb-con .on p{color: #fff;}
+.lnb-list-item-inner .lnb-con .on .loader .circle{opacity: 1;}
+.lnb-list-item-inner .lnb-con .on .loader .circle.cir01{animation: big 1.25s ease infinite;}
+.lnb-list-item-inner .lnb-con .on .loader .circle.cir02{animation: big 1.25s .25s ease infinite;}
+.lnb-list-item-inner .lnb-con .on .loader .circle.cir03{animation: big 1.25s .5s ease infinite;}
 
 
 
