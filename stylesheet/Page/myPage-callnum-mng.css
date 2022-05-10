@@ -1,0 +1,155 @@
+﻿/* Common Introduction Start */
+main .main_content .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main_content1 {
+    background: white;
+    padding: 50px 0;
+}
+
+main .main_content .text_area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+main .main_content .text_area .introduce_title {
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+}
+
+main .main_content .text_area .introduce_content {
+    font-size: 18px;
+    display: block;
+}
+
+main .main_content .content_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+    background-color: #f7f7f7;
+}
+
+.column_wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.row_wrapper {
+    display: flex;
+    flex-grow: 1;
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-grow: 1;
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.callnum_table {
+    width: 100%;
+}
+
+.callnum_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    background-color: #cecece;
+}
+
+.callnum_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+}
+
+.label_info {
+    background-color: #bebebe;
+    padding: 10px 30px;
+    margin-right: 10px;
+}
+
+/* ul li태그에 리스트 스타일을 없앰 */
+li {
+    list-style: none;
+}
+
+/* ul li태그에 리스트 스타일을 없앰 */
+ul {
+    list-style: none;
+}
+
+/* menu태그 자식의 ul의 자식 li를 왼쪽정렬과 넓이 140설정 */
+.drop_down >li {
+    position: relative;
+}
+
+.drop_down>li>ul {
+    display: none;
+    position: absolute;
+    font-size: 14px;
+    background: skyblue;
+    width: 100%;
+}
+
+.drop_down>li>ul>li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:30px;
+}
+
+.drop_down>li:hover>ul {
+    display: block;
+}
+
+.drop_down>li>ul>li:hover {
+    background: orange;
+    transition: ease 1s;
+}
+
+
+@media (max-width: 1850px) {
+    .main_content .wrapper {
+        margin-left: 270px;
+    }
+}

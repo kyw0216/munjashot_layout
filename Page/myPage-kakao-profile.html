@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>마이 페이지</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src="../javascript/external/jquery-3.5.1.min.js"></script>
+    <script src="../javascript/Common/modal.js"></script>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/base.css'>
+
+    <script src='../javascript/base/util.js'></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-regular.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-solid.min.css">
+
+    <script src="../javascript/external/swiper-4.5.1.min.js"></script>
+    <link rel="stylesheet" href="../stylesheet/external/swiper-4.5.1.min.css">
+
+    <script type="text/javascript" src="../javascript/external/popper-1.16.0.min.js"></script>
+    <script type="text/javascript" src="../javascript/external/tippy-5.1.1-bundle.iife.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#header").load("header.html"); //헤더 인클루드
+            $("#footer").load("footer.html"); //푸터부분 인클루드
+            $("#leftBar_div").load("leftBar.html"); //푸터부분 인클루드
+            $("#rightBar_div").load("rightBar.html"); //푸터부분 인클루드
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- <div data-include-path="header.html"></div> -->
+
+    <!-- Body -->
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/myPage-kakao-profile.css'>
+    <script src='../javascript/Page/myPage-kakao-profile.js'></script>
+
+    <div id="main-body-wrapper" style="min-height: 50% !important;">
+        <div id="main-body" style="display: flex; justify-content: center; align-items: center;">
+            <main class="body-section">
+
+                <div class="main_content main_content1">
+                    <div class="wrapper clearfix">
+
+                        <div class="content_wrapper">
+
+                            <div class="column_wrapper">
+                                <div class="row_wrapper" style="justify-content: flex-start;">
+                                    <span style="font-size:24px;;">카카오 발송 관리</span>
+                                </div>
+                            </div>
+
+                            <div class="row_wrapper" style="justify-content: flex-start;">
+                                <label class="label_info on" onclick="javascript:location.href='myPage-kakao-profile.html';">발신 프로필 관리</label>
+                                <label class="label_info" onclick="javascript:location.href='myPage-kakao-alim.html';">알림톡 템플릿 관리</label>
+                                <label class="label_info">친구톡 이미지 관리</label>
+                            </div>
+                                
+                            <hr style="margin:12px;width: 100%;">
+
+                            <div class="column_wrapper" style="justify-content: center; align-items: flex-start; line-height: normal;">
+                                <span>* 비즈니스 인증된 채널만 등록 가능합니다.</span>
+                                <span>* 채널 등록까지는 영업일 기준 1일~2일 소요 됩니다.</span>
+                            </div>
+
+                            <div class="row_wrapper" style="justify-content: flex-start;">
+                                <div class="row" style="justify-content: flex-start;">
+                                    <button class="btn" style="width:150px;" onclick="javascript:location.href='myPage-kakao-profile-addChannel.html'">채널 등록</button>
+                                    <button class="btn" style="margin-left:10px; width:150px;" onclick="javascript:location.href='myPage-kakao-profile-group-mng.html'">그룹 관리</button>
+                                </div>
+                                <div class="row" style="justify-content: flex-end; align-items: center;">
+                                    <input type="search" style="height: 30px;" placeholder="채널명, 그룹명">
+                                    <button class="btn" style="margin-left: 10px;">검색</button>
+                                </div>
+                            </div>
+                            
+                            <div class="column_wrapper">
+                                <div class="column_wrapper"
+                                    style="justify-content: flex-start; align-items: flex-start;">
+
+                                    <table class="log_table">
+                                        <tr>
+                                            <th>카카오톡 채널명</th>
+                                            <th>검색용 아이디</th>
+                                            <th class="drop_down">
+                                                <li>상태 ▼
+                                                    <ul>
+                                                        <li>전체</li>
+                                                        <li>등록완료</li>
+                                                        <li>반려</li>
+                                                        <li>문자샷 심사중</li>
+                                                        <li>카카오 심사중</li>
+                                                    </ul>    
+                                                </li>
+                                            </th>
+                                            <th>등록요청일</th>
+                                            <th>그룹<label class="label_info on" style="padding: 2px 7px;" data-tippy-content="
+                                                <h1>그룹이란 ?</h1>
+                                                다수의 카카오톡 채널을 [그룹]으로 묶어 간편하게 관리할 수 있는 기능입니다. 그룹에 템플릿을 등록하면, 그룹 내 채널에서 모두 해당 템플릿을 발송하실 수 있습니다.
+                                                <br><br>
+                                                그룹 이용 매뉴얼<br>
+                                                1. 그룹관리 버튼을 클릭하여 신규그룹을 생성해주세요.<br>
+                                                2. 원하시는 카카오톡 채널을 그룹으로 지정해주세요.<br>
+                                                3. 그룹에 템플릿을 등록하신 후 그룹 내의 모든 채널에서 알림톡을 발송해보세요. (그룹에 등록된 템플릿은 그룹화 된 모든 채널에서 발송하실 수 있습니다.)<br>
+                                                <span style='color:red; font-weight:bold;'>* 한번 생성된 그룹명은 변경이 불가능합니다.</span> <br>
+                                                <span style='color:red; font-weight:bold;'>* 그룹 심사 중 상태에서는 신규 템플릿 등록이 불가능합니다.</span>  
+                                                ">?</label></th>
+                                            <th>관리</th>
+                                        </tr>
+                                        <tr>
+                                            <td>프로필1</td>
+                                            <td>프로필2</td>
+                                            <td>등록완료</td>
+                                            <td>21/01/01</td>
+                                            <td class="drop_down">
+                                                <li>그룹미지정 ▼
+                                                    <ul>
+                                                        <li>엠포플러스</li>
+                                                        <li>엠포플러스2</li>
+                                                        <li>엠포플러스3</li>
+                                                        <li>엠포플러스4</li>
+                                                        <li>+ 그룹추가</li>
+                                                    </ul>    
+                                                </li>
+                                            </td>
+                                            <td><button class="btn">삭제</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>반려</td>
+                                            <td>20/12/30</td>
+                                            <td>엠포플러스 <button class="btn">해제</button></td>
+                                            <td><button class="btn">수정</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>문자샷 심사중</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>카카오 심사중</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+
+                                    <div class="row_wrapper" style="margin-top:20px;">
+                                        <span>1/2/3 .... /10</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="title">
+                <h2>모달</h2>
+            </div>
+            <div class="close-area">X</div>
+            <div class="content" style="display: flex; justify-content: center; align-items: center;">
+                <p>모달입니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- leftBar -->
+    <div id="leftBar_div"></div>
+
+    <!-- rightBar -->
+    <div id="rightBar_div"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- <div data-include-path="footer.html"></div> -->
+</body>
+
+</html>

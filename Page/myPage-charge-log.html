@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>마이 페이지</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src="../javascript/external/jquery-3.5.1.min.js"></script>
+    <script src="../javascript/Common/modal.js"></script>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/base.css'>
+
+    <script src='../javascript/base/util.js'></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-regular.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-solid.min.css">
+
+    <script src="../javascript/external/swiper-4.5.1.min.js"></script>
+    <link rel="stylesheet" href="../stylesheet/external/swiper-4.5.1.min.css">
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#header").load("header.html"); //헤더 인클루드
+            $("#footer").load("footer.html"); //푸터부분 인클루드
+            $("#leftBar_div").load("leftBar.html"); //푸터부분 인클루드
+            $("#rightBar_div").load("rightBar.html"); //푸터부분 인클루드
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- <div data-include-path="header.html"></div> -->
+
+    <!-- Body -->
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/myPage-charge.css'>
+    <script src='../javascript/Page/myPage-charge.js'></script>
+
+    <div id="main-body-wrapper" style="min-height: 50% !important;">
+        <div id="main-body" style="display: flex; justify-content: center; align-items: center;">
+            <main class="body-section">
+
+                <div class="main_content main_content1">
+                    <div class="wrapper clearfix">
+
+                        <div class="content_wrapper">
+
+                            <hr style="margin:12px;width: 100%;">
+
+                            <div class="row_wrapper" style="background-color: #888888; border-radius: 5px; padding:10px;">
+                                <div class="menu_select_div">
+                                    <input type="radio" id="charge_log" name="menu_select" class="menu_radio_box"  value="charge_log" checked></input><label class="menu_label" for="charge_log">충전내역</label>
+                                </div>
+                                <div class="menu_select_div" style="border-left: 1px solid black;">
+                                    <input type="radio" id="use_log" name="menu_select" class="menu_radio_box" value="use_log"></input><label class="menu_label" for="use_log">사용내역</label>
+                                </div>
+                            </div>
+
+                            <div class="column_wrapper">
+                                <div class="column_wrapper charge_log_div"
+                                    style="justify-content: flex-start; align-items: flex-start;">
+
+                                    <div class="row_wrapper" style="background-color: white; padding:5px;">
+                                        <div style="display: flex; align-items: center; flex-grow: 1;">
+                                            <span
+                                                style="padding:5px; border: 1px solid black; border-radius: 5px; margin-right: 10px;">오늘</span>
+                                            <span
+                                                style="padding:5px; border: 1px solid black; border-radius: 5px; margin-right: 10px;">1주일</span>
+                                            <span
+                                                style="padding:5px; border: 1px solid black; border-radius: 5px; margin-right: 10px;">1개월</span>
+                                            <span
+                                                style="padding:5px; border: 1px solid black; border-radius: 5px; margin-right: 10px;">3개월</span>
+                                        </div>
+                                        <div style="display: flex; align-items: center; justify-content: flex-end; flex-grow: 1;">
+                                            <input type="date"> - <input type="date"> <button class="btn" style="margin-left:10px;">검색</button>
+                                        </div>
+                                    </div>
+
+                                    <table class="log_table">
+                                        <tr>
+                                            <th>일자</th>
+                                            <th class="drop_down">
+                                                <li>충전수단 ▼
+                                                    <ul>
+                                                        <li>전체</li>
+                                                        <li>카드결제</li>
+                                                        <li>계좌이체</li>
+                                                    </ul>    
+                                                </li>
+                                            </th>
+                                            <th>내역</th>
+                                            <th>거래명세서</th>
+                                            <th>충전 금액</th>
+                                            <th>충전 후 금액</th>
+                                        </tr>
+                                        <tr>
+                                            <td>21/01/01</td>
+                                            <td>카드결제</td>
+                                            <td>문자메시지 사용료</td>
+                                            <td><button class="btn" style="width: 80%;">다운로드</button></td>
+                                            <td>100,000원</td>
+                                            <td style="color:red; font-weight: bold;">100,000원</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+
+                                    <div class="row_wrapper" style="margin-top:20px;">
+                                        <span>1/2/3 .... /10</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="column_wrapper use_log_div"
+                                    style="justify-content: flex-start; align-items: flex-start; display: none;">
+
+                                    <div class="row_wrapper" style="background-color: white; padding:5px;">
+                                        <div style="display: flex; align-items: center; flex-grow: 1;">
+                                            <span
+                                                style="padding:5px; border: 1px solid black; border-radius: 5px; margin-right: 10px;">오늘</span>
+                                            <span
+                                                style="padding:5px; border: 1px solid black; border-radius: 5px; margin-right: 10px;">1주일</span>
+                                            <span
+                                                style="padding:5px; border: 1px solid black; border-radius: 5px; margin-right: 10px;">1개월</span>
+                                            <span
+                                                style="padding:5px; border: 1px solid black; border-radius: 5px; margin-right: 10px;">3개월</span>
+                                        </div>
+                                        <div style="display: flex; align-items: center; justify-content: flex-end; flex-grow: 1;">
+                                            <input type="date"> - <input type="date"> <button class="btn" style="margin-left:10px;">검색</button>
+                                        </div>
+                                    </div>
+
+                                    <table class="log_table">
+                                        <tr>
+                                            <th>일자</th>
+                                            <th class="drop_down">
+                                                <li>구분 ▼
+                                                    <ul>
+                                                        <li>전체</li>
+                                                        <li>문자메시지</li>
+                                                        <li>카카오</li>
+                                                        <li>바코드</li>
+                                                        <li>해외문자</li>
+                                                        <li>팩스</li>
+                                                        <li>기타</li>
+                                                    </ul>    
+                                                </li>
+                                            </th>
+                                            <th>내역</th>
+                                            <th>금액</th>
+                                            <th>반영 후 금액</th>
+                                        </tr>
+                                        <tr>
+                                            <td>21/01/02</td>
+                                            <td>문자메시지</td>
+                                            <td>1월 1일 발송건 차감(LMS 00건)</td>
+                                            <td style="color:red; font-weight: bold;">-100,000</td>
+                                            <td>100,000원</td>
+                                        </tr>
+                                        <tr>
+                                            <td>21/01/01</td>
+                                            <td>카카오</td>
+                                            <td>12월 30일 실패건 환불(SMS 00건)</td>
+                                            <td style="color:blue; font-weight: bold;">+5,000</td>
+                                            <td>10,000원</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>팩스</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>...</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" style="font-weight: bold;">합계</td>
+                                            <td>-95,000</td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+
+                                    <div class="row_wrapper" style="margin-top:20px;">
+                                        <span>1/2/3 .... /10</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="title">
+                <h2>모달</h2>
+            </div>
+            <div class="close-area">X</div>
+            <div class="content" style="display: flex; justify-content: center; align-items: center;">
+                <p>모달입니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- leftBar -->
+    <div id="leftBar_div"></div>
+
+    <!-- rightBar -->
+    <div id="rightBar_div"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- <div data-include-path="footer.html"></div> -->
+</body>
+
+</html>

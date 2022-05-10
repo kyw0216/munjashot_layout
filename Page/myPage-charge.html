@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>마이 페이지</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src="../javascript/external/jquery-3.5.1.min.js"></script>
+    <script src="../javascript/Common/modal.js"></script>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/base.css'>
+
+    <script src='../javascript/base/util.js'></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-regular.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-solid.min.css">
+
+    <script src="../javascript/external/swiper-4.5.1.min.js"></script>
+    <link rel="stylesheet" href="../stylesheet/external/swiper-4.5.1.min.css">
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#header").load("header.html"); //헤더 인클루드
+            $("#footer").load("footer.html"); //푸터부분 인클루드
+            $("#leftBar_div").load("leftBar.html"); //푸터부분 인클루드
+            $("#rightBar_div").load("rightBar.html"); //푸터부분 인클루드
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- <div data-include-path="header.html"></div> -->
+
+    <!-- Body -->
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/myPage-charge.css'>
+    <script src='../javascript/Page/myPage-charge.js'></script>
+
+    <div id="main-body-wrapper" style="min-height: 50% !important;">
+        <div id="main-body" style="display: flex; justify-content: center; align-items: center;">
+            <main class="body-section">
+
+                <div class="main_content main_content1">
+                    <div class="wrapper clearfix">
+
+                        <div class="content_wrapper">
+                            <div class="column_wrapper">
+                                <div class="row_wrapper" style="justify-content: flex-start;">
+                                    <span style="font-size:24px;;">충전</span>
+                                </div>
+                            </div>
+
+                            <hr style="margin:12px;width: 100%;">
+
+                            <div class="column_wrapper">
+                                <div class="row_wrapper" style="justify-content: flex-start;">
+                                    <span>결제수단 선택</span>
+                                </div>
+                                
+                                <div class="row_wrapper" style="background-color: #888888; border-radius: 5px; padding:10px;">
+                                    <div class="menu_select_div">
+                                        <input type="radio" id="bank" name="menu_select" class="menu_radio_box"  value="bank" checked></input><label class="menu_label" for="bank">전용계좌</label>
+                                    </div>
+                                    <div class="menu_select_div" style="border-left: 1px solid black;">
+                                        <input type="radio" id="card" name="menu_select" class="menu_radio_box" value="card"></input><label class="menu_label" for="card">카드결제</label>
+                                    </div>
+                                </div>
+
+                                <div class="column_wrapper bank_div" style="justify-content: flex-start; align-items: flex-start;">
+                                    <span style="margin-bottom:5px; line-height:normal;">전용계좌 관리</span>
+                                    <table class="bank_table">
+                                        <tr>
+                                            <th>은행명</th>
+                                            <th>계좌번호</th>
+                                            <th>은행명</th>
+                                            <th>계좌번호</th>
+                                        </tr>
+                                        <tr>
+                                            <td>은행명</td>
+                                            <td><button class="btn" style="width: 80%;">발급</button></td>
+                                            <td>은행명</td>
+                                            <td><button class="btn" style="width: 80%;">발급</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>은행명</td>
+                                            <td><button class="btn" style="width: 80%;">발급</button></td>
+                                            <td>은행명</td>
+                                            <td><button class="btn" style="width: 80%;">발급</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>은행명</td>
+                                            <td><button class="btn" style="width: 80%;">발급</button></td>
+                                            <td>은행명</td>
+                                            <td><button class="btn" style="width: 80%;">발급</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>은행명</td>
+                                            <td><button class="btn" style="width: 80%;">발급</button></td>
+                                            <td>은행명</td>
+                                            <td><button class="btn" style="width: 80%;">발급</button></td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div class="row_wrapper" style="justify-content: flex-start;">
+                                    <span>결제 금액</span>
+                                </div>
+
+                                <div class="row_wrapper" style="justify-content: flex-start;">
+                                    <div class="money_select_div">
+                                        <input type="radio" id="5000" name="money_select" class="money_radio_box"></input><label class="money_label" for="5000">5,000원</label>
+                                        <input type="radio" id="10000" name="money_select" class="money_radio_box"></input><label class="money_label" for="10000">10,000원</label>
+                                        <input type="radio" id="20000" name="money_select" class="money_radio_box"></input><label class="money_label" for="20000">20,000원</label>
+                                        <input type="radio" id="50000" name="money_select" class="money_radio_box"></input><label class="money_label" for="50000">50,000원</label>
+                                        <input type="radio" id="direct" name="money_select" class="money_radio_box"></input><label class="money_label" for="direct">직접 입력</label>
+                                        <input type="text" class="money_direct"></input>
+                                    </div>
+                                </div>
+                         
+                                <div class="column_wrapper" style="justify-content: flex-end; align-items: flex-end; color:#888888">
+                                    <span>결제금액은 최소 5,000원 이후 100원 단위로 설정 가능 합니다.</span>
+                                    <span>다만, 신용카드사 별 결제한도 제한에 따라 결제 가능 금액은 달라질 수 있습니다</span>
+                                </div>
+
+                                <hr style="margin:12px;width: 100%;">
+                                
+                                <div class="row_wrapper" style="justify-content: flex-start;">
+                                    <span style="font-size:24px;">총 결제금액</span>
+                                </div>
+                                
+                                <div class="row_wrapper" style="justify-content: flex-end;">
+                                    <span style="font-size:24px; font-weight: bold; color:rgb(0, 0, 193)">00,000원</span><span style="margin-left:10px;">[부가세포함]</span>
+                                </div>
+                                
+                                <div class="row_wrapper" style="justify-content: flex-end; ">
+                                    <button class="btn" onclick="javascript:alert('견적서 다운로드 팝업');">견적서 다운로드</button>
+                                </div>
+                                
+                                <hr style="margin:12px;width: 100%;">
+
+                                <div class="row_wrapper" style="justify-content: flex-end; ">
+                                    <button class="btn" style="width: 200px;" onclick="javascript:alert('결제하기 팝업');">결제하기</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="title">
+                <h2>모달</h2>
+            </div>
+            <div class="close-area">X</div>
+            <div class="content" style="display: flex; justify-content: center; align-items: center;">
+                <p>모달입니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- leftBar -->
+    <div id="leftBar_div"></div>
+
+    <!-- rightBar -->
+    <div id="rightBar_div"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- <div data-include-path="footer.html"></div> -->
+</body>
+
+</html>

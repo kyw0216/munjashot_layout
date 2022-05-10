@@ -635,43 +635,44 @@ textarea.ctrl-input {
 }
 
 #modal .modal-window {
-  background: rgba(69, 139, 197, 0.70);
+  /* background: rgba(69, 139, 197, 0.70); */
+  background: white;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(13.5px);
   -webkit-backdrop-filter: blur(13.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  width: 600px;
-  height: 500px;
+  width: 900px;
+  height: 600px;
   position: relative;
   top: -100px;
   padding: 10px;
 }
 
-#modal .title {
+/* #modal .title {
   padding-left: 10px;
   display: inline;
-  text-shadow: 1px 1px 2px gray;
-  color: white;
+  color: black;
 }
 
 #modal .title h2 {
   display: inline;
-}
+} */
 
 #modal .close-area {
-  display: inline;
-  float: right;
+  position: absolute;
   padding-right: 10px;
   cursor: pointer;
-  text-shadow: 1px 1px 2px gray;
-  color: white;
+  color: black;
+  right:10px;
+  top:15px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #modal .content {
   padding: 0px 10px;
-  text-shadow: 1px 1px 2px gray;
-  color: white;
+  color: black;
   height: 100%;
 }
 
@@ -721,6 +722,33 @@ textarea.ctrl-input {
   .quick_menu_web {
     display: block;
   }
+}
+
+
+/* 툴팁 디자인 설정 */
+.tippy-tooltip {
+  background-color: rgba(50, 50, 50, 0.9);
+
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+.tippy-popper[x-placement^=top] .tippy-arrow {
+  border-top: 8px solid rgba(50, 50, 50, 0.9);
+}
+
+.tippy-popper[x-placement^=bottom] .tippy-arrow {
+  border-bottom: 8px solid rgba(50, 50, 50, 0.9);
+}
+
+.tippy-popper[x-placement^=left] .tippy-arrow {
+  border-left: 8px solid rgba(50, 50, 50, 0.9);
+}
+
+.tippy-popper[x-placement^=right] .tippy-arrow {
+  border-right: 8px solid rgba(50, 50, 50, 0.9);
 }
 
 /* PC End */

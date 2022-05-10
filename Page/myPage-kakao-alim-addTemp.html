@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>마이 페이지</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src="../javascript/external/jquery-3.5.1.min.js"></script>
+    <script src="../javascript/Common/modal.js"></script>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/base.css'>
+
+    <script src='../javascript/base/util.js'></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-regular.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-solid.min.css">
+
+    <script src="../javascript/external/swiper-4.5.1.min.js"></script>
+    <link rel="stylesheet" href="../stylesheet/external/swiper-4.5.1.min.css">
+
+    <script type="text/javascript" src="../javascript/external/popper-1.16.0.min.js"></script>
+    <script type="text/javascript" src="../javascript/external/tippy-5.1.1-bundle.iife.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#header").load("header.html"); //헤더 인클루드
+            $("#footer").load("footer.html"); //푸터부분 인클루드
+            $("#leftBar_div").load("leftBar.html"); //푸터부분 인클루드
+            $("#rightBar_div").load("rightBar.html"); //푸터부분 인클루드
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- <div data-include-path="header.html"></div> -->
+
+    <!-- Body -->
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/myPage-kakao-alim.css'>
+    <script src='../javascript/Page/myPage-kakao-alim.js'></script>
+
+    <div id="main-body-wrapper" style="min-height: 50% !important;">
+        <div id="main-body" style="display: flex; justify-content: center; align-items: center;">
+            <main class="body-section">
+
+                <div class="main_content main_content1">
+                    <div class="wrapper clearfix">
+
+                        <div class="content_wrapper">
+
+                            <div class="column_wrapper">
+                                <div class="row_wrapper" style="justify-content: flex-start;">
+                                    <span style="font-size:24px;;">카카오 발송 관리</span>
+                                </div>
+                            </div>
+
+                            <div class="row_wrapper" style="justify-content: flex-start;">
+                                <label class="label_info" onclick="javascript:location.href='myPage-kakao-profile.html';">발신 프로필 관리</label>
+                                <label class="label_info on" onclick="javascript:location.href='myPage-kakao-alim.html';">알림톡 템플릿 관리</label>
+                                <label class="label_info">친구톡 이미지 관리</label>
+                            </div>
+                                
+                            <hr style="margin:12px;width: 100%;">
+
+                            <div class="container">
+
+                                <div class="row_wrapper" style="justify-content: flex-start; align-items: center;">
+                                    <span>● 발신프로필 선택</span>
+                                </div>
+
+                                <div class="row_wrapper" style="background-color: white; padding:5px;">
+                                    <label style="font-weight: bold; margin-left:10px; padding:0 20px;">발신프로필 선택</label>
+                                    <select style="margin-left:10px; width:300px;"><option>선택</option></select>
+                                </div>
+
+                                <div class="sub_container">
+                                    <div class="temp_div">
+                                        <div class="row" style="border-bottom: 1px solid black; margin: 0;">
+                                            <div class="row" style="justify-content: flex-start;">
+                                                <span>● 템플릿 입력 1</span>
+                                            </div>
+                                            <div class="row" style="justify-content: flex-end;">
+                                                <button class="btn">+ 입력란 추가</button>
+                                                <button class="btn" style="margin-left:10px;">- 입력란 삭제</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
+                                            <div class="temp_title">
+                                                <span>템플릿 코드 *</span>
+                                            </div>
+                                            <div class="temp_content">
+                                                <input type="radio" id="tmeplete_code_auto" name="tmeplete_code" class="tmeplete_code">
+                                                <label for="tmeplete_code_auto" style="min-width:80px;">자동 생성</label>
+                                                <input type="radio" id="tmeplete_code_direct" name="tmeplete_code" class="tmeplete_code" style="margin-left:20px;">
+                                                <label for="tmeplete_code_direct" style="min-width:80px;">직접 입력</label>
+                                                <input id="tmeplete_code_input" type="text" placeholder="최대 30자" class="ctrl-input" maxlength="30" onkeyup="check_cnt(this)">
+                                                <label id="tmeplete_code_cnt" style="min-width:80px; margin-left:10px;">0/30자</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
+                                            <div class="temp_title">
+                                                <span>템플릿 명 *</span>
+                                            </div>
+                                            <div class="temp_content">
+                                                <input type="radio" id="tmeplete_code_auto" name="tmeplete_code" class="tmeplete_code">
+                                                <label for="tmeplete_code_auto" style="min-width:80px;">자동 생성</label>
+                                                <input type="radio" id="tmeplete_code_direct" name="tmeplete_code" class="tmeplete_code" style="margin-left:20px;">
+                                                <label for="tmeplete_code_direct" style="min-width:80px;">직접 입력</label>
+                                                <input id="tmeplete_code_input" type="text" placeholder="최대 30자" class="ctrl-input" maxlength="30" onkeyup="check_cnt(this)">
+                                                <label id="tmeplete_code_cnt" style="min-width:80px; margin-left:10px;">0/30자</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
+                                            <div class="temp_title">
+                                                <span>강조 유형 *</span>
+                                            </div>
+                                            <div class="temp_content">
+                                                <input type="radio" id="tmeplete_code_auto" name="tmeplete_code" class="tmeplete_code">
+                                                <label for="tmeplete_code_auto" style="min-width:80px;">자동 생성</label>
+                                                <input type="radio" id="tmeplete_code_direct" name="tmeplete_code" class="tmeplete_code" style="margin-left:20px;">
+                                                <label for="tmeplete_code_direct" style="min-width:80px;">직접 입력</label>
+                                                <input id="tmeplete_code_input" type="text" placeholder="최대 30자" class="ctrl-input" maxlength="30" onkeyup="check_cnt(this)">
+                                                <label id="tmeplete_code_cnt" style="min-width:80px; margin-left:10px;">0/30자</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
+                                            <div class="temp_title">
+                                                <span>메시지 유형 *</span>
+                                            </div>
+                                            <div class="temp_content">
+                                                <input type="radio" id="tmeplete_code_auto" name="tmeplete_code" class="tmeplete_code">
+                                                <label for="tmeplete_code_auto" style="min-width:80px;">자동 생성</label>
+                                                <input type="radio" id="tmeplete_code_direct" name="tmeplete_code" class="tmeplete_code" style="margin-left:20px;">
+                                                <label for="tmeplete_code_direct" style="min-width:80px;">직접 입력</label>
+                                                <input id="tmeplete_code_input" type="text" placeholder="최대 30자" class="ctrl-input" maxlength="30" onkeyup="check_cnt(this)">
+                                                <label id="tmeplete_code_cnt" style="min-width:80px; margin-left:10px;">0/30자</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
+                                            <div class="temp_title">
+                                                <span>템플릿 내용 *</span>
+                                            </div>
+                                            <div class="temp_content" style="flex-basis: 300px;">
+                                                <textarea style="width:400px; height:100px;">asdf</textarea>
+                                            </div>
+                                            <div class="row" style="flex-basis: 0;">
+                                                
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    
+                                    <div class="preview_div">asdf</div>
+
+                                </div>
+
+    
+                                <div class="row_wrapper" style="justify-content: flex-start;">
+                                    <div class="row" style="justify-content: flex-start; width: 30%;;">
+                                        <button class="btn" style="width:200px;">등록</button>
+                                    </div>
+                                    
+                                    <div class="row" style="justify-content: flex-end;">
+                                        <input type="date"> - <input type="date"> 
+                                        <select style="margin-left:10px; width:150px;">
+                                            <option>상태전체</option>
+                                            <option>엠포심사중</option>
+                                            <option>카카오심사중</option>
+                                            <option>승인</option>
+                                            <option>반려</option>
+                                            <option>숨김</option>
+                                            <option>삭제</option>
+                                        </select>
+                                        
+                                        <input type="search" placeholder="템플릿 코드, 템플릿명" style="margin-left:10px;">
+    
+                                        <button class="btn" style="margin-left:10px;">검색</button>
+    
+                                    </div>
+                                </div>
+                                
+                                <div class="column_wrapper">
+                                    <div class="column_wrapper"
+                                        style="justify-content: flex-start; align-items: flex-start;">
+    
+                                        <table class="log_table">
+                                            <tr>
+                                                <th>번호</th>
+                                                <th>템플릿코드</th>
+                                                <th>템플릿명</th>
+                                                <th>상태</th>
+                                                <th>등록요청일</th>
+                                                <th>처리일</th>
+                                                <th>관리</th>
+                                            </tr>
+                                            <tr>
+                                                <td>프로필1</td>
+                                                <td>EMFOPLUS</td>
+                                                <td>TEST</td>
+                                                <td>승인완료</td>
+                                                <td>21/01/01</td>
+                                                <td>21/01/01</td>
+                                                <td>
+                                                    <button class="btn">숨김</button>
+                                                    <button class="btn">삭제</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+    
+                                        <div class="row_wrapper" style="margin-top:20px;">
+                                            <span>1/2/3 .... /10</span>
+                                        </div>
+    
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="title">
+                <h2>모달</h2>
+            </div>
+            <div class="close-area">X</div>
+            <div class="content" style="display: flex; justify-content: center; align-items: center;">
+                <p>모달입니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- leftBar -->
+    <div id="leftBar_div"></div>
+
+    <!-- rightBar -->
+    <div id="rightBar_div"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- <div data-include-path="footer.html"></div> -->
+</body>
+
+</html>

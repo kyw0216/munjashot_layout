@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>마이 페이지</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src="../javascript/external/jquery-3.5.1.min.js"></script>
+    <script src="../javascript/Common/modal.js"></script>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/base.css'>
+
+    <script src='../javascript/base/util.js'></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-regular.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-solid.min.css">
+
+    <script src="../javascript/external/swiper-4.5.1.min.js"></script>
+    <link rel="stylesheet" href="../stylesheet/external/swiper-4.5.1.min.css">
+
+    <script type="text/javascript" src="../javascript/external/popper-1.16.0.min.js"></script>
+    <script type="text/javascript" src="../javascript/external/tippy-5.1.1-bundle.iife.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#header").load("header.html"); //헤더 인클루드
+            $("#footer").load("footer.html"); //푸터부분 인클루드
+            $("#leftBar_div").load("leftBar.html"); //푸터부분 인클루드
+            $("#rightBar_div").load("rightBar.html"); //푸터부분 인클루드
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- <div data-include-path="header.html"></div> -->
+
+    <!-- Body -->
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/myPage-kakao-profile.css'>
+    <script src='../javascript/Page/myPage-kakao-profile.js'></script>
+
+    <div id="main-body-wrapper" style="min-height: 50% !important;">
+        <div id="main-body" style="display: flex; justify-content: center; align-items: center;">
+            <main class="body-section">
+
+                <div class="main_content main_content1">
+                    <div class="wrapper clearfix">
+
+                        <div class="content_wrapper">
+
+                            <div class="column_wrapper">
+                                <div class="row_wrapper" style="justify-content: flex-start;">
+                                    <span style="font-size:24px;;">카카오 발송 관리</span>
+                                </div>
+                            </div>
+
+                            <div class="row_wrapper" style="justify-content: flex-start;">
+                                <label class="label_info on" onclick="javascript:location.href='myPage-kakao-profile.html';">발신 프로필 관리</label>
+                                <label class="label_info" onclick="javascript:location.href='myPage-kakao-alim.html';">알림톡 템플릿 관리</label>
+                                <label class="label_info">친구톡 이미지 관리</label>
+                            </div>
+                                
+                            <hr style="margin:12px;width: 100%;">
+
+                            <div class="column_wrapper" style="justify-content: center; align-items: flex-start; line-height: normal;">
+                                <span style="font-size: 20px; font-weight: bold;">채널 등록 <button id="btn-modal" class="btn-modal" data-modal="modal-addChannel-info" style="margin-left:5px; padding:0px 10px; cursor: pointer;">?</button></span>
+                            </div>
+
+                            <div class="column_wrapper">
+                                <div class="column_wrapper charge_log_div"
+                                    style="justify-content: flex-start; align-items: flex-start;">
+
+                                    <table class="chn_table">
+                                        <tr>
+                                            <th>*검색용 아이디</th>
+                                            <td>@</td>
+                                        </tr>
+                                        <tr>
+                                            <th>*카카오톡 채널명</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>그룹 지정</th>
+                                            <td>
+                                                <select style="width:150px;">
+                                                    <option>그룹미지정</option>
+                                                </select>
+                                                <br>
+                                                <span>* 그룹을 지정할 경우, 그룹화된 시점 이후로 등록된 템플릿만 발송 가능합니다.</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+                            </div>
+
+                            <div class="row_wrapper">
+                                <button class="btn" style="width:150px;" onclick="javascript:alert('등록!');">등록</button>
+                                <button class="btn" style="margin-left:10px; width:150px;" onclick="javascript:alert('취소!');">취소</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="title">
+                <h2>모달</h2>
+            </div>
+            <div class="close-area">X</div>
+            <div class="content" style="display: flex; justify-content: center; align-items: center;">
+                <p>모달입니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- leftBar -->
+    <div id="leftBar_div"></div>
+
+    <!-- rightBar -->
+    <div id="rightBar_div"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- <div data-include-path="footer.html"></div> -->
+</body>
+
+</html>

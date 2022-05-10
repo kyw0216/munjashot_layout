@@ -1,7 +1,19 @@
 ﻿window.onload = function () {
 
-    function modalOn() {
+    // const btnModal = document.getElementById("btn-modal")
+    let btnModal = $(".btn-modal")
+
+    async function modalOn(modalName) {
+
+        let modal_html = await loadModal(modalName);
+        $("#modal").html(modal_html);
+        
         modal.style.display = "flex"
+
+        const closeBtn = modal.querySelector(".close-area");
+        closeBtn.addEventListener("click", e => {
+            modalOff();
+        });
     }
 
     function isModalOn() {
@@ -12,15 +24,19 @@
         modal.style.display = "none"
     }
 
-    const btnModal = document.getElementById("btn-modal")
-    btnModal.addEventListener("click", e => {
-        modalOn();
+    btnModal.on("click", function(){
+        modalOn($(this).data("modal"));
     });
 
-    const closeBtn = modal.querySelector(".close-area")
-    closeBtn.addEventListener("click", e => {
-        modalOff();
-    });
+    // btnModal.addEventListener("click", e => {
+    //     alert("클릭");
+    //     // modalOn(modalName);
+    // });
+
+    // const closeBtn = modal.querySelector(".close-area")
+    // closeBtn.addEventListener("click", e => {
+    //     modalOff();
+    // });
 
     modal.addEventListener("click", e => {
         const evTarget = e.target
@@ -34,4 +50,29 @@
             modalOff();
         }
     });
+}
+
+function loadModal(filename) { 
+    
+    return new Promise( function( resolve, reject )
+    {
+        $.ajax(
+        {
+            url: "../../Modal/"+filename+".html",
+            cache: true,
+            success: function( data )
+            {
+                resolve( data );
+            },
+            error: function( err )
+            {
+                // success: false, reason: FAIL:IO, FAIL:AUTH, FAIL:NO_MENU, ERR_UNKNOWN
+                reject( err.responseJSON ||
+                {
+                    success: false,
+                    reason: "ERR_UNKNOWN"
+                } );
+            },
+        } );
+    } );
 }
