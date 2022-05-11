@@ -21,16 +21,26 @@
     
 });
 
-function check_cnt(obj){
+function check_cnt(type, obj){
 
 	var strLen = obj.value.length;
     
-    $("#tmeplete_code_cnt").html(strLen + "/30자");
+    if(type == "code"){
+        $("#tmeplete_code_cnt").html(strLen + "/30자");
 
-    if(strLen > 30) {
-        $("#tmeplete_code_cnt").css("color", "red");
-    } else{
-        $("#tmeplete_code_cnt").css("color", "black");
+        if(strLen > 30) {
+            $("#tmeplete_code_cnt").css("color", "red");
+        } else{
+            $("#tmeplete_code_cnt").css("color", "black");
+        }
+    } else if (type == "name") {
+        $("#tmeplete_name_cnt").html(strLen + "/200자");
+
+        if(strLen > 200) {
+            $("#tmeplete_name_cnt").css("color", "red");
+        } else{
+            $("#tmeplete_name_cnt").css("color", "black");
+        }
     }
     
 }

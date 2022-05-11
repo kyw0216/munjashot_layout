@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>회원가입</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src="../javascript/external/jquery-3.5.1.min.js"></script>
+    <script src="../javascript/Common/modal.js"></script>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/base.css'>
+
+    <script src='../javascript/base/util.js'></script>
+    <script src='../javascript/Page/signup.js'></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-regular.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-solid.min.css">
+
+    <script src="../javascript/external/swiper-4.5.1.min.js"></script>
+    <link rel="stylesheet" href="../stylesheet/external/swiper-4.5.1.min.css">
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#header").load("header.html"); //헤더 인클루드
+            $("#footer").load("footer.html"); //푸터부분 인클루드
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- <div data-include-path="header.html"></div> -->
+
+    <!-- Body -->
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/signup.css'>
+    <script src='../javascript/Page/signup.js'></script>
+
+    <div id="main-body-wrapper" style="min-height: 50% !important;">
+        <div id="main-body" style="display: flex; justify-content: center; align-items: center;">
+            <main class="body-section">
+
+                <div class="main_content main_content1">
+                    <div class="wrapper clearfix">
+                        
+                        <div class="content_wrapper">
+
+                            <div class="column_wrapper" style="background-color: #f7f7f7; line-height: normal; font-size:30px;">
+                                <span>회원가입을 축하합니다</span>
+                            </div>
+
+
+                            <div class="column_wrapper signup-finish_div info_div">
+                                <span style="text-align: center;">
+                                    문자샷 가입을 환영합니다.<br><br>
+
+                                    가입 축하 1,000 point 를 적립해드렸으니 자유롭게 사용해보세요.<br><br>
+
+                                    등록하신 발신번호로의 본인인증 전화 후 문자 발송이 가능합니다.<br><br>
+                                    (영업시간 기준 24시간 이내 처리)<br><br>
+
+                                    감사합니다.
+                                </span>
+                            </div>
+                            
+                            <div class="column_wrapper callback_info_div info_div" style="display:none;">
+                                <span style="text-align: center;">
+                                    발신번호 등록시 필요서류 안내<br><br>
+
+                                    1. 기업 회원<br>
+                                    - 가입 사업자 명의 : 통신서비스 이용 증명원<br>
+                                    - 타 사업자 명의 : 통신서비스 이용 증명원, 위임장, 발신번호 소유주의 사업자등록증<br>
+                                    - 개인명의(재직자) : 통신서비스 이용 증명원, 재직증명서<br>
+                                    - 개인명의(비재직자) : 통신서비스 이용 증명원, 위임장, 발신번호 소유주의 신분증 사본(주민등록 번호 뒷자리 마킹)<br><br>
+
+                                    2. 개인 회원<br>
+                                    - 가입자 본인 명의 : 통신서비스 이용 증명원<br>
+                                    - 타인 명의 : 통신서비스 이용 증명원, 위임장, 타인의 신분증 사본(주민등록 번호 뒷자리 마킹)<br>
+                                    - 사업자 명의(재직자) : 통신서비스 이용 증명원, 재직증명서, 발신번호 소유주의 사업자등록증<br>
+                                    - 사업자 명의(비재직자) : 통신서비스 이용 증명원, 위임장, 발신번호 소유주의의 사업자등록증<br><br>
+
+                                    통신서비스 이용증명원은 통신사 홈페이지 혹은 고객센터로 전화하시어 간편하게 발급이 가능합니다.<br><br>
+
+                                    통신사별 발급 방법은 아래와 같습니다.<br><br>
+
+                                    SK텔레콤 [바로가기]<br>
+                                    ㆍ 홈페이지 발급방법 : 로그인 > 나의 가입정보 > 이용계약증명서 조회<br>
+                                    ㆍ 모바일 서비스 고객센터 : 114, 080-011-6000, 1599-0011<br>
+                                    ㆍ 유선 서비스 고객센터 : 080-816-2000, 1600-2000<br><br>
+
+                                    KT [바로가기<br>
+                                    ㆍ 홈페이지 발급방법 : 로그인 > 가입정보 > 조회/변경 > 가입증명원 인쇄<br>
+                                    ㆍ 모바일서비스 고객센터 : 114, 1588-0010<br>
+                                    ㆍ 유선서비스 고객센터 : 100<br><br>
+
+                                    LG U+ [바로가기]<br>
+                                    ㆍ 홈페이지 발급방법 : 로그인 > 상품가입안내 > 가입사실확인 조회<br>
+                                    ㆍ 모바일서비스 고객센터 : 114, 1544-0010<br>
+                                    ㆍ 유선서비스 고객센터 : 101<br><br>
+
+                                    한 번 발신번호를 등록하시면 등록된 번호로 간편하고 빠르게 문자 발송이 가능합니다.<br>
+                                    상기 내용을 꼼꼼히 확인 후, 필요 서류를 등록 해주시길 바랍니다.<br>
+                                    * 발신번호 등록 승인 까지는 영업일 기준 최대 1~2일 소요됩니다.<br>
+                                </span>
+                            </div>
+
+                            <div class="column_wrapper add_info_div info_div" style="display:none;">
+                                <img src="../image/광고문자 발송규칙 안내.jpg">
+                            </div>
+
+                            <div class="row_wrapper" style="background-color: #888888; border-radius: 5px; padding:10px; margin: 0;">
+                                <div class="menu_select_div">
+                                    <input type="radio" id="callback" name="menu_select" class="menu_radio_box"  value="callback"></input>
+                                    <label class="menu_label" for="callback">
+                                        발신번호 등록시 필요서류 안내
+                                    </label>
+                                </div>
+                                <div class="menu_select_div" style="border-left: 1px solid black;">
+                                    <input type="radio" id="add" name="menu_select" class="menu_radio_box" value="add"></input
+                                    ><label class="menu_label" for="add">
+                                        광고문자 발송규칙 안내
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="column_wrapper" style="background-color: #f7f7f7; padding:20px; line-height: normal; font-size:30px; cursor: pointer;" onclick="javascript:location.href='login.html';">
+                                <span>로그인하러 가기</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="title">
+                <h2>모달</h2>
+            </div>
+            <div class="close-area">X</div>
+            <div class="content" style="display: flex; justify-content: center; align-items: center;">
+                <p>모달입니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- <div data-include-path="footer.html"></div> -->
+</body>
+
+</html>

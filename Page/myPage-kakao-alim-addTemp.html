@@ -88,7 +88,7 @@
                                     <div class="temp_div">
                                         <div class="row" style="border-bottom: 1px solid black; margin: 0;">
                                             <div class="row" style="justify-content: flex-start;">
-                                                <span>● 템플릿 입력 1</span>
+                                                <span style="font-weight: bold;">● 템플릿 입력 1</span>
                                             </div>
                                             <div class="row" style="justify-content: flex-end;">
                                                 <button class="btn">+ 입력란 추가</button>
@@ -98,70 +98,77 @@
 
                                         <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
                                             <div class="temp_title">
-                                                <span>템플릿 코드 *</span>
+                                                <span style="font-weight: bold;">템플릿 코드 *</span>
                                             </div>
                                             <div class="temp_content">
                                                 <input type="radio" id="tmeplete_code_auto" name="tmeplete_code" class="tmeplete_code">
                                                 <label for="tmeplete_code_auto" style="min-width:80px;">자동 생성</label>
                                                 <input type="radio" id="tmeplete_code_direct" name="tmeplete_code" class="tmeplete_code" style="margin-left:20px;">
                                                 <label for="tmeplete_code_direct" style="min-width:80px;">직접 입력</label>
-                                                <input id="tmeplete_code_input" type="text" placeholder="최대 30자" class="ctrl-input" maxlength="30" onkeyup="check_cnt(this)">
+                                                <input id="tmeplete_code_input" type="text" placeholder="최대 30자" class="ctrl-input" maxlength="30" onkeyup="check_cnt('code', this)">
                                                 <label id="tmeplete_code_cnt" style="min-width:80px; margin-left:10px;">0/30자</label>
                                             </div>
                                         </div>
                                         
                                         <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
                                             <div class="temp_title">
-                                                <span>템플릿 명 *</span>
+                                                <span style="font-weight: bold;">템플릿 명 *</span>
                                             </div>
                                             <div class="temp_content">
-                                                <input type="radio" id="tmeplete_code_auto" name="tmeplete_code" class="tmeplete_code">
-                                                <label for="tmeplete_code_auto" style="min-width:80px;">자동 생성</label>
-                                                <input type="radio" id="tmeplete_code_direct" name="tmeplete_code" class="tmeplete_code" style="margin-left:20px;">
-                                                <label for="tmeplete_code_direct" style="min-width:80px;">직접 입력</label>
-                                                <input id="tmeplete_code_input" type="text" placeholder="최대 30자" class="ctrl-input" maxlength="30" onkeyup="check_cnt(this)">
+                                                <input id="tmeplete_name_input" type="text" placeholder="최대 200자, 템플릿 명은 메시지 내용에 포함되지 않습니다." class="ctrl-input" maxlength="200" onkeyup="check_cnt('name', this)">
+                                                <label id="tmeplete_name_cnt" style="min-width:80px; margin-left:10px;">0/200자</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
+                                            <div class="temp_title">
+                                                <span style="font-weight: bold;">강조 유형 *</span>
+                                            </div>
+                                            <div class="temp_content">
+                                                <select style="width:150px;">
+                                                    <option>선택안함</option>
+                                                    <option>강조표기형</option>
+                                                    <option>이미지형</option>
+                                                    <option>아이템리스트형</option>
+                                                </select>
                                                 <label id="tmeplete_code_cnt" style="min-width:80px; margin-left:10px;">0/30자</label>
                                             </div>
                                         </div>
 
                                         <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
                                             <div class="temp_title">
-                                                <span>강조 유형 *</span>
+                                                <span style="font-weight: bold;">메시지 유형 *</span>
                                             </div>
                                             <div class="temp_content">
-                                                <input type="radio" id="tmeplete_code_auto" name="tmeplete_code" class="tmeplete_code">
-                                                <label for="tmeplete_code_auto" style="min-width:80px;">자동 생성</label>
-                                                <input type="radio" id="tmeplete_code_direct" name="tmeplete_code" class="tmeplete_code" style="margin-left:20px;">
-                                                <label for="tmeplete_code_direct" style="min-width:80px;">직접 입력</label>
-                                                <input id="tmeplete_code_input" type="text" placeholder="최대 30자" class="ctrl-input" maxlength="30" onkeyup="check_cnt(this)">
+                                                <select style="width:150px;">
+                                                    <option>기본형</option>
+                                                    <option>부가정보형</option>
+                                                    <option>광고추가형</option>
+                                                    <option>복합형</option>
+                                                </select>
                                                 <label id="tmeplete_code_cnt" style="min-width:80px; margin-left:10px;">0/30자</label>
                                             </div>
                                         </div>
 
                                         <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
                                             <div class="temp_title">
-                                                <span>메시지 유형 *</span>
+                                                <span style="font-weight: bold;">템플릿 내용 *</span>
                                             </div>
-                                            <div class="temp_content">
-                                                <input type="radio" id="tmeplete_code_auto" name="tmeplete_code" class="tmeplete_code">
-                                                <label for="tmeplete_code_auto" style="min-width:80px;">자동 생성</label>
-                                                <input type="radio" id="tmeplete_code_direct" name="tmeplete_code" class="tmeplete_code" style="margin-left:20px;">
-                                                <label for="tmeplete_code_direct" style="min-width:80px;">직접 입력</label>
-                                                <input id="tmeplete_code_input" type="text" placeholder="최대 30자" class="ctrl-input" maxlength="30" onkeyup="check_cnt(this)">
-                                                <label id="tmeplete_code_cnt" style="min-width:80px; margin-left:10px;">0/30자</label>
+                                            <div class="temp_content" style="flex-grow:0;flex-basis:400px;">
+                                                <textarea style="width:400px; height:100px;resize: none;">asdf</textarea>
                                             </div>
-                                        </div>
 
-                                        <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
-                                            <div class="temp_title">
-                                                <span>템플릿 내용 *</span>
+                                            <div class="row" style="flex-basis: 0; margin:0;">
+                                                <div class="column">
+                                                    <div class="row" style="align-items: flex-start; justify-content: flex-start; margin:0;">
+                                                        asdf
+                                                    </div>
+                                                    <div class="row" style="flex-basis: 0; margin:0;">
+                                                    
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="temp_content" style="flex-basis: 300px;">
-                                                <textarea style="width:400px; height:100px;">asdf</textarea>
-                                            </div>
-                                            <div class="row" style="flex-basis: 0;">
-                                                
-                                            </div>
+                                            
                                         </div>
 
                                     </div>
