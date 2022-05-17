@@ -47,8 +47,8 @@
 
     <!-- Body -->
 
-    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/myPage-kakao-profile.css'>
-    <script src='../javascript/Page/myPage-kakao-profile.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/myPage-resMng.css'>
+    <script src='../javascript/Page/myPage-resMng.js'></script>
 
     <div id="main-body-wrapper" style="min-height: 50% !important;">
         <div id="main-body" style="display: flex; justify-content: center; align-items: center;">
@@ -61,57 +61,76 @@
 
                             <div class="column_wrapper">
                                 <div class="row_wrapper" style="justify-content: flex-start;">
-                                    <span style="font-size:24px;;">카카오 발송 관리</span>
+                                    <span style="font-size:24px;;">예약 관리</span>
                                 </div>
                             </div>
 
-                            <div class="row_wrapper" style="justify-content: flex-start;">
-                                <label class="label_info on" onclick="javascript:location.href='myPage-kakao-profile.html';">발신 프로필 관리</label>
-                                <label class="label_info" onclick="javascript:location.href='myPage-kakao-alim.html';">알림톡 템플릿 관리</label>
-                                <label class="label_info" onclick="javascript:location.href='myPage-kakao-friendImg.html';">친구톡 이미지 관리</label>
+                            <div class="column_wrapper" style="align-items: flex-start; justify-content: center; line-height: normal;">
+                                <span style="font-size:20px; color:red;">예약취소는 발송시간 5분 전까지 가능합니다.</span>
+                                <span style="font-size:20px; color:red;">예약취소 작업 후 통신사 사정에 따라 취소가 안될 수 있으니 취소 후 꼭 취소 완료 여부 확인해주시기 바랍니다.</span>
+                                <span style="font-size:20px; color:red;">예약취소 작업 중 장애 발생 시 1599-2320으로 문의 주시기 바랍니다.</span>
                             </div>
-                                
+                            
                             <hr style="margin:12px;width: 100%;">
 
-                            <div class="column_wrapper" style="justify-content: center; align-items: flex-start; line-height: normal;">
-                                <span style="font-size: 20px; font-weight: bold;">채널 등록 <button id="btn-modal" class="btn-modal" data-modal="modal-addChannel-info" style="margin-left:5px; padding:0px 10px; cursor: pointer;">?</button></span>
-                            </div>
-
                             <div class="column_wrapper">
-                                <div class="column_wrapper charge_log_div"
+                                <div class="column_wrapper"
                                     style="justify-content: flex-start; align-items: flex-start;">
 
-                                    <table class="chn_table">
+                                    <table class="res_table">
                                         <tr>
-                                            <th>*검색용 아이디</th>
-                                            <td>@</td>
+                                            <th>예약일</th>
+                                            <th>메시지 타입</th>
+                                            <th>예약건수</th>
+                                            <th>누계</th>
+                                            <th>취소</th>
                                         </tr>
                                         <tr>
-                                            <th>*카카오톡 채널명</th>
-                                            <td></td>
+                                            <td class="date_td">2022-05-16 12:00:00</td>
+                                            <td>LMS</td>
+                                            <td class="res_td" onclick="javascript:location.href='myPage-resMng-time-detail.html';"><u>10</u></td>
+                                            <td>10</td>
+                                            <td><button class="btn">예약취소</button></td>
                                         </tr>
                                         <tr>
-                                            <th>그룹 지정</th>
-                                            <td>
-                                                <select style="width:150px;">
-                                                    <option>그룹미지정</option>
-                                                </select>
-                                                <br>
-                                                <span>* 그룹을 지정할 경우, 그룹화된 시점 이후로 등록된 템플릿만 발송 가능합니다.</span>
-                                            </td>
+                                            <td class="date_td">2022-05-16 13:00:00</td>
+                                            <td>LMS</td>
+                                            <td class="res_td" onclick="javascript:location.href='myPage-resMng-time-detail.html';"><u>10</u></td>
+                                            <td>20</td>
+                                            <td><button class="btn">예약취소</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date_td">2022-05-16 14:00:00</td>
+                                            <td>LMS</td>
+                                            <td class="res_td" onclick="javascript:location.href='myPage-resMng-time-detail.html';"><u>10</u></td>
+                                            <td>30</td>
+                                            <td><button class="btn">예약취소</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date_td">2022-05-16 15:00:00</td>
+                                            <td>LMS</td>
+                                            <td class="res_td" onclick="javascript:location.href='myPage-resMng-time-detail.html';"><u>10</u></td>
+                                            <td>40</td>
+                                            <td><button class="btn">예약취소</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date_td" style="font-weight: bold;">합계</td>
+                                            <td class="date_td" colspan="4">40 건</td>
                                         </tr>
                                     </table>
 
+                                    <!-- <div class="row_wrapper" style="margin-top:20px;">
+                                        <span>1/2/3 .... /10</span>
+                                    </div> -->
+
                                 </div>
                             </div>
 
-                            <div class="row_wrapper">
-                                <button class="btn" style="width:150px;" onclick="javascript:alert('등록!');">등록</button>
-                                <button class="btn" style="margin-left:10px; width:150px;" onclick="javascript:alert('취소!');">취소</button>
-                            </div>
                         </div>
                     </div>
+
                 </div>
+
             </main>
         </div>
     </div>

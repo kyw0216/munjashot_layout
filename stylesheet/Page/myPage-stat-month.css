@@ -41,65 +41,6 @@ main .main_content .content_wrapper {
     background-color: #f7f7f7;
 }
 
-main .main_content .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 10px;
-    background-color: white;
-}
-
-main .main_content .container .sub_container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: #f7f7f7;
-    padding: 20px 0
-}
-
-main .main_content .container .sub_container .preview_div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    min-height: 500px;
-    border-radius: 50px;
-    background-color: white;
-}
-
-
-main .main_content .container .sub_container .temp_div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: #f7f7f7;
-}
-
-main .main_content .container .sub_container .temp_title{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #f7f7f7;
-    margin-left:20px;
-    min-width: 200px;
-}
-
-main .main_content .container .sub_container .temp_content{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #f7f7f7;
-    flex-grow: 1;
-}
 
 /* .menu_label {
     color: white;
@@ -129,7 +70,6 @@ main .main_content .container .sub_container .temp_content{
 .column {
     display: flex;
     flex-direction: column;
-    margin: 10px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -138,15 +78,94 @@ main .main_content .container .sub_container .temp_content{
 .row {
     display: flex;
     flex-grow: 1;
-    margin: 10px;
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
 }
 
+.stat_table {
+    width: 100%;
+}
+
+.stat_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    background-color: #cecece;
+    line-height: normal;
+}
+
+.stat_table td {
+    border: 1px solid #333;
+    padding: 2px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 20px;
+    line-height: normal;
+}
+
 .log_table {
     width: 100%;
+}
+
+.stat_table_small {
+    width: 100%;
+}
+
+.stat_table_small th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    font-size:14px;
+    width: 200px;
+    background-color: #cecece;
+    line-height: normal;
+}
+
+.stat_table_small td {
+    border: 1px solid #333;
+    padding: 2px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 20px;
+    line-height: normal;
+}
+
+.stat_table_detail {
+    width: 100%;
+    table-layout:fixed;
+}
+
+.stat_table_detail th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    /* width: 200px; */
+    background-color: #cecece;
+    line-height: normal;
+}
+
+.stat_table_detail td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    line-height: normal;
+    height: 40px;
+    white-space : nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
 }
 
 .log_table th {
@@ -168,34 +187,13 @@ main .main_content .container .sub_container .temp_content{
     height: 30px;
 }
 
-.btn_table {
-    width: 100%;
-}
-
-.btn_table th {
-    text-align: left;
-    font-weight: bold;
-    border: 1px solid #bdbdbd;
-    padding: 10px;
-    text-align: center;
-    width: 200px;
-    background-color: #cecece;
-}
-
-.btn_table td {
-    border: 1px solid #333;
-    padding: 10px;
-    background-color: #fff;
-    text-align: center;
-    border: 1px solid #bdbdbd;
-    height: 30px;
-}
-
 .label_info {
     background-color: #bebebe;
     padding: 10px 30px;
-    margin-right: 10px;
     cursor: pointer;
+    width:100%;
+    text-align: center;
+    border: 1px solid #888888;
 }
 
 .label_info.on{
@@ -203,6 +201,21 @@ main .main_content .container .sub_container .temp_content{
     color:white;
     font-weight: bold;
 }
+
+.sublabel_info {
+    background-color: #bebebe;
+    padding: 10px 30px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #888888;
+}
+
+.sublabel_info.on{
+    background-color: #888888;
+    color:white;
+    font-weight: bold;
+}
+
 
 /* ul li태그에 리스트 스타일을 없앰 */
 li {
@@ -291,6 +304,57 @@ ul {
     background: orange;
     transition: ease 1s;
 }
+
+
+main .main_content1 .container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+main .main_content1 .tab_title {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+main .main_content1 .tab_title li {
+    display: flex;
+    /* flex-grow: 1; */
+    justify-content: center;
+    list-style: none;
+    padding: 15px 15px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #bebebe;
+}
+
+main .main_content1 .tab_title li.on {
+    background-color: #bebebe;
+    font-weight: bold;
+}
+
+main .main_content1 .tab_cont {
+    clear: both;
+    border: 1px solid #dedede;
+    height: 100%;
+    /* background-color: #cecece; */
+}
+
+main .main_content1 .tab_cont .tab_in_content.on {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+main .main_content1 .tab_cont .tab_in_content {
+    display: none;
+}
+
 
 
 @media (max-width: 1850px) {

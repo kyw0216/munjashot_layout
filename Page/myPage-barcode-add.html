@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>마이 페이지</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src="../javascript/external/jquery-3.5.1.min.js"></script>
+    <script src="../javascript/Common/modal.js"></script>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/base.css'>
+
+    <script src='../javascript/base/util.js'></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-regular.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-solid.min.css">
+
+    <script src="../javascript/external/swiper-4.5.1.min.js"></script>
+    <link rel="stylesheet" href="../stylesheet/external/swiper-4.5.1.min.css">
+
+    <script type="text/javascript" src="../javascript/external/popper-1.16.0.min.js"></script>
+    <script type="text/javascript" src="../javascript/external/tippy-5.1.1-bundle.iife.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#header").load("header.html"); //헤더 인클루드
+            $("#footer").load("footer.html"); //푸터부분 인클루드
+            $("#leftBar_div").load("leftBar.html"); //푸터부분 인클루드
+            $("#rightBar_div").load("rightBar.html"); //푸터부분 인클루드
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- <div data-include-path="header.html"></div> -->
+
+    <!-- Body -->
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/myPage-barcode.css'>
+    <script src='../javascript/Page/myPage-barcode.js'></script>
+
+    <div id="main-body-wrapper" style="min-height: 50% !important;">
+        <div id="main-body" style="display: flex; justify-content: center; align-items: center;">
+            <main class="body-section">
+
+                <div class="main_content main_content1">
+                    <div class="wrapper clearfix">
+
+                        <div class="content_wrapper">
+
+                            <div class="container">
+
+                                <div class="sub_container">
+                                    <div class="info_div">
+
+                                        <div class="column" style="background-color: #eeeeee; align-items: flex-start; line-height: normal; padding:10px;">
+                                            <span>1. 바코드 제목 입력(메시지에는 노출되지 않음)</span>
+                                            <span>2. 바코드 유형 선택 및 샘플 값 입력</span>
+                                            <span>3. 바코드 발송 방식 선택 (바코드+이미지의 경우, 200kb이하의 JPG파일 첨부</span>
+                                            <span>4. [바코드 영영을 지정하기]를 클릭 후 바코드 삽입위치 지정</span>
+                                            <span>5. [바코드 샘플보기]를 클릭하여 최종적으로 이미지 확인</span>
+                                            <span>6. 수신번호, 발신번호 입력 후 발송(테스트 발송도 과금 부과 됨.)</span>
+                                            <span>7. 바코드를 수신한 핸드폰으로 실제 환경에서 테스트 진행</span>
+                                        </div>
+
+                                        <div class="row" style="justify-content: flex-start;">
+                                            <span style="font-size:20px;font-weight: bold;">바코드 정보 입력</span>
+                                        </div>
+
+                                        <table class="barcode_table">
+                                            <tr>
+                                                <th>바코드 제목</th>
+                                                <td><input class="ctrl-input" placeholder="바코드 제목을 입력해주세요."></td>
+                                            </tr>
+                                            <tr>
+                                                <th>바코드 유형</th>
+                                                <td>
+                                                    <select id="BAR_TYPE" name="BAR_TYPE">
+                                                        <option value="">=== 바코드 유형 선택 ===</option>
+                                                        <option value="CODE128">CODE128(최대 80자리 영문/숫자)</option>
+                                                        <option value="QRCODE">QRCODE(최대 200byte)</option>
+                                                        <option value="EAN13">EAN13(EAN13 번호 세칙을 만족하는 13자리 숫자)</option>
+                                                        <option value="ITF">ITF(12~20자리(짝수개) 숫자)</option>
+                                                        <option value="etc">기타</option>
+                                                    </select>
+                                                    <br>
+                                                    <span style="color:red; font-size:12px;">※ 바코드 유형을 선택해주세요.</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>바코드 샘플값</th>
+                                                <td><input class="ctrl-input" placeholder="바코드 샘플 값을 입력해주세요."></td>
+                                            </tr>
+                                            <tr>
+                                                <th>바코드 발송 방식</th>
+                                                <td>
+                                                    <input type="radio" id="img_barcode_chk" name="bar_type_chk"><label for="img_barcode_chk" style="margin-left:5px;">이미지+바코드 발송</label>
+                                                    <input type="radio" id="barcode_chk" name="bar_type_chk" style="margin-left:10px;"><label for="barcode_chk" style="margin-left:5px;">바코드만 발송</label>
+                                                    <br><br>
+                                                    <input type="checkbox"><label style="margin-left:5px;">바코드 번호 표기</label><br>
+                                                    <span style="color:red; font-size:12px;">※ 바코드 하단에 나오는 바코드번호를 표기합니다.</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>파일첨부</th>
+                                                <td>
+                                                    <input type="file" style="display: block;">
+                                                    <span style="color:red; font-size:12px;">※ 바코드 발송 방식이 '이미지+바코드'인 경우만 가능합니다.</span>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <div class="row" style="margin:10px 0;">
+                                            <button class="btn" style="flex-grow: 1;">바코드 영역 지정하기</button>
+                                            <button class="btn" style="flex-grow: 1; margin-left:10px;">바코드 샘플보기</button>
+                                        </div>
+
+                                        <div class="row" style="margin:0;">
+                                            <div class="row" style="justify-content:flex-start;margin:0;"><span style="font-size:20px;font-weight: bold;">바코드 테스트 발송</span></div>
+                                            <div class="row" style="justify-content:flex-end;margin:0;"><span style="font-size:13px;color: red; font-weight: bold;">(* 테스트 발송도 과금됩니다.)</span></div>
+                                        </div>
+
+                                        <table class="barcode_table" style="margin-top:10px;">
+                                            <tr>
+                                                <th>수신번호</th>
+                                                <td><input class="ctrl-input" placeholder="수신 번호를 입력해주세요."></td>
+                                            </tr>
+                                            <tr>
+                                                <th>발신번호</th>
+                                                <td>
+                                                    <select style="width: 100%;">
+                                                        <option value="15992320">15992320</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <div class="row">
+                                            <button class="btn" style="flex-grow: 1;" onclick="javscript:alert('테스트 발송하기');">테스트 발송하기</button>
+                                        </div>
+
+                                        <div class="row_wrapper">
+                                            <button class="btn" style="flex-grow: 1;" onclick="javscript:alert('초기화!');">초기화</button>
+                                            <button class="btn" style="flex-grow: 1; margin-left:10px;" onclick="javscript:alert('등록!');">등 록</button>
+                                            <button class="btn" style="flex-grow: 1; margin-left:10px;" onclick="javscript:location.href='myPage-barcode.html'">목 록</button>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="preview_div">미리보기</div>
+
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="title">
+                <h2>모달</h2>
+            </div>
+            <div class="close-area">X</div>
+            <div class="content" style="display: flex; justify-content: center; align-items: center;">
+                <p>모달입니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- leftBar -->
+    <div id="leftBar_div"></div>
+
+    <!-- rightBar -->
+    <div id="rightBar_div"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- <div data-include-path="footer.html"></div> -->
+</body>
+
+</html>

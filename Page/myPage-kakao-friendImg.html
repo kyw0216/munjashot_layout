@@ -47,8 +47,8 @@
 
     <!-- Body -->
 
-    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/myPage-kakao-alim.css'>
-    <script src='../javascript/Page/myPage-kakao-alim.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/myPage-kakao-friendImg.css'>
+    <script src='../javascript/Page/myPage-kakao-friendImg.js'></script>
 
     <div id="main-body-wrapper" style="min-height: 50% !important;">
         <div id="main-body" style="display: flex; justify-content: center; align-items: center;">
@@ -67,26 +67,15 @@
 
                             <div class="row_wrapper" style="justify-content: flex-start;">
                                 <label class="label_info" onclick="javascript:location.href='myPage-kakao-profile.html';">발신 프로필 관리</label>
-                                <label class="label_info on" onclick="javascript:location.href='myPage-kakao-alim.html';">알림톡 템플릿 관리</label>
-                                <label class="label_info" onclick="javascript:location.href='myPage-kakao-friendImg.html';">친구톡 이미지 관리</label>
+                                <label class="label_info" onclick="javascript:location.href='myPage-kakao-alim.html';">알림톡 템플릿 관리</label>
+                                <label class="label_info on" onclick="javascript:location.href='myPage-kakao-friendImg.html';">친구톡 이미지 관리</label>
                             </div>
                                 
                             <hr style="margin:12px;width: 100%;">
 
-                            <div class="row_wrapper" style="background-color: white; padding:5px;">
-                                <div style="display: flex; align-items: center; flex-grow: 1;">
-                                    <label style="font-weight: bold; margin-left:10px; padding:0 20px;">발신프로필</label>
-                                    <select style="margin-left:10px; width:200px;"><option>선택</option></select>
-                                </div>
-                                <div style="display: flex; align-items: center; justify-content: flex-start; flex-grow: 1;">
-                                    <label style="font-weight: bold; margin-left:10px; padding:0 20px;">발신프로필/그룹</label>
-                                    <select style="margin-left:10px; width:200px;"><option>선택</option></select>
-                                </div>
-                            </div>
-
                             <div class="row_wrapper" style="justify-content: flex-start;">
                                 <div class="row" style="justify-content: flex-start; width: 30%;;">
-                                    <button class="btn" style="width:200px;" onclick="javascript:location.href='myPage-kakao-alim-addTemp.html'">등록</button>
+                                    <button class="btn" style="width:200px;" onclick="javascript:location.href='myPage-kakao-friendImg-addImg.html'">등록</button>
                                 </div>
                                 
                                 <div class="row" style="justify-content: flex-end;">
@@ -95,13 +84,11 @@
                                         <option>상태전체</option>
                                         <option>엠포심사중</option>
                                         <option>카카오심사중</option>
-                                        <option>승인</option>
                                         <option>반려</option>
-                                        <option>숨김</option>
-                                        <option>삭제</option>
+                                        <option>등록완료</option>
                                     </select>
                                     
-                                    <input type="search" placeholder="템플릿 코드, 템플릿명" style="margin-left:10px;">
+                                    <input class="ctrl-input" type="search" placeholder="이미지 제목" style="margin-left:10px; width:auto;">
 
                                     <button class="btn" style="margin-left:10px;">검색</button>
 
@@ -115,22 +102,19 @@
                                     <table class="log_table">
                                         <tr>
                                             <th>번호</th>
-                                            <th>템플릿코드</th>
-                                            <th>템플릿명</th>
+                                            <th>이미지 제목</th>
+                                            <th>유형</th>
                                             <th>상태</th>
                                             <th>등록요청일</th>
-                                            <th>처리일</th>
                                             <th>관리</th>
                                         </tr>
                                         <tr>
-                                            <td>프로필1</td>
-                                            <td>EMFOPLUS</td>
-                                            <td>TEST</td>
-                                            <td>승인완료</td>
-                                            <td>21/01/01</td>
+                                            <td>1</td>
+                                            <td>이미지제목</td>
+                                            <td>와이드</td>
+                                            <td>등록완료</td>
                                             <td>21/01/01</td>
                                             <td>
-                                                <button class="btn">숨김</button>
                                                 <button class="btn">삭제</button>
                                             </td>
                                         </tr>
@@ -141,19 +125,8 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td></td>
                                         </tr>
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
@@ -168,19 +141,8 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td></td>
                                         </tr>
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
@@ -195,6 +157,13 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
                                             <td></td>
                                         </tr>
                                         <tr>
@@ -204,10 +173,16 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td></td>
                                         </tr>
                                         <tr>
                                             <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
                                             <td></td>
                                             <td></td>
                                             <td></td>

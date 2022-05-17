@@ -33,6 +33,9 @@
                         style="position:relative; top:0; left:0;" dir="ltr">
                         <div class="gs-left-bar-inner">
                             <div class="gs-left-bar-info">
+
+
+<!-- 
                                 <table>
 
                                     <tbody>
@@ -49,12 +52,42 @@
                                         <tr>
                                             <th>사용요금제</th>
                                             <td><a href="/info/price" class="pricePlanName">기본</a></td>
-                                            <!-- 요금제 페이지로 이동(아직 링크x) -->
+                                        </tr>
+
+
+                                    </tbody>
+                                </table> -->
+
+                                <table>
+
+                                    <tbody>
+                                        <tr>
+                                            <th>잔액</th>
+                                            <td>
+                                                <a href="myPage-charge-log.html" class="userCash">0</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>예약건수</th>
+                                            <td><a href="myPage-resMng.html" class="userPoint">200</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>미확인팩스</th>
+                                            <td><a href="myPage-fax-receive.html" class="userPoint">200</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>자동 로그아웃</th>
+                                            <td>
+                                                59:00:23
+                                                <br>
+                                                <button class="btn" style="padding:6px; font-size: 12px;">로그아웃 연장</button>
+                                            </td>
                                         </tr>
 
 
                                     </tbody>
                                 </table>
+
                             </div>
                             <div class="gs-left-bar-transmit">
                                 <div class="tit">전송가능여부
@@ -162,7 +195,7 @@
                                                     <div class="circle cir03"></div>
                                                 </div>
                                             </a>
-                                            <a href="javascript:corpMsg();" class="clearfix lnb3-3">
+                                            <a href="myPage-kakao-friendImg.html" class="clearfix lnb3-3">
                                                 <p>친구톡 이미지 관리</p>
                                                 <div class="loader">
                                                     <div class="circle cir01"></div>
@@ -175,7 +208,7 @@
                                 </div>
                                 <div class="lnb-list-item">
                                     <dl class="lnb-list-item-inner clearfix lnb4">
-                                        <a href="/address" class="lnb-tit">
+                                        <a href="myPage-barcode.html" class="lnb-tit">
                                             <i class="xi-barcode icon"></i>
                                             <p>바코드 관리</p>
                                         </a>
@@ -183,7 +216,7 @@
                                 </div>
                                 <div class="lnb-list-item">
                                     <dl class="lnb-list-item-inner clearfix lnb5">
-                                        <a href="/address" class="lnb-tit">
+                                        <a href="mypage-address.html" class="lnb-tit">
                                             <i class="xi-users-o icon"></i>
                                             <p>주소록 관리</p>
                                         </a>
@@ -197,7 +230,7 @@
                                             <i class="xi-angle-up-min arrow"></i>
                                         </dt>
                                         <dd class="lnb-con" style="display: none;">
-                                            <a href="/message/list" class="clearfix lnb6-1">
+                                            <a href="myPage-unsubscribe-080.html" class="clearfix lnb6-1">
                                                 <p>080번호 관리</p>
                                                 <div class="loader">
                                                     <div class="circle cir01"></div>
@@ -205,7 +238,7 @@
                                                     <div class="circle cir03"></div>
                                                 </div>
                                             </a>
-                                            <a href="/message/reservation" class="clearfix lnb6-2">
+                                            <a href="myPage-unsubscribe-list.html" class="clearfix lnb6-2">
                                                 <p>수신거부 리스트</p>
                                                 <div class="loader">
                                                     <div class="circle cir01"></div>
@@ -213,14 +246,14 @@
                                                     <div class="circle cir03"></div>
                                                 </div>
                                             </a>
-                                            <a href="/refuse" class="clearfix lnb6-3">
+                                            <!-- <a href="/refuse" class="clearfix lnb6-3">
                                                 <p>관리</p>
                                                 <div class="loader">
                                                     <div class="circle cir01"></div>
                                                     <div class="circle cir02"></div>
                                                     <div class="circle cir03"></div>
                                                 </div>
-                                            </a>
+                                            </a> -->
                                         </dd>
                                     </dl>
                                 </div>
@@ -232,7 +265,7 @@
                                             <i class="xi-angle-up-min arrow"></i>
                                         </dt>
                                         <dd class="lnb-con" style="display: none;">
-                                            <a href="/message/list" class="clearfix lnb7-1">
+                                            <a href="myPage-stat-month-msg.html" class="clearfix lnb7-1">
                                                 <p>월별통계</p>
                                                 <div class="loader">
                                                     <div class="circle cir01"></div>
@@ -240,7 +273,7 @@
                                                     <div class="circle cir03"></div>
                                                 </div>
                                             </a>
-                                            <a href="/message/reservation" class="clearfix lnb7-2">
+                                            <a href="myPage-send-log-msg.html" class="clearfix lnb7-2">
                                                 <p>전송내역</p>
                                                 <div class="loader">
                                                     <div class="circle cir01"></div>
@@ -248,8 +281,16 @@
                                                     <div class="circle cir03"></div>
                                                 </div>
                                             </a>
-                                            <a href="/refuse" class="clearfix lnb7-3">
+                                            <a href="myPage-resMng.html" class="clearfix lnb7-3">
                                                 <p>예약내역</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+                                            <a href="myPage-resCancelMng.html" class="clearfix lnb7-3">
+                                                <p>예약취소내역</p>
                                                 <div class="loader">
                                                     <div class="circle cir01"></div>
                                                     <div class="circle cir02"></div>
@@ -261,10 +302,29 @@
                                 </div>
                                 <div class="lnb-list-item">
                                     <dl class="lnb-list-item-inner clearfix lnb8">
-                                        <a href="/address" class="lnb-tit">
+                                        <dt class="lnb-tit">
                                             <i class="xi-fax icon"></i>
                                             <p>팩스 수신함</p>
-                                        </a>
+                                            <i class="xi-angle-up-min arrow"></i>
+                                        </dt>
+                                        <dd class="lnb-con" style="display: none;">
+                                            <a href="myPage-fax-addReceiveNum.html" class="clearfix lnb8-1">
+                                                <p>수신번호 발급</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+                                            <a href="myPage-fax-receive.html" class="clearfix lnb8-2">
+                                                <p>받은 팩스함</p>
+                                                <div class="loader">
+                                                    <div class="circle cir01"></div>
+                                                    <div class="circle cir02"></div>
+                                                    <div class="circle cir03"></div>
+                                                </div>
+                                            </a>
+                                        </dd>
                                     </dl>
                                 </div>
                                 <div class="lnb-list-item">

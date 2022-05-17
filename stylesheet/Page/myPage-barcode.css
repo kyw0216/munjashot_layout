@@ -57,7 +57,7 @@ main .main_content .container .sub_container{
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
     padding: 20px 0
 }
 
@@ -66,20 +66,20 @@ main .main_content .container .sub_container .preview_div{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    min-height: 500px;
-    border-radius: 50px;
-    background-color: white;
+    width: 100%;
+    min-height: 800px;
+    background-color: #eeeeee;
+    margin-left:10px;
 }
 
 
-main .main_content .container .sub_container .temp_div{
+main .main_content .container .sub_container .info_div{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
 }
 
 main .main_content .container .sub_container .temp_title{
@@ -87,7 +87,7 @@ main .main_content .container .sub_container .temp_title{
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
     margin-left:20px;
     min-width: 200px;
 }
@@ -97,7 +97,7 @@ main .main_content .container .sub_container .temp_content{
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
     flex-grow: 1;
 }
 
@@ -155,7 +155,7 @@ main .main_content .container .sub_container .temp_content{
     border: 1px solid #bdbdbd;
     padding: 10px;
     text-align: center;
-    width: 200px;
+    width: 180px;
     background-color: #cecece;
 }
 
@@ -168,26 +168,27 @@ main .main_content .container .sub_container .temp_content{
     height: 30px;
 }
 
-.btn_table {
+.barcode_table {
     width: 100%;
 }
 
-.btn_table th {
+.barcode_table th {
     text-align: left;
     font-weight: bold;
     border: 1px solid #bdbdbd;
     padding: 10px;
-    text-align: center;
-    width: 200px;
-    background-color: #cecece;
+    text-align: left;
+    width: 160px;
+    min-width: 160px;
+    background-color: #eeeeee;
 }
 
-.btn_table td {
+.barcode_table td {
     border: 1px solid #333;
     padding: 10px;
     background-color: #fff;
-    text-align: center;
-    border: 1px solid #bdbdbd;
+    text-align: left;
+    border: 1px solid #eeeeee;
     height: 30px;
 }
 

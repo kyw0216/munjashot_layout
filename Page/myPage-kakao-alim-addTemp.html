@@ -68,7 +68,7 @@
                             <div class="row_wrapper" style="justify-content: flex-start;">
                                 <label class="label_info" onclick="javascript:location.href='myPage-kakao-profile.html';">발신 프로필 관리</label>
                                 <label class="label_info on" onclick="javascript:location.href='myPage-kakao-alim.html';">알림톡 템플릿 관리</label>
-                                <label class="label_info">친구톡 이미지 관리</label>
+                                <label class="label_info" onclick="javascript:location.href='myPage-kakao-friendImg.html';">친구톡 이미지 관리</label>
                             </div>
                                 
                             <hr style="margin:12px;width: 100%;">
@@ -155,176 +155,62 @@
                                                 <span style="font-weight: bold;">템플릿 내용 *</span>
                                             </div>
                                             <div class="temp_content" style="flex-grow:0;flex-basis:400px;">
-                                                <textarea style="width:400px; height:100px;resize: none;">asdf</textarea>
+                                                <textarea style="width:400px; height:100px;resize: none;" onkeyup="check_cnt('content', this)" placeholder="템플릿 내용을 입력하세요. 수신번호마다 다른 메시지를 보낼 경우 변수를 설정합니다.
+예)#{고객명}님의 님의 주문이 완료되었습니다.
+
+※ 변수명 설정 시 주의사항 : 값이 다른 경우 변수명 다르게 설정
+(O) 주문일 : #{주문날짜} / 배송일 : #{배송날짜}
+(X) 주문일 : #{날짜} / 배송일 : #{날짜}"></textarea>
                                             </div>
 
                                             <div class="row" style="flex-basis: 0; margin:0;">
-                                                <div class="column">
-                                                    <div class="row" style="align-items: flex-start; justify-content: flex-start; margin:0;">
-                                                        asdf
-                                                    </div>
-                                                    <div class="row" style="flex-basis: 0; margin:0;">
+                                                <div class="column" style="align-items: flex-start; justify-content: flex-start;">
+                                                    <label id="tmeplete_content_cnt">0/1000자</label>
+                                                    <span>변수형식: <span style="color:skyblue">#{변수명}</span></span>
                                                     
-                                                    </div>
+                                                    <button class="btn" style="margin-top:20px;">이모티콘 삽입</button>
                                                 </div>
                                             </div>
-                                            
                                         </div>
 
-                                    </div>
-                                    
-                                    <div class="preview_div">asdf</div>
+                                        <div class="row" style="margin: 0; justify-content: flex-start; padding: 10px 0px;">
+                                            <div class="temp_title">
+                                                <span style="font-weight: bold;">버튼</span><button class="btn" style="margin-left:10px;" onclick="">+추가</button>
+                                            </div>
+                                        </div>
 
-                                </div>
-
-    
-                                <div class="row_wrapper" style="justify-content: flex-start;">
-                                    <div class="row" style="justify-content: flex-start; width: 30%;;">
-                                        <button class="btn" style="width:200px;">등록</button>
-                                    </div>
-                                    
-                                    <div class="row" style="justify-content: flex-end;">
-                                        <input type="date"> - <input type="date"> 
-                                        <select style="margin-left:10px; width:150px;">
-                                            <option>상태전체</option>
-                                            <option>엠포심사중</option>
-                                            <option>카카오심사중</option>
-                                            <option>승인</option>
-                                            <option>반려</option>
-                                            <option>숨김</option>
-                                            <option>삭제</option>
-                                        </select>
+                                        <div class="row" style="margin: 0; justify-content: flex-start; padding: 10px 0px; padding:0 20px;">
+                                            <table class="btn_table">
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>버튼타입</th>
+                                                    <th>버튼명</th>
+                                                    <th>버튼링크</th>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4">버튼을 추가할 수 있습니다.</td>
+                                                </tr>
+                                            </table>
+                                        </div>
                                         
-                                        <input type="search" placeholder="템플릿 코드, 템플릿명" style="margin-left:10px;">
-    
-                                        <button class="btn" style="margin-left:10px;">검색</button>
-    
+
                                     </div>
+                                    
+                                    <div class="preview_div">미리보기</div>
+
                                 </div>
-                                
-                                <div class="column_wrapper">
-                                    <div class="column_wrapper"
-                                        style="justify-content: flex-start; align-items: flex-start;">
     
-                                        <table class="log_table">
-                                            <tr>
-                                                <th>번호</th>
-                                                <th>템플릿코드</th>
-                                                <th>템플릿명</th>
-                                                <th>상태</th>
-                                                <th>등록요청일</th>
-                                                <th>처리일</th>
-                                                <th>관리</th>
-                                            </tr>
-                                            <tr>
-                                                <td>프로필1</td>
-                                                <td>EMFOPLUS</td>
-                                                <td>TEST</td>
-                                                <td>승인완료</td>
-                                                <td>21/01/01</td>
-                                                <td>21/01/01</td>
-                                                <td>
-                                                    <button class="btn">숨김</button>
-                                                    <button class="btn">삭제</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                        </table>
-    
-                                        <div class="row_wrapper" style="margin-top:20px;">
-                                            <span>1/2/3 .... /10</span>
-                                        </div>
-    
+                                <div class="row_wrapper">
+                                    <div class="row">
+                                        <button class="btn" style="width:200px;" onclick="javscript:alert('등록!');">등록</button>
+                                        <button class="btn" style="width:200px; margin-left:30px;" onclick="javscript:location.href='myPage-kakao-alim.html'">뒤로가기</button>
                                     </div>
                                 </div>
 
                             </div>
-
                         </div>
                     </div>
-
                 </div>
-
             </main>
         </div>
     </div>

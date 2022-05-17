@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>마이 페이지</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src="../javascript/external/jquery-3.5.1.min.js"></script>
+    <script src="../javascript/Common/modal.js"></script>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/base.css'>
+
+    <script src='../javascript/base/util.js'></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-regular.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-solid.min.css">
+
+    <script src="../javascript/external/swiper-4.5.1.min.js"></script>
+    <link rel="stylesheet" href="../stylesheet/external/swiper-4.5.1.min.css">
+
+    <script type="text/javascript" src="../javascript/external/popper-1.16.0.min.js"></script>
+    <script type="text/javascript" src="../javascript/external/tippy-5.1.1-bundle.iife.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#header").load("header.html"); //헤더 인클루드
+            $("#footer").load("footer.html"); //푸터부분 인클루드
+            $("#leftBar_div").load("leftBar.html"); //푸터부분 인클루드
+            $("#rightBar_div").load("rightBar.html"); //푸터부분 인클루드
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- <div data-include-path="header.html"></div> -->
+
+    <!-- Body -->
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/myPage-send-log.css'>
+    <script src='../javascript/Page/myPage-send-log.js'></script>
+
+    <div id="main-body-wrapper" style="min-height: 50% !important;">
+        <div id="main-body" style="display: flex; justify-content: center; align-items: center;">
+            <main class="body-section">
+
+                <div class="main_content main_content1">
+                    <div class="wrapper clearfix">
+
+                        <div class="content_wrapper">
+
+                            <div class="column_wrapper">
+                                <div class="row_wrapper" style="justify-content: flex-start;">
+                                    <span style="font-size:24px;">전송내역 <i class="xi-help icon" style="cursor: pointer;" data-tippy-content="
+                                        <h1>전송내역 이란?</h1>
+                                        <br><br>
+                                        요청건별 전송내역을 한눈에 간략하게 확인 가능합니다.<br>
+                                        <span style='color:red;'>● 전송내역에 테스트 건수는 집계되지 않습니다.</span><br>
+                                        ● 정확한 건수 확인은 전송통계를 확인해주세요.
+                                        " data-tippy-placement="right"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="row_wrapper" style="justify-content: flex-start;">
+                                <label class="label_info" onclick="javascript:location.href='myPage-send-log-msg.html';">문자</label>
+                                <label class="label_info" onclick="javascript:location.href='myPage-send-log-kakao.html';">카카오</label>
+                                <label class="label_info on" onclick="javascript:location.href='myPage-send-log-barcode.html';">바코드</label>
+                                <label class="label_info" onclick="javascript:location.href='myPage-send-log-global.html';">해외문자</label>
+                                <label class="label_info" onclick="javascript:location.href='myPage-send-log-fax.html';">팩스</label>
+                            </div>
+
+                            <div class="container">
+                                <!-- <ul class="tab_title">
+                                    <li class="on">전체</li>
+                                    <li>SMS</li>
+                                    <li>LMS</li>
+                                    <li>MMS</li>
+                                </ul> -->
+                                <div class="tab_cont">
+                                    <div class="tab_in_content all_content on">
+                                        <div class="column_wrapper">
+                                            <!-- <div class="column_wrapper" style="justify-content: center; align-items: flex-start; line-height: normal;">
+                                                <span>* 메시지 결과값 수신 까지 최대 48시간이 소요 됩니다.</span>
+                                                <span>* 메시지의 내용은 발송일로부터 6개월 간 조회 가능 합니다.</span>
+                                            </div> -->
+                
+                                            <div class="row_wrapper" style="justify-content: flex-start;">
+                                                <div class="row" style="justify-content: flex-start;">
+                                                    <input type="date"> - <input type="date">
+                                                </div>
+                                                <div class="row" style="justify-content: flex-end; align-items: center;">
+                                                    <select style="margin-right:10px;">
+                                                        <option>수신번호</option>
+                                                        <option>발신번호</option>
+                                                        <option>문자내용</option>
+                                                        <option>문자제목</option>
+                                                    </select>
+                                                    <input class="ctrl-input" type="text" style="width: 200px;" placeholder="">
+                                                    <button class="btn" style="margin-left: 10px;">검색</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="row_wrapper" style="justify-content: flex-end;">
+                                                <button class="btn" style="margin-left: 10px;">엑셀 다운로드</button>
+                                            </div>
+                                            
+                                            <div class="column_wrapper">
+                                                <div class="column_wrapper"
+                                                    style="justify-content: flex-start; align-items: flex-start;">
+                
+                                                    <table class="log_table">
+                                                        <tr>
+                                                            <th>전송일시</th>
+                                                            <th>메시지내용</th>
+                                                            <th>코드 유형</th>
+                                                            <th>전송건수</th>
+                                                            <th>성공건수</th>
+                                                            <th>실패건수</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2022-05-01 00:00<br>~<br>2022-05-01 00:00</td>
+                                                            <td><u style="color:blue; cursor: pointer;" onclick="javascript:location.href='myPage-send-log-barcode-detail.html'">내용</u></td>
+                                                            <td>QR</td>
+                                                            <td>20</td>
+                                                            <td>20</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2022-05-01 00:00<br>~<br>2022-05-01 00:00</td>
+                                                            <td><u style="color:blue; cursor: pointer;" onclick="javascript:location.href='myPage-send-log-barcode-detail.html'">내용</u></td>
+                                                            <td>QR</td>
+                                                            <td>20</td>
+                                                            <td>20</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2022-05-01 00:00<br>~<br>2022-05-01 00:00</td>
+                                                            <td><u style="color:blue; cursor: pointer;" onclick="javascript:location.href='myPage-send-log-barcode-detail.html'">내용</u></td>
+                                                            <td>QR</td>
+                                                            <td>20</td>
+                                                            <td>20</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2022-05-01 00:00<br>~<br>2022-05-01 00:00</td>
+                                                            <td><u style="color:blue; cursor: pointer;" onclick="javascript:location.href='myPage-send-log-barcode-detail.html'">내용</u></td>
+                                                            <td>QR</td>
+                                                            <td>20</td>
+                                                            <td>20</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2022-05-01 00:00<br>~<br>2022-05-01 00:00</td>
+                                                            <td><u style="color:blue; cursor: pointer;" onclick="javascript:location.href='myPage-send-log-barcode-detail.html'">내용</u></td>
+                                                            <td>QR</td>
+                                                            <td>20</td>
+                                                            <td>20</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2022-05-01 00:00<br>~<br>2022-05-01 00:00</td>
+                                                            <td><u style="color:blue; cursor: pointer;" onclick="javascript:location.href='myPage-send-log-barcode-detail.html'">내용</u></td>
+                                                            <td>QR</td>
+                                                            <td>20</td>
+                                                            <td>20</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2022-05-01 00:00<br>~<br>2022-05-01 00:00</td>
+                                                            <td><u style="color:blue; cursor: pointer;" onclick="javascript:location.href='myPage-send-log-barcode-detail.html'">내용</u></td>
+                                                            <td>QR</td>
+                                                            <td>20</td>
+                                                            <td>20</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2022-05-01 00:00<br>~<br>2022-05-01 00:00</td>
+                                                            <td><u style="color:blue; cursor: pointer;" onclick="javascript:location.href='myPage-send-log-barcode-detail.html'">내용</u></td>
+                                                            <td>QR</td>
+                                                            <td>20</td>
+                                                            <td>20</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2022-05-01 00:00<br>~<br>2022-05-01 00:00</td>
+                                                            <td><u style="color:blue; cursor: pointer;" onclick="javascript:location.href='myPage-send-log-barcode-detail.html'">내용</u></td>
+                                                            <td>QR</td>
+                                                            <td>20</td>
+                                                            <td>20</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2022-05-01 00:00<br>~<br>2022-05-01 00:00</td>
+                                                            <td><u style="color:blue; cursor: pointer;" onclick="javascript:location.href='myPage-send-log-barcode-detail.html'">내용</u></td>
+                                                            <td>QR</td>
+                                                            <td>20</td>
+                                                            <td>20</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="row_wrapper" style="height:auto;">
+                                                <span>1/2/3 .... /10</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="title">
+                <h2>모달</h2>
+            </div>
+            <div class="close-area">X</div>
+            <div class="content" style="display: flex; justify-content: center; align-items: center;">
+                <p>모달입니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- leftBar -->
+    <div id="leftBar_div"></div>
+
+    <!-- rightBar -->
+    <div id="rightBar_div"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- <div data-include-path="footer.html"></div> -->
+</body>
+
+</html>

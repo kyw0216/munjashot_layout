@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>마이 페이지</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src="../javascript/external/jquery-3.5.1.min.js"></script>
+    <script src="../javascript/Common/modal.js"></script>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/base.css'>
+
+    <script src='../javascript/base/util.js'></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-regular.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-solid.min.css">
+
+    <script src="../javascript/external/swiper-4.5.1.min.js"></script>
+    <link rel="stylesheet" href="../stylesheet/external/swiper-4.5.1.min.css">
+
+    <script type="text/javascript" src="../javascript/external/popper-1.16.0.min.js"></script>
+    <script type="text/javascript" src="../javascript/external/tippy-5.1.1-bundle.iife.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#header").load("header.html"); //헤더 인클루드
+            $("#footer").load("footer.html"); //푸터부분 인클루드
+            $("#leftBar_div").load("leftBar.html"); //푸터부분 인클루드
+            $("#rightBar_div").load("rightBar.html"); //푸터부분 인클루드
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- <div data-include-path="header.html"></div> -->
+
+    <!-- Body -->
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/myPage-kakao-friendImg.css'>
+    <script src='../javascript/Page/myPage-kakao-friendImg.js'></script>
+
+    <div id="main-body-wrapper" style="min-height: 50% !important;">
+        <div id="main-body" style="display: flex; justify-content: center; align-items: center;">
+            <main class="body-section">
+
+                <div class="main_content main_content1">
+                    <div class="wrapper clearfix">
+
+                        <div class="content_wrapper">
+
+                            <div class="column_wrapper">
+                                <div class="row_wrapper" style="justify-content: flex-start;">
+                                    <span style="font-size:24px;;">카카오 발송 관리</span>
+                                </div>
+                            </div>
+
+                            <div class="row_wrapper" style="justify-content: flex-start;">
+                                <label class="label_info" onclick="javascript:location.href='myPage-kakao-profile.html';">발신 프로필 관리</label>
+                                <label class="label_info" onclick="javascript:location.href='myPage-kakao-alim.html';">알림톡 템플릿 관리</label>
+                                <label class="label_info on" onclick="javascript:location.href='myPage-kakao-friendImg.html';">친구톡 이미지 관리</label>
+                            </div>
+                                
+                            <hr style="margin:12px;width: 100%;">
+
+                            <div class="container">
+
+                                <div class="row" style="border-bottom: 1px solid black; margin: 0;">
+                                    <div class="row" style="justify-content: flex-start; margin: 0;">
+                                        <span style="font-weight: bold;">● 이미지 등록 1</span>
+                                    </div>
+                                    <div class="row" style="justify-content: flex-end;">
+                                        <button class="btn">+ 입력란 추가</button>
+                                        <button class="btn" style="margin-left:10px;">- 입력란 삭제</button>
+                                    </div>
+                                </div>
+
+                                <div class="sub_container">
+                                    <div class="temp_div">
+
+                                        <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
+                                            <div class="temp_title">
+                                                <span style="font-weight: bold;">구분</span>
+                                            </div>
+                                            <div class="temp_content">
+                                                <input type="radio" id="friend_default" name="friendImg_type" class="friendImg_type">
+                                                <label for="friend_default" style="min-width:80px;">친구톡 기본</label>
+                                                <input type="radio" id="friend_wide" name="friendImg_type" class="friendImg_type" style="margin-left:20px;">
+                                                <label for="friend_wide" style="min-width:80px;">친구톡 와이드</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
+                                            <div class="temp_title">
+                                                <span style="font-weight: bold;">제목 *</span>
+                                            </div>
+                                            <div class="temp_content">
+                                                <input id="friendImg_title_input" type="text" placeholder="제목을 입력하세요." class="ctrl-input" maxlength="15" onkeyup="check_byte('friendImg_title', this)">
+                                                <label id="friendImg_title_cnt" style="min-width:180px; margin-left:10px;">0/15 bytes 입력가능</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin: 0; justify-content: flex-start; padding: 10px 0px;">
+                                            <div class="temp_title">
+                                                <span style="font-weight: bold;">이미지 *</span>
+                                            </div>
+                                            <div class="temp_content" style="flex-direction: column; justify-content: center; align-items: flex-start;">
+                                                <input type="file" style="display:block;">
+
+                                                <span style="font-size:14px; color:#bdbdbd; line-height: normal; margin-top: 10px;">파일 규격 : JPG, JPEG, PNG만 가능 / 용량 최대 500KB</span>
+                                                <span style="font-size:14px; color:#bdbdbd; line-height: normal;">권장 사이즈 : 720px X 720px(가로 500px 미만, 가로:세로 비율이 2:1 미만 또는 3:4 초과 시 업로드 불가)</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="row_wrapper">
+                                    <div class="row">
+                                        <button class="btn" style="width:200px;" onclick="javscript:alert('등록!');">등록</button>
+                                        <button class="btn" style="width:200px; margin-left:30px;" onclick="javscript:location.href='myPage-kakao-friendImg.html'">뒤로가기</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="title">
+                <h2>모달</h2>
+            </div>
+            <div class="close-area">X</div>
+            <div class="content" style="display: flex; justify-content: center; align-items: center;">
+                <p>모달입니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- leftBar -->
+    <div id="leftBar_div"></div>
+
+    <!-- rightBar -->
+    <div id="rightBar_div"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- <div data-include-path="footer.html"></div> -->
+</body>
+
+</html>

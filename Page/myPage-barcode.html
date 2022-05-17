@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>마이 페이지</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src="../javascript/external/jquery-3.5.1.min.js"></script>
+    <script src="../javascript/Common/modal.js"></script>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/base.css'>
+
+    <script src='../javascript/base/util.js'></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-regular.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-solid.min.css">
+
+    <script src="../javascript/external/swiper-4.5.1.min.js"></script>
+    <link rel="stylesheet" href="../stylesheet/external/swiper-4.5.1.min.css">
+
+    <script type="text/javascript" src="../javascript/external/popper-1.16.0.min.js"></script>
+    <script type="text/javascript" src="../javascript/external/tippy-5.1.1-bundle.iife.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#header").load("header.html"); //헤더 인클루드
+            $("#footer").load("footer.html"); //푸터부분 인클루드
+            $("#leftBar_div").load("leftBar.html"); //푸터부분 인클루드
+            $("#rightBar_div").load("rightBar.html"); //푸터부분 인클루드
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- <div data-include-path="header.html"></div> -->
+
+    <!-- Body -->
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/myPage-barcode.css'>
+    <script src='../javascript/Page/myPage-barcode.js'></script>
+
+    <div id="main-body-wrapper" style="min-height: 50% !important;">
+        <div id="main-body" style="display: flex; justify-content: center; align-items: center;">
+            <main class="body-section">
+
+                <div class="main_content main_content1">
+                    <div class="wrapper clearfix">
+
+                        <div class="content_wrapper">
+
+                            <div class="column_wrapper">
+                                <div class="row_wrapper" style="justify-content: flex-start;">
+                                    <span style="font-size:24px;;">바코드 관리</span>
+                                </div>
+                            </div>
+
+                            <hr style="margin:12px;width: 100%;">
+
+                            <div class="row_wrapper" style="justify-content: flex-end;">
+                                <button class="btn" style="width:200px;" onclick="javascript:location.href='myPage-barcode-add.html';">등록하기</button>
+                            </div>
+                            
+                            <div class="column_wrapper">
+                                <div class="column_wrapper"
+                                    style="justify-content: flex-start; align-items: flex-start;">
+
+                                    <table class="log_table">
+                                        <tr>
+                                            <th><input id="all_chk" class="chk_box" type="checkbox"></th>
+                                            <th>이미지 썸네일</th>
+                                            <th>바코드 유형</th>
+                                            <th>바코드제목</th>
+                                            <th>등록일시</th>
+                                            <th>관리</th>
+                                        </tr>
+                                        <tr>
+                                            <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
+                                            <td><img src="../image/이미지 썸네일.png"></td>
+                                            <td>QRCODE</td>
+                                            <td>등록완료</td>
+                                            <td>21/01/01</td>
+                                            <td>
+                                                <button class="btn" onclick="javascript:location.href='myPage-barcode-add.html';">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+
+                                    <div class="row_wrapper" style="margin-top:20px;">
+                                        <span>1/2/3 .... /10</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="row_wrapper" style="justify-content: flex-end;">
+                                    <button class="btn" onclick="javascript:alert('선택삭제');">선택삭제</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="title">
+                <h2>모달</h2>
+            </div>
+            <div class="close-area">X</div>
+            <div class="content" style="display: flex; justify-content: center; align-items: center;">
+                <p>모달입니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- leftBar -->
+    <div id="leftBar_div"></div>
+
+    <!-- rightBar -->
+    <div id="rightBar_div"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- <div data-include-path="footer.html"></div> -->
+</body>
+
+</html>
