@@ -58,7 +58,8 @@ function loadModal(filename) {
     {
         $.ajax(
         {
-            url: "../../Modal/"+filename+".html",
+            // url: "../../Modal/"+filename+".html",
+            url: "../Modal/"+filename+".html",
             cache: true,
             success: function( data )
             {
