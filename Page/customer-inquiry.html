@@ -74,35 +74,45 @@
                                         <label class="label" style="margin-right:20px;">상담 분류*</label>
                                         <select style="width:100%;">
                                             <option>카테고리 선택</option>
+                                            <option>신규가입</option>
+                                            <option>일반상담</option>
+                                            <option>기타</option>
+                                            <option>서비스 개선요청</option>
                                         </select>
                                     </div>
                                     <div class="row">
                                         <label class="label" style="margin-right:20px;">이름(회사명)*</label>
-                                        <input type="text" style="width:100%;">
+                                        <input class="ctrl-input" type="text" style="width:100%;" placeholder="(이름 혹은 회사명 입력)">
                                     </div>
                                     <div class="row">
                                         <label class="label" style="margin-right:20px;">이메일 주소*</label>
-                                        <input type="text" style="width:100%;">
+                                        <input class="ctrl-input"  type="text" style="width:100%;" placeholder="example@emfoplus.co.kr">
                                     </div>
                                     <div class="row">
                                         <label class="label" style="margin-right:20px;">연락처</label>
-                                        <input type="text" style="width:100%;">
+                                        <input class="ctrl-input"  type="text" style="width:100%;" placeholder="01012341234">
                                     </div>
                                     <div class="row">
                                         <label class="label" style="margin-right:20px;">파일 첨부</label>
 
-                                        <select name="send_phone_list" id="send_phone_list" size="10" multiple=""
+                                        <!-- <select name="send_phone_list" id="send_phone_list" size="10" multiple=""
                                             class="select_phone_multiple" ondblclick="DelCheck();"
                                             style="width: 100%; height: 100px; background-repeat: no-repeat; background-position: center center;"
                                             onkeydown="deletion(this);" onmousedown="deletion(this)">
 
                                             <option>첨부파일 리스트</option>
-                                        </select>
+                                        </select> -->
+
+                                        <div class="row_wrapper" style="margin:0;">
+                                            <div id="fileDrop" class="fileDrop" style="margin:0;">
+                                                <h1>첨부파일 리스트</h1>
+                                            </div>
+                                        </div>
 
                                     </div>
                                     <div class="row">
                                         <label class="label" style="margin-right:20px;">문의 내용</label>
-                                        <textarea style="width:100%;height:100px;"></textarea>
+                                        <textarea style="width:100%;height:100px; resize:none;" placeholder="문의 내용을 입력하세요."></textarea>
                                     </div>
                                     <div class="row" style="justify-content: left;">
                                         <label class="label" style="margin-right:20px;">개인정보 수집 및 이용 동의</label>
@@ -111,10 +121,8 @@
                                         <input type="text" style="width:100%;" value="본문내용">
                                     </div>
                                     <div class="row" style="justify-content: right;">
-                                        <input type="checkbox">
-                                        <label class="label"
-                                            style="margin-left:10px;background-color: transparent;">개인정보
-                                            수집 및 이용에 동의합니다.</label>
+                                        <input id="agree_chk" class="chk_box" type="checkbox">
+                                        <label for="agree_chk" class="label" style="margin-left:10px;background-color: transparent;">개인정보 수집 및 이용에 동의합니다.</label>
                                     </div>
                                     <div class="row">
                                         <button class="btn" onclick="javascript:alert('1:1 문의 등록!');">등록하기</button>

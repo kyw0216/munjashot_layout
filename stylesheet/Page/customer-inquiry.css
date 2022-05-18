@@ -101,3 +101,35 @@ main .main_content .text_area .introduce_content {
     text-align: center;
     background-color: #bebebe;
 }
+
+/* 드롭 반응 */
+.fileDrop.active {
+    background: #eee;
+}
+
+.fileDrop {
+    flex-grow:1;
+    height: 60px;
+     
+    margin: .6rem;
+    overflow: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius: 5px;
+    border: 4px dashed #ddd;
+    user-select: none;
+    transition: 0.4s;
+}
+  
+/* 드롭 반응 */
+.fileDrop.active {
+    background: #ddd;
+}
+  
+.fileDrop h1 {
+    font-size: 1.5rem;
+    color:rgb(116, 116, 116);
+}
