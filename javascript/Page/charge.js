@@ -101,3 +101,7 @@ $(document).ready(function () {
     }, 300); // 비활성화 된 슬라이드 애니메이션
 
 });
+
+function inquiry_layout(){
+    $(".main_content5").css("display", "flex");
+}

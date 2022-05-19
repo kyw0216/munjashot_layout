@@ -52,82 +52,84 @@
                 <div class="main_content main_content1">
                     <div class="wrapper clearfix">
 
-                        <div class="column" style="background-color:#f7f7f7;">
-
+                        <div class="column" style="background-color:#f7f7f7;margin:0;">
 
                             <div class="text_area">
-                                <span class="introduce_title">1:1 문의</span>
+                                <span class="introduce_title">문의하기</span>
+                            </div>
 
-                                <div class="row">
-                                    <span class="introduce_content"
-                                        style="background-color: white; width:800px; text-align: center;padding:10px;margin-top:5px;">문자샷
-                                        담당자가 고객님의 문의에 빠르고 정확하게
-                                        답변해드립니다.
-                                    </span>
-
-                                </div>
+                            <div class="row" style="margin:0;">
+                                <span class="introduce_content" style="text-align: center;padding:10px;">궁금하신 점을 검색해주세요.</span>
                             </div>
 
                             <div class="inquiry_box">
-                                <div class="column">
+                                <div class="column" style="margin:0;">
                                     <div class="row">
-                                        <label class="label" style="margin-right:20px;">상담 분류*</label>
-                                        <select style="width:100%;">
-                                            <option>카테고리 선택</option>
-                                            <option>신규가입</option>
-                                            <option>일반상담</option>
-                                            <option>기타</option>
-                                            <option>서비스 개선요청</option>
-                                        </select>
+                                        <input class="ctrl-input" type="text" placeholder="(제목 혹은 내용 입력)">
+                                        <button class="btn" style="width:80px; margin-left:10px;">검색</button>
                                     </div>
-                                    <div class="row">
-                                        <label class="label" style="margin-right:20px;">이름(회사명)*</label>
-                                        <input class="ctrl-input" type="text" style="width:100%;" placeholder="(이름 혹은 회사명 입력)">
-                                    </div>
-                                    <div class="row">
-                                        <label class="label" style="margin-right:20px;">이메일 주소*</label>
-                                        <input class="ctrl-input"  type="text" style="width:100%;" placeholder="example@emfoplus.co.kr">
-                                    </div>
-                                    <div class="row">
-                                        <label class="label" style="margin-right:20px;">연락처</label>
-                                        <input class="ctrl-input"  type="text" style="width:100%;" placeholder="01012341234">
-                                    </div>
-                                    <div class="row">
-                                        <label class="label" style="margin-right:20px;">파일 첨부</label>
 
-                                        <!-- <select name="send_phone_list" id="send_phone_list" size="10" multiple=""
-                                            class="select_phone_multiple" ondblclick="DelCheck();"
-                                            style="width: 100%; height: 100px; background-repeat: no-repeat; background-position: center center;"
-                                            onkeydown="deletion(this);" onmousedown="deletion(this)">
+                                    <div class="row">
+                                        <div class="row box1" style="margin:0;" onclick="javascript:location.href='customer-inquiry-list.html'">
+                                            <div class="column" style="margin:0;">
+                                                <div class="icon_div">아이콘</div>
+                                                <span style="margin-top:10px;">1:1 문의</span>
+                                            </div>
+                                        </div>
+                                        <div class="row box2" style="margin:0; margin-left:20px;" onclick="javascript:location.href='customer-faq.html'">
+                                            <div class="column" style="margin:0;">
+                                                <div class="icon_div">아이콘</div>
+                                                <span style="margin-top:10px;">FAQ</span>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                            <option>첨부파일 리스트</option>
-                                        </select> -->
+                                    <div class="row">
+                                        <div class="column" style="margin:0;">
+                                            <div class="row" style="margin:0;">
+                                                <span style="margin-bottom:10px;">지금 많이 하는 질문</span>
+                                            </div>
+                                            <div class="row box1" style="margin:0; height:260px;">
+                                                <table class="question_table">
+                                                    <tr>
+                                                        <th>top1</th>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>top2</th>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>top3</th>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>top4</th>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>top5</th>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
 
-                                        <div class="row_wrapper" style="margin:0;">
-                                            <div id="fileDrop" class="fileDrop" style="margin:0;">
-                                                <h1>첨부파일 리스트</h1>
+                                        <div class="column" style="margin:0;">
+                                            <div class="row" style="margin:0;">
+                                                <span style="margin-bottom:10px;">전화문의</span>
+                                            </div>
+                                            <div class="row box2" style="margin:0; margin-left:20px; height:260px;">
+                                                <div class="column" style="margin:0;">
+                                                    <span>1599-2320 (내선번호 1)</span><br>
+                                                    <span>평일 09~18시</span>
+                                                    <span>점심 12시~1시</span>
+                                                </div>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="row">
-                                        <label class="label" style="margin-right:20px;">문의 내용</label>
-                                        <textarea style="width:100%;height:100px; resize:none;" placeholder="문의 내용을 입력하세요."></textarea>
-                                    </div>
-                                    <div class="row" style="justify-content: left;">
-                                        <label class="label" style="margin-right:20px;">개인정보 수집 및 이용 동의</label>
-                                    </div>
-                                    <div class="row">
-                                        <input type="text" style="width:100%;" value="본문내용">
-                                    </div>
-                                    <div class="row" style="justify-content: right;">
-                                        <input id="agree_chk" class="chk_box" type="checkbox">
-                                        <label for="agree_chk" class="label" style="margin-left:10px;background-color: transparent;">개인정보 수집 및 이용에 동의합니다.</label>
-                                    </div>
-                                    <div class="row">
-                                        <button class="btn" onclick="javascript:alert('1:1 문의 등록!');">등록하기</button>
-                                    </div>
-
+                                  
                                 </div>
 
                             </div>

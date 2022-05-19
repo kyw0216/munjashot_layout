@@ -184,6 +184,53 @@ main .main_content .container .sub_container .temp_content{
     cursor: pointer;
 }
 
+.info_table {
+    width: 100%;
+}
+
+.info_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+    width:200px;
+    background-color: #eeeeee;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.info_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.info_table2 {
+    width: 100%;
+}
+
+.info_table2 th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #333;
+    padding: 10px;
+    width:200px;
+    background-color: #eeeeee;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.info_table2 td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    vertical-align: middle;
+    line-height: normal;
+}
+
 /* ul li태그에 리스트 스타일을 없앰 */
 li {
     list-style: none;
@@ -285,6 +332,64 @@ ul {
 .drop_down>li>ul>li:hover {
     background: orange;
     transition: ease 1s;
+}
+
+/* 드롭 반응 */
+.fileDrop.active {
+    background: #eee;
+}
+
+.fileDrop {
+    flex-grow:1;
+    height: 60px;
+     
+    margin: .6rem;
+    overflow: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius: 5px;
+    border: 4px dashed #ddd;
+    user-select: none;
+    transition: 0.4s;
+
+    background-color: white;
+}
+  
+.fileDrop h1 {
+    font-size: 1.5rem;
+    color:rgb(116, 116, 116);
+}
+
+/* 드롭 반응 */
+.fileDrop2.active {
+    background: #eee;
+}
+
+.fileDrop2 {
+    flex-grow:1;
+    height: 60px;
+     
+    margin: .6rem;
+    overflow: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius: 5px;
+    border: 4px dashed #ddd;
+    user-select: none;
+    transition: 0.4s;
+
+    background-color: white;
+  }
+  
+.fileDrop2 h1 {
+    font-size: 1.5rem;
+    color:rgb(116, 116, 116);
 }
 
 

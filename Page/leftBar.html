@@ -1,16 +1,17 @@
 ﻿<link rel="stylesheet" href="../stylesheet/Common/leftBar.css">
 <script src="../javascript/Common/leftBar.js"></script>
 <script src="../javascript/external/jquery-custom-content-scroller-3.1.5.js"></script>
-
-
-
+<script src="../javascript/Common/modal.js"></script>
 
 <section id="leftBar">
     <div class="gs-left-bar-top">
 
         <p class="user-id" id="lnbUserId">emfoplus</p>
         <a href="myPage-myInfo-editInfo-tab1.html" class="setting"><i class="xi-cog"></i></a>
-        <div class="alarm side-alarm-open-btn" id="alarmBtn"><span><i class="xi-bell"></i></span></div>
+        <div class="alarm side-alarm-open-btn" id="alarmBtn">
+            <!-- <span><i class="xi-bell btn-modal" id="btn-modal" data-modal="modal-callnum-add"></i></span> -->
+            <span><i class="xi-bell btn-modal" id="btn-modal" data-modal="modal-alarm"></i></span>
+        </div>
         <!-- 새로운 알림이 있을시 new 클래스 붙혀주세요. -->
 
         <div class="side-alarm-con" style="width: 410px; top: 70px; left:240px;">
@@ -353,3 +354,5 @@
         </div>
     </div>
 </section>
+
+<!-- <script src="../javascript/Common/modal.js"></script> -->

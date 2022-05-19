@@ -47,9 +47,9 @@ var _lnb = {
     btn: function () {
         var _this = this.top();
 
-        $("#alarmBtn").off("click").on("click", function () {
-            _this.proc.readAlarm();
-        });
+        // $("#alarmBtn").off("click").on("click", function () {
+        //     _this.proc.readAlarm();
+        // });
 
     },
     proc: {
@@ -104,32 +104,32 @@ var _lnb = {
             });
 
         },
-        readAlarm: function () {
-            var _this = this.top();
+        // readAlarm: function () {
+        //     var _this = this.top();
 
-            var ajaxUrl = "/ajax/info/alarm/read";
-            $.ajax({
-                url: ajaxUrl,
-                type: "GET",
-                dataType: "text",
-                timeout: 30000,
-                success: function (_data) {
-                    var json = _IBJson.decode(_data);
-                    if (json) {
-                        var result_code = json.rsltCode;
-                        if (result_code == "R000") {
-                            $("#leftBar .alarm").removeClass("new");
-                        } else if (result_code == "R902") {} else {
-                            IBAlert(json.rsltMsg);
-                        }
-                    } else {
-                        //json data not exist
-                        IBAlert(Common.getAlertMsg("501"));
-                    }
-                }
-            });
+        //     var ajaxUrl = "/ajax/info/alarm/read";
+        //     $.ajax({
+        //         url: ajaxUrl,
+        //         type: "GET",
+        //         dataType: "text",
+        //         timeout: 30000,
+        //         success: function (_data) {
+        //             var json = _IBJson.decode(_data);
+        //             if (json) {
+        //                 var result_code = json.rsltCode;
+        //                 if (result_code == "R000") {
+        //                     $("#leftBar .alarm").removeClass("new");
+        //                 } else if (result_code == "R902") {} else {
+        //                     IBAlert(json.rsltMsg);
+        //                 }
+        //             } else {
+        //                 //json data not exist
+        //                 IBAlert(Common.getAlertMsg("501"));
+        //             }
+        //         }
+        //     });
 
-        }
+        // }
 
     },
     func: {

@@ -1,4 +1,5 @@
-﻿window.onload = function () {
+﻿// window.onload = function () {
+$(function () {
 
     // const btnModal = document.getElementById("btn-modal")
     let btnModal = $(".btn-modal")
@@ -50,7 +51,8 @@
             modalOff();
         }
     });
-}
+// }
+});
 
 function loadModal(filename) { 
     

@@ -37,6 +37,7 @@ main .main_content .text_area .introduce_content {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    line-height: normal;
 }
 
 .inquiry_box .column {
@@ -46,6 +47,7 @@ main .main_content .text_area .introduce_content {
     justify-content: center;
     align-items: center;
     width: 100%;
+    line-height: normal;
 }
 
 .inquiry_box .row {
@@ -55,6 +57,7 @@ main .main_content .text_area .introduce_content {
     width: 100%;
     justify-content: center;
     align-items: center;
+    line-height: normal;
 }
 
 .column_wrapper {
@@ -62,6 +65,7 @@ main .main_content .text_area .introduce_content {
     flex-direction: column;
     margin: 10px;
     width: 100%;
+    line-height: normal;
     /* align-items: center; */
     /* justify-content: center; */
 }
@@ -72,6 +76,7 @@ main .main_content .text_area .introduce_content {
     margin: 10px;
     width: 100%;
     height: 100%;
+    line-height: normal;
     /* justify-content: center; */
     /* align-items: center; */
 }
@@ -83,6 +88,7 @@ main .main_content .text_area .introduce_content {
     justify-content: center;
     align-items: center;
     width: 100%;
+    line-height: normal;
 }
 
 .row {
@@ -93,6 +99,7 @@ main .main_content .text_area .introduce_content {
     height: 100%;
     justify-content: center;
     align-items: center;
+    line-height: normal;
 }
 
 .label {
@@ -100,6 +107,209 @@ main .main_content .text_area .introduce_content {
     padding: 5px;
     text-align: center;
     background-color: #bebebe;
+}
+
+.box1{
+    padding:20px;
+    border:1px solid #888888;
+    background-color: #f7f7f7;
+    cursor: pointer;
+}
+
+.box2{
+    padding:20px;
+    border:1px solid #888888;
+    background-color: #f7f7f7;
+}
+
+.icon_div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100px;
+    height:100px;
+    background-color: #bdbdbd;
+    border-radius: 50%;
+}
+
+.question_table {
+    width: 100%;
+}
+
+.question_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+    min-width: 100px;
+    background-color: #cecece;
+}
+
+.question_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+}
+
+#main-menu-body .customer-support-faq-list>.header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+#main-menu-body .customer-support-faq-list>.header>* {
+    flex: 1;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#main-menu-body .customer-support-faq-list>.header>*>i {
+    margin-right: 4px;
+}
+
+#main-menu-body .customer-support-faq-list>.item {
+    width: 100%;
+    border: 1px solid #eaeaea;
+    margin-bottom: 12px;
+    padding: 12px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#main-menu-body .customer-support-faq-list>.item.open>.header>.icon {
+    transform: rotate(-180deg);
+}
+
+#main-menu-body .customer-support-faq-list>.item>.header {
+    display: flex;
+    align-items: center;
+}
+
+/* #main-menu-body .customer-support-faq-list>.item>.header>.category {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+} */
+
+#main-menu-body .customer-support-faq-list>.item>.header>.answer_status {
+    flex:1;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    max-width: 120px;
+}
+
+#main-menu-body .customer-support-faq-list>.item>.header>.inquiry_content {
+    flex:1;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#main-menu-body .customer-support-faq-list>.item>.header>.inquiry_date {
+    flex:1;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#main-menu-body .customer-support-faq-list>.item>.header>.question {
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+#main-menu-body .customer-support-faq-list>.item>.header>.icon {
+    position: absolute;
+    right: 12px;
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out;
+    margin-left: auto;
+}
+
+/* #main-menu-body .customer-support-faq-list>.item>.answer {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-right: 10px;
+} */
+
+#main-menu-body .customer-support-faq-list>.item>.answer {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-right: 10px;
+}
+
+#main-menu-body .customer-support-faq-list>.item>.answer .answer_category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow:1;
+    max-width: 120px;
+    text-align: center;
+    border:1px solid black;
+    padding:10px;
+}
+
+#main-menu-body .customer-support-faq-list>.item>.answer .answer_content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow:1;
+    text-align: center;
+    padding:10px;
+}
+
+#main-menu-body .customer-support-faq-page-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-menu-body .customer-support-faq-page-list>.previous {
+    margin-right: 12px;
+}
+
+#main-menu-body .customer-support-faq-page-list>.next {
+    margin-left: 6px;
+}
+
+#main-menu-body .customer-support-faq-page-list>.item {
+    padding: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-right: 6px;
+    color: black;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+#main-menu-body .customer-support-faq-page-list>.item.selected {
+    background-color: #646464;
+    color: white;
+}
+
+.customer-support-faq-list>.header .number_item {
+    max-width: 120px;
+}
+
+.customer-support-faq-list>.item>.header>.category {
+    width: 120px;
+}
+
+.customer-support-faq-list>.item>.answer {
+    margin-left: 0;
 }
 
 /* 드롭 반응 */
@@ -122,11 +332,8 @@ main .main_content .text_area .introduce_content {
     border: 4px dashed #ddd;
     user-select: none;
     transition: 0.4s;
-}
-  
-/* 드롭 반응 */
-.fileDrop.active {
-    background: #ddd;
+
+    background-color: white;
 }
   
 .fileDrop h1 {
