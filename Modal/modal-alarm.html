@@ -1,6 +1,48 @@
 <link rel="stylesheet" href="../stylesheet/Common/modal.css">
 
-<div id="modal-auth-status" class="modal-window">
+<script>
+
+$(function(){
+    Fn_Tippy_Init();
+});
+// 툴팁 세팅
+function Fn_Tippy_Init(){
+
+    tippy("[data-tippy-content]",
+    {
+        content: "tooltip",
+        allowHTML: true,
+        maxWidth: 500
+    });
+}
+
+
+function alarmList_textEdit(object){
+
+    if($(object).text() == "수정") {
+        $(object).text("완료");
+        $(object).parents("tr").find("input[type='text']").attr("readonly", false);
+    } else if ($(object).text() == "완료"){
+        $(object).text("수정")
+        $(object).parents("tr").find("input[type='text']").attr("readonly", true);
+    }
+}
+
+function alarmList_delete(object){
+
+    let result = confirm("알람 리스트 삭제 선택하신 수신번호로 잔액 알람 설정이 삭제 됩니다. 삭제 하시겠습니까?");
+
+    if(result){
+        alert("삭제되었습니다.");
+    } else {
+        alert("취소되었습니다.");
+    }
+
+}
+    
+</script>
+
+<div id="modal-alarm" class="modal-window">
 
     <div class="m_row_wrapper" style="justify-content: flex-start;">
         <span class="m_title">잔액 알람 설정</span>
@@ -11,6 +53,213 @@
     <hr style="margin:20px 0;width: 100%;">
 
     <div class="content">
+        
+        <div class="m_column_wrapper">
+            <div class="m_row_wrapper j_start">
+                <span class="">충전한 금액이 기준금액 이하로 소진될 경우 설정된 담당자 번호로 충전 알람 문자가 발송됩니다.</span>
+            </div>
+
+            <div class="m_row_wrapper j_start" style="margin-top:20px;">
+                <table class="alarm_table">
+                    <tr>
+                        <th style="width:200px;">이름</th>
+                        <td>
+                            <input type="text" class="ctrl-input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>전화번호</th>
+                        <td>
+                            <input type="text" class="ctrl-input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>기준금액</th>
+                        <td>
+                            <input type="text" class="ctrl-input">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="m_row_wrapper j_start" style="margin-top:20px;">
+                <span class="" style="font-size: 20px;">알림 리스트 관리</span>
+            </div>
+
+            <div class="m_row_wrapper" style="margin-top:20px;">
+                <div class="m_column_wrapper i_start">
+                    <table class="alarm_table">
+                        <tr>
+                            <th>이름</th>
+                            <th>전화번호</th>
+                            <th>기준금액</th>
+                            <th>
+                                야간알람동의
+                                <!-- <i class="xi-help icon" style="cursor: pointer;" data-tippy-content="야간 알림을 해제하실 경우, 오후 10시 ~ 오전 7시 까지는 문자 발송이 되지 않습니다." data-tippy-maxWidth="100px;"></i> -->
+                                <i class="xi-help icon" style="cursor: pointer;" data-tippy-content="야간 알림을 해제하실 경우, 오후 10시 ~ 오전 7시 까지는 문자 발송이 되지 않습니다." data-tippy-maxWidth="300"></i>
+                            </th>
+                            <th>관리</th>
+                        </tr>
+                    </table>
+
+                    <div class="alarm_table_div" style="border-bottom:1px solid #bdbdbd;">
+                        <table class="alarm_table">
+                            <tr>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td>
+                                    <div class="switch_wrapper">
+                                        <input type="checkbox" class="switch" id="switch">
+                                        <label for="switch" class="switch_label">
+                                          <span class="onf_btn"></span>
+                                        </label>
+                                      </div>
+                                </td>
+                                <td>
+                                    <button class="btn" style="width:80px; padding:5px;" onclick="alarmList_textEdit(this);">수정</button><br>
+                                    <button class="btn" style="width:80px; padding:5px; margin-top:5px;" onclick="alarmList_delete(this);">삭제</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td>
+                                    <div class="switch_wrapper">
+                                        <input type="checkbox" class="switch" id="switch2">
+                                        <label for="switch2" class="switch_label">
+                                          <span class="onf_btn"></span>
+                                        </label>
+                                      </div>
+                                </td>
+                                <td>
+                                    <button class="btn" style="width:80px; padding:5px;" onclick="alarmList_textEdit(this);">수정</button><br>
+                                    <button class="btn" style="width:80px; padding:5px; margin-top:5px;" onclick="alarmList_delete(this);">삭제</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td>
+                                    <div class="switch_wrapper">
+                                        <input type="checkbox" class="switch" id="switch3">
+                                        <label for="switch3" class="switch_label">
+                                          <span class="onf_btn"></span>
+                                        </label>
+                                      </div>
+                                </td>
+                                <td>
+                                    <button class="btn" style="width:80px; padding:5px;" onclick="alarmList_textEdit(this);">수정</button><br>
+                                    <button class="btn" style="width:80px; padding:5px; margin-top:5px;" onclick="alarmList_delete(this);">삭제</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td>
+                                    <div class="switch_wrapper">
+                                        <input type="checkbox" class="switch" id="switch4">
+                                        <label for="switch4" class="switch_label">
+                                          <span class="onf_btn"></span>
+                                        </label>
+                                      </div>
+                                </td>
+                                <td>
+                                    <button class="btn" style="width:80px; padding:5px;" onclick="alarmList_textEdit(this);">수정</button><br>
+                                    <button class="btn" style="width:80px; padding:5px; margin-top:5px;" onclick="alarmList_delete(this);">삭제</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td>
+                                    <div class="switch_wrapper">
+                                        <input type="checkbox" class="switch" id="switch5">
+                                        <label for="switch5" class="switch_label">
+                                          <span class="onf_btn"></span>
+                                        </label>
+                                      </div>
+                                </td>
+                                <td>
+                                    <button class="btn" style="width:80px; padding:5px;" onclick="alarmList_textEdit(this);">수정</button><br>
+                                    <button class="btn" style="width:80px; padding:5px; margin-top:5px;" onclick="alarmList_delete(this);">삭제</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td>
+                                    <div class="switch_wrapper">
+                                        <input type="checkbox" class="switch" id="switch6">
+                                        <label for="switch6" class="switch_label">
+                                          <span class="onf_btn"></span>
+                                        </label>
+                                      </div>
+                                </td>
+                                <td>
+                                    <button class="btn" style="width:80px; padding:5px;" onclick="alarmList_textEdit(this);">수정</button><br>
+                                    <button class="btn" style="width:80px; padding:5px; margin-top:5px;" onclick="alarmList_delete(this);">삭제</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td>
+                                    <div class="switch_wrapper">
+                                        <input type="checkbox" class="switch" id="switch7">
+                                        <label for="switch7" class="switch_label">
+                                          <span class="onf_btn"></span>
+                                        </label>
+                                      </div>
+                                </td>
+                                <td>
+                                    <button class="btn" style="width:80px; padding:5px;" onclick="alarmList_textEdit(this);">수정</button><br>
+                                    <button class="btn" style="width:80px; padding:5px; margin-top:5px;" onclick="alarmList_delete(this);">삭제</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td><input type="text" class="ctrl-input" readonly></td>
+                                <td>
+                                    <div class="switch_wrapper">
+                                        <input type="checkbox" class="switch" id="switch8">
+                                        <label for="switch8" class="switch_label">
+                                          <span class="onf_btn"></span>
+                                        </label>
+                                      </div>
+                                </td>
+                                <td>
+                                    <button class="btn" style="width:80px; padding:5px;" onclick="alarmList_textEdit(this);">수정</button><br>
+                                    <button class="btn" style="width:80px; padding:5px; margin-top:5px;" onclick="alarmList_delete(this);">삭제</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="m_row_wrapper" style="margin-top:20px;">
+                <div class="m_column_wrapper i_start">
+                    <span class="" style="color:red;">※ 동일 전화번호로 여러 개 기준금액 설정이 불가능합니다.</span>
+                    <span class="" style="color:red;">※ 알림 문자 발송 비용은 과금되지 않습니다.</span>
+                </div>
+            </div>
+
+            <div class="m_row_wrapper" style="margin-top:20px;">
+                <button class="btn" style="width:100px;" onclick="javscript:alert('등록되었습니다!');">등록</button>
+                <button class="btn" style="width:100px;margin-left:10px;">취소</button>
+            </div>
+
+        </div>
+
+
         <!-- <div class="m_column_wrapper">
 
             <div class="m_row_wrapper">

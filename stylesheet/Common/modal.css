@@ -17,6 +17,50 @@
     height:auto;
 }
 
+#modal-alarm .content{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width:100%;
+    height:auto;
+}
+
+#modal-alarm .alarm_table_div{
+    width:100%;
+    height:200px;
+    overflow-y: scroll;
+}
+
+#modal-alarm .alarm_table{
+    width: 100%;
+    table-layout:fixed;
+}
+
+#modal-alarm .alarm_table th{
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    background-color: #cecece;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+#modal-alarm .alarm_table td{
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    line-height: normal;
+    white-space : nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+
 .m_row_wrapper{
     display: flex;
     flex-direction: row;

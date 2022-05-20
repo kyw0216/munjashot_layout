@@ -91,4 +91,25 @@
 
     });
 
+
+
+    $("#munja_ad_chk").click(function () {
+
+        if ($("#munja_ad_chk").prop("checked")) {
+            $(".msg_content_textarea").val("(광고)");
+            // $(".msg_content_textarea").attr("value", "(광고)");
+            $(".msg_080_textarea").css("display", "block");
+            $(".msg_content_textarea").css("height", "200px");
+        } else {
+            $(".msg_content_textarea").val("");
+            // $(".msg_content_textarea").attr("value", "");
+            $(".msg_080_textarea").css("display", "none");
+            $(".msg_content_textarea").css("height", "300px");
+        }
+
+    });
+
 });
+
+
+

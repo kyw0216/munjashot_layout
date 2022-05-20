@@ -65,10 +65,10 @@
                                 <div class="tab_in_content munja_content on">
                                     <!-- <div class="tab_in_content munja_content"> -->
 
-                                    <div class="row_wrapper">
-                                        <div class="column_wrapper">
+                                    <div class="row_wrapper" style="padding:20px; margin-top:0;">
+                                        <div class="column_wrapper" style="margin-top:0;">
 
-                                            <div class="row">
+                                            <div class="row" style="margin-top:0;">
                                                 <button class="btn"
                                                     style="min-width: 150px; margin-right:20px;">발신번호</button>
                                                 <select style="width:100%;">
@@ -76,12 +76,12 @@
                                                 </select>
                                             </div>
                                             <div class="row" style="justify-content: flex-end;">
-                                                <input type="checkbox" style="margin-right: 10px;">
-                                                <label>광고규칙 추가</label>
+                                                <input id="munja_ad_chk" name="munja_ad_chk" type="checkbox" style="margin-right: 10px;">
+                                                <label for="munja_ad_chk">광고규칙 추가</label>
                                             </div>
-                                            <div class="row" style="background-color: #fff;">
-                                                <div class="column">
-                                                    <div class="row">
+                                            <div class="row" style="background-color: #fff;padding:10px;">
+                                                <div class="column" style="margin-top:0;">
+                                                    <div class="row" style="margin-top:0;">
                                                         <label style="min-width:80px;margin-right:10px;">(발송제목)</label>
                                                         <input type="text" style="width: 100%;">
                                                     </div>
@@ -90,9 +90,13 @@
                                                         <label>(발송내용)</label>
                                                     </div>
                                                     <div class="row">
-                                                        <textarea style="width: 100%; height:200px;">발송내용</textarea>
+                                                        <div class="column" style="margin-top:0;">
+                                                            <textarea class="msg_content_textarea" style="width: 100%; height:300px;" placeholder="발송내용"></textarea>
+                                                            <textarea class="msg_080_textarea" style="width: 100%; height:100px; text-align: left;" readonly>
+무료수신거부
+080XXXXXXXX</textarea>
+                                                        </div>
                                                     </div>
-
                                                     <div class="row">
                                                         <button class="btn"
                                                             style="min-width: 150px; margin-right:20px;">이미지 첨부</button>
@@ -140,9 +144,9 @@
                                                     불러오기</button>
                                             </div>
 
-                                            <div class="row" style="background-color: #fff;">
-                                                <div class="column">
-                                                    <div class="row" style="justify-content: flex-start;">
+                                            <div class="row" style="background-color: #fff; padding:10px;">
+                                                <div class="column" style="margin-top:0;">
+                                                    <div class="row" style="justify-content: flex-start; margin-top:0;">
                                                         <label>수신번호 리스트</label>
                                                     </div>
                                                     <div class="row">
@@ -157,31 +161,28 @@
                                             </div>
 
                                             <div class="row">
-                                                <button class="btn"
-                                                    style="min-width: 150px; margin-right:20px;">발송시간</button>
+                                                <button class="btn" style="min-width: 150px; margin-right:20px;">발송시간</button>
                                                 <div style="width:100%; border: 1px solid black; padding:8px;">
-                                                    <input type="radio" name="send_time"></input>
-                                                    <label>즉시발송</label>
-                                                    <input type="radio" name="send_time"></input>
-                                                    <label>예약발송</label>
+                                                    <input id="msg_immSend_chk" type="radio" name="send_time"></input>
+                                                    <label for="msg_immSend_chk">즉시발송</label>
+                                                    <input id="msg_resSend_chk" type="radio" name="send_time"></input>
+                                                    <label for="msg_resSend_chk">예약발송</label>
                                                 </div>
 
                                             </div>
                                             <div class="row">
-                                                <button class="btn"
-                                                    style="min-width: 150px; margin-right:20px;">간격발송</button>
+                                                <button class="btn" style="min-width: 150px; margin-right:20px;">간격발송</button>
                                                 <div style="width:100%; border: 1px solid black; padding:8px;">
-                                                    <input type="checkbox"></input>
-                                                    <label>적용</label>
+                                                    <input id="msg_interval_chk" type="checkbox"></input>
+                                                    <label for="msg_interval_chk">적용</label>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="column_wrapper basis_500">
-                                            <div class="row" style="height:100%; border: 1px solid black">스마트폰 미리보기
-                                            </div>
+                                        <div class="column_wrapper basis_500" style="margin-left:20px; margin-top:0;">
+                                            <div class="row" style="border: 1px solid black; margin-top:0;">스마트폰 미리보기</div>
 
-                                            <div class="row" style="align-items: end;">
+                                            <div class="row" style="align-items: end; margin-top:0;">
                                                 <button class="btn" style="min-width: 150px; margin-right:20px;">테스트
                                                     전송</button>
                                                 <button class="btn" style="min-width: 150px;">전송</button>
@@ -192,8 +193,8 @@
                                 </div>
 
                                 <!-- <div class=" tab_in_content kakao_content on"> -->
-                                <div class=" tab_in_content kakao_content">
-                                    <div class="container">
+                                <div class="tab_in_content kakao_content">
+                                    <div class="container" style="padding:20px; margin-top:0;">
                                         <ul class="sub_tab_title">
                                             <li class="on">알림톡</li>
                                             <li>친구톡</li>
@@ -201,9 +202,9 @@
 
                                         <div class="sub_tab_cont">
                                             <div class="sub_tab_in_content alimtalk_content on">
-                                                <div class="column_wrapper">
-                                                    <div class="row_wrapper">
-                                                        <div class="column_wrapper">
+                                                <div class="column_wrapper" style="margin-top:0;">
+                                                    <div class="row_wrapper" style="margin-top:0;">
+                                                        <div class="column_wrapper" style="margin-top:0;">
 
                                                             <div class="row">
                                                                 <button class="btn"
@@ -223,11 +224,10 @@
                                                                 </select>
                                                             </div>
 
-                                                            <div class="row" style="background-color: #fff;">
-                                                                <div class="column">
+                                                            <div class="row" style="background-color: #fff; padding:10px;">
+                                                                <div class="column" style="margin-top:0;">
 
-                                                                    <div class="row"
-                                                                        style="justify-content: flex-start;">
+                                                                    <div class="row" style="justify-content: flex-start; margin-top:0;">
                                                                         <label>(발송내용)</label>
                                                                     </div>
                                                                     <div class="row">
@@ -238,9 +238,8 @@
                                                             </div>
 
                                                             <div class="row" style="justify-content: flex-start;">
-                                                                <input id="alim_fail_msg_chk" type="checkbox"
-                                                                    style="margin-right: 10px;">
-                                                                <label>실패 건 문자 재발송</label>
+                                                                <input id="alim_fail_msg_chk" type="checkbox" style="margin-right: 10px;">
+                                                                <label for="alim_fail_msg_chk">실패 건 문자 재발송</label>
                                                             </div>
 
                                                             <div class="msg_layout">
@@ -253,16 +252,14 @@
                                                                     </select>
                                                                 </div>
 
-                                                                <div class="row" style="background-color: #fff;">
-                                                                    <div class="column">
-                                                                        <div class="row">
-                                                                            <label
-                                                                                style="min-width:80px;margin-right:10px;">(발송제목)</label>
+                                                                <div class="row" style="background-color: #fff; padding:10px;">
+                                                                    <div class="column" style="margin-top:0;">
+                                                                        <div class="row" style="margin-top:0;">
+                                                                            <label style="min-width:80px;margin-right:10px;">(발송제목)</label>
                                                                             <input type="text" style="width: 100%;">
                                                                         </div>
 
-                                                                        <div class="row"
-                                                                            style="justify-content: flex-start;">
+                                                                        <div class="row" style="justify-content: flex-start; margin-top:0;">
                                                                             <label>(발송내용)</label>
                                                                         </div>
                                                                         <div class="row">
@@ -315,9 +312,8 @@
                                                             </div>
 
                                                             <div class="row" style="background-color: #fff;">
-                                                                <div class="column">
-                                                                    <div class="row"
-                                                                        style="justify-content: flex-start;">
+                                                                <div class="column" style="margin-top:0; padding:10px;">
+                                                                    <div class="row" style="justify-content: flex-start; margin-top:0;">
                                                                         <label>수신번호 리스트</label>
                                                                     </div>
                                                                     <div class="row">
@@ -355,22 +351,21 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="column_wrapper basis_500">
-                                                            <div class="row"
-                                                                style="height:100%; border: 1px solid black">
+                                                        <div class="column_wrapper basis_500" style="margin-left:20px;">
+                                                            <div class="row" style="height:100%; border: 1px solid black; margin-top:0;">
                                                                 스마트폰 미리보기
                                                             </div>
 
-                                                            <div class="column_wrapper">
+                                                            <div class="column_wrapper" style="margin-top: 10px;">
                                                                 <button class="btn" style="width:100%;">변수
                                                                     매칭</button>
-                                                                <div class="row">
+                                                                <div class="row" style="margin-top: 10px;">
                                                                     <label style="min-width: 70px;">#(이름)</label>
                                                                     <select style="width:100%;">
                                                                         <option>(선택)</option>
                                                                     </select>
                                                                 </div>
-                                                                <div class="row">
+                                                                <div class="row" style="margin-top: 10px;">
                                                                     <label style="min-width: 70px;">#(날짜)</label>
                                                                     <select style="width:100%;">
                                                                         <option>(선택)</option>
@@ -378,7 +373,7 @@
                                                                 </div>
                                                             </div>
 
-                                                            <div class="row" style="align-items: end;">
+                                                            <div class="row" style="align-items: end; margin-top:0;">
                                                                 <button class="btn"
                                                                     style="min-width: 150px; margin-right:20px;">테스트
                                                                     전송</button>
@@ -392,7 +387,7 @@
 
 
                                             <div class="sub_tab_in_content friendtalk_content">
-                                                <div class="column_wrapper">
+                                                <div class="column_wrapper" style="margin-top:0;">
                                                     <div class="row_wrapper">
                                                         <div class="column_wrapper">
 
@@ -405,11 +400,9 @@
                                                                 </select>
                                                             </div>
 
-                                                            <div class="row" style="background-color: #fff;">
-                                                                <div class="column">
-
-                                                                    <div class="row"
-                                                                        style="justify-content: flex-start;">
+                                                            <div class="row" style="background-color: #fff; padding:10px;">
+                                                                <div class="column" style="margin-top:0;">
+                                                                    <div class="row" style="justify-content: flex-start; margin-top:0;">
                                                                         <label>(발송내용)</label>
                                                                     </div>
                                                                     <div class="row">
@@ -470,9 +463,8 @@
                                                             </div>
 
                                                             <div class="row" style="justify-content: flex-start;">
-                                                                <input id="friend_fail_msg_chk" type="checkbox"
-                                                                    style="margin-right: 10px;">
-                                                                <label>실패 건 문자 재발송</label>
+                                                                <input id="friend_fail_msg_chk" type="checkbox" style="margin-right: 10px;">
+                                                                <label for="friend_fail_msg_chk">실패 건 문자 재발송</label>
                                                             </div>
 
                                                             <div class="msg_layout">
@@ -485,16 +477,14 @@
                                                                     </select>
                                                                 </div>
 
-                                                                <div class="row" style="background-color: #fff;">
-                                                                    <div class="column">
-                                                                        <div class="row">
-                                                                            <label
-                                                                                style="min-width:80px;margin-right:10px;">(발송제목)</label>
+                                                                <div class="row" style="background-color: #fff; padding:10px;">
+                                                                    <div class="column" style="margin-top:0;">
+                                                                        <div class="row" style="margin-top:0;">
+                                                                            <label style="min-width:80px;margin-right:10px;">(발송제목)</label>
                                                                             <input type="text" style="width: 100%;">
                                                                         </div>
 
-                                                                        <div class="row"
-                                                                            style="justify-content: flex-start;">
+                                                                        <div class="row" style="justify-content: flex-start;">
                                                                             <label>(발송내용)</label>
                                                                         </div>
                                                                         <div class="row">
@@ -526,8 +516,7 @@
                                                             </div>
 
                                                             <div class="row">
-                                                                <button class="btn"
-                                                                    style="min-width: 100px; margin-right:20px;">수신번호</button>
+                                                                <button class="btn" style="min-width: 100px; margin-right:20px;">수신번호</button>
                                                                 <input type="text" style="width:100%;margin-right:20px;"
                                                                     value="(직접입력)">
                                                                 <button class="btn"
@@ -546,10 +535,9 @@
                                                                     불러오기</button>
                                                             </div>
 
-                                                            <div class="row" style="background-color: #fff;">
-                                                                <div class="column">
-                                                                    <div class="row"
-                                                                        style="justify-content: flex-start;">
+                                                            <div class="row" style="background-color: #fff; padding: 10px;">
+                                                                <div class="column" style="margin-top:0;">
+                                                                    <div class="row" style="justify-content: flex-start; margin-top:0;">
                                                                         <label>수신번호 리스트</label>
                                                                     </div>
                                                                     <div class="row">
@@ -587,22 +575,21 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="column_wrapper basis_500">
-                                                            <div class="row"
-                                                                style="height:100%; border: 1px solid black">
+                                                        <div class="column_wrapper basis_500" style="margin-left:20px;">
+                                                            <div class="row" style="height:100%; border: 1px solid black; margin-top:0;">
                                                                 스마트폰 미리보기
                                                             </div>
 
-                                                            <div class="column_wrapper">
+                                                            <div class="column_wrapper" style="margin-top: 10px;">
                                                                 <button class="btn" style="width:100%;">변수
                                                                     매칭</button>
-                                                                <div class="row">
+                                                                <div class="row" style="margin-top: 10px;">
                                                                     <label style="min-width: 70px;">#(이름)</label>
                                                                     <select style="width:100%;">
                                                                         <option>(선택)</option>
                                                                     </select>
                                                                 </div>
-                                                                <div class="row">
+                                                                <div class="row" style="margin-top: 10px;">
                                                                     <label style="min-width: 70px;">#(날짜)</label>
                                                                     <select style="width:100%;">
                                                                         <option>(선택)</option>
@@ -610,7 +597,7 @@
                                                                 </div>
                                                             </div>
 
-                                                            <div class="row" style="align-items: end;">
+                                                            <div class="row" style="align-items: end; margin-top:0;">
                                                                 <button class="btn"
                                                                     style="min-width: 150px; margin-right:20px;">테스트
                                                                     전송</button>
@@ -629,8 +616,8 @@
                                 </div>
 
                                 <div class="tab_in_content barcode_content">
-                                    <div class="row_wrapper">
-                                        <div class="column_wrapper">
+                                    <div class="row_wrapper" style="padding:20px; margin-top:0;">
+                                        <div class="column_wrapper"style="margin-top:0;">
 
                                             <div class="row">
                                                 <button class="btn"
@@ -645,10 +632,9 @@
                                                 <button class="btn" style="min-width: 150px; margin-right:20px;">바코드
                                                     보관함</button>
                                             </div>
-                                            <div class="row" style="background-color: #fff;">
-                                                <div class="column">
-
-                                                    <div class="row" style="justify-content: flex-start;">
+                                            <div class="row" style="background-color: #fff; padding:10px;">
+                                                <div class="column" style="margin-top:0;">
+                                                    <div class="row" style="justify-content: flex-start; margin-top:0;">
                                                         <label>(발송내용)</label>
                                                     </div>
                                                     <div class="row">
@@ -700,9 +686,9 @@
                                                     불러오기</button>
                                             </div>
 
-                                            <div class="row" style="background-color: #fff;">
-                                                <div class="column">
-                                                    <div class="row" style="justify-content: flex-start;">
+                                            <div class="row" style="background-color: #fff; padding: 10px;">
+                                                <div class="column" style="margin-top:0;">
+                                                    <div class="row" style="justify-content: flex-start; margin-top:0;">
                                                         <label>수신번호 리스트</label>
                                                     </div>
                                                     <div class="row">
@@ -738,11 +724,10 @@
                                         </div>
 
                                         <!-- <div class="column_wrapper basis_500" style="height:auto;"> -->
-                                        <div class="column_wrapper basis_500">
-                                            <div class="row" style="height:100%; border: 1px solid black">스마트폰 미리보기
-                                            </div>
+                                        <div class="column_wrapper basis_500" style="margin-left:20px;">
+                                            <div class="row" style="height:100%; border: 1px solid black; margin-top:0;">스마트폰 미리보기</div>
 
-                                            <div class="row" style="height:auto;">
+                                            <div class="row" style="height:auto; margin-top: 10px;">
                                                 <button class="btn" style="min-width: 150px; margin-right:20px;">바코드 값
                                                 </button>
                                                 <select style="width:100%;">
@@ -750,7 +735,7 @@
                                                 </select>
                                             </div>
 
-                                            <div class="row" style="align-items: end;">
+                                            <div class="row" style="align-items: end; margin-top:0;">
                                                 <button class="btn" style="min-width: 150px; margin-right:20px;">테스트
                                                     전송</button>
                                                 <button class="btn" style="min-width: 150px;">전송</button>
@@ -761,8 +746,8 @@
                                 </div>
 
                                 <div class="tab_in_content globalmsg_content">
-                                    <div class="row_wrapper">
-                                        <div class="column_wrapper">
+                                    <div class="row_wrapper" style="padding:20px; margin-top:0;">
+                                        <div class="column_wrapper"style="margin-top:0;">
 
                                             <div class="row">
                                                 <button class="btn"
@@ -784,9 +769,9 @@
                                                 <button class="btn" style="min-width: 150px; margin-right:20px;">바코드
                                                     보관함</button>
                                             </div>
-                                            <div class="row" style="background-color: #fff;">
-                                                <div class="column">
-                                                    <div class="row" style="justify-content: flex-start;">
+                                            <div class="row" style="background-color: #fff; padding:10px;">
+                                                <div class="column" style="margin-top:0;">
+                                                    <div class="row" style="justify-content: flex-start; margin-top:0;">
                                                         <label>(발송내용)</label>
                                                     </div>
                                                     <div class="row">
@@ -836,9 +821,9 @@
                                                     불러오기</button>
                                             </div>
 
-                                            <div class="row" style="background-color: #fff;">
-                                                <div class="column">
-                                                    <div class="row" style="justify-content: flex-start;">
+                                            <div class="row" style="background-color: #fff; padding: 10px;">
+                                                <div class="column" style="margin-top:0;">
+                                                    <div class="row" style="justify-content: flex-start; margin-top:0;">
                                                         <label>수신번호 리스트</label>
                                                     </div>
                                                     <div class="row">
@@ -866,17 +851,16 @@
                                         </div>
 
                                         <!-- <div class="column_wrapper basis_500" style="height:auto;"> -->
-                                        <div class="column_wrapper basis_500">
-                                            <div class="row" style="height:auto;justify-content: flex-end;">
+                                        <div class="column_wrapper basis_500" style="margin-left:20px;">
+                                            <div class="row" style="height:auto;justify-content: flex-end; margin-top:0;">
                                                 <button class="btn" style="min-width: 200px;">해외 문자
                                                     발송 유의사항
                                                 </button>
                                             </div>
-                                            <div class="row" style="height:auto;justify-content: flex-start;">
+                                            <div class="row" style="height:auto;justify-content: flex-start; margin-top:10px;">
                                                 <label style="min-width: 200px;">(발송 단가 : 00원) [vat-]</label>
                                             </div>
-                                            <div class="row" style="height:100%; border: 1px solid black">스마트폰 미리보기
-                                            </div>
+                                            <div class="row" style="margin-top:10px; height:100%; border: 1px solid black">스마트폰 미리보기</div>
 
                                             <div class="row" style="align-items: end;">
                                                 <button class="btn" style="min-width: 150px; margin-right:20px;">테스트
@@ -889,8 +873,8 @@
                                 </div>
 
                                 <div class="tab_in_content fax_content">
-                                    <div class="row_wrapper">
-                                        <div class="column_wrapper">
+                                    <div class="row_wrapper" style="padding:20px; margin-top:0;">
+                                        <div class="column_wrapper" style="margin-top:0;">
 
                                             <div class="row">
                                                 <button class="btn"
@@ -977,8 +961,7 @@
 
                                             <div class="row" style="background-color: #fff;">
 
-                                                <div class="row"
-                                                    style="width: 100%; height:100px;background-color: white;">
+                                                <div class="row" style="width: 100%; height:100px;background-color: white; margin-top:0;">
                                                     (첨부파일)
                                                 </div>
 
@@ -1006,9 +989,9 @@
                                                     불러오기</button>
                                             </div>
 
-                                            <div class="row" style="background-color: #fff;">
-                                                <div class="column">
-                                                    <div class="row" style="justify-content: flex-start;">
+                                            <div class="row" style="background-color: #fff; padding: 10px;">
+                                                <div class="column" style="margin-top:0;">
+                                                    <div class="row" style="justify-content: flex-start; margin-top:0;">
                                                         <label>수신번호 리스트</label>
                                                     </div>
                                                     <div class="row">
@@ -1043,12 +1026,12 @@
                                             </div>
                                         </div>
 
-                                        <div class="column_wrapper basis_500">
-                                            <div class="row" style="align-items: end;">
+                                        <div class="column_wrapper basis_500" style="margin-left:20px;">
+                                            <div class="row" style="align-items: end; margin-top:0;">
                                                 <button class="btn" style="min-width: 150px;">미리보기</button>
                                             </div>
 
-                                            <div class="row" style="align-items: end;">
+                                            <div class="row" style="align-items: end; margin-top:0;">
                                                 <button class="btn" style="min-width: 150px; margin-right:20px;">테스트
                                                     전송</button>
                                                 <button class="btn" style="min-width: 150px;">전송</button>
