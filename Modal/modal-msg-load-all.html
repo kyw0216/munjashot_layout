@@ -1,0 +1,139 @@
+<link rel="stylesheet" href="../stylesheet/Common/modal.css">
+
+<script>
+
+$(function(){
+    Fn_Tippy_Init();
+});
+// 툴팁 세팅
+function Fn_Tippy_Init(){
+
+    tippy("[data-tippy-content]",
+    {
+        content: "tooltip",
+        allowHTML: true,
+        maxWidth: 500
+    });
+}
+
+</script>
+
+<div id="modal-msg-load" class="modal-window">
+
+    <div class="m_row_wrapper" style="justify-content: flex-start;">
+        <span class="m_title">메시지 보관함</span>
+    </div>
+
+    <div class="close-area">X</div>
+
+    <hr style="margin:20px 0;width: 100%;">
+
+    <div class="m_row_wrapper" style="justify-content: flex-start;">
+        <span class="m_content">저장된 메시지를 자유롭게 불러올 수 있습니다.</span>
+    </div>
+
+    <div class="content">
+        
+        <div class="m_column_wrapper" style="width: 100%;">
+            
+            <div class="m_row_wrapper" style="margin-top:10px; justify-content: flex-start;">
+                <label class="menu_label on">전체</label>
+                <label class="menu_label">SMS</label>
+                <label class="menu_label">LMS</label>
+                <label class="menu_label">MMS</label>
+            </div>
+            
+            <div class="m_row_wrapper" style="margin-top:10px; justify-content: flex-end;">
+                <input type="date"> - <input type="date">
+                <input class="ctrl-input" type="text" style="margin-left:10px; width: 200px;">
+                <button class="btn">검색</button>
+            </div>
+            
+            <div class="m_row_wrapper" style="margin-top:10px;">
+                <div class="m_column_wrapper" style="width: 100%;">
+                    <div class="m_column_wrapper" style="width: 100%; align-items: flex-start;">
+                        <label class="msg_type_label sms">SMS</label>
+                        <div class="m_row_wrapper">
+                            <div class="msg_box sms" style="padding:10px;">
+                                <div class="m_column_wrapper">
+                                    <div class="m_column_wrapper" style="width: 100%; align-items: flex-start; justify-content: flex-start; margin-top:10px;">
+                                        <span>(발송 제목)</span>
+                                        <hr style="margin:10px 0;width: 100%;">
+                                        <span>(발송 내용)</span>
+                                    </div>
+
+                                    <div class="m_column_wrapper" style="width: 100%; align-items: flex-end; justify-content: flex-end;">
+                                        <span>( 85/90 byte )</span>
+                                        <span>등록일 : 0000-00-00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m_row_wrapper" style="margin-top:10px;">
+                        <span class="msg_name"><u>메시지명 1</u></span>
+                        <i class="fa-solid fa-pen-to-square" style="margin-left:10px;"></i>
+                    </div>
+                </div>
+
+                <div class="m_column_wrapper" style="width: 100%; margin-left:20px;">
+                    <div class="m_column_wrapper" style="width: 100%; align-items: flex-start;">
+                        <label class="msg_type_label lms">LMS</label>
+                        <div class="m_row_wrapper">
+                            <div class="msg_box lms" style="padding:10px;">
+                                <div class="m_column_wrapper">
+                                    <div class="m_column_wrapper" style="width: 100%; align-items: flex-start; justify-content: flex-start; margin-top:10px;">
+                                        <span>(발송 제목)</span>
+                                        <hr style="margin:10px 0;width: 100%;">
+                                        <span>(발송 내용)</span>
+                                    </div>
+
+                                    <div class="m_column_wrapper" style="width: 100%; align-items: flex-end; justify-content: flex-end;">
+                                        <span>( 85/90 byte )</span>
+                                        <span>등록일 : 0000-00-00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m_row_wrapper" style="margin-top:10px;">
+                        <span class="msg_name"><u>메시지명 2</u></span>
+                        <i class="fa-solid fa-pen-to-square" style="margin-left:10px;"></i>
+                    </div>
+                </div>
+
+                <div class="m_column_wrapper" style="width: 100%; margin-left:20px;">
+                    <div class="m_column_wrapper" style="width: 100%; align-items: flex-start;">
+                        <label class="msg_type_label mms">MMS</label>
+                        <div class="m_row_wrapper">
+                            <div class="msg_box mms" style="padding:10px;">
+                                <div class="m_column_wrapper">
+                                    <div class="m_column_wrapper" style="width: 100%; align-items: flex-start; justify-content: flex-start; margin-top:10px;">
+                                        <span>(발송 제목)</span>
+                                        <hr style="margin:10px 0;width: 100%;">
+                                        <span>(발송 내용)</span>
+                                    </div>
+
+                                    <div class="m_column_wrapper" style="width: 100%; align-items: flex-end; justify-content: flex-end;">
+                                        <span>( 85/90 byte )</span>
+                                        <span>등록일 : 0000-00-00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m_row_wrapper" style="margin-top:10px;">
+                        <span class="msg_name"><u>메시지명 3</u></span>
+                        <i class="fa-solid fa-pen-to-square" style="margin-left:10px;"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="m_row_wrapper" style="margin-top:10px;">
+                <span>1/2/3 .... /10</span>
+            </div>
+
+        </div>
+    </div>
+</div>

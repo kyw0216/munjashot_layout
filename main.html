@@ -116,6 +116,222 @@
                 <div class="main_content main_content3">
                     <div class="wrapper clearfix">
                         <div class="text_area">
+                            <span class="introduce_title">똑똑한 AI 추천 서비스</span>
+                            <span class="introduce_content" style="font-size:16px;margin-top:16px;">관심있는 키워드를 클릭하시면 고객님께 어울리는 문자 유형을 추천해드려요.</span>
+                        </div>
+
+                        <div class="row_wrapper">
+                            <table class="ai_table">
+                                <tr>
+                                    <td>
+                                        <input class="hash_chk" type="checkbox" name="hash_chk">
+                                        <label class="hash_label">#기업</label>
+                                    </td>
+                                    <td>
+                                        <input class="hash_chk" type="checkbox" name="hash_chk">
+                                        <label class="hash_label">#개인</label>
+                                    </td>
+                                    <td>
+                                        <input class="hash_chk" type="checkbox" name="hash_chk">
+                                        <label class="hash_label">#정보성</label>
+                                    </td>
+                                    <td>
+                                        <input class="hash_chk" type="checkbox" name="hash_chk">
+                                        <label class="hash_label">#광고성</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="hash_chk" type="checkbox" name="hash_chk">
+                                        <label class="hash_label">#문자메시지</label>
+                                    </td>
+                                    <td>
+                                        <input class="hash_chk" type="checkbox" name="hash_chk">
+                                        <label class="hash_label">#카카오메시지</label>
+                                    </td>
+                                    <td>
+                                        <input class="hash_chk" type="checkbox" name="hash_chk">
+                                        <label class="hash_label">#이미지</label>
+                                    </td>
+                                    <td>
+                                        <input class="hash_chk" type="checkbox" name="hash_chk">
+                                        <label class="hash_label">#대량발송</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="hash_chk" type="checkbox" name="hash_chk">
+                                        <label class="hash_label">#인터넷팩스</label>
+                                    </td>
+                                    <td>
+                                        <input class="hash_chk" type="checkbox" name="hash_chk">
+                                        <label class="hash_label">#해외메시지</label>
+                                    </td>
+                                    <td>
+                                        <input class="hash_chk" type="checkbox" name="hash_chk">
+                                        <label class="hash_label">#웹발송</label>
+                                    </td>
+                                    <td>
+                                        <input class="hash_chk" type="checkbox" name="hash_chk">
+                                        <label class="hash_label">#모듈발송</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="hash_chk" type="checkbox" name="hash_chk">
+                                        <label class="hash_label">#이벤트알림</label>
+                                    </td>
+                                    <td>
+                                        <input class="hash_chk" type="checkbox" name="hash_chk">
+                                        <label class="hash_label">#배송알림</label>
+                                    </td>
+                                    <td>
+                                        <input class="hash_chk" type="checkbox" name="hash_chk">
+                                        <label class="hash_label">#예약알림</label>
+                                    </td>
+                                    <td>
+                                        <input class="hash_chk" type="checkbox" name="hash_chk">
+                                        <label class="hash_label">#주문알림</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="row_wrapper" style="margin-top:20px;">
+                            <button class="btn" onclick="fn_open_ai_Result();">추천서비스 확인하기</button>
+                        </div>
+
+                        <div class="ai_result_div column_wrapper" style="margin-top:20px;">
+                            <div class="row_wrapper" style="justify-content: flex-start;">
+                                <span style="font-size: 24px; font-weight: bold;">AI 추천서비스 결과</span>
+                            </div>
+
+                            <div class="row_wrapper">
+                                <!-- <div class="row_wrapper" style="height: auto;"> -->
+                                        <!-- Slider main container -->
+                                    <div class="swiper-container swiper-container3">
+                                        <!-- Additional required wrapper -->
+                                        <div class="swiper-wrapper">
+                                            <!-- Slides -->
+                                            <div class="swiper-slide">
+                                                <div class="slide">슬라이드1</div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="slide">슬라이드2</div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="slide">슬라이드3</div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="slide">슬라이드4</div>
+                                            </div>
+                                        </div>
+                                        <!-- If we need pagination -->
+                                        <!-- <div class="swiper-pagination"></div> -->
+
+                                        <!-- If we need navigation buttons -->
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+
+                                        <!-- If we need scrollbar -->
+                                        <!-- <div class="swiper-scrollbar"></div> -->
+                                    </div>
+                                <!-- </div> -->
+                                <div class="column_wrapper" style="min-width: 600px;">
+                                    <span>나에게 맞는 발송 유형은</span>
+                                    <div class="ai_result_scroll_div column_wrapper" style="margin-top:10px; justify-content: flex-start;">
+                                        <div class="ai_result_scroll_element">
+                                            <span class="title">SMS</span>
+                                            <span class="content">90 bytes 이내 단문형 문자</span><br>
+                                            <span class="content">짧은 내용 전송 시 긴 문자보다 저렴한 단문 메시지, SMS</span>
+                                        </div>
+                                        
+                                        <div class="ai_result_scroll_element">
+                                            <span class="title">알림톡</span>
+                                            <span class="content">1,000자 이내 정보성 메시지</span><br>
+                                            <span class="content">문자보다 저렴한 정보성 메시지 카카오 알림톡</span>
+                                        </div>
+
+                                        <div class="ai_result_scroll_element">
+                                            <span class="title">친구톡</span>
+                                            <span class="content">1,000자 이내 광고성 메시지</span><br>
+                                            <span class="content">기업 마케팅을 위한 타겟팅 메시지 친구톡</span>
+                                        </div>
+
+                                        <div class="ai_result_scroll_element">
+                                            <span class="title">SMS</span>
+                                            <span class="content">90 bytes 이내 단문형 문자</span><br>
+                                            <span class="content">짧은 내용 전송 시 긴 문자보다 저렴한 단문 메시지, SMS</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row_wrapper" style="justify-content: flex-start;">
+                                <span>합리적인 <span style="font-size: 24px; font-weight: bold;">개인 요금제</span> [부가세 별도] 충전금 유효기간 없음</span>
+                            </div>
+
+                            <div class="row_wrapper" style="justify-content: flex-start;">
+                                <table class="charge_table">
+                                    <tr>
+                                        <td>SMS</td>
+                                        <td>--------------</td>
+                                        <td>00원</td>
+                                        <td>알림톡</td>
+                                        <td>--------------</td>
+                                        <td>00원</td>
+                                        <td>바코드</td>
+                                        <td>--------------</td>
+                                        <td>00원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LMS</td>
+                                        <td>--------------</td>
+                                        <td>00원</td>
+                                        <td>친구톡</td>
+                                        <td>--------------</td>
+                                        <td>00원</td>
+                                        <td>해외문자</td>
+                                        <td>--------------</td>
+                                        <td>00원 ~ 00원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MMS</td>
+                                        <td>--------------</td>
+                                        <td>00원</td>
+                                        <td>친구톡 이미지</td>
+                                        <td>--------------</td>
+                                        <td>00원</td>
+                                        <td>FAX</td>
+                                        <td>--------------</td>
+                                        <td>00원</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="row_wrapper" style="margin-top:20px;">
+                                <div class="column_wrapper">
+                                    <label class="btn_label">가입시 1,000포인트 증정</label>
+                                    <button class="btn" onclick="javascript:location.href='Page/signup.html'">회원가입 하기</button>
+                                </div>
+                                <div class="column_wrapper" style="margin-left:20px;">
+                                    <label class="btn_label">대량발송, 후불제 고객</label>
+                                    <button class="btn btn-modal" id="btn-modal" data-modal="modal-inquiry">상담 신청하기</button>
+                                </div>
+                                <div class="column_wrapper" style="height:auto;margin-left:20px;justify-content: flex-end;">
+                                    <button class="btn" onclick="fn_close_ai_Result();">다시 선택하기</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="main_content main_content4">
+                    <div class="wrapper clearfix">
+                        <div class="text_area">
                             <span class="introduce_content">색다른 고객 경험을 위한 스마트 광고 솔루션</span>
                             <span class="introduce_content" style="font-size:16px;margin-top:16px;">마케팅에 최적화된 광고 페이지를
                                 무료로 제작해보세요</span>
@@ -136,7 +352,7 @@
                     </div>
                 </div>
 
-                <div class="main_content main_content4">
+                <div class="main_content main_content5">
                     <div class="wrapper clearfix">
                         <div class="text_area">
                             <span class="introduce_title">왜, [사이트명] 인가요?</span>
@@ -158,7 +374,7 @@
                     </div>
                 </div>
 
-                <div class="main_content main_content5">
+                <div class="main_content main_content6">
                     <div class="wrapper clearfix">
                         <div class="text_area">
                             <span class="introduce_title">번거로움은 빼고 편리함은 더했습니다</span>
@@ -172,11 +388,11 @@
                 </div>
 
 
-                <div class="main_content main_content6">
+                <div class="main_content main_content7">
                     <div class="wrapper clearfix">
 
                         <!-- Slider main container -->
-                        <div class="swiper-container swiper-container6">
+                        <div class="swiper-container swiper-container7">
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
@@ -217,7 +433,7 @@
 
                 </div>
 
-                <div class="main_content main_content7">
+                <div class="main_content main_content8">
                     <div class="wrapper clearfix">
                         <div class="image_area">
                             <div class="row_wrapper">
@@ -269,15 +485,16 @@
                     </div>
                 </div>
 
-                <div class="main_content main_content8">
+                <div class="main_content main_content9">
                     <div class="wrapper clearfix">
                         <div class="text_area">
                             <span class="introduce_title">가장 저렴한 가격으로 제안합니다</span>
                             <span class="introduce_content">복잡한 조건 없이 보여지는 가격 그대로!</span>
                         </div>
                         <div class="image_area">기업형</div>
-                        <div class="button_area"><button class="btn" onclick="javascript:alert('견적 상담 모달창 등장');">견적
-                                상담하기</button></div>
+                        <div class="button_area">
+                            <button class="btn btn-modal" id="btn-modal" data-modal="modal-inquiry">상담 신청하기</button>
+                        </div>
                     </div>
                 </div>
 
@@ -285,6 +502,8 @@
 
         </div>
     </div>
+
+    <div id="modal" class="modal-overlay"></div>
 
     <!-- Footer -->
     <div id="footer"></div>

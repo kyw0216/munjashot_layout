@@ -83,7 +83,8 @@
                                                 <div class="column" style="margin-top:0;">
                                                     <div class="row" style="margin-top:0;">
                                                         <label style="min-width:80px;margin-right:10px;">(발송제목)</label>
-                                                        <input type="text" style="width: 100%;">
+                                                        <input id="msg_title" class="ctrl-input" type="text" onkeyup="check_byte('msg_title', this)" maxlength="40">
+                                                        <label id="msg_title_byte" style="min-width:150px;margin-left:10px;">0 / 40 byte</label>
                                                     </div>
 
                                                     <div class="row" style="justify-content: flex-start;">
@@ -91,19 +92,20 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="column" style="margin-top:0;">
-                                                            <textarea class="msg_content_textarea" style="width: 100%; height:300px;" placeholder="발송내용"></textarea>
+                                                            <textarea class="msg_content_textarea" style="width: 100%; height:300px;" placeholder="발송내용" onkeyup="check_byte('msg_content', this)"></textarea>
                                                             <textarea class="msg_080_textarea" style="width: 100%; height:100px; text-align: left;" readonly>
 무료수신거부
 080XXXXXXXX</textarea>
+                                                            <div class="row" style="justify-content: flex-start;">
+                                                                <label id="msg_content_byte">0 / 90 byte</label>
+                                                                <label id="msg_type" style="margin-left:5px; color:#4a4adb;">(SMS)</label>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <button class="btn"
-                                                            style="min-width: 150px; margin-right:20px;">이미지 첨부</button>
-                                                        <button class="btn"
-                                                            style="min-width: 150px; margin-right:20px;">문구저장</button>
-                                                        <button class="btn"
-                                                            style="min-width: 150px; margin-right:20px;">불러오기</button>
+                                                        <button class="btn btn-modal" style="min-width: 150px; margin-right:20px;" id="btn-modal" data-modal="modal-msg-img">이미지 첨부</button>
+                                                        <button class="btn btn-modal" style="min-width: 150px; margin-right:20px;" id="btn-modal" data-modal="modal-msg-save">문구저장</button>
+                                                        <button class="btn btn-modal" style="min-width: 150px; margin-right:20px;" id="btn-modal" data-modal="modal-msg-load-all">불러오기</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -127,21 +129,19 @@
                                             </div>
 
                                             <div class="row">
-                                                <button class="btn"
-                                                    style="min-width: 100px; margin-right:20px;">수신번호</button>
-                                                <input type="text" style="width:100%;margin-right:20px;" value="(직접입력)">
-                                                <button class="btn" style="min-width: 100px;">추가</button>
+                                                <button class="btn" style="min-width: 100px; margin-right:20px;">수신번호</button>
+                                                
+                                                <div class="column" style="margin-top:0;" data-parsley-validate id="msg-send-form">
+                                                    <input id="msg_receiving_num" class="ctrl-input msg-send-form-item" type="text" style="margin-right:20px;" placeholder="(직접입력)" maxlength=20 data-column="msg_receiving_num" pattern="/^\d{3}-\d{3,4}-\d{4}$/" required data-parsley-pattern-message="잘못된 전화번호 규칙입니다.">
+                                                    <div class="msg-send-form-toastList"></div>
+                                                </div>
+                                                <button class="btn" style="min-width: 100px;" onclick="receiving_num_check();">추가</button>
                                             </div>
 
                                             <div class="row">
-                                                <button class="btn"
-                                                    style="width:100%; min-width: 150px; margin-right:20px;">주소록에서
-                                                    추가</button>
-                                                <button class="btn"
-                                                    style="width:100%; min-width: 150px; margin-right:20px;">클립보드
-                                                    붙여넣기</button>
-                                                <button class="btn" style="width:100%; min-width: 150px;">엑셀
-                                                    불러오기</button>
+                                                <button class="btn" style="width:100%; min-width: 150px; margin-right:20px;">주소록에서 추가</button>
+                                                <button class="btn" style="width:100%; min-width: 150px; margin-right:20px;">클립보드 붙여넣기</button>
+                                                <button class="btn" style="width:100%; min-width: 150px;">엑셀 불러오기</button>
                                             </div>
 
                                             <div class="row" style="background-color: #fff; padding:10px;">
@@ -150,12 +150,13 @@
                                                         <label>수신번호 리스트</label>
                                                     </div>
                                                     <div class="row">
-                                                        <div
-                                                            style="width: 100%; height:120px; border-bottom: 1px solid black;">
+                                                        <div class="receiving_num_list_div" style="width: 100%; height:120px; border-bottom: 1px solid black;">
+                                                            <table class="receiving_num_list_table"></table>
                                                         </div>
                                                     </div>
                                                     <div class="row" style="justify-content: flex-end;">
-                                                        <button class="btn" style="min-width: 150px;">전체 삭제</button>
+                                                        <button class="btn" style="min-width: 150px;" onclick="remove_receiving_num_list();">전체 삭제</button>
+                                                        <label class="receiving_num_list_cnt" style="margin-left:10px;">총 0 개</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -163,10 +164,11 @@
                                             <div class="row">
                                                 <button class="btn" style="min-width: 150px; margin-right:20px;">발송시간</button>
                                                 <div style="width:100%; border: 1px solid black; padding:8px;">
-                                                    <input id="msg_immSend_chk" type="radio" name="send_time"></input>
+                                                    <input id="msg_immSend_chk" type="radio" name="msg_send_time" value="immediately"></input>
                                                     <label for="msg_immSend_chk">즉시발송</label>
-                                                    <input id="msg_resSend_chk" type="radio" name="send_time"></input>
+                                                    <input id="msg_resSend_chk" type="radio" name="msg_send_time" value="reservation"></input>
                                                     <label for="msg_resSend_chk">예약발송</label>
+                                                    <input class="msg_send_time" type="date" disabled>
                                                 </div>
 
                                             </div>
@@ -291,12 +293,9 @@
                                                             </div>
 
                                                             <div class="row">
-                                                                <button class="btn"
-                                                                    style="min-width: 100px; margin-right:20px;">수신번호</button>
-                                                                <input type="text" style="width:100%;margin-right:20px;"
-                                                                    value="(직접입력)">
-                                                                <button class="btn"
-                                                                    style="min-width: 100px;">추가</button>
+                                                                <button class="btn" style="min-width: 100px; margin-right:20px;">수신번호</button>
+                                                                <input class="ctrl-input" type="text" style="width:100%;margin-right:20px;" placeholder="(직접입력)" maxlength=20>
+                                                                <button class="btn" style="min-width: 100px;">추가</button>
                                                             </div>
 
                                                             <div class="row">
@@ -333,10 +332,11 @@
                                                                     style="min-width: 150px; margin-right:20px;">발송시간</button>
                                                                 <div
                                                                     style="width:100%; border: 1px solid black; padding:8px;">
-                                                                    <input type="radio" name="send_time"></input>
-                                                                    <label>즉시발송</label>
-                                                                    <input type="radio" name="send_time"></input>
-                                                                    <label>예약발송</label>
+                                                                    <input id="alim_immSend_chk" type="radio" name="alim_send_time" value="immediately"></input>
+                                                                    <label for="alim_immSend_chk">즉시발송</label>
+                                                                    <input id="alim_resSend_chk" type="radio" name="alim_send_time" value="reservation"></input>
+                                                                    <label for="alim_resSend_chk">예약발송</label>
+                                                                    <input class="alim_send_time" type="date" disabled>
                                                                 </div>
 
                                                             </div>
@@ -481,7 +481,7 @@
                                                                     <div class="column" style="margin-top:0;">
                                                                         <div class="row" style="margin-top:0;">
                                                                             <label style="min-width:80px;margin-right:10px;">(발송제목)</label>
-                                                                            <input type="text" style="width: 100%;">
+                                                                            <input class="ctrl-input" type="text">
                                                                         </div>
 
                                                                         <div class="row" style="justify-content: flex-start;">
@@ -517,10 +517,8 @@
 
                                                             <div class="row">
                                                                 <button class="btn" style="min-width: 100px; margin-right:20px;">수신번호</button>
-                                                                <input type="text" style="width:100%;margin-right:20px;"
-                                                                    value="(직접입력)">
-                                                                <button class="btn"
-                                                                    style="min-width: 100px;">추가</button>
+                                                                <input class="ctrl-input" type="text" style="margin-right:20px;" placeholder="(직접입력)" maxlength=20>
+                                                                <button class="btn" style="min-width: 100px;">추가</button>
                                                             </div>
 
                                                             <div class="row">
@@ -557,10 +555,11 @@
                                                                     style="min-width: 150px; margin-right:20px;">발송시간</button>
                                                                 <div
                                                                     style="width:100%; border: 1px solid black; padding:8px;">
-                                                                    <input type="radio" name="send_time"></input>
-                                                                    <label>즉시발송</label>
-                                                                    <input type="radio" name="send_time"></input>
-                                                                    <label>예약발송</label>
+                                                                    <input id="friend_immSend_chk" type="radio" name="friend_send_time" value="immediately"></input>
+                                                                    <label for="friend_immSend_chk">즉시발송</label>
+                                                                    <input id="friend_resSend_chk" type="radio" name="friend_send_time" value="reservation"></input>
+                                                                    <label for="friend_resSend_chk">예약발송</label>
+                                                                    <input class="friend_send_time" type="date" disabled>
                                                                 </div>
 
                                                             </div>
@@ -671,7 +670,7 @@
                                             <div class="row">
                                                 <button class="btn"
                                                     style="min-width: 100px; margin-right:20px;">수신번호</button>
-                                                <input type="text" style="width:100%;margin-right:20px;" value="(직접입력)">
+                                                <input class="ctrl-input" type="text" style="margin-right:20px;" placeholder="(직접입력)" maxlength=20>
                                                 <button class="btn" style="min-width: 100px;">추가</button>
                                             </div>
 
@@ -706,10 +705,11 @@
                                                 <button class="btn"
                                                     style="min-width: 150px; margin-right:20px;">발송시간</button>
                                                 <div style="width:100%; border: 1px solid black; padding:8px;">
-                                                    <input type="radio" name="send_time"></input>
-                                                    <label>즉시발송</label>
-                                                    <input type="radio" name="send_time"></input>
-                                                    <label>예약발송</label>
+                                                    <input id="barcode_immSend_chk" type="radio" name="barcode_send_time" value="immediately"></input>
+                                                    <label for="barcode_immSend_chk">즉시발송</label>
+                                                    <input id="barcode_resSend_chk" type="radio" name="barcode_send_time" value="reservation"></input>
+                                                    <label for="barcode_resSend_chk">예약발송</label>
+                                                    <input class="barcode_send_time" type="date" disabled>
                                                 </div>
 
                                             </div>
@@ -758,9 +758,8 @@
                                             </div>
 
                                             <div class="row">
-                                                <button class="btn"
-                                                    style="min-width: 150px; margin-right:20px;">국가검색</button>
-                                                <input tpye="text" style="width:100%;">
+                                                <button class="btn" style="min-width: 150px; margin-right:20px;">국가검색</button>
+                                                <input class="ctrl-input" tpye="text">
                                             </div>
 
                                             <div class="row" style="justify-content: flex-start;">
@@ -808,9 +807,9 @@
                                             <div class="row">
                                                 <button class="btn"
                                                     style="min-width: 100px; margin-right:20px;">수신번호</button>
-                                                <input type="text" style="min-width: 100px;margin-right:20px;"
+                                                <input class="ctrl-input" type="text" style="min-width: 100px;margin-right:20px;"
                                                     value="(국가번호)">
-                                                <input type="text" style="width:100%;margin-right:20px;" value="(직접입력)">
+                                                <input class="ctrl-input" type="text" style="margin-right:20px;" placeholder="(직접입력)" maxlength=20>
                                                 <button class="btn" style="min-width: 100px;">추가</button>
                                             </div>
 
@@ -841,12 +840,12 @@
                                                 <button class="btn"
                                                     style="min-width: 150px; margin-right:20px;">발송시간</button>
                                                 <div style="width:100%; border: 1px solid black; padding:8px;">
-                                                    <input type="radio" name="send_time"></input>
-                                                    <label>즉시발송</label>
-                                                    <input type="radio" name="send_time"></input>
-                                                    <label>예약발송</label>
+                                                    <input id="global_immSend_chk" type="radio" name="global_send_time" value="immediately"></input>
+                                                    <label for="global_immSend_chk">즉시발송</label>
+                                                    <input id="global_resSend_chk" type="radio" name="global_send_time" value="reservation"></input>
+                                                    <label for="global_resSend_chk">예약발송</label>
+                                                    <input class="global_send_time" type="date" disabled>
                                                 </div>
-
                                             </div>
                                         </div>
 
@@ -887,19 +886,16 @@
                                             <div class="row">
                                                 <button class="btn"
                                                     style="min-width: 150px; margin-right:20px;">제목</button>
-                                                <input type="text" style="width:100%;">
+                                                <input class="ctrl-input" type="text">
                                             </div>
 
                                             <div class="row" style="justify-content: flex-start;">
-                                                <button class="btn" style="min-width: 150px; margin-right:20px;">팩스
-                                                    표지</button>
+                                                <button class="btn" style="min-width: 150px; margin-right:20px;">팩스 표지</button>
 
-                                                <input type="radio" style="margin-right: 5px;" name="fax_cover_chk"
-                                                    value="N">
-                                                <label style="margin-right: 10px;">적용안함</label>
-                                                <input type="radio" style="margin-right:5px;" name="fax_cover_chk"
-                                                    value="Y">
-                                                <label>적용</label>
+                                                <input id="fax_cover_no" type="radio" style="margin-right: 5px;" name="fax_cover_chk" value="N">
+                                                <label for="fax_cover_no" style="margin-right: 10px;">적용안함</label>
+                                                <input id="fax_cover_yes" type="radio" style="margin-right:5px;" name="fax_cover_chk" value="Y">
+                                                <label for="fax_cover_yes">적용</label>
                                             </div>
 
                                             <div class="fax_cover_layout">
@@ -908,37 +904,30 @@
                                                     <table class="fax_table">
                                                         <tr>
                                                             <td class="th">수신자</td>
-                                                            <td class="td"><input type="text" value="(입력)"
-                                                                    style="width:100%;"></td>
+                                                            <td class="td"><input class="ctrl-input" type="text" value="(입력)"></td>
                                                             <td class="th">수신번호</td>
-                                                            <td class="td"><input type="text" value="(입력)"
-                                                                    style="width:100%;"></td>
+                                                            <td class="td"><input class="ctrl-input" type="text" value="(입력)"></td>
                                                         </tr>
 
                                                         <tr>
                                                             <td class="th">발신자</td>
-                                                            <td class="td"><input type="text" value="(입력)"
-                                                                    style="width:100%;"></td>
+                                                            <td class="td"><input class="ctrl-input" type="text" value="(입력)"></td>
                                                             <td class="th">발신번호</td>
-                                                            <td class="td"><input type="text" value="(입력)"
-                                                                    style="width:100%;"></td>
+                                                            <td class="td"><input class="ctrl-input" type="text" value="(입력)"></td>
                                                             </td>
                                                         </tr>
 
                                                         <tr>
                                                             <td class="th">제목</td>
-                                                            <td class="td"><input type="text" value="(입력)"
-                                                                    style="width:100%;"></td>
+                                                            <td class="td"><input class="ctrl-input" type="text" value="(입력)"></td>
                                                             <td class="th">일자</td>
-                                                            <td class="td"><input type="text" value="0000-00-00"
-                                                                    style="width:100%;"></td>
+                                                            <td class="td"><input class="ctrl-input" type="text" value="0000-00-00"></td>
                                                             </td>
                                                         </tr>
 
                                                         <tr>
                                                             <td class="th">메시지</td>
-                                                            <td class="td" colspan="3"><textarea
-                                                                    style="width:100%;height:100%;">(입력)</textarea></td>
+                                                            <td class="td" colspan="3"><textarea style="width:100%;height:100%;">(입력)</textarea></td>
                                                             </td>
                                                         </tr>
 
@@ -946,8 +935,7 @@
                                                 </div>
 
                                                 <div class="row" style="justify-content: flex-end;">
-                                                    <button class="btn"
-                                                        style="min-width: 100px; margin-right:20px;">저장</button>
+                                                    <button class="btn" style="min-width: 100px; margin-right:20px;">저장</button>
                                                     <button class="btn" style="min-width: 100px;">수정</button>
                                                 </div>
                                             </div>
@@ -955,8 +943,7 @@
 
                                             <div class="row">
                                                 <input type="file" style="display: block;width:100%;">
-                                                <button class="btn" style="min-width: 150px;">추가
-                                                </button>
+                                                <button class="btn" style="min-width: 150px;">추가</button>
                                             </div>
 
                                             <div class="row" style="background-color: #fff;">
@@ -974,7 +961,7 @@
                                             <div class="row">
                                                 <button class="btn"
                                                     style="min-width: 100px; margin-right:20px;">수신번호</button>
-                                                <input type="text" style="width:100%;margin-right:20px;" value="(직접입력)">
+                                                <input class="ctrl-input" type="text" style="margin-right:20px;" placeholder="(직접입력)" maxlength=20>
                                                 <button class="btn" style="min-width: 100px;">추가</button>
                                             </div>
 
@@ -1009,10 +996,11 @@
                                                 <button class="btn"
                                                     style="min-width: 150px; margin-right:20px;">발송시간</button>
                                                 <div style="width:100%; border: 1px solid black; padding:8px;">
-                                                    <input type="radio" name="send_time"></input>
-                                                    <label>즉시발송</label>
-                                                    <input type="radio" name="send_time"></input>
-                                                    <label>예약발송</label>
+                                                    <input id="fax_immSend_chk" type="radio" name="fax_send_time" value="immediately"></input>
+                                                    <label for="fax_immSend_chk">즉시발송</label>
+                                                    <input id="fax_resSend_chk" type="radio" name="fax_send_time" value="reservation"></input>
+                                                    <label for="fax_resSend_chk">예약발송</label>
+                                                    <input class="fax_send_time" type="date" disabled>
                                                 </div>
 
                                             </div>

@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="../stylesheet/Common/modal.css">
+
+<script>
+
+$(function(){
+    Fn_Tippy_Init();
+});
+// 툴팁 세팅
+function Fn_Tippy_Init(){
+
+    tippy("[data-tippy-content]",
+    {
+        content: "tooltip",
+        allowHTML: true,
+        maxWidth: 500
+    });
+}
+
+</script>
+
+<div id="modal-msg-img" class="modal-window">
+
+    <div class="m_row_wrapper" style="justify-content: flex-start;">
+        <span class="m_title">이미지 첨부</span>
+    </div>
+
+    <div class="close-area">X</div>
+
+    <hr style="margin:20px 0;width: 100%;">
+
+    <div class="m_column_wrapper" style="align-items: flex-start; height:auto;">
+        <span class="m_content">- <span style="color:red;">JPG</span> 파일만 첨부 가능합니다.</span>
+        <span class="m_content">- <span style="color:red;">200 Kbyte</span> 까지 지원 가능합니다.</span>
+        <span class="m_content">- <span style="color:red;">가로, 세로는 각 1500px</span>을 넘을 수 없습니다.</span>
+    </div>
+
+    <div class="content">
+        
+        <div class="m_column_wrapper" style="width: 100%; margin-top:10px; align-items: flex-start;">
+            
+            <input type="file" style="display: block;">
+            <input type="file" style="display: block;">
+            <input type="file" style="display: block;">
+
+        </div>
+
+        <div class="m_row_wrapper" style="margin-top:10px;">
+            <button class="btn" style="width:100px;">확 인</button>
+            <button class="btn" style="width:100px; margin-left:10px;" onclick="javscript:modal.style.display='none'">취 소</button>
+        </div>
+
+    </div>
+</div>

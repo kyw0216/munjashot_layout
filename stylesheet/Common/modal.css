@@ -60,6 +60,82 @@
     vertical-align: middle;
 }
 
+#modal-inquiry .label{
+    min-width:200px;
+}
+
+#modal-msg-load .menu_label{
+    width: 80px;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #888888;
+    border-radius: 10px;   
+    background-color: #cecece;
+    cursor: pointer;
+}
+
+#modal-msg-load .menu_label.on{
+    background-color: #b2b2ff;
+}
+
+#modal-msg-load .msg_type_label{
+    position: relative;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;   
+    background-color: #888888;
+    color: white;
+    top: 15px;
+}
+
+#modal-msg-load .msg_type_label.sms{
+    background-color:#888888;
+}
+
+#modal-msg-load .msg_type_label.lms{
+    background-color: #4a4adb;
+}
+
+#modal-msg-load .msg_type_label.mms{
+    background-color: orange;
+}
+
+#modal-msg-load .msg_box{
+    width: 100%;
+    border: 3px solid #888888;
+    height:250px;
+}
+
+#modal-msg-load .msg_box.sms{
+   border: 3px solid #888888;
+}
+
+#modal-msg-load .msg_box.lms{
+   border: 3px solid #4a4adb;
+}
+
+#modal-msg-load .msg_box.mms{
+   border: 3px solid orange;
+}
+
+#modal-msg-load .msg_name{
+   color:#4a4adb;
+   cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .m_row_wrapper{
     display: flex;

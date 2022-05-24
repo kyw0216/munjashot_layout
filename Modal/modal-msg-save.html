@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="../stylesheet/Common/modal.css">
+
+<script>
+
+$(function(){
+    Fn_Tippy_Init();
+});
+// 툴팁 세팅
+function Fn_Tippy_Init(){
+
+    tippy("[data-tippy-content]",
+    {
+        content: "tooltip",
+        allowHTML: true,
+        maxWidth: 500
+    });
+}
+
+</script>
+
+<div id="modal-msg-save" class="modal-window" style="width: auto;">
+
+    <div class="m_row_wrapper" style="justify-content: flex-start;">
+        <span class="m_title">문구 저장</span>
+    </div>
+
+    <div class="close-area">X</div>
+
+    <hr style="margin:20px 0;width: 100%;">
+
+    <div class="m_column_wrapper" style="height:auto;">
+        <span class="m_content">저장할 문구의 이름을 입력해주세요.</span>
+    </div>
+
+    <div class="content">
+        
+        <div class="m_column_wrapper" style="width: 100%; margin-top:10px;">
+            <input type="text" class="ctrl-input" placeholder="저장 문구 1">
+        </div>
+
+        <div class="m_row_wrapper" style="margin-top:10px;">
+            <button class="btn" style="width:200px;">문구 저장</button>
+        </div>
+
+    </div>
+</div>
