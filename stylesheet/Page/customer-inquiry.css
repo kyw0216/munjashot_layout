@@ -120,6 +120,7 @@ main .main_content .text_area .introduce_content {
     padding:20px;
     border:1px solid #888888;
     background-color: #f7f7f7;
+    cursor: pointer;
 }
 
 .icon_div{

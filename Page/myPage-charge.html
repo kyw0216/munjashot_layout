@@ -119,12 +119,12 @@
 
                                 <div class="row_wrapper" style="justify-content: flex-start;">
                                     <div class="money_select_div">
-                                        <input type="radio" id="5000" name="money_select" class="money_radio_box"></input><label class="money_label" for="5000">5,000원</label>
-                                        <input type="radio" id="10000" name="money_select" class="money_radio_box"></input><label class="money_label" for="10000">10,000원</label>
-                                        <input type="radio" id="20000" name="money_select" class="money_radio_box"></input><label class="money_label" for="20000">20,000원</label>
-                                        <input type="radio" id="50000" name="money_select" class="money_radio_box"></input><label class="money_label" for="50000">50,000원</label>
-                                        <input type="radio" id="direct" name="money_select" class="money_radio_box"></input><label class="money_label" for="direct">직접 입력</label>
-                                        <input class="ctrl-input money_direct" type="text" style="width:auto"></input>
+                                        <input type="radio" id="5000" name="money_select" class="money_radio_box" value=5000></input><label class="money_label" for="5000">5,000원</label>
+                                        <input type="radio" id="10000" name="money_select" class="money_radio_box" value=10000></input><label class="money_label" for="10000">10,000원</label>
+                                        <input type="radio" id="20000" name="money_select" class="money_radio_box" value=20000></input><label class="money_label" for="20000">20,000원</label>
+                                        <input type="radio" id="50000" name="money_select" class="money_radio_box" value=50000></input><label class="money_label" for="50000">50,000원</label>
+                                        <input type="radio" id="direct" name="money_select" class="money_radio_box" value="direct"></input><label class="money_label" for="direct">직접 입력</label>
+                                        <input id="direct_amount" class="ctrl-input money_direct" type="text" style="width:auto"></input>
                                     </div>
                                 </div>
                          
@@ -144,13 +144,14 @@
                                 </div>
                                 
                                 <div class="row_wrapper" style="justify-content: flex-end; ">
-                                    <button class="btn" onclick="javascript:alert('견적서 다운로드 팝업');">견적서 다운로드</button>
+                                    <button class="btn btn-modal" id="btn-modal" data-modal="modal-estimate">견적서 다운로드</button>
                                 </div>
                                 
                                 <hr style="margin:12px;width: 100%;">
 
                                 <div class="row_wrapper" style="justify-content: flex-end; ">
-                                    <button class="btn" style="width: 200px;" onclick="javascript:alert('결제하기 팝업');">결제하기</button>
+                                    <!-- <button class="btn" style="width: 200px;" onclick="javascript:util.alert('오류', 'error', '결제하시겠습니까?');">결제하기</button> -->
+                                    <button class="btn" style="width: 200px;" onclick="process_payment();">결제하기</button>
                                 </div>
 
                             </div>

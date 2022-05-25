@@ -28,3 +28,20 @@
 
     
 });
+
+
+function process_payment(){
+
+    if( !$("input:radio[name=money_select]:checked").val() ){
+        util.alert("알림", "error", "충전금액을 선택해주세요.");
+        return false;
+    } else {
+        if($("input:radio[name=money_select]:checked").val() === "direct" && $("#direct_amount").val().trim() === ""){
+            util.alert("알림", "error", "충전금액을 입력해주세요.") 
+            return false;
+        }
+        
+        alert("KG 모빌리언스 결제창");
+    }
+
+}

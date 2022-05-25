@@ -1,11 +1,81 @@
 <link rel="stylesheet" href="../stylesheet/Common/modal.css">
 
-<div id="modal-auth-status" class="modal-window">
-    <div class="close-area">X</div>
-    <div class="title">
-        <h2>견적서</h2>
+<div id="modal-estimate" class="modal-window">
+
+    <div class="m_row_wrapper" style="justify-content: flex-start;">
+        <span class="m_title">견적서</span>
     </div>
+
+    <div class="close-area">X</div>
+
+    <hr style="margin:20px 0;width: 100%;">
+
     <div class="content">
-        모달입니다.
+
+        <table class="info_table">
+            <tr>
+                <td rowspan="5">
+                    백지은 귀하<br>
+                    2021년 10월 21일<br>
+                    아래와 같이 견적합니다.
+                </td>
+                <th rowspan="5" style="border-left: 2px solid black;">공<br>급<br>자</th>
+                <td colspan="4"></td>
+            </tr>
+            <tr>
+                <th>상호</th>
+                <td>엠포플러스(주)</td>
+                <th>성명</th>
+                <td>백지은</td>
+            </tr>
+            <tr>
+                <th>사업자 주소</th>
+                <td colspan="3">111</td>
+            </tr>
+            <tr>
+                <th>업태</th>
+                <td>111</td>
+                <th>종목</th>
+                <td>데이터전송장치</td>
+            </tr>
+            <tr>
+                <th>전화번호</th>
+                <td colspan="3">111</td>
+            </tr>
+        </table>
+
+        <div class="m_row_wrapper" style="justify-content: flex-start; margin-top:20px;">
+            <table class="info_table">
+                <tr>
+                    <th style="width:200px;">합계금액</span><br><span style="font-weight: normal;">(공급가액+부가세)</span></th>
+                    <td style="text-align: right; font-size: 18px; font-weight: bold;">일백오만 원 정 (1,050,000원)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="m_row_wrapper" style="justify-content: flex-start; margin-top:20px;">
+            <table class="money_table">
+                <tr style="border-top:2px solid black;">
+                    <th>품명</th>
+                    <th>수량</th>
+                    <th>단가(부가세포함)</th>
+                    <th>공급가액</th>
+                    <th>부가세</th>
+                </tr>
+                <tr>
+                    <td>문자메시지 사용료</td>
+                    <td>300</td>
+                    <td></td>
+                    <td>954,545</td>
+                    <td>95,455</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="m_row_wrapper" style="margin-top:20px;">
+            <button class="btn" style="width:100px;">다운로드</button>
+            <button class="btn" style="width:100px; margin-left:20px;">인쇄하기</button>
+        </div>
+
     </div>
 </div>
