@@ -184,6 +184,242 @@
     line-height: normal;
 }
 
+#modal-fax-send-confirm .preview_div {
+    border: 1px solid #333;
+    width: 300px;
+    height: 400px;
+    line-height: normal;
+}
+
+#modal-fax-send-confirm .fax_table {
+    width: 100%;
+    table-layout:fixed;
+}
+
+#modal-fax-send-confirm .fax_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    background-color: #cecece;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+#modal-fax-send-confirm .fax_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+#modal-global-send-confirm .preview_div {
+    display: flex;
+    flex-grow: 1;
+    border: 1px solid #333;
+    width: 300px;
+    height: 400px;
+    line-height: normal;
+}
+
+#modal-global-send-confirm .fax_table {
+    width: 100%;
+    table-layout:fixed;
+}
+
+#modal-global-send-confirm .fax_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    background-color: #cecece;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+#modal-global-send-confirm .fax_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+#modal-global-country-search .country_table_div{
+    width:100%;
+    height:200px;
+    overflow-y: scroll;
+}
+
+#modal-global-country-search .country_table{
+    width: 100%;
+    table-layout:fixed;
+}
+
+#modal-global-country-search .country_table th{
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    background-color: #cecece;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+#modal-global-country-search .country_table td{
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    line-height: normal;
+    white-space : nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+#modal-global-notice .content{
+    background-image: url(../../image/global_bg.jpg);
+}
+
+#modal-barcode-list .barcode_table_div{
+    width:100%;
+    height:200px;
+    overflow-y: scroll;
+}
+
+#modal-barcode-list .barcode_table{
+    width: 100%;
+    table-layout:fixed;
+}
+
+#modal-barcode-list .barcode_table th{
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    background-color: #cecece;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+#modal-barcode-list .barcode_table td{
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    line-height: normal;
+    white-space : nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+
+#modal-address .address_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #eeeeee;
+    margin-left:10px;
+}
+
+#modal-address .group_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    /* background-color: #f7f7f7; */
+}
+
+#modal-address .address_table_div{
+    width:100%;
+    height:200px;
+    overflow: scroll;
+}
+
+#modal-address .address_table {
+    width: 100%;
+}
+
+#modal-address .address_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    width: 10%;
+    background-color: #cecece;
+}
+
+#modal-address .address_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+    width: 10%;
+}
+
+#modal-address .address_receiver_table_div {
+    width:100%;
+    height:160px;
+    overflow-y: scroll;
+}
+
+#modal-address .address_receiver_table {
+    width: 100%;
+}
+
+#modal-address .address_receiver_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    width: 10%;
+    background-color: #cecece;
+}
+
+#modal-address .address_receiver_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+    width: 10%;
+}
+
+#modal-address .label_info {
+    background-color: #bebebe;
+    padding: 10px 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#modal-address .label_info.on{
+    background-color: #888888;
+    color:white;
+    font-weight: bold;
+}
 
 
 
@@ -238,7 +474,7 @@
 }
 
 .j_end{
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 
 .i_start{

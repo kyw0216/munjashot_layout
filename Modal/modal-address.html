@@ -1,0 +1,268 @@
+<link rel="stylesheet" href="../stylesheet/Common/modal.css">
+
+<script>
+
+$(function(){
+    Fn_Tippy_Init();
+    allChk();
+});
+// 툴팁 세팅
+function Fn_Tippy_Init(){
+
+    tippy("[data-tippy-content]",
+    {
+        content: "tooltip",
+        allowHTML: true,
+        maxWidth: 500
+    });
+}
+
+// 전체 선택/해제
+function allChk() {
+$("#all_chk").click(function () {
+    if ($("#all_chk").prop("checked")) {
+        $("input[name=barcode_chk]").prop("checked", true);
+    } else {
+        $("input[name=barcode_chk]").prop("checked", false);
+    }
+});
+}
+    
+</script>
+
+<div id="modal-address" class="modal-window" style="width:1200px;">
+
+    <div class="m_row_wrapper" style="justify-content: flex-start;">
+        <span class="m_title">주소록에서 추가</span>
+    </div>
+
+    <div class="close-area">X</div>
+
+    <hr style="margin:20px 0;width: 100%;">
+
+
+    <div class="content">
+        
+        <!-- <div class="container"> -->
+        <div class="m_column_wrapper">
+
+            <div class="m_row_wrapper">
+                <div class="group_div">
+
+                    <div class="m_row_wrapper" style="margin:0;">
+                        <input class="ctrl-input" placeholder="그룹명 검색"><button class="btn" style="width:60px;">검색</button>
+                    </div>
+    
+                    <div class="m_column_wrapper" style="margin:0 10px; border:1px solid #bdbdbd; height:300px; width: 100%;">
+                        <div class="m_row_wrapper" style="justify-content:flex-start; margin:0; padding:10px; border-top: 1px solid #bdbdbd; flex-grow:0;">
+                            <span style="cursor: pointer; width:100%; color:rgb(61, 61, 219); font-weight: bold;"><i class="xi-folder-open icon" style="padding:10px; background-color: #eeeeee; border-radius: 50%;;"></i><span style="margin-left:10px;">전체</span></span>
+                        </div>
+                        <div class="m_row_wrapper" style="padding:10px; border-top: 1px solid #bdbdbd;">
+                            <div class="m_column_wrapper j_start">
+                                <span style="font-size:14px; width: 100%; margin:10px;">● 미지정(0)</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                
+                <div class="address_div">
+    
+                    <div class="m_row_wrapper" style="border-top:2px solid black; margin:0; padding:10px;">
+                        <input class="ctrl-input" type="text" placeholder="휴대폰번호 (필수)">
+                        
+                        <button class="btn" style="margin-left:10px; min-width:70px;">검색</button>
+                        
+                        <select class="select" style="width:60px;margin-left:10px;">
+                            <option>20개씩</option>
+                            <option>10개씩</option>
+                        </select>
+    
+                    </div>
+    
+                    <table class="address_table">
+                        <tr>
+                            <th><input id="all_chk" class="chk_box" type="checkbox"></th>
+                            <th>그룹</th>
+                            <th>이름</th>
+                            <th>수신번호</th>
+                            <th>메모1</th>
+                            <th>메모2</th>
+                            <th>메모3</th>
+                            <th>메모4</th>
+                            <th>메모5</th>
+                        </tr>
+                    </table>
+    
+                    <div class="address_table_div" style="border-bottom:1px solid #bdbdbd;">
+                        <table class="address_table">
+                            <tr>
+                                <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+    
+                    <div class="m_row_wrapper" style="margin:0; justify-content: flex-end; margin-top:10px;">
+                        <button class="btn btn-modal" id="btn-modal" data-modal="modal-address-download">선택 추가</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="m_row_wrapper" style="border: 1px solid black; margin-top:10px; padding:10px;">
+                <div class="m_column_wrapper i_start j_start">
+                    <span style="font-size:20px;">발송 대상 (총 102건)</span>
+
+                    <div class="address_receiver_table_div">
+                        <table class="address_receiver_table" style="margin-top:10px;">
+                            <tr>
+                                <td>주소록(100명)</td>
+                                <td>주소록(100명)</td>
+                                <td>주소록(100명)</td>
+                                <td>주소록(100명)</td>
+                            </tr>
+                            <tr>
+                                <td>주소록(100명)</td>
+                                <td>주소록(100명)</td>
+                                <td>주소록(100명)</td>
+                                <td>주소록(100명)</td>
+                            </tr>
+                            <tr>
+                                <td>주소록(100명)</td>
+                                <td>주소록(100명)</td>
+                                <td>주소록(100명)</td>
+                                <td>주소록(100명)</td>
+                            </tr>
+                            <tr>
+                                <td>주소록(100명)</td>
+                                <td>주소록(100명)</td>
+                                <td>주소록(100명)</td>
+                                <td>주소록(100명)</td>
+                            </tr>
+                            <tr>
+                                <td>주소록(100명)</td>
+                                <td>주소록(100명)</td>
+                                <td>주소록(100명)</td>
+                                <td>주소록(100명)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="m_row_wrapper" style="margin-top:20px">
+            <button class="btn btn-modal" id="btn-modal" data-modal="modal-fax-send-finish" style="width: 120px;" onclick="modal.style.display='none'">이어서 전송</button>
+            <button class="btn" style="width:120px; margin-left:20px;" onclick="modal.style.display='none'">닫기</button>
+        </div>
+
+    </div>
+</div>

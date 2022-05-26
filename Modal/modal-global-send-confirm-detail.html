@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="../stylesheet/Common/modal-dept2.css">
+
+<script>
+
+$(function(){
+    Fn_Tippy_Init();
+});
+// 툴팁 세팅
+function Fn_Tippy_Init(){
+
+    tippy("[data-tippy-content]",
+    {
+        content: "tooltip",
+        allowHTML: true,
+        maxWidth: 500
+    });
+}
+    
+</script>
+
+<div id="modal-global-send-confirm" class="modal-window">
+
+    <div class="m_row_wrapper" style="justify-content: flex-start;">
+        <span class="m_title">차감예정금액 자세히보기</span>
+    </div>
+
+    <div class="close-area">X</div>
+
+    <hr style="margin:10px 0;width: 100%;">
+
+    <div class="content">
+
+        <div class="m_row_wrapper i_start">
+            <table class="money_detail_table">
+                <tr>
+                    <th>발송국가</th>
+                    <th>단가</th>
+                    <th>발송건수</th>
+                    <th>총액</th>
+                </tr>
+                <tr>
+                    <td>미국</td>
+                    <td>00원</td>
+                    <td>00건</td>
+                    <td>00원</td>
+                </tr>
+                <tr>
+                    <td>일본</td>
+                    <td>00원</td>
+                    <td>00건</td>
+                    <td>00원</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>

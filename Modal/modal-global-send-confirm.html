@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="../stylesheet/Common/modal.css">
 <script src="../javascript/Common/modal.js"></script>
+<script src="../javascript/Common/modal-dept2.js"></script>
 
 <script>
 
@@ -19,7 +20,7 @@ function Fn_Tippy_Init(){
     
 </script>
 
-<div id="modal-fax-send-confirm" class="modal-window">
+<div id="modal-global-send-confirm" class="modal-window">
 
     <div class="m_row_wrapper" style="justify-content: flex-start;">
         <span class="m_title">팩스 전송</span>
@@ -34,13 +35,8 @@ function Fn_Tippy_Init(){
         <div class="m_row_wrapper i_start">
             <div class="m_column_wrapper">
                 <div class="preview_div">
-                    <div class="m_column_wrapper">
-                        <div class="m_row_wrapper">
-                            <span>(파일 미리보기)</span>
-                        </div>
-                        <div class="m_row_wrapper" style="margin: 10px 0; flex-grow: 0;">
-                            <span>1/2/3 .... /10</span>
-                        </div>
+                    <div class="m_row_wrapper">
+                        <span>내용</span>
                     </div>
                 </div>
             </div>
@@ -73,17 +69,15 @@ function Fn_Tippy_Init(){
                         </tr>
                     </table>
                 </div>
-
-                <div class="m_column_wrapper i_start" style="width: 100%; padding:10px; margin-top:10px;">
-                    <span style="font-size: 18px;">[첨부파일 정보]</span>
-                    <span style="font-size: 18px;">업로드 파일 수 : - 개</span>
-                    <span style="font-size: 18px;">페이지 수 : - 장</span>
-                </div>
                 
                 <div class="m_column_wrapper i_end" style="width: 100%; padding:10px; margin-top:10px;">
+                    <span>※ 수신거부, 중복건수 버튼을 클릭 하여 해당 기능에 대해 허용 하여 발송 가능합니다.</span>
+                </div>
+
+                <div class="m_column_wrapper i_end" style="width: 100%; padding:10px; margin-top:10px;">
                     <span style="font-size: 18px; font-weight: bold;">차감예정 금액 000원</span>
-                    <span style="font-size: 18px; color: #888888;">총 페이지 수 : ( )</span>
-                    <span style="font-size: 18px; color: #888888;">단가 : ( )원</span>
+                    <span class="btn-modal-dept2" data-modal-dept2="modal-global-send-confirm-detail" style="font-size: 18px; color: #888888; cursor: pointer;"><u>자세히보기</u></span>
+                    <div id="modal_dept2" class="modal-overlay"></div>
                 </div>
                 
             </div>

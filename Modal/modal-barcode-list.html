@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="../stylesheet/Common/modal.css">
+
+<script>
+
+$(function(){
+    Fn_Tippy_Init();
+});
+// 툴팁 세팅
+function Fn_Tippy_Init(){
+
+    tippy("[data-tippy-content]",
+    {
+        content: "tooltip",
+        allowHTML: true,
+        maxWidth: 500
+    });
+}
+
+</script>
+
+<div id="modal-barcode-list" class="modal-window">
+
+    <div class="m_row_wrapper" style="justify-content: flex-start;">
+        <span class="m_title">바코드 보관함</span>
+    </div>
+
+    <div class="close-area">X</div>
+
+    <hr style="margin:20px 0;width: 100%;">
+
+    <div class="content">
+
+        <div class="m_row_wrapper" style="margin-top:20px;">
+        
+            <table class="barcode_table">
+                <tr>
+                    <th>이미지 썸네일</th>
+                    <th>바코드 유형</th>
+                    <th>바코드제목</th>
+                    <th>등록일시</th>
+                    <th>관리</th>
+                </tr>
+                <tr>
+                    <td><img src="../image/이미지 썸네일.png" style="width: 100%; height:auto;"></td>
+                    <td>QRCODE</td>
+                    <td>등록완료</td>
+                    <td>21/01/01</td>
+                    <td>
+                        <button class="btn" onclick="javascript:location.href='../Page/myPage-barcode-add.html';">수정</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div class="m_row_wrapper j_end" style="margin-top:20px;">
+            <span style="font-weight: bold; color: #4a4adb; cursor: pointer;" onclick="javascript:window.open('../Page/myPage-barcode-add.html');"><u>신규 바코드 생성하러 가기</u></span>
+        </div>
+
+
+        <div class="m_row_wrapper" style="margin-top:20px;">
+            <button class="btn" style="width:100px; margin-left:10px;" onclick="modal.style.display='none'">닫기</button>
+        </div>
+        
+    </div>
+</div>

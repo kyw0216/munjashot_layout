@@ -82,31 +82,6 @@ main .main_content .container .sub_container .group_div{
     /* background-color: #f7f7f7; */
 }
 
-main .main_content .container .sub_container .temp_title{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    /* background-color: #f7f7f7; */
-    margin-left:20px;
-    min-width: 200px;
-}
-
-main .main_content .container .sub_container .temp_content{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    /* background-color: #f7f7f7; */
-    flex-grow: 1;
-}
-
-/* .menu_label {
-    color: white;
-    font-size: 20px;
-    line-height: normal;
-} */
-
 .column_wrapper {
     display: flex;
     flex-direction: column;
@@ -175,30 +150,6 @@ main .main_content .container .sub_container .temp_content{
     width: 10%;
 }
 
-.barcode_table {
-    width: 100%;
-}
-
-.barcode_table th {
-    text-align: left;
-    font-weight: bold;
-    border: 1px solid #bdbdbd;
-    padding: 10px;
-    text-align: left;
-    width: 160px;
-    min-width: 160px;
-    background-color: #eeeeee;
-}
-
-.barcode_table td {
-    border: 1px solid #333;
-    padding: 10px;
-    background-color: #fff;
-    text-align: left;
-    border: 1px solid #eeeeee;
-    height: 30px;
-}
-
 .label_info {
     background-color: #bebebe;
     padding: 10px 30px;
@@ -210,94 +161,6 @@ main .main_content .container .sub_container .temp_content{
     background-color: #888888;
     color:white;
     font-weight: bold;
-}
-
-/* ul li태그에 리스트 스타일을 없앰 */
-li {
-    list-style: none;
-}
-
-/* ul li태그에 리스트 스타일을 없앰 */
-ul {
-    list-style: none;
-}
-
-
-.chn_table {
-    width: 100%;
-}
-
-.chn_table th {
-    text-align: left;
-    font-weight: bold;
-    border: 1px solid #bdbdbd;
-    padding: 10px;
-    text-align: center;
-    width: 200px;
-    background-color: #cecece;
-}
-
-.chn_table td {
-    border: 1px solid #333;
-    padding: 10px;
-    background-color: #fff;
-    text-align: left;
-    border: 1px solid #bdbdbd;
-    height: 30px;
-    line-height:normal;
-}
-
-.menu_select_div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-}
-
-.menu_select_div input[type=radio] {
-    display: none;
-}
-
-.menu_select_div input[type=radio]+label {
-    cursor: pointer;
-    color: white;
-    font-size: 20px;
-    line-height: normal;
-}
-
-.menu_select_div input[type=radio]:checked+label {
-    background-color: #333;
-    color: #fff;
-}
-
-/* menu태그 자식의 ul의 자식 li를 왼쪽정렬과 넓이 140설정 */
-.drop_down >li {
-    position: relative;
-}
-
-.drop_down>li>ul {
-    display: none;
-    position: absolute;
-    font-size: 14px;
-    background: skyblue;
-    width: 100%;
-}
-
-.drop_down>li>ul>li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:30px;
-}
-
-.drop_down>li:hover>ul {
-    display: block;
-}
-
-.drop_down>li>ul>li:hover {
-    background: orange;
-    transition: ease 1s;
 }
 
 

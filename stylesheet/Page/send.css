@@ -78,7 +78,14 @@ main .main_content1 .tab_cont .tab_in_content {
     display: none;
 }
 
-
+main .main_content1 .tab_cont .munja_content .msg_interval_layout {
+    /* display: flex; */
+    display: none;
+    flex-grow: 1;
+    justify-content: center;
+    flex-direction: column;   
+    /* padding: 10px; */
+}
 
 
 main .main_content1 .sub_tab_title {

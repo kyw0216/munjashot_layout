@@ -167,6 +167,19 @@
 
     });
 
+    $("input:checkbox[name=msg_interval_chk]").click(function () {
+
+        var chk = $(this).is(":checked");
+
+        console.log('msg_interval_chk');
+
+        if (chk) {
+            $(".munja_content .msg_interval_layout").css("display", "flex");
+        } else {
+            $(".munja_content .msg_interval_layout").hide();
+        }
+    });
+
 });
 
 
@@ -266,3 +279,4 @@ function remove_receiving_num(obj){
     
     receiving_num_list_cnt_check();
 }
+

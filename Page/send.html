@@ -111,8 +111,12 @@
                                             </div>
 
                                             <div class="row">
-                                                <button class="btn" style="width:100%;">변수
-                                                    추가</button>
+                                                <button class="btn" style="width:100%;">변수 추가<label data-tippy-placement="right" data-tippy-maxWidth="300" data-tippy-content="                                                    
+                                                    <h1>[안내문]</h1><br>
+                                                    변수란 입력된 영역이 주소록 데이터와 매칭되어 수신자별로 다른 내용이 발송되는 기능입니다.<br>
+                                                    (ex)<br>
+                                                    [이름]님, 잔여포인트는 [메모1]점 입니다. → 지은님, 잔여포인트는 1,000점 입니다.">
+                                                    <i class="fa-solid fa-circle-question"></i></label></button>
                                             </div>
                                             <div class="row">
                                                 <button class="btn"
@@ -139,7 +143,7 @@
                                             </div>
 
                                             <div class="row">
-                                                <button class="btn" style="width:100%; min-width: 150px; margin-right:20px;">주소록에서 추가</button>
+                                                <button class="btn btn-modal" data-modal="modal-address" style="width:100%; min-width: 150px; margin-right:20px;">주소록에서 추가</button>
                                                 <button class="btn" style="width:100%; min-width: 150px; margin-right:20px;">클립보드 붙여넣기</button>
                                                 <button class="btn" style="width:100%; min-width: 150px;">엑셀 불러오기</button>
                                             </div>
@@ -173,10 +177,37 @@
 
                                             </div>
                                             <div class="row">
-                                                <button class="btn" style="min-width: 150px; margin-right:20px;">간격발송</button>
-                                                <div style="width:100%; border: 1px solid black; padding:8px;">
-                                                    <input id="msg_interval_chk" type="checkbox"></input>
-                                                    <label for="msg_interval_chk">적용</label>
+                                                <button class="btn" style="min-width: 150px; margin-right:20px;">간격발송
+                                                    <label data-tippy-placement="right" data-tippy-maxwidth="300" data-tippy-content="                                                    
+                                                    <h1>[안내문]</h1><br>
+                                                    예약시점을 기준으로 설정한 간격마다 설정한 건수의 메시지가 발송됩니다.<br>
+                                                    <span style='color:red; font-weight:bold;'>* 이용자들의 문자 발송량이 증가 할 경우 발송 지연될 가능성이 있습니다.</span><br>">
+                                                    <i class="fa-solid fa-circle-question"></i></label></button>
+
+                                                <div class="row" style="justify-content: flex-start; margin:0; border: 1px solid black; padding:8px;">
+                                                    <input id="msg_interval_chk" type="checkbox" name="msg_interval_chk"></input>
+                                                    <label for="msg_interval_chk" style="margin-left:10px;">적용</label>
+
+                                                    <div class="msg_interval_layout" style="margin-left:20px;">
+                                                        <div class="row" style="margin: 0; justify-content: flex-start;">
+                                                            <span>간격 : </span>
+                                                            <select style="margin-left:10px;">
+                                                                <option>5분</option>
+                                                                <option>10분</option>
+                                                                <option>15분</option>
+                                                                <option>30분</option>
+                                                                <option>60분</option>
+                                                            </select>
+                                                            <span style="margin-left:20px;">회당 : </span>
+                                                            <input type="text" class="ctrl-input" style="width: 60px; margin-left:10px;">
+                                                            <span style="margin-left:10px;">건</span>
+                                                        </div>
+                                                        
+                                                        <div class="column" style="margin: 0; align-items: flex-start; line-height: normal;">
+                                                            <span style="font-weight: bold; color:#4a4adb;">마지막 발송 일시 : 2021-11-21 19:05</span>
+                                                            <span style="font-weight: bold; color:red;">광고 문자 발송 가능 시간 : 08:00 ~ 21:00</span>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -272,8 +303,18 @@
                                                                 </div>
 
                                                                 <div class="row">
-                                                                    <button class="btn" style="width:100%;">변수
-                                                                        추가</button>
+                                                                    <button class="btn" style="width:100%;">변수 추가<label class="label_info on" style="padding: 2px 7px;" data-tippy-content="
+                                                                        <h1>그룹이란 ?</h1>
+                                                                        다수의 카카오톡 채널을 [그룹]으로 묶어 간편하게 관리할 수 있는 기능입니다. 그룹에 템플릿을 등록하면, 그룹 내 채널에서 모두 해당 템플릿을 발송하실 수 있습니다.
+                                                                        <br><br>
+                                                                        그룹 이용 매뉴얼<br>
+                                                                        1. 그룹관리 버튼을 클릭하여 신규그룹을 생성해주세요.<br>
+                                                                        2. 원하시는 카카오톡 채널을 그룹으로 지정해주세요.<br>
+                                                                        3. 그룹에 템플릿을 등록하신 후 그룹 내의 모든 채널에서 알림톡을 발송해보세요. (그룹에 등록된 템플릿은 그룹화 된 모든 채널에서 발송하실 수 있습니다.)<br>
+                                                                        <span style='color:red; font-weight:bold;'>* 한번 생성된 그룹명은 변경이 불가능합니다.</span> <br>
+                                                                        <span style='color:red; font-weight:bold;'>* 그룹 심사 중 상태에서는 신규 템플릿 등록이 불가능합니다.</span>  
+                                                                        "><i class="fa-solid fa-circle-question"></i></label></button>
+                                                                    
                                                                 </div>
                                                                 <div class="row">
                                                                     <button class="btn"
@@ -626,10 +667,8 @@
                                                 </select>
                                             </div>
                                             <div class="row" style="justify-content: flex-start;">
-                                                <button class="btn" style="min-width: 150px; margin-right:20px;">바코드
-                                                    선택</button>
-                                                <button class="btn" style="min-width: 150px; margin-right:20px;">바코드
-                                                    보관함</button>
+                                                <button class="btn" style="min-width: 150px; margin-right:20px;">바코드 선택</button>
+                                                <button class="btn btn-modal" data-modal="modal-barcode-list" style="min-width: 150px; margin-right:20px;">바코드 보관함</button>
                                             </div>
                                             <div class="row" style="background-color: #fff; padding:10px;">
                                                 <div class="column" style="margin-top:0;">
@@ -759,15 +798,9 @@
 
                                             <div class="row">
                                                 <button class="btn" style="min-width: 150px; margin-right:20px;">국가검색</button>
-                                                <input class="ctrl-input" tpye="text">
+                                                <input class="ctrl-input btn-modal" data-modal="modal-global-country-search" tpye="text">
                                             </div>
 
-                                            <div class="row" style="justify-content: flex-start;">
-                                                <button class="btn" style="min-width: 150px; margin-right:20px;">바코드
-                                                    선택</button>
-                                                <button class="btn" style="min-width: 150px; margin-right:20px;">바코드
-                                                    보관함</button>
-                                            </div>
                                             <div class="row" style="background-color: #fff; padding:10px;">
                                                 <div class="column" style="margin-top:0;">
                                                     <div class="row" style="justify-content: flex-start; margin-top:0;">
@@ -852,9 +885,7 @@
                                         <!-- <div class="column_wrapper basis_500" style="height:auto;"> -->
                                         <div class="column_wrapper basis_500" style="margin-left:20px;">
                                             <div class="row" style="height:auto;justify-content: flex-end; margin-top:0;">
-                                                <button class="btn" style="min-width: 200px;">해외 문자
-                                                    발송 유의사항
-                                                </button>
+                                                <button class="btn btn-modal" data-modal="modal-global-notice" style="min-width: 200px;">해외 문자 발송 유의사항</button>
                                             </div>
                                             <div class="row" style="height:auto;justify-content: flex-start; margin-top:10px;">
                                                 <label style="min-width: 200px;">(발송 단가 : 00원) [vat-]</label>
@@ -862,9 +893,8 @@
                                             <div class="row" style="margin-top:10px; height:100%; border: 1px solid black">스마트폰 미리보기</div>
 
                                             <div class="row" style="align-items: end;">
-                                                <button class="btn" style="min-width: 150px; margin-right:20px;">테스트
-                                                    전송</button>
-                                                <button class="btn" style="min-width: 150px;">전송</button>
+                                                <button class="btn" style="min-width: 150px; margin-right:20px;">테스트 전송</button>
+                                                <button class="btn btn-modal" id="btn-modal" data-modal="modal-global-send-confirm" style="min-width: 150px;">전송</button>
                                             </div>
 
                                         </div>
@@ -941,6 +971,9 @@
                                             </div>
 
 
+                                            <div class="row" style="justify-content: flex-start;">
+                                                <button class="btn" style="min-width: 150px;">발송문서</button>
+                                            </div>
                                             <div class="row">
                                                 <input type="file" style="display: block;width:100%;">
                                                 <button class="btn" style="min-width: 150px;">추가</button>

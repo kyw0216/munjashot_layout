@@ -1,0 +1,116 @@
+<link rel="stylesheet" href="../stylesheet/Common/modal.css">
+
+<script>
+
+$(function(){
+    Fn_Tippy_Init();
+});
+// 툴팁 세팅
+function Fn_Tippy_Init(){
+
+    tippy("[data-tippy-content]",
+    {
+        content: "tooltip",
+        allowHTML: true,
+        maxWidth: 500
+    });
+}
+
+</script>
+
+<div id="modal-global-country-search" class="modal-window" style="width:600px;">
+
+    <div class="m_row_wrapper" style="justify-content: flex-start;">
+        <span class="m_title">국가 검색</span>
+    </div>
+
+    <div class="close-area">X</div>
+
+    <hr style="margin:20px 0;width: 100%;">
+
+    <div class="content">
+
+        <div class="m_row_wrapper" style="margin-top:20px;">
+            <input type="text" class="ctrl-input" placeholder="(국가명)">
+            <button class="btn" style="width:100px; margin-left:10px;">검색</button>
+        </div>
+        
+        <table class="country_table" style="margin-top:20px;">
+            <tr>
+                <th>국가명</th>
+                <th>단가(부가세 별도)</th>
+            </tr>
+        </table>
+
+        <div class="country_table_div" style="border-bottom:1px solid #bdbdbd;">
+            <table class="country_table">
+               
+                <tr>
+                    <td>대한민국</td>
+                    <td>20원</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="m_row_wrapper" style="margin-top:20px;">
+            <button class="btn" style="width:100px; margin-left:10px;" onclick="modal.style.display='none'">닫기</button>
+        </div>
+        
+    </div>
+</div>
