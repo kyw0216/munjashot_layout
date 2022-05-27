@@ -180,6 +180,58 @@
         }
     });
 
+    $("input:checkbox[name=alim_interval_chk]").click(function () {
+
+        var chk = $(this).is(":checked");
+
+        console.log('alim_interval_chk');
+
+        if (chk) {
+            $(".alimtalk_content .alim_interval_layout").css("display", "flex");
+        } else {
+            $(".alimtalk_content .alim_interval_layout").hide();
+        }
+    });
+
+    $("input:checkbox[name=friend_interval_chk]").click(function () {
+
+        var chk = $(this).is(":checked");
+
+        console.log('friend_interval_chk');
+
+        if (chk) {
+            $(".friendtalk_content .friend_interval_layout").css("display", "flex");
+        } else {
+            $(".friendtalk_content .friend_interval_layout").hide();
+        }
+    });
+
+    $("input:checkbox[name=barcode_interval_chk]").click(function () {
+
+        var chk = $(this).is(":checked");
+
+        console.log('msg_interval_chk');
+
+        if (chk) {
+            $(".barcode_content .barcode_interval_layout").css("display", "flex");
+        } else {
+            $(".barcode_content .barcode_interval_layout").hide();
+        }
+    });
+
+    $("input:checkbox[name=fax_interval_chk]").click(function () {
+
+        var chk = $(this).is(":checked");
+
+        console.log('fax_interval_chk');
+
+        if (chk) {
+            $(".fax_content .fax_interval_layout").css("display", "flex");
+        } else {
+            $(".fax_content .fax_interval_layout").hide();
+        }
+    });
+
 });
 
 

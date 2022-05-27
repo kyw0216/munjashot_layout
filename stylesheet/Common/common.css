@@ -730,7 +730,7 @@ textarea.ctrl-input {
   /* height: 100%; */
   /* position: fixed; */
   position: relative;
-  top: 10px;
+  /* top: 10px; */
   display: none;
   flex-direction: column;
   align-items: center;
@@ -741,6 +741,15 @@ textarea.ctrl-input {
   -webkit-backdrop-filter: blur(1.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#modal_dept2.modal-overlay.relative {
+  top: 10px;
+  position: relative;
+}
+
+#modal_dept2.modal-overlay.fixed {
+  position: fixed;
 }
 
 #modal_dept2 .modal-window {
@@ -911,6 +920,11 @@ textarea.ctrl-input {
   #modal .modal-window {
     margin-left: 270px;
   }
+
+  #modal #modal_dept2 .modal-window {
+    margin-left: 0px !important;
+  }
+
 }
 
 

@@ -20,12 +20,21 @@ function Fn_Tippy_Init(){
 // 전체 선택/해제
 function allChk() {
 $("#all_chk").click(function () {
-    if ($("#all_chk").prop("checked")) {
-        $("input[name=barcode_chk]").prop("checked", true);
-    } else {
-        $("input[name=barcode_chk]").prop("checked", false);
-    }
-});
+        if ($("#all_chk").prop("checked")) {
+            $("input[name=barcode_chk]").prop("checked", true);
+        } else {
+            $("input[name=barcode_chk]").prop("checked", false);
+        }
+    });
+}
+
+// 주소록 관리 페이지로 이동
+function go_address_mng() {
+
+    util.confirm("경고", "warning", "작성하시던 메시지 발송 내용이 초기화 됩니다.<br>주소록 관리 페이지로 이동하시겠습니까?").then(function (result) {    
+        if (!result) return;
+        location.href = "../Page/myPage-address.html";
+    });
 }
     
 </script>
@@ -258,10 +267,14 @@ $("#all_chk").click(function () {
             </div>
             
         </div>
+      
+        <div class="m_row_wrapper j_end" style="margin-top:20px">
+            <button class="btn" onclick="go_address_mng();">주소록 관리</button>
+        </div>
 
         <div class="m_row_wrapper" style="margin-top:20px">
-            <button class="btn btn-modal" id="btn-modal" data-modal="modal-fax-send-finish" style="width: 120px;" onclick="modal.style.display='none'">이어서 전송</button>
-            <button class="btn" style="width:120px; margin-left:20px;" onclick="modal.style.display='none'">닫기</button>
+            <button class="btn" style="width:120px;" onclick="modal.style.display='none'">취소</button>
+            <button class="btn btn-modal" id="btn-modal" style="width: 120px; margin-left:20px;" onclick="modal.style.display='none'">등록</button>
         </div>
 
     </div>

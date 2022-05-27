@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="../stylesheet/Common/modal.css">
+
+<script>
+
+$(function(){
+    Fn_Tippy_Init();
+    allChk();
+});
+// 툴팁 세팅
+function Fn_Tippy_Init(){
+
+    tippy("[data-tippy-content]",
+    {
+        content: "tooltip",
+        allowHTML: true,
+        maxWidth: 500
+    });
+}
+    
+</script>
+
+<div id="modal-address-excel" class="modal-window" style="width:500px;">
+
+    <div class="m_row_wrapper" style="justify-content: flex-start;">
+        <span class="m_title">1회성 주소록 업로드</span>
+    </div>
+
+    <div class="close-area">X</div>
+
+    <hr style="margin:20px 0;width: 100%;">
+
+    <div class="content">
+
+        <div class="m_column_wrapper" style="margin-top:20px;">
+            <img src="../image/pop_outadd02_new.jpg">
+        </div>
+
+        <div class="m_column_wrapper" style="margin-top:20px;">
+
+            <button class="btn" onclick="javascript:alert('Excel 샘플 다운로드!');">Excel 샘플 다운로드</button>
+            
+            <div class="m_row_wrapper" style="margin-top:10px;">
+                <label>중복 업로드 허용</label>
+                <input type="checkbox" class="chk_box" style="margin-left:10px;">
+            </div>
+
+            <input type="file" style="margin-top:10px; display: block;">
+
+            <button class="btn" onclick="modal.style.display='none'" style="margin-top:10px;">주소록 올리기</button>
+
+        </div>
+
+        <div class="m_row_wrapper" style="margin-top:20px">
+        </div>
+
+    </div>
+</div>

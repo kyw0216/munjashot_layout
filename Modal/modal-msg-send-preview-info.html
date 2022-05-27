@@ -1,0 +1,140 @@
+<link rel="stylesheet" href="../stylesheet/Common/modal-dept2.css">
+
+<script>
+
+$(function(){
+    Fn_Tippy_Init();
+    allChk();
+});
+// 툴팁 세팅
+function Fn_Tippy_Init(){
+
+    tippy("[data-tippy-content]",
+    {
+        content: "tooltip",
+        allowHTML: true,
+        maxWidth: 500
+    });
+}
+
+// 전체 선택/해제
+function allChk() {
+$("#all_chk").click(function () {
+        if ($("#all_chk").prop("checked")) {
+            $("input[name=barcode_chk]").prop("checked", true);
+        } else {
+            $("input[name=barcode_chk]").prop("checked", false);
+        }
+    });
+}
+
+// 주소록 관리 페이지로 이동
+function go_address_mng() {
+
+    util.confirm("경고", "warning", "작성하시던 메시지 발송 내용이 초기화 됩니다.<br>주소록 관리 페이지로 이동하시겠습니까?").then(function (result) {    
+        if (!result) return;
+        location.href = "../Page/myPage-address.html";
+    });
+}
+    
+</script>
+
+<div id="modal-msg-send-preview-info" class="modal-window" style="width:600px;">
+
+    <div class="m_row_wrapper" style="justify-content: flex-start;">
+        <span class="m_title">미리보기 이미지 안내</span>
+    </div>
+
+    <div class="close-area">X</div>
+
+    <hr style="margin:20px 0;width: 100%;">
+
+    <div class="content">
+
+        <div class="m_row_wrapper" style="justify-content: flex-start;">
+            <span class="m_content">- 문자샷에서 제공하는 미리보기 이미지는 단말기 설정에 따라 다르게 보일 수 있습니다. 아래 이미지를 참고해주시기 바랍니다.</span>
+        </div>
+    
+        <div class="m_row_wrapper" style="margin-top:20px;">
+            <span class="m_content">&lt;실제 단말기 수신화면 예시&gt;</span>
+        </div>
+
+        <div class="m_row_wrapper">
+
+            <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px; margin-top:20px;">
+                <div class="m_column_wrapper">
+        
+                    <div class="m_row_wrapper">
+                        <span class="m_content">(스마트폰 모형)</span>
+                    </div>
+
+                    <div class="m_row_wrapper" style="margin-top:10px;">
+                        <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px;">
+                            <span>이<br>미<br>지</span>
+                        </div>
+                        <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px; margin-left: 5px;">
+                            <span>이<br>미<br>지</span>
+                        </div>
+                        <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px; margin-left: 5px;">
+                            <span>이<br>미<br>지</span>
+                        </div>
+                    </div>
+
+                    <div class="m_row_wrapper" style="margin-top:10px;">
+                        <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px;">
+                            <span>제목</span>
+                        </div>
+                    </div>
+
+                    <div class="m_row_wrapper" style="margin-top:10px;">
+                        <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px; height: 100px;">
+                            <span>내용</span>
+                        </div>
+                    </div>
+
+                    <div class="m_row_wrapper" style="margin-top:20px;">
+                        <button class="btn" style="width: 100%;">예시 2</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px; margin-top:20px; margin-left:20px;">
+                <div class="m_column_wrapper">
+
+                    <div class="m_row_wrapper">
+                        <span class="m_content">(스마트폰 모형)</span>
+                    </div>
+                    
+                    <div class="m_row_wrapper" style="margin-top:10px;">
+                        <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px;">
+                            <span>이<br>미<br>지</span>
+                        </div>
+                        <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px; margin-left: 5px;">
+                            <span>이<br>미<br>지</span>
+                        </div>
+                        <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px; margin-left: 5px;">
+                            <span>이<br>미<br>지</span>
+                        </div>
+                    </div>
+
+                    <div class="m_row_wrapper" style="margin-top:10px;">
+                        <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px;">
+                            <span>제목</span>
+                        </div>
+                    </div>
+
+                    <div class="m_row_wrapper" style="margin-top:10px;">
+                        <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px; height: 100px;">
+                            <span>내용</span>
+                        </div>
+                    </div>
+
+                    <div class="m_row_wrapper" style="margin-top:20px;">
+                        <button class="btn" style="width: 100%;">예시 2</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

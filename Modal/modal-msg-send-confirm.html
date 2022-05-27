@@ -1,0 +1,145 @@
+<link rel="stylesheet" href="../stylesheet/Common/modal.css">
+<script src="../javascript/Common/modal.js"></script>
+<script src="../javascript/Common/modal-dept2.js"></script>
+
+<script>
+
+$(function(){
+    Fn_Tippy_Init();
+});
+// 툴팁 세팅
+function Fn_Tippy_Init(){
+
+    tippy("[data-tippy-content]",
+    {
+        content: "tooltip",
+        allowHTML: true,
+        maxWidth: 500
+    });
+}
+    
+</script>
+
+<div id="modal-msg-send-confirm" class="modal-window">
+
+    <div class="m_row_wrapper" style="justify-content: flex-start;">
+        <span class="m_title">문자메시지 전송</span>
+    </div>
+
+    <div class="close-area">X</div>
+
+    <hr style="margin:20px 0;width: 100%;">
+
+    <div class="content">
+
+        <div class="m_row_wrapper i_start">
+
+            <div class="m_column_wrapper" style="min-width: 270px;">
+                <div class="preview_div">
+                    <div class="m_column_wrapper j_start">
+                    
+                        <div class="m_row_wrapper">
+                            <span style="font-weight: bold; font-size: 20px;">문자메시지 테스트 전송</span>
+                        </div>
+    
+                        <div class="m_row_wrapper j_start" style="margin-top:20px;">
+                            <span style="font-weight: bold; font-size: 20px;">미리보기</span>
+                        </div>
+    
+                        <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px; margin-top:20px;">
+                            <div class="m_column_wrapper">
+                                <div class="m_row_wrapper">
+                                    <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px;">
+                                        <span>이<br>미<br>지</span>
+                                    </div>
+                                    <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px; margin-left: 5px;">
+                                        <span>이<br>미<br>지</span>
+                                    </div>
+                                    <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px; margin-left: 5px;">
+                                        <span>이<br>미<br>지</span>
+                                    </div>
+                                </div>
+    
+                                <div class="m_row_wrapper" style="margin-top:10px;">
+                                    <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px;">
+                                        <span>제목</span>
+                                    </div>
+                                </div>
+    
+                                <div class="m_row_wrapper" style="margin-top:10px;">
+                                    <div class="m_row_wrapper" style="border: 2px solid #888888; padding:10px; height: 100px;">
+                                        <span>내용</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+            
+            <div class="m_column_wrapper" style="margin-left:10px;">
+
+                <div class="m_row_wrapper">
+                    <table class="msg_table">
+                        <tr>
+                            <td>전송 시간</td>
+                            <td>2021년 10년 19일 오후 4시 30분</td>
+                        </tr>
+                        <tr>
+                            <td>발신 번호</td>
+                            <td>010-1599-2320</td>
+                        </tr>
+                        <tr>
+                            <td>발송 건수</td>
+                            <td>10 건</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="m_row_wrapper" style="margin-top:10px;">
+                    <table class="msg_table">
+                        <tr>
+                            <td>수신자 리스트<br>5건</td>
+                            <td>수신거부 제외<br>3건</td>
+                            <td>중복건수 제외<br>1건</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="m_row_wrapper" style="margin-top:10px;">
+                    <span>※ 수신거부, 중복건수 버튼을 클릭 하여 해당 기능에 대해 허용 하여 발송 가능합니다.</span>
+                </div>
+
+                <div class="m_column_wrapper i_end" style="width: 100%; padding:10px; margin-top:10px;">
+                    <span style="font-size: 18px; font-weight: bold;">차감예정 금액 000원</span>
+                    <span style="font-size: 18px; color: #888888;">발송타입 : ( )</span>
+                    <span style="font-size: 18px; color: #888888;">단가 : ( )원</span>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="m_column_wrapper i_start" style="margin-top:20px">
+            <span>※ 변수는 수신번호 리스트 중 첫번째 대상의 데이터로 보여집니다.<label data-tippy-placement="top" data-tippy-maxWidth="300" data-tippy-content="                                                    
+                <h1>[안내문]</h1><br>
+                변수란 입력된 영역이 주소록 데이터와 매칭되어 수신자별로 다른 내용이 발송되는 기능입니다.<br>
+                (ex)<br>
+                [이름]님, 잔여포인트는 [메모1]점 입니다. → 지은님, 잔여포인트는 1,000점 입니다.">
+                <i class="fa-solid fa-circle-question"></i></label></span>
+            <span>※ 상단 미리보기 이미지는 단말기 설정에 따라 다르게 보일 수 있습니다.<i class="fa-solid fa-circle-question btn-modal-dept2" data-modal-dept2="modal-msg-send-preview-info" style="margin-left:3px; cursor: pointer;"></i></span>
+        </div>
+
+
+
+        <div class="m_row_wrapper" style="margin-top:20px">
+            <button class="btn btn-modal" id="btn-modal" data-modal="modal-msg-send-reserve-finish" style="width: 120px;">예약 전송</button>
+            <button class="btn btn-modal" id="btn-modal" data-modal="modal-msg-send-finish" style="width: 120px; margin-left:20px;">전송</button>
+            <button class="btn" style="width:120px; margin-left:20px;" onclick="modal.style.display='none'">취소</button>
+        </div>
+
+
+    </div>
+</div>
+
+<div id="modal_dept2" class="modal-overlay fixed"></div>
