@@ -41,6 +41,15 @@ main .main_content .content_wrapper {
     background-color: #f7f7f7;
 }
 
+main .main_content .container_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+}
+
 main .main_content .container {
     display: flex;
     flex-direction: column;

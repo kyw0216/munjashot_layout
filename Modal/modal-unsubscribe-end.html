@@ -1,11 +1,33 @@
 <link rel="stylesheet" href="../stylesheet/Common/modal.css">
 
-<div id="modal-auth-status" class="modal-window">
-    <div class="close-area">X</div>
-    <div class="title">
-        <h2>080번호 정기 차감 서비스 해지</h2>
+<div id="modal-unsubscribe-end" class="modal-window" style="width:500px;">
+
+    <div class="m_row_wrapper" style="justify-content: flex-start;">
+        <span class="m_title">080번호 정기 차감 서비스 해지</span>
     </div>
+
+    <div class="close-area">X</div>
+
+    <hr style="margin:20px 0;width: 100%;">
+
     <div class="content">
-        모달입니다.
+        
+        <div class="m_column_wrapper" style="width: 100%;">
+
+            <div class="m_row_wrapper j_start">
+                <span>· 이용기간 : ~X월 XX일</span>
+            </div>
+            <div class="m_row_wrapper j_start" style="margin-top:20px;">
+                <span>· 지금 정기차감 서비스를 해지하시더라도 X월 XX일 까지는 이용 가능합니다.</span>
+            </div>
+            <div class="m_row_wrapper j_start">
+                <span>(최근 차감일 : X월 X일)</span>
+            </div>
+
+            <div class="m_row_wrapper" style="margin-top:20px">
+                <button class="btn" onclick="javascript:util.alert('서비스 해지 완료', 'success', '서비스 해지가 완료되었습니다!');">해지</button>
+                <button class="btn" onclick="javascript:modal.style.display='none';" style="margin-left:10px;">닫기</button>
+            </div>
+        </div>
     </div>
 </div>

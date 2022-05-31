@@ -73,65 +73,65 @@
                                 
                             <hr style="margin:12px;width: 100%;">
 
-                            <div class="container">
-
-                                <div class="row" style="border-bottom: 1px solid black; margin: 0;">
-                                    <div class="row" style="justify-content: flex-start; margin: 0;">
-                                        <span style="font-weight: bold;">● 이미지 등록 1</span>
-                                    </div>
-                                    <div class="row" style="justify-content: flex-end;">
-                                        <button class="btn">+ 입력란 추가</button>
-                                        <button class="btn" style="margin-left:10px;">- 입력란 삭제</button>
-                                    </div>
-                                </div>
-
-                                <div class="sub_container">
-                                    <div class="temp_div">
-
-                                        <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
-                                            <div class="temp_title">
-                                                <span style="font-weight: bold;">구분</span>
-                                            </div>
-                                            <div class="temp_content">
-                                                <input type="radio" id="friend_default" name="friendImg_type" class="friendImg_type">
-                                                <label for="friend_default" style="min-width:80px;">친구톡 기본</label>
-                                                <input type="radio" id="friend_wide" name="friendImg_type" class="friendImg_type" style="margin-left:20px;">
-                                                <label for="friend_wide" style="min-width:80px;">친구톡 와이드</label>
-                                            </div>
+                            <div class="container_wrapper">
+                                <div class="container">
+                                    <div class="row" style="border-bottom: 1px solid black; margin: 0;">
+                                        <div class="row" style="justify-content: flex-start; margin: 0;">
+                                            <span style="font-weight: bold;">● 이미지 등록 1</span>
                                         </div>
-                                        
-                                        <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
-                                            <div class="temp_title">
-                                                <span style="font-weight: bold;">제목 *</span>
-                                            </div>
-                                            <div class="temp_content">
-                                                <input id="friendImg_title_input" type="text" placeholder="제목을 입력하세요." class="ctrl-input" maxlength="15" onkeyup="check_byte('friendImg_title', this)">
-                                                <label id="friendImg_title_cnt" style="min-width:180px; margin-left:10px;">0/15 bytes 입력가능</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="row" style="margin: 0; justify-content: flex-start; padding: 10px 0px;">
-                                            <div class="temp_title">
-                                                <span style="font-weight: bold;">이미지 *</span>
-                                            </div>
-                                            <div class="temp_content" style="flex-direction: column; justify-content: center; align-items: flex-start;">
-                                                <input type="file" style="display:block;">
-
-                                                <span style="font-size:14px; color:#bdbdbd; line-height: normal; margin-top: 10px;">파일 규격 : JPG, JPEG, PNG만 가능 / 용량 최대 500KB</span>
-                                                <span style="font-size:14px; color:#bdbdbd; line-height: normal;">권장 사이즈 : 720px X 720px(가로 500px 미만, 가로:세로 비율이 2:1 미만 또는 3:4 초과 시 업로드 불가)</span>
-
-                                            </div>
+                                        <div class="row" style="justify-content: flex-end;">
+                                            <button class="btn" onclick="add_container();">+ 입력란 추가</button>
+                                            <button class="btn" style="margin-left:10px;" onclick="del_container();">- 입력란 삭제</button>
                                         </div>
                                     </div>
-                                </div>
     
-                                <div class="row_wrapper">
-                                    <div class="row">
-                                        <button class="btn" style="width:200px;" onclick="javscript:alert('등록!');">등록</button>
-                                        <button class="btn" style="width:200px; margin-left:30px;" onclick="javscript:location.href='myPage-kakao-friendImg.html'">뒤로가기</button>
+                                    <div class="sub_container">
+                                        <div class="temp_div">
+    
+                                            <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
+                                                <div class="temp_title">
+                                                    <span style="font-weight: bold;">구분</span>
+                                                </div>
+                                                <div class="temp_content">
+                                                    <input type="radio" id="friend_default" name="friendImg_type" class="friendImg_type">
+                                                    <label for="friend_default" style="min-width:80px;">친구톡 기본</label>
+                                                    <input type="radio" id="friend_wide" name="friendImg_type" class="friendImg_type" style="margin-left:20px;">
+                                                    <label for="friend_wide" style="min-width:80px;">친구톡 와이드</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
+                                                <div class="temp_title">
+                                                    <span style="font-weight: bold;">제목 *</span>
+                                                </div>
+                                                <div class="temp_content">
+                                                    <input id="friendImg_title_input" type="text" placeholder="제목을 입력하세요." class="ctrl-input" maxlength="15" onkeyup="check_byte('friendImg_title', this)">
+                                                    <label id="friendImg_title_cnt" style="min-width:180px; margin-left:10px;">0/15 bytes 입력가능</label>
+                                                </div>
+                                            </div>
+    
+                                            <div class="row" style="margin: 0; justify-content: flex-start; padding: 10px 0px;">
+                                                <div class="temp_title">
+                                                    <span style="font-weight: bold;">이미지 *</span>
+                                                </div>
+                                                <div class="temp_content" style="flex-direction: column; justify-content: center; align-items: flex-start;">
+                                                    <input type="file" style="display:block;">
+    
+                                                    <span style="font-size:14px; color:#bdbdbd; line-height: normal; margin-top: 10px;">파일 규격 : JPG, JPEG, PNG만 가능 / 용량 최대 500KB</span>
+                                                    <span style="font-size:14px; color:#bdbdbd; line-height: normal;">권장 사이즈 : 720px X 720px(가로 500px 미만, 가로:세로 비율이 2:1 미만 또는 3:4 초과 시 업로드 불가)</span>
+    
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-
+                            </div>
+                            
+                            <div class="row_wrapper">
+                                <div class="row">
+                                    <button class="btn" style="width:200px;" onclick="javscript:alert('등록!');">등록</button>
+                                    <button class="btn" style="width:200px; margin-left:30px;" onclick="javscript:location.href='myPage-kakao-friendImg.html'">뒤로가기</button>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,121 @@
+<link rel="stylesheet" href="../stylesheet/Common/modal.css">
+<script src="../javascript/Common/modal.js"></script>
+<script src="../javascript/Common/modal-dept2.js"></script>
+
+<script>
+
+$(function(){
+    Fn_Tippy_Init();
+});
+
+// 툴팁 세팅
+function Fn_Tippy_Init(){
+    
+    tippy("[data-tippy-content]",
+    {
+        content: "tooltip",
+        allowHTML: true,
+        maxWidth: 500
+    });
+}
+
+</script>
+    
+
+<div id="modal-address-upload-preview2" class="modal-window">
+
+    <div class="m_row_wrapper" style="justify-content: flex-start;">
+        <span class="m_title">엑셀 주소록 업로드</span>
+    </div>
+    
+    <div class="m_column_wrapper i_start" style="width:100%; height: auto;">
+        <span class="m_content">엑셀파일을 이용하여 주소록 대량등록 업로드를 할 수 있습니다.</span>
+        <span class="m_content">아래 주의사항을 참고하시어 업로드 해주시기 바랍니다.</span>
+    </div>
+
+    <div class="close-area">X</div>
+
+    <hr style="margin:20px 0;width: 100%;">
+
+    <div class="content">
+
+        <div class="m_row_wrapper j_end" style="margin-top:10px;">
+            <span>총 4건</span>
+        </div>
+
+        <hr style="margin:10px 0;width: 100%;">
+
+        <div class="m_column_wrapper" style="width: 100%;">
+            <table class="address_table">
+                <tr>
+                    <th>이름</th>
+                    <th>전화번호</th>
+                    <th>메모1</th>
+                    <th>메모2</th>
+                    <th>메모3</th>
+                    <th>메모4</th>
+                    <th>메모5</th>
+                </tr>
+            </table>
+                
+            <div class="address_table_div">
+                <table class="address_table">
+                    <tr>
+                        <td>서자룡</td>
+                        <td>010-7777-8888</td>
+                        <td>팀장</td>
+                        <td>2000</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>윤상중</td>
+                        <td>010-7874-4844</td>
+                        <td>대리</td>
+                        <td>2001</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>김태영</td>
+                        <td>010-4844-7888</td>
+                        <td>대리</td>
+                        <td>3012</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>이영무</td>
+                        <td>010-2548-1470</td>
+                        <td>주임</td>
+                        <td>3022</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="m_row_wrapper" style="margin-top:20px;">
+                <label for="1">중복 업로드 허용</label>
+                <input id="1" type="checkbox" class="chk_box" style="margin-left:20px;">
+            </div>
+            
+            <div class="m_row_wrapper" style="margin-top:10px;">
+                <input type="file" style="display: block;">
+            </div>
+
+            <div class="m_row_wrapper" style="margin-top:10px;">
+                <button class="btn btn-modal" data-modal="modal-address-upload">돌아가기</button>
+                <button class="btn" style="margin-left:10px;">주소록 올리기</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

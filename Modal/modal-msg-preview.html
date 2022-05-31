@@ -1,11 +1,27 @@
 <link rel="stylesheet" href="../stylesheet/Common/modal.css">
+<script src="../javascript/Common/modal.js"></script>
+<script src="../javascript/Common/modal-dept2.js"></script>
 
-<div id="modal-auth-status" class="modal-window">
-    <div class="close-area">X</div>
-    <div class="title">
-        <h2>메시지 내용</h2>
+<div id="modal-msg-preview" class="modal-window" style="width: 300px;">
+    <div class="msg_preview_div">
+        <div class="m_column_wrapper">
+            <div class="m_row_wrapper" style="padding:5px; border-bottom: 1px solid gray;">
+                <div class="m_row_wrapper j_start">
+                    <span>제목</span>
+                </div>
+                <div class="m_row_wrapper j_end">
+                    <!-- <img src="../image/img_preview.png" style="cursor: pointer;" class="btn-modal" data-modal="modal-img-view" data-tippy-content="<h1>이미지 확인</h1>" data-tippy-placement="top"> -->
+                    <img src="../image/img_preview.png" style="cursor: pointer;" class="btn-modal-dept2" data-modal-dept2="modal-img-view" data-tippy-content="<h1>이미지 확인</h1>" data-tippy-placement="top">
+                </div>
+            </div>
+    
+            <div class="m_row_wrapper j_start i_start" style="padding:5px;height:300px;">
+                <span>내용</span>
+            </div>
+    
+        </div>
     </div>
-    <div class="content">
-        모달입니다.
-    </div>
+
 </div>
+
+<div id="modal_dept2" class="modal-overlay fixed"></div>

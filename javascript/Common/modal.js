@@ -3,6 +3,10 @@ $(function () {
 
     // const btnModal = document.getElementById("btn-modal")
     let btnModal = $(".btn-modal")
+    let modal_ = $("#modal");
+
+    btnModal.off("click");
+    modal_.off("click");
 
     async function modalOn(modalName) {
 

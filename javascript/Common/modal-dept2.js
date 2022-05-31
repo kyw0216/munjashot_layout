@@ -4,6 +4,10 @@ $(function () {
     // const btnModal = document.getElementById("btn-modal")
     let btnModal_dept2 = $(".btn-modal-dept2")
     let modal_dept2 = document.getElementById("modal_dept2");
+    let modal_dept2_ = $("#modal_dept2");
+
+    btnModal_dept2.off("click");
+    modal_dept2_.off("click");
 
     async function modalOn_dept2(modalName) {
 

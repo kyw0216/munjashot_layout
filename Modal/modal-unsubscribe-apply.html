@@ -1,11 +1,168 @@
 <link rel="stylesheet" href="../stylesheet/Common/modal.css">
 
-<div id="modal-auth-status" class="modal-window">
-    <div class="close-area">X</div>
-    <div class="title">
-        <h2>080 ARS 수신거부 서비스 신청</h2>
+<div id="modal-unsubscribe-apply" class="modal-window" style="width:500px;">
+
+    <div class="m_row_wrapper" style="justify-content: flex-start;">
+        <span class="m_title">080 ARS 수신거부 서비스 신청</span>
     </div>
+
+    <div class="close-area">X</div>
+
+    <hr style="margin:20px 0;width: 100%;">
+
     <div class="content">
-        모달입니다.
+        
+        <div class="m_column_wrapper" style="width: 100%;">
+
+            <div class="m_row_wrapper">
+                <span>080 ARS 수신거부 서비스는 유선 상담 후 가능합니다. 연락처를 남겨주시면 담당자가 전화 드리겠습니다.</span>
+            </div>
+
+            <div class="m_column_wrapper" style="width: 100%;">
+                <div class="m_row_wrapper" style="margin-top:10px">
+                    <label class="label" style="margin-right:20px;">담당자</label>
+                    <input class="ctrl-input" type="text">
+                </div>
+                <div class="m_row_wrapper" style="margin-top:10px">
+                    <label class="label" style="margin-right:20px;">연락처</label>
+                    <input class="ctrl-input"  type="text" placeholder="010-0000-0000">
+                </div>
+                <div class="m_row_wrapper" style="margin-top:10px">
+                    <label class="label" style="margin-right:20px;">상담 가능 시간</label>
+                    <div class="m_column_wrapper">
+                        <div class="m_row_wrapper" style="margin-top:10px">
+                            <label class="label" style="min-width: 60px;">평일</label> 
+                            <select>
+                                <option>01</option>
+                                <option>02</option>
+                                <option>03</option>
+                                <option>04</option>
+                                <option>05</option>
+                                <option>06</option>
+                                <option>07</option>
+                                <option>08</option>
+                                <option>09</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                            </select>
+                            <span style="margin:0 10px;">~</span>
+                            <select>
+                                <option>01</option>
+                                <option>02</option>
+                                <option>03</option>
+                                <option>04</option>
+                                <option>05</option>
+                                <option>06</option>
+                                <option>07</option>
+                                <option>08</option>
+                                <option>09</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                            </select>
+                        </div>
+
+                        <div class="m_row_wrapper" style="margin-top:10px">
+                            <label class="label" style="min-width: 60px;">주말</label> 
+                            <select>
+                                <option>01</option>
+                                <option>02</option>
+                                <option>03</option>
+                                <option>04</option>
+                                <option>05</option>
+                                <option>06</option>
+                                <option>07</option>
+                                <option>08</option>
+                                <option>09</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                            </select>
+                            <span style="margin:0 10px;">~</span>
+                            <select>
+                                <option>01</option>
+                                <option>02</option>
+                                <option>03</option>
+                                <option>04</option>
+                                <option>05</option>
+                                <option>06</option>
+                                <option>07</option>
+                                <option>08</option>
+                                <option>09</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                            </select>
+                        </div>
+
+                    </div> 
+                </div>
+                <div class="m_row_wrapper" style="margin-top:10px; justify-content: left;">
+                    <label class="label" style="margin-right:20px;">개인정보 수집 및 이용 동의*</label>
+                </div>
+                <div class="m_row_wrapper" style="margin-top:10px">
+                    <textarea style="width:100%;" placeholder="본문내용"></textarea>
+                </div>
+                <div class="m_row_wrapper" style="margin-top:10px; justify-content: right;">
+                    <input id="agree_chk" class="chk_box" type="checkbox">
+                    <label for="agree_chk" class="label" style="margin-left:10px;background-color: transparent;">개인정보 수집 및 이용에 동의합니다.</label>
+                </div>
+                <div class="m_row_wrapper" style="margin-top:20px">
+                    <button class="btn" onclick="javascript:util.alert('서비스 신청 완료', 'success', '서비스 신청이 완료되었습니다!');">확인</button>
+                    <button class="btn" onclick="javascript:modal.style.display='none';" style="margin-left:10px;">닫기</button>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 </div>

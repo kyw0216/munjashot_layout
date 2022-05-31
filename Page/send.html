@@ -69,8 +69,7 @@
                                         <div class="column_wrapper" style="margin-top:0;">
 
                                             <div class="row" style="margin-top:0;">
-                                                <button class="btn"
-                                                    style="min-width: 150px; margin-right:20px;">발신번호</button>
+                                                <button class="btn" style="min-width: 150px; margin-right:20px;">발신번호</button>
                                                 <select style="width:100%;">
                                                     <option>발신번호</option>
                                                 </select>
@@ -242,32 +241,37 @@
                                                         <div class="column_wrapper" style="margin-top:0;">
 
                                                             <div class="row">
-                                                                <button class="btn"
-                                                                    style="min-width: 150px; margin-right:20px;">프로필
-                                                                    채널</button>
-                                                                <select style="width:100%;">
+                                                                <button class="btn" style="min-width: 150px; margin-right:20px;">프로필 채널</button>
+                                                                <!-- <select style="width:100%;">
                                                                     <option>발신번호</option>
-                                                                </select>
+                                                                </select> -->
+                                                                <input class="ctrl-input" type="text" list="alim_profile_list"/>
+                                                                <datalist id="alim_profile_list" style="width:100%;">
+                                                                    <option>채널명1</option>
+                                                                    <option>채널명2</option>
+                                                                    <option>채널명3</option>
+                                                                    <option>채널명4</option>
+                                                                    <option>채널명5</option>
+                                                                </datalist>
                                                             </div>
 
                                                             <div class="row">
-                                                                <button class="btn"
-                                                                    style="min-width: 150px; margin-right:20px;">발송
-                                                                    템플릿</button>
-                                                                <select style="width:100%;">
+                                                                <button class="btn" style="min-width: 150px; margin-right:20px;">발송 템플릿</button>
+                                                                <input class="ctrl-input" type="text" list="send_template_list"/>
+                                                                <datalist id="send_template_list" style="width:100%;">
                                                                     <option>발송 템플릿</option>
-                                                                </select>
+                                                                </datalist>
                                                             </div>
 
-                                                            <div class="row" style="background-color: #fff; padding:10px;">
+                                                            <div class="row" style="background-color: #fff;padding:10px;">
                                                                 <div class="column" style="margin-top:0;">
-
-                                                                    <div class="row" style="justify-content: flex-start; margin-top:0;">
+                                                                    <div class="row" style="justify-content: flex-start;">
                                                                         <label>(발송내용)</label>
                                                                     </div>
                                                                     <div class="row">
-                                                                        <textarea
-                                                                            style="width: 100%; height:200px;">발송내용</textarea>
+                                                                        <div class="column" style="margin-top:0;">
+                                                                            <textarea class="alim_content_textarea" style="width: 100%; height:300px;" placeholder="발송내용" onkeyup="check_byte('alim_content', this)"></textarea>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -280,26 +284,42 @@
                                                             <div class="msg_layout">
 
                                                                 <div class="row">
-                                                                    <button class="btn"
-                                                                        style="min-width: 150px; margin-right:20px;">발신번호</button>
+                                                                    <button class="btn" style="min-width: 150px; margin-right:20px;">발신번호</button>
                                                                     <select style="width:100%;">
                                                                         <option>발신번호</option>
                                                                     </select>
                                                                 </div>
-
-                                                                <div class="row" style="background-color: #fff; padding:10px;">
+                                                                <div class="row" style="justify-content: flex-end;">
+                                                                    <input id="munja_ad_chk" name="munja_ad_chk" type="checkbox" style="margin-right: 10px;">
+                                                                    <label for="munja_ad_chk">광고규칙 추가</label>
+                                                                </div>
+                                                                <div class="row" style="background-color: #fff;padding:10px;">
                                                                     <div class="column" style="margin-top:0;">
                                                                         <div class="row" style="margin-top:0;">
                                                                             <label style="min-width:80px;margin-right:10px;">(발송제목)</label>
-                                                                            <input type="text" style="width: 100%;">
+                                                                            <input id="alim_msg_title" class="ctrl-input" type="text" onkeyup="check_byte('alim_msg_title', this)" maxlength="40">
+                                                                            <label id="alim_msg_title_byte" style="min-width:150px;margin-left:10px;">0 / 40 byte</label>
                                                                         </div>
-
-                                                                        <div class="row" style="justify-content: flex-start; margin-top:0;">
+                    
+                                                                        <div class="row" style="justify-content: flex-start;">
                                                                             <label>(발송내용)</label>
                                                                         </div>
                                                                         <div class="row">
-                                                                            <textarea
-                                                                                style="width: 100%; height:200px;">발송내용</textarea>
+                                                                            <div class="column" style="margin-top:0;">
+                                                                                <textarea class="alim_msg_content_textarea" style="width: 100%; height:300px;" placeholder="발송내용" onkeyup="check_byte('alim_msg_content', this)"></textarea>
+                                                                                <textarea class="alim_msg_080_textarea" style="width: 100%; height:100px; text-align: left;" readonly>
+무료수신거부
+080XXXXXXXX</textarea>
+                                                                                <div class="row" style="justify-content: flex-start;">
+                                                                                    <label id="alim_msg_content_byte">0 / 90 byte</label>
+                                                                                    <label id="alim_msg_type" style="margin-left:5px; color:#4a4adb;">(SMS)</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <button class="btn btn-modal" style="min-width: 150px; margin-right:20px;" id="btn-modal" data-modal="modal-msg-img">이미지 첨부</button>
+                                                                            <button class="btn btn-modal" style="min-width: 150px; margin-right:20px;" id="btn-modal" data-modal="modal-msg-save">문구저장</button>
+                                                                            <button class="btn btn-modal" style="min-width: 150px; margin-right:20px;" id="btn-modal" data-modal="modal-msg-load-all">불러오기</button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -342,15 +362,9 @@
                                                             </div>
 
                                                             <div class="row">
-                                                                <button class="btn"
-                                                                    style="width:100%; min-width: 150px; margin-right:20px;">주소록에서
-                                                                    추가</button>
-                                                                <button class="btn"
-                                                                    style="width:100%; min-width: 150px; margin-right:20px;">클립보드
-                                                                    붙여넣기</button>
-                                                                <button class="btn"
-                                                                    style="width:100%; min-width: 150px;">엑셀
-                                                                    불러오기</button>
+                                                                <button class="btn btn-modal" data-modal="modal-address" style="width:100%; min-width: 150px; margin-right:20px;">주소록에서 추가</button>
+                                                                <button class="btn btn-modal" data-modal="modal-address-clipboard" style="width:100%; min-width: 150px; margin-right:20px;">클립보드 붙여넣기</button>
+                                                                <button class="btn btn-modal" data-modal="modal-address-excel" style="width:100%; min-width: 150px;">엑셀 불러오기</button>
                                                             </div>
 
                                                             <div class="row" style="background-color: #fff;">
@@ -442,11 +456,13 @@
                                                             </div>
 
                                                             <div class="row" style="align-items: end; margin-top:0;">
-                                                                <button class="btn"
-                                                                    style="min-width: 150px; margin-right:20px;">테스트
-                                                                    전송</button>
-                                                                <button class="btn"
-                                                                    style="min-width: 150px;">전송</button>
+                                                                <div class="row" style="align-items: end;">
+                                                                    <button class="btn btn-modal" data-modal="modal-alim-send-test" style="min-width: 150px; margin-right:20px;">테스트 전송<label data-tippy-maxwidth="300" data-tippy-content="                                                    
+                                                                        <h1>[안내문]</h1><br>
+                                                                        <span>고객에게 문자 발송 전, 담당자님 번호로 테스트 발송을 권장해 드립니다</span><br>">
+                                                                        <i class="fa-solid fa-circle-question"></i></label></button>
+                                                                    <button class="btn btn-modal" id="btn-modal" data-modal="modal-alim-send-confirm" style="min-width: 150px;">전송</button>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -456,26 +472,39 @@
 
                                             <div class="sub_tab_in_content friendtalk_content">
                                                 <div class="column_wrapper" style="margin-top:0;">
-                                                    <div class="row_wrapper">
+                                                    <div class="row_wrapper" style="margin-top:0;">
                                                         <div class="column_wrapper">
 
-                                                            <div class="row">
-                                                                <button class="btn"
-                                                                    style="min-width: 150px; margin-right:20px;">프로필
-                                                                    채널</button>
-                                                                <select style="width:100%;">
-                                                                    <option>발신번호</option>
-                                                                </select>
+                                                            <div class="row" style="margin-top:0;">
+                                                                <button class="btn" style="min-width: 150px; margin-right:20px;">프로필 채널</button>
+                                                                <input class="ctrl-input" type="text" list="friend_profile_list"/>
+                                                                <datalist id="friend_profile_list" style="width:100%;">
+                                                                    <option>채널명1</option>
+                                                                    <option>채널명2</option>
+                                                                    <option>채널명3</option>
+                                                                    <option>채널명4</option>
+                                                                    <option>채널명5</option>
+                                                                </datalist>
                                                             </div>
 
-                                                            <div class="row" style="background-color: #fff; padding:10px;">
+                                                            <div class="row" style="background-color: #fff;padding:10px;">
                                                                 <div class="column" style="margin-top:0;">
-                                                                    <div class="row" style="justify-content: flex-start; margin-top:0;">
+                                                                    <div class="row" style="justify-content: flex-start;">
                                                                         <label>(발송내용)</label>
                                                                     </div>
                                                                     <div class="row">
-                                                                        <textarea
-                                                                            style="width: 100%; height:200px;">발송내용</textarea>
+                                                                        <div class="column" style="margin-top:0;">
+                                                                            <textarea class="friend_content_textarea" style="width: 100%; height:300px;" placeholder="발송내용" onkeyup="check_byte('friend_content', this)"></textarea>
+                                                                            <div class="row" style="justify-content: flex-start;">
+                                                                                <label id="friend_content_byte">0 / 1000 byte</label>
+                                                                                <label id="friend_type" style="margin-left:5px; color:#4a4adb;">(친구톡)</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <button class="btn btn-modal" style="min-width: 150px; margin-right:20px;" id="btn-modal" data-modal="modal-msg-img">이미지 첨부</button>
+                                                                        <button class="btn btn-modal" style="min-width: 150px; margin-right:20px;" id="btn-modal" data-modal="modal-msg-save">문구저장</button>
+                                                                        <button class="btn btn-modal" style="min-width: 150px; margin-right:20px;" id="btn-modal" data-modal="modal-msg-load-all">불러오기</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -538,33 +567,48 @@
                                                             <div class="msg_layout">
 
                                                                 <div class="row">
-                                                                    <button class="btn"
-                                                                        style="min-width: 150px; margin-right:20px;">발신번호</button>
+                                                                    <button class="btn" style="min-width: 150px; margin-right:20px;">발신번호</button>
                                                                     <select style="width:100%;">
                                                                         <option>발신번호</option>
                                                                     </select>
                                                                 </div>
-
-                                                                <div class="row" style="background-color: #fff; padding:10px;">
+                                                                <div class="row" style="justify-content: flex-end;">
+                                                                    <input id="munja_ad_chk" name="munja_ad_chk" type="checkbox" style="margin-right: 10px;">
+                                                                    <label for="munja_ad_chk">광고규칙 추가</label>
+                                                                </div>
+                                                                <div class="row" style="background-color: #fff;padding:10px;">
                                                                     <div class="column" style="margin-top:0;">
                                                                         <div class="row" style="margin-top:0;">
                                                                             <label style="min-width:80px;margin-right:10px;">(발송제목)</label>
-                                                                            <input class="ctrl-input" type="text">
+                                                                            <input id="friend_msg_title" class="ctrl-input" type="text" onkeyup="check_byte('friend_msg_title', this)" maxlength="40">
+                                                                            <label id="friend_msg_title_byte" style="min-width:150px;margin-left:10px;">0 / 40 byte</label>
                                                                         </div>
-
+                    
                                                                         <div class="row" style="justify-content: flex-start;">
                                                                             <label>(발송내용)</label>
                                                                         </div>
                                                                         <div class="row">
-                                                                            <textarea
-                                                                                style="width: 100%; height:200px;">발송내용</textarea>
+                                                                            <div class="column" style="margin-top:0;">
+                                                                                <textarea class="friend_msg_content_textarea" style="width: 100%; height:300px;" placeholder="발송내용" onkeyup="check_byte('friend_msg_content', this)"></textarea>
+                                                                                <textarea class="friend_msg_080_textarea" style="width: 100%; height:100px; text-align: left;" readonly>
+무료수신거부
+080XXXXXXXX</textarea>
+                                                                                <div class="row" style="justify-content: flex-start;">
+                                                                                    <label id="friend_msg_content_byte">0 / 90 byte</label>
+                                                                                    <label id="friend_msg_type" style="margin-left:5px; color:#4a4adb;">(SMS)</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <button class="btn btn-modal" style="min-width: 150px; margin-right:20px;" id="btn-modal" data-modal="modal-msg-img">이미지 첨부</button>
+                                                                            <button class="btn btn-modal" style="min-width: 150px; margin-right:20px;" id="btn-modal" data-modal="modal-msg-save">문구저장</button>
+                                                                            <button class="btn btn-modal" style="min-width: 150px; margin-right:20px;" id="btn-modal" data-modal="modal-msg-load-all">불러오기</button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="row">
-                                                                    <button class="btn" style="width:100%;">변수
-                                                                        추가</button>
+                                                                    <button class="btn" style="width:100%;">변수 추가</button>
                                                                 </div>
                                                                 <div class="row">
                                                                     <button class="btn"
@@ -590,15 +634,9 @@
                                                             </div>
 
                                                             <div class="row">
-                                                                <button class="btn"
-                                                                    style="width:100%; min-width: 150px; margin-right:20px;">주소록에서
-                                                                    추가</button>
-                                                                <button class="btn"
-                                                                    style="width:100%; min-width: 150px; margin-right:20px;">클립보드
-                                                                    붙여넣기</button>
-                                                                <button class="btn"
-                                                                    style="width:100%; min-width: 150px;">엑셀
-                                                                    불러오기</button>
+                                                                <button class="btn btn-modal" data-modal="modal-address" style="width:100%; min-width: 150px; margin-right:20px;">주소록에서 추가</button>
+                                                                <button class="btn btn-modal" data-modal="modal-address-clipboard" style="width:100%; min-width: 150px; margin-right:20px;">클립보드 붙여넣기</button>
+                                                                <button class="btn btn-modal" data-modal="modal-address-excel" style="width:100%; min-width: 150px;">엑셀 불러오기</button>
                                                             </div>
 
                                                             <div class="row" style="background-color: #fff; padding: 10px;">
@@ -690,11 +728,11 @@
                                                             </div>
 
                                                             <div class="row" style="align-items: end; margin-top:0;">
-                                                                <button class="btn"
-                                                                    style="min-width: 150px; margin-right:20px;">테스트
-                                                                    전송</button>
-                                                                <button class="btn"
-                                                                    style="min-width: 150px;">전송</button>
+                                                                <button class="btn btn-modal" data-modal="modal-friend-send-test" style="min-width: 150px; margin-right:20px;">테스트 전송<label data-tippy-maxwidth="300" data-tippy-content="                                                    
+                                                                    <h1>[안내문]</h1><br>
+                                                                    <span>고객에게 문자 발송 전, 담당자님 번호로 테스트 발송을 권장해 드립니다</span><br>">
+                                                                    <i class="fa-solid fa-circle-question"></i></label></button>
+                                                                <button class="btn btn-modal" data-modal="modal-friend-send-confirm" style="min-width: 150px;">전송</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -722,27 +760,35 @@
                                                 <button class="btn" style="min-width: 150px; margin-right:20px;">바코드 선택</button>
                                                 <button class="btn btn-modal" data-modal="modal-barcode-list" style="min-width: 150px; margin-right:20px;">바코드 보관함</button>
                                             </div>
-                                            <div class="row" style="background-color: #fff; padding:10px;">
+
+                                            <div class="row" style="background-color: #fff;padding:10px;">
                                                 <div class="column" style="margin-top:0;">
-                                                    <div class="row" style="justify-content: flex-start; margin-top:0;">
+                                                    <div class="row" style="margin-top:0;">
+                                                        <label style="min-width:80px;margin-right:10px;">(발송제목)</label>
+                                                        <input id="barcode_msg_title" class="ctrl-input" type="text" onkeyup="check_byte('barcode_msg_title', this)" maxlength="40">
+                                                        <label id="barcode_msg_title_byte" style="min-width:150px;margin-left:10px;">0 / 40 byte</label>
+                                                    </div>
+
+                                                    <div class="row" style="justify-content: flex-start;">
                                                         <label>(발송내용)</label>
                                                     </div>
                                                     <div class="row">
-                                                        <textarea style="width: 100%; height:200px;">발송내용</textarea>
+                                                        <div class="column" style="margin-top:0;">
+                                                            <textarea class="barcode_msg_content_textarea" style="width: 100%; height:300px;" placeholder="발송내용" onkeyup="check_byte('barcode_msg_content', this)"></textarea>
+                                                            <div class="row" style="justify-content: flex-start;">
+                                                                <label id="barcode_msg_content_byte">0 / 2000 byte</label>
+                                                            </div>
+                                                        </div>
                                                     </div>
-
                                                     <div class="row">
-                                                        <button class="btn"
-                                                            style="min-width: 150px; margin-right:20px;">문구저장</button>
-                                                        <button class="btn"
-                                                            style="min-width: 150px; margin-right:20px;">불러오기</button>
+                                                        <button class="btn btn-modal" style="min-width: 150px; margin-right:20px;" id="btn-modal" data-modal="modal-msg-save">문구저장</button>
+                                                        <button class="btn btn-modal" style="min-width: 150px; margin-right:20px;" id="btn-modal" data-modal="modal-msg-load-all">불러오기</button>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="row">
-                                                <button class="btn" style="width:100%;">변수
-                                                    추가</button>
+                                                <button class="btn" style="width:100%;">변수 추가</button>
                                             </div>
                                             <div class="row">
                                                 <button class="btn"
@@ -766,14 +812,9 @@
                                             </div>
 
                                             <div class="row">
-                                                <button class="btn"
-                                                    style="width:100%; min-width: 150px; margin-right:20px;">주소록에서
-                                                    추가</button>
-                                                <button class="btn"
-                                                    style="width:100%; min-width: 150px; margin-right:20px;">클립보드
-                                                    붙여넣기</button>
-                                                <button class="btn" style="width:100%; min-width: 150px;">엑셀
-                                                    불러오기</button>
+                                                <button class="btn btn-modal" data-modal="modal-address" style="width:100%; min-width: 150px; margin-right:20px;">주소록에서 추가</button>
+                                                <button class="btn btn-modal" data-modal="modal-address-clipboard" style="width:100%; min-width: 150px; margin-right:20px;">클립보드 붙여넣기</button>
+                                                <button class="btn btn-modal" data-modal="modal-address-excel" style="width:100%; min-width: 150px;">엑셀 불러오기</button>
                                             </div>
 
                                             <div class="row" style="background-color: #fff; padding: 10px;">
@@ -854,9 +895,13 @@
                                             </div>
 
                                             <div class="row" style="align-items: end; margin-top:0;">
-                                                <button class="btn" style="min-width: 150px; margin-right:20px;">테스트
-                                                    전송</button>
-                                                <button class="btn" style="min-width: 150px;">전송</button>
+                                                <div class="row" style="align-items: end;">
+                                                    <button class="btn btn-modal" data-modal="modal-barcode-send-test" style="min-width: 150px; margin-right:20px;">테스트 전송<label data-tippy-maxwidth="300" data-tippy-content="                                                    
+                                                        <h1>[안내문]</h1><br>
+                                                        <span>고객에게 문자 발송 전, 담당자님 번호로 테스트 발송을 권장해 드립니다</span><br>">
+                                                        <i class="fa-solid fa-circle-question"></i></label></button>
+                                                    <button class="btn btn-modal" id="btn-modal" data-modal="modal-barcode-send-confirm" style="min-width: 150px;">전송</button>
+                                                </div>
                                             </div>
 
                                         </div>
@@ -869,7 +914,11 @@
 
                                             <div class="row">
                                                 <button class="btn"
-                                                    style="min-width: 150px; margin-right:20px;">발신번호</button>
+                                                    style="min-width: 150px; margin-right:20px;">발신번호<label data-tippy-placement="right" data-tippy-maxwidth="300" data-tippy-content="                                                    
+                                                        <h1>[안내문]</h1><br>
+                                                        발신번호는 각 국가의 발송 규칙에 의하여 해당 국가의 임의 번호로 적용됩니다.</span><br>">
+                                                        <i class="fa-solid fa-circle-question"></i></label>
+                                                </button>
                                                 <select style="width:100%;">
                                                     <option>발신번호</option>
                                                 </select>
@@ -880,20 +929,22 @@
                                                 <input class="ctrl-input btn-modal" data-modal="modal-global-country-search" tpye="text">
                                             </div>
 
-                                            <div class="row" style="background-color: #fff; padding:10px;">
+                                            <div class="row" style="background-color: #fff;padding:10px;">
                                                 <div class="column" style="margin-top:0;">
-                                                    <div class="row" style="justify-content: flex-start; margin-top:0;">
+                                                    <div class="row" style="justify-content: flex-start;">
                                                         <label>(발송내용)</label>
                                                     </div>
                                                     <div class="row">
-                                                        <textarea style="width: 100%; height:200px;">발송내용</textarea>
+                                                        <div class="column" style="margin-top:0;">
+                                                            <textarea class="global_msg_content_textarea" style="width: 100%; height:300px;" placeholder="발송내용" onkeyup="check_byte('global_msg_content', this)"></textarea>
+                                                            <div class="row" style="justify-content: flex-start;">
+                                                                <label id="global_msg_content_byte">0 / 70 byte</label>
+                                                            </div>
+                                                        </div>
                                                     </div>
-
                                                     <div class="row">
-                                                        <button class="btn"
-                                                            style="min-width: 150px; margin-right:20px;">문구저장</button>
-                                                        <button class="btn"
-                                                            style="min-width: 150px; margin-right:20px;">불러오기</button>
+                                                        <button class="btn btn-modal" style="min-width: 150px; margin-right:20px;" id="btn-modal" data-modal="modal-msg-save">문구저장</button>
+                                                        <button class="btn btn-modal" style="min-width: 150px; margin-right:20px;" id="btn-modal" data-modal="modal-msg-load-all">불러오기</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -949,14 +1000,21 @@
                                             </div>
 
                                             <div class="row">
-                                                <button class="btn"
-                                                    style="min-width: 150px; margin-right:20px;">발송시간</button>
+                                                <button class="btn" style="min-width: 150px; margin-right:20px;">발송시간</button>
                                                 <div style="width:100%; border: 1px solid black; padding:8px;">
-                                                    <input id="global_immSend_chk" type="radio" name="global_send_time" value="immediately"></input>
-                                                    <label for="global_immSend_chk">즉시발송</label>
-                                                    <input id="global_resSend_chk" type="radio" name="global_send_time" value="reservation"></input>
-                                                    <label for="global_resSend_chk">예약발송</label>
-                                                    <input class="global_send_time" type="date" disabled>
+                                                    <div class="column_wrapper" style="margin:0">
+                                                        <div class="row_wrapper" style="margin:0; align-items: center;">
+                                                            <input id="global_immSend_chk" type="radio" name="global_send_time" value="immediately"></input>
+                                                            <label for="global_immSend_chk" style="margin-left:5px;">즉시발송</label>
+                                                            <input id="global_resSend_chk" type="radio" name="global_send_time" value="reservation" style="margin-left:10px;"></input>
+                                                            <label for="global_resSend_chk" style="margin-left:5px;">예약발송</label>
+                                                            <input class="global_send_time" type="date" disabled style="margin-left:5px;">
+                                                        </div>
+
+                                                        <div class="row_wrapper global_resSend_info" style="display: none;">
+                                                            <span style="color:#4a4adb; font-weight: bold;">( ) 국가 시간으로 0000-00-00 00시 00분에 발송됩니다.</span>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -972,7 +1030,10 @@
                                             <div class="row" style="margin-top:10px; height:100%; border: 1px solid black">스마트폰 미리보기</div>
 
                                             <div class="row" style="align-items: end;">
-                                                <button class="btn" style="min-width: 150px; margin-right:20px;">테스트 전송</button>
+                                                <button class="btn btn-modal" data-modal="modal-global-send-test" style="min-width: 150px; margin-right:20px;">테스트 전송<label data-tippy-maxwidth="300" data-tippy-content="                                                    
+                                                    <h1>[안내문]</h1><br>
+                                                    <span>고객에게 문자 발송 전, 담당자님 번호로 테스트 발송을 권장해 드립니다</span><br>">
+                                                    <i class="fa-solid fa-circle-question"></i></label></button>
                                                 <button class="btn btn-modal" id="btn-modal" data-modal="modal-global-send-confirm" style="min-width: 150px;">전송</button>
                                             </div>
 
@@ -1044,7 +1105,7 @@
                                                 </div>
 
                                                 <div class="row" style="justify-content: flex-end;">
-                                                    <button class="btn" style="min-width: 100px; margin-right:20px;">저장</button>
+                                                    <button class="btn" style="min-width: 100px; margin-right:20px;" onclick="javascript:util.alert('저장완료', 'success', '팩스 표지를 수정하였습니다.');">저장</button>
                                                     <button class="btn" style="min-width: 100px;">수정</button>
                                                 </div>
                                             </div>
@@ -1078,14 +1139,9 @@
                                             </div>
 
                                             <div class="row">
-                                                <button class="btn"
-                                                    style="width:100%; min-width: 150px; margin-right:20px;">주소록에서
-                                                    추가</button>
-                                                <button class="btn"
-                                                    style="width:100%; min-width: 150px; margin-right:20px;">클립보드
-                                                    붙여넣기</button>
-                                                <button class="btn" style="width:100%; min-width: 150px;">엑셀
-                                                    불러오기</button>
+                                                <button class="btn btn-modal" data-modal="modal-address" style="width:100%; min-width: 150px; margin-right:20px;">주소록에서 추가</button>
+                                                <button class="btn btn-modal" data-modal="modal-address-clipboard" style="width:100%; min-width: 150px; margin-right:20px;">클립보드 붙여넣기</button>
+                                                <button class="btn btn-modal" data-modal="modal-address-excel" style="width:100%; min-width: 150px;">엑셀 불러오기</button>
                                             </div>
 
                                             <div class="row" style="background-color: #fff; padding: 10px;">
@@ -1158,7 +1214,6 @@
                                             </div>
 
                                             <div class="row" style="align-items: end; margin-top:0;">
-                                                <button class="btn" style="min-width: 150px; margin-right:20px;">테스트 전송</button>
                                                 <button class="btn btn-modal" id="btn-modal" data-modal="modal-fax-send-confirm" style="min-width: 150px;">전송</button>
                                             </div>
                                         </div>

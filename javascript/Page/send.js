@@ -210,11 +210,11 @@
 
         var chk = $(this).is(":checked");
 
-        console.log('msg_interval_chk');
+        console.log('barcode_interval_chk');
 
         if (chk) {
             $(".barcode_content .barcode_interval_layout").css("display", "flex");
-        } else {
+        } else {    
             $(".barcode_content .barcode_interval_layout").hide();
         }
     });
@@ -230,6 +230,19 @@
         } else {
             $(".fax_content .fax_interval_layout").hide();
         }
+    });
+
+    $("input:radio[name=global_send_time]").click(function () {
+
+        console.log($(this).val());
+
+        if( $(this).val() == "reservation" ) {
+            console.log("타냐");
+            $(".globalmsg_content .global_resSend_info").css("display", "flex");
+        } else {
+            $(".globalmsg_content .global_resSend_info").hide();
+        }   
+
     });
 
 });
@@ -280,6 +293,99 @@ function check_byte(type, obj){
             }
         }
     }
+
+    if(type == "alim_msg_title"){
+        $("#alim_msg_title_byte").html(byte + " / 40 byte");
+
+        if(byte > 40) {
+            $("#alim_msg_title_byte").css("color", "red");
+        } else{
+            $("#alim_msg_title_byte").css("color", "black");
+        }
+
+        if(byte > 0){
+            $("#alim_msg_type").html("(LMS)");
+            $(".alim_msg_content_textarea").css("background-color", "rgb(74 74 219 / 14%)");
+        } else {
+            $("#alim_msg_type").html("(SMS)");
+            $(".alim_msg_content_textarea").css("background-color", "#f7f7f7");
+        }
+    } else if (type == "alim_msg_content"){
+        $("#alim_msg_content_byte").html(byte + " / 90 byte");
+        
+        if(byte > 90) {
+            $("#alim_msg_content_byte").html(byte + " / 2000 byte");
+            $(".alim_msg_content_textarea").css("background-color", "rgb(74 74 219 / 14%)");
+            $("#alim_msg_type").html("(LMS)");
+        } else{
+            $("#alim_msg_content_byte").html(byte + " / 90 byte");
+            $(".alim_msg_content_textarea").css("background-color", "#f7f7f7");
+
+            if($("#alim_msg_title").val().length > 0){
+                $(".alim_msg_content_textarea").css("background-color", "rgb(74 74 219 / 14%)");
+                $("#alim_msg_type").html("(LMS)");
+            } else {
+                $("#alim_msg_type").html("(SMS)");
+            }
+        }
+    }
+
+    if(type == "friend_msg_title"){
+        $("#friend_msg_title_byte").html(byte + " / 40 byte");
+
+        if(byte > 40) {
+            $("#friend_msg_title_byte").css("color", "red");
+        } else{
+            $("#friend_msg_title_byte").css("color", "black");
+        }
+
+        if(byte > 0){
+            $("#friend_msg_type").html("(LMS)");
+            $(".friend_msg_content_textarea").css("background-color", "rgb(74 74 219 / 14%)");
+        } else {
+            $("#friend_msg_type").html("(SMS)");
+            $(".friend_msg_content_textarea").css("background-color", "#f7f7f7");
+        }
+    } else if (type == "friend_msg_content"){
+        $("#friend_msg_content_byte").html(byte + " / 90 byte");
+        
+        if(byte > 90) {
+            $("#friend_msg_content_byte").html(byte + " / 2000 byte");
+            $(".friend_msg_content_textarea").css("background-color", "rgb(74 74 219 / 14%)");
+            $("#friend_msg_type").html("(LMS)");
+        } else{
+            $("#friend_msg_content_byte").html(byte + " / 90 byte");
+            $(".friend_msg_content_textarea").css("background-color", "#f7f7f7");
+
+            if($("#friend_msg_title").val().length > 0){
+                $(".friend_msg_content_textarea").css("background-color", "rgb(74 74 219 / 14%)");
+                $("#friend_msg_type").html("(LMS)");
+            } else {
+                $("#friend_msg_type").html("(SMS)");
+            }
+        }
+    }
+
+    if(type == "friend_content"){
+        $("#friend_content_byte").html(byte + " / 1000 byte");
+    }
+
+    if(type == "barcode_msg_title"){
+        $("#barcode_msg_title_byte").html(byte + " / 40 byte");
+
+        if(byte > 40) {
+            $("#barcode_msg_title_byte").css("color", "red");
+        } else{
+            $("#barcode_msg_title_byte").css("color", "black");
+        }
+    } else if (type == "barcode_msg_content"){
+        $("#barcode_msg_content_byte").html(byte + " / 2000 byte");
+    }
+
+    if(type == "global_msg_content"){
+        $("#global_msg_content_byte").html(byte + " / 70 byte");
+    }
+    
 }
 
 function receiving_num_check( )

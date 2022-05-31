@@ -18,10 +18,10 @@ function Fn_Tippy_Init(){
     
 </script>
 
-<div id="modal-global-send-finish" class="modal-window" style="width: 600px;">
+<div id="modal-friend-send-finish" class="modal-window" style="width: 600px;">
 
     <div class="m_row_wrapper" style="justify-content: flex-start;">
-        <span class="m_title">해외 문자 전송</span>
+        <span class="m_title">친구톡 전송</span>
     </div>
 
     <div class="close-area">X</div>
@@ -37,17 +37,20 @@ function Fn_Tippy_Init(){
         <div class="m_column_wrapper i_start" style="margin-top: 20px; width: 100%;">
             <span>전송시간 : 0000-00-00 00시 00분</span>
             <span>발신번호 : 010-0000-0000</span>
-            <span>발송 페이지수 : 10건 * 10장 <span style="font-weight: bold;">(총 100장)</span></span>
+            <span>발송건수 : 10건</span>
         </div>
         
         <div class="m_row_wrapper j_end" style="margin-top: 20px;">
             <span style="font-weight: bold;">차감 금액 000원</span>
         </div>
         
+        <div class="m_row_wrapper j_start" style="margin-top:20px">
+            <span>실패건은 2일 후 자동 환불됩니다.</span>
+        </div>
 
         <div class="m_row_wrapper" style="margin-top:20px">
-            <button class="btn btn-modal" id="btn-modal" data-modal="modal-fax-send-finish" style="width: 120px;" onclick="modal.style.display='none'">이어서 전송</button>
-            <button class="btn" style="width:120px; margin-left:20px;" onclick="modal.style.display='none'">닫기</button>
+            <button class="btn" style="width:120px;" onclick="modal.style.display='none'">확인</button>
+            <button class="btn btn-modal" id="btn-modal" style="width: 120px; margin-left:20px;" onclick="modal.style.display='none'">이어서 전송</button>
         </div>
 
 

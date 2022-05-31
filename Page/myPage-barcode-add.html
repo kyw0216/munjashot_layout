@@ -66,12 +66,13 @@
 
                                         <div class="column" style="background-color: #eeeeee; align-items: flex-start; line-height: normal; padding:10px;">
                                             <span>1. 바코드 제목 입력(메시지에는 노출되지 않음)</span>
-                                            <span>2. 바코드 유형 선택 및 샘플 값 입력</span>
+                                            <span>2. 바코드 유형 선택 및 샘플 값 입력<button class="btn" style="margin-left:5px; padding:3px;" onclick="javascript:window.open('https://bizshot.co.kr/Bar_Mng/popDetail1.emfo','', 'width=900px,height=740px,scrollbars=yes');">상세설명</button></span>
                                             <span>3. 바코드 발송 방식 선택 (바코드+이미지의 경우, 200kb이하의 JPG파일 첨부</span>
-                                            <span>4. [바코드 영영을 지정하기]를 클릭 후 바코드 삽입위치 지정</span>
-                                            <span>5. [바코드 샘플보기]를 클릭하여 최종적으로 이미지 확인</span>
+                                            <span>4. [바코드 영영을 지정하기]를 클릭 후 바코드 삽입위치 지정<button class="btn" style="margin-left:5px; padding:3px;" onclick="javascript:window.open('https://bizshot.co.kr/Bar_Mng/popDetail2.emfo','', 'width=900px,height=886px,scrollbars=yes');">상세설명</button></span>
+                                            <span>5. [바코드 샘플보기]를 클릭하여 최종적으로 이미지 확인<button class="btn" style="margin-left:5px; padding:3px;" onclick="javascript:window.open('https://bizshot.co.kr/Bar_Mng/popDetail3.emfo','', 'width=900px,height=886px,scrollbars=yes');">상세설명</button></span>
                                             <span>6. 수신번호, 발신번호 입력 후 발송(테스트 발송도 과금 부과 됨.)</span>
                                             <span>7. 바코드를 수신한 핸드폰으로 실제 환경에서 테스트 진행</span>
+                                            <img src="../image/useInfoIcon2.png" style="cursor: pointer;" onclick="javascript:window.open('https://bizshot.co.kr/DownLoad/bizshot_barcode_useManual.pdf','', 'width=1020px,height=1000px,scrollbars=yes');">
                                         </div>
 
                                         <div class="row" style="justify-content: flex-start;">
@@ -147,12 +148,12 @@
                                         </table>
 
                                         <div class="row">
-                                            <button class="btn" style="flex-grow: 1;" onclick="javscript:alert('테스트 발송하기');">테스트 발송하기</button>
+                                            <button class="btn" style="flex-grow: 1;" onclick="javscript:util.alert('테스트 발송', 'success', '테스트 발송하기');">테스트 발송하기</button>
                                         </div>
 
                                         <div class="row_wrapper">
-                                            <button class="btn" style="flex-grow: 1;" onclick="javscript:alert('초기화!');">초기화</button>
-                                            <button class="btn" style="flex-grow: 1; margin-left:10px;" onclick="javscript:alert('등록!');">등 록</button>
+                                            <button class="btn" style="flex-grow: 1;">초기화</button>
+                                            <button class="btn" style="flex-grow: 1; margin-left:10px;" onclick="javscript:util.alert('등록 완료', 'success', '바코드가 성공적으로 등록되었습니다.');">등 록</button>
                                             <button class="btn" style="flex-grow: 1; margin-left:10px;" onclick="javscript:location.href='myPage-barcode.html'">목 록</button>
                                         </div>
                                         

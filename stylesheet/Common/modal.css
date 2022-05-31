@@ -425,6 +425,7 @@
 
 
 
+/* ////////////////////////////////// */
 #modal-msg-send-test .address_div{
     display: flex;
     flex-direction: column;
@@ -441,7 +442,6 @@
     justify-content: center;
     align-items: center;
     width: 250px;
-    /* background-color: #f7f7f7; */
 }
 
 #modal-msg-send-test .address_table_div{
@@ -515,6 +515,404 @@
     border-radius: 10px;
     padding: 10px 20px;
 }
+/* ////////////////////////////////// */
+
+
+/* ////////////////////////////////// */
+#modal-global-send-test .address_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #eeeeee;
+    margin-left:10px;
+}
+
+#modal-global-send-test .group_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+}
+
+#modal-global-send-test .address_table_div{
+    width:100%;
+    height:200px;
+    overflow: scroll;
+}
+
+#modal-global-send-test .address_table {
+    width: 100%;
+}
+
+#modal-global-send-test .address_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 5px;
+    text-align: center;
+    width: 10%;
+    background-color: #cecece;
+}
+
+#modal-global-send-test .address_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+    width: 10%;
+}
+
+#modal-global-send-test .address_receiver_table_div {
+    width:100%;
+    height:160px;
+    overflow-y: scroll;
+}
+
+#modal-global-send-test .address_receiver_table {
+    width: 100%;
+}
+
+#modal-global-send-test .address_receiver_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    width: 10%;
+    background-color: #cecece;
+}
+
+#modal-global-send-test .address_receiver_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+    width: 10%;
+}
+
+#modal-global-send-test .preview_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+/* ////////////////////////////////// */
+
+
+/* ////////////////////////////////// */
+#modal-barcode-send-test .address_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #eeeeee;
+    margin-left:10px;
+}
+
+#modal-barcode-send-test .group_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+}
+
+#modal-barcode-send-test .address_table_div{
+    width:100%;
+    height:200px;
+    overflow: scroll;
+}
+
+#modal-barcode-send-test .address_table {
+    width: 100%;
+}
+
+#modal-barcode-send-test .address_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 5px;
+    text-align: center;
+    width: 10%;
+    background-color: #cecece;
+}
+
+#modal-barcode-send-test .address_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+    width: 10%;
+}
+
+#modal-barcode-send-test .address_receiver_table_div {
+    width:100%;
+    height:160px;
+    overflow-y: scroll;
+}
+
+#modal-barcode-send-test .address_receiver_table {
+    width: 100%;
+}
+
+#modal-barcode-send-test .address_receiver_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    width: 10%;
+    background-color: #cecece;
+}
+
+#modal-barcode-send-test .address_receiver_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+    width: 10%;
+}
+
+#modal-barcode-send-test .preview_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+/* ////////////////////////////////// */
+
+/* ////////////////////////////////// */
+#modal-alim-send-test .address_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #eeeeee;
+    margin-left:10px;
+}
+
+#modal-alim-send-test .group_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    /* background-color: #f7f7f7; */
+}
+
+#modal-alim-send-test .address_table_div{
+    width:100%;
+    height:200px;
+    overflow: scroll;
+}
+
+#modal-alim-send-test .address_table {
+    width: 100%;
+}
+
+#modal-alim-send-test .address_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 5px;
+    text-align: center;
+    width: 10%;
+    background-color: #cecece;
+}
+
+#modal-alim-send-test .address_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+    width: 10%;
+}
+
+#modal-alim-send-test .address_receiver_table_div {
+    width:100%;
+    height:160px;
+    overflow-y: scroll;
+}
+
+#modal-alim-send-test .address_receiver_table {
+    width: 100%;
+}
+
+#modal-alim-send-test .address_receiver_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    width: 10%;
+    background-color: #cecece;
+}
+
+#modal-alim-send-test .address_receiver_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+    width: 10%;
+}
+
+#modal-alim-send-test .preview_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+#modal-alim-send-test .send_label {
+    border-radius: 10px; 
+    padding: 6px; 
+    background-color: #cecece;
+    cursor: pointer;
+}
+
+#modal-alim-send-test .send_label.on {
+    background-color: rgb(159, 159, 240);
+}
+/* /////////////////////////////////// */
+
+
+/* ////////////////////////////////// */
+#modal-friend-send-test .address_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #eeeeee;
+    margin-left:10px;
+}
+
+#modal-friend-send-test .group_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    /* background-color: #f7f7f7; */
+}
+
+#modal-friend-send-test .address_table_div{
+    width:100%;
+    height:200px;
+    overflow: scroll;
+}
+
+#modal-friend-send-test .address_table {
+    width: 100%;
+}
+
+#modal-friend-send-test .address_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 5px;
+    text-align: center;
+    width: 10%;
+    background-color: #cecece;
+}
+
+#modal-friend-send-test .address_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+    width: 10%;
+}
+
+#modal-friend-send-test .address_receiver_table_div {
+    width:100%;
+    height:160px;
+    overflow-y: scroll;
+}
+
+#modal-friend-send-test .address_receiver_table {
+    width: 100%;
+}
+
+#modal-friend-send-test .address_receiver_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    width: 10%;
+    background-color: #cecece;
+}
+
+#modal-friend-send-test .address_receiver_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+    width: 10%;
+}
+
+#modal-friend-send-test .preview_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+#modal-friend-send-test .send_label {
+    border-radius: 10px; 
+    padding: 6px; 
+    background-color: #cecece;
+    cursor: pointer;
+}
+
+#modal-friend-send-test .send_label.on {
+    background-color: rgb(159, 159, 240);
+}
+/* /////////////////////////////////// */
+
+
 
 #modal-msg-send-confirm .preview_div {
     display: flex;
@@ -555,6 +953,225 @@
     line-height: normal;
 }
 
+
+/* //////////////////////////////////////////////////// */
+#modal-alim-send-confirm .preview_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+#modal-alim-send-confirm .msg_table {
+    width: 100%;
+    table-layout:fixed;
+}
+
+#modal-alim-send-confirm .msg_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    background-color: #cecece;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+#modal-alim-send-confirm .msg_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+    vertical-align: middle;
+    line-height: normal;
+}
+/* //////////////////////////////////////////////////// */
+
+
+/* //////////////////////////////////////////////////// */
+#modal-friend-send-confirm .preview_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+#modal-friend-send-confirm .msg_table {
+    width: 100%;
+    table-layout:fixed;
+}
+
+#modal-friend-send-confirm .msg_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    background-color: #cecece;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+#modal-friend-send-confirm .msg_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+    vertical-align: middle;
+    line-height: normal;
+}
+/* //////////////////////////////////////////////////// */
+
+
+
+/* //////////////////////////////////////////////////// */
+#modal-barcode-send-confirm .preview_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+#modal-barcode-send-confirm .msg_table {
+    width: 100%;
+    table-layout:fixed;
+}
+
+#modal-barcode-send-confirm .msg_table th {
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    background-color: #cecece;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+#modal-barcode-send-confirm .msg_table td {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+    vertical-align: middle;
+    line-height: normal;
+}
+/* //////////////////////////////////////////////////// */
+
+#modal-unsubscribe-apply .label{
+    min-width:120px;
+}
+
+#modal-img-view .box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    width:100%;
+    height:200px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    border: 1px solid black;
+}
+
+#modal-msg-preview .address_table_div {
+    border: 2px solid rgb(12, 12, 162);
+    padding:5px;
+    height: 100%;
+}
+
+
+#modal-address-upload-preview1 .address_table_div {
+    width:100%;
+    height:200px;
+    overflow-y: scroll;
+}
+
+#modal-address-upload-preview1 .address_table {
+    width: 100%;
+    table-layout:fixed;
+}
+
+#modal-address-upload-preview1 .address_table th{
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    background-color: #cecece;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+#modal-address-upload-preview1 .address_table td{
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    line-height: normal;
+    white-space : nowrap;
+    overflow: hidden; 
+    vertical-align: middle;
+}
+
+
+#modal-address-upload-preview2 .address_table_div {
+    width:100%;
+    height:200px;
+    overflow-y: scroll;
+}
+
+#modal-address-upload-preview2 .address_table {
+    width: 100%;
+    table-layout:fixed;
+}
+
+#modal-address-upload-preview2 .address_table th{
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    text-align: center;
+    background-color: #cecece;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+#modal-address-upload-preview2 .address_table td{
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    line-height: normal;
+    /* white-space : nowrap; */
+    /* overflow: hidden;  */
+    vertical-align: middle;
+}
 
 .m_row_wrapper{
     display: flex;

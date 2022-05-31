@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="../stylesheet/Common/modal.css">
+
+<script>
+
+$(function(){
+    Fn_Tippy_Init();
+});
+// 툴팁 세팅
+function Fn_Tippy_Init(){
+
+    tippy("[data-tippy-content]",
+    {
+        content: "tooltip",
+        allowHTML: true,
+        maxWidth: 500
+    });
+}
+    
+</script>
+
+<div id="modal-barcode-send-reserve-finish" class="modal-window" style="width: 600px;">
+
+    <div class="m_row_wrapper" style="justify-content: flex-start;">
+        <span class="m_title">바코드 전송</span>
+    </div>
+
+    <div class="close-area">X</div>
+
+    <hr style="margin:20px 0;width: 100%;">
+
+    <div class="m_row_wrapper j_start">
+        <span class="m_content">예약이 완료되었습니다.</span>
+    </div>
+
+    <div class="m_column_wrapper i_start" style="height: auto; color: #888888;">
+        <span class="m_content"> * 예약 내역은 [전송결과] – [예약내역] 메뉴에서 확인 가능합니다.</span>
+        <span class="m_content"> * 예약 취소는 발송 5분 전 까지만 가능합니다.</span>
+    </div>
+
+    <div class="content">
+        
+        <div class="m_column_wrapper i_start" style="margin-top: 20px; width: 100%;">
+            <span>전송시간 : 0000-00-00 00시 00분</span>
+            <span>발신번호 : 010-0000-0000</span>
+            <span>발송건수 : 10건</span>
+        </div>
+        
+        <div class="m_row_wrapper j_end" style="margin-top: 20px;">
+            <span style="font-weight: bold;">차감 금액 000원</span>
+        </div>
+        
+        <div class="m_row_wrapper j_start" style="margin-top:20px">
+            <span>실패건은 2일 후 자동 환불됩니다.</span>
+        </div>
+
+        <div class="m_row_wrapper" style="margin-top:20px">
+            <button class="btn" style="width:120px;" onclick="modal.style.display='none'">확인</button>
+            <button class="btn" style="width: 120px; margin-left:20px;" onclick="modal.style.display='none'">이어서 전송</button>
+            <button class="btn" style="width: 120px; margin-left:20px;" onclick="javascript:location.href='../Page/myPage-resMng-time-detail.html';">예약내역 확인</button>
+        </div>
+
+    </div>
+</div>

@@ -67,78 +67,43 @@
 
                             <hr style="margin:12px;width: 100%;">
 
-                            <div class="row_wrapper" style="justify-content: flex-end;">
-                                <button class="btn" style="width:200px;" onclick="javascript:location.href='myPage-barcode-add.html';">등록하기</button>
-                            </div>
-                            
-                            <div class="column_wrapper">
-                                <div class="column_wrapper"
-                                    style="justify-content: flex-start; align-items: flex-start;">
-
-                                    <table class="log_table">
+                            <div class="row_wrapper" style="align-items: flex-start; margin:0;">
+                                <div class="column_wrapper" style="justify-content: flex-start; align-items: flex-start; margin:0;">
+                                    <table class="barcode_table">
                                         <tr>
-                                            <th><input id="all_chk" class="chk_box" type="checkbox"></th>
-                                            <th>이미지 썸네일</th>
-                                            <th>바코드 유형</th>
-                                            <th>바코드제목</th>
                                             <th>등록일시</th>
-                                            <th>관리</th>
+                                            <td>2022-05-18 오후 3:04:43</td>
                                         </tr>
                                         <tr>
-                                            <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
-                                            <td><img src="../image/이미지 썸네일.png"></td>
+                                            <th>바코드제목</th>
+                                            <td>test</td>
+                                        </tr>
+                                        <tr>
+                                            <th>바코드 발송 방식</th>
+                                            <td>이미지 + 바코드 발송</td>
+                                        </tr>
+                                        <tr>
+                                            <th>바코드 유형</th>
                                             <td>QRCODE</td>
-                                            <td><a href="myPage-barcode-detail.html" style="color:blue; text-decoration: underline;">등록완료</a></td>
-                                            <td>21/01/01</td>
-                                            <td>
-                                                <button class="btn" onclick="javascript:location.href='myPage-barcode-add.html';">수정</button>
-                                            </td>
                                         </tr>
                                         <tr>
-                                            <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td><input class="chk_box" type="checkbox" name="barcode_chk"></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <th>바코드 샘플값</th>
+                                            <td>ABCD</td>
                                         </tr>
                                     </table>
 
-                                    <div class="row_wrapper" style="margin-top:20px;">
-                                        <span>1/2/3 .... /10</span>
+                                    <div class="row_wrapper" style="margin:0; margin-top:20px;">
+                                        <button class="btn" onclick="javascript:location.href='myPage-barcode.html';" style="width: 100%;">목록</button>
+                                        <button class="btn" onclick="javascript:location.href='myPage-barcode-add.html';" style="width: 100%; margin-left:10px;">수정하기</button>
+                                        <button class="btn" onclick="javascript:alert('삭제하기');" style="width: 100%; margin-left:10px;">삭제하기</button>
                                     </div>
 
                                 </div>
 
-                                <div class="row_wrapper" style="justify-content: flex-end;">
-                                    <button class="btn" onclick="javascript:alert('선택삭제');">선택삭제</button>
+                                <div class="row_wrapper" style="margin:0; margin-left:10px; border: 1px solid black; height: 500px;">
+                                    바코드 이미지
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
