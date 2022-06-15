@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
     
     allChk();
-    chk_sum();
 
     console.log($("input:radio[name=menu_select]").val());
 

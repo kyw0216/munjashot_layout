@@ -42,3 +42,36 @@ function chk_sum() {
 
     });
 }
+
+function reservation_cancel(){
+    
+    util.confirm("경고", "warning", "해당 발송 예약을 취소하시겠습니까?").then(function (result) {
+        if (!result) return;
+        util.alert('예약취소 완료', 'success', '예약 발송이 취소되었습니다.', null, null, null, function(){
+            location.href = "../Page/myPage-resMng-tui.html";
+        });
+    });
+
+}
+
+function reservation_cancel2(){
+    
+    util.confirm("경고", "warning", "해당 발송 예약을 취소하시겠습니까?").then(function (result) {
+        if (!result) return;
+        util.alert('예약취소 완료', 'success', '예약 발송이 취소되었습니다.', null, null, null, function(){
+            location.href = "../Page/myPage-resMng-time-tui.html";
+        });
+    });
+
+}
+
+function reservation_cancel3(){
+    
+    util.confirm("경고", "warning", "해당 발송 예약을 취소하시겠습니까?").then(function (result) {
+        if (!result) return;
+        util.alert('예약취소 완료', 'success', '예약 발송이 취소되었습니다.', null, null, null, function(){
+            location.href = "../Page/myPage-resMng-time-detail-tui.html";
+        });
+    });
+
+}

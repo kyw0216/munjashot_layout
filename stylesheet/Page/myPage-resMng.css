@@ -86,6 +86,12 @@ main .main_content .content_wrapper {
     align-items: center;
 }
 
+#grid .res_span{
+    font-weight: bold; 
+    color:#7694B6;
+    cursor: pointer;
+}
+
 .res_table {
     width: 100%;
 }

@@ -3,7 +3,7 @@
     allChk();
     chk_sum();
 
-    console.log($("input:radio[name=menu_select]").val());
+    // console.log($("input:radio[name=menu_select]").val());
 
     $("input:radio[name=menu_select]").change(function () {
 
@@ -18,7 +18,6 @@
 
     });
 
-    
 });
 
 
@@ -36,11 +35,19 @@ function allChk() {
 }
 
 function chk_sum() {
+    
     $("input[name=select_chk]").change(function(){
 
         let sum = $("input[name=select_chk]:checked").length;
-
         $("#select_sum").val(sum);
 
     });
+}
+
+function chk_sum2() {
+
+    let sum = $("input[name=select_chk]:checked").length;
+    console.log(sum);
+    $("#select_sum").val(sum);
+
 }

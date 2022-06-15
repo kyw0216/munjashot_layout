@@ -1,11 +1,136 @@
 <link rel="stylesheet" href="../stylesheet/Common/modal.css">
 
-<div id="modal-auth-status" class="modal-window">
-    <div class="close-area">X</div>
-    <div class="title">
-        <h2>발신번호 등록</h2>
+<script>
+
+$(function(){
+    type_chk();
+    Fn_Tippy_Init();
+});
+
+// 툴팁 세팅
+function Fn_Tippy_Init(){
+
+    tippy("[data-tippy-content]",
+    {
+        content: "tooltip",
+        allowHTML: true,
+        maxWidth: 500
+    });
+}
+
+if(document.querySelector(".fileDrop")){
+
+    const $drop = document.querySelector(".fileDrop");
+    const $title = document.querySelector(".fileDrop h1");
+
+    // 드래그한 파일 객체가 해당 영역에 놓였을 때
+    $drop.ondrop = (e) => {
+        e.preventDefault();
+        $drop.className = "fileDrop";
+        
+        // 파일 리스트
+        const files = [...e.dataTransfer?.files];
+
+        $title.innerHTML = files.map(v => v.name).join("<br>");
+    }
+
+    // ondragover 이벤트가 없으면 onDrop 이벤트가 실행되지 않습니다.
+    $drop.ondragover = (e) => {
+    e.preventDefault();
+    }
+
+    // 드래그한 파일이 최초로 진입했을 때
+        $drop.ondragenter = (e) => {
+        e.preventDefault();
+        
+        $drop.className += " active";
+    }
+
+    // 드래그한 파일이 영역을 벗어났을 때
+    $drop.ondragleave = (e) => {
+        e.preventDefault();
+        
+        $drop.className = "fileDrop";
+    }
+}
+
+// callnum Type 체크
+function type_chk() {
+    $(".type_label").click(function() {
+        $(".type_label").removeClass("on");
+        $(this).addClass("on");
+    });
+}
+</script>
+
+<div id="modal-callnum-add" class="modal-window" style="width: 500px;">
+
+    <div class="m_row_wrapper" style="justify-content: flex-start;">
+        <span class="m_title">발신번호 등록</span>
     </div>
+
+    <div class="close-area">X</div>
+
+    <hr style="margin:20px 0;width: 100%;">
+
     <div class="content">
-        모달입니다.
+
+        <div class="m_row_wrapper" style="background-color: aliceblue; padding: 5px; border-radius: 10px;">
+            <div class="m_row_wrapper j_start">
+                <span>발신번호 유형 선택*</span>
+            </div>
+            <div class="m_row_wrapper j_end">
+                <input id="msg" name="callnum_type" type="checkbox" style="display: none;">
+                <label for="msg" class="type_label on">문자</label>
+                <input id="fax" name="callnum_type" type="checkbox" style="display: none;">
+                <label for="fax" class="type_label" style="margin-left:10px;">팩스</label>
+            </div>
+        </div>
+        
+        <div class="m_column_wrapper" style="width: 100%; margin-top:20px;">
+
+            <div class="m_row_wrapper j_start">
+                <label class="label" style="margin-right:18px;">발신번호 등록 전 확인해주세요<label data-tippy-placement="top" data-tippy-maxWidth="600" data-tippy-content="                                                    
+                    <h1 style='color:red; font-weight:bold; font-size:20px;'>발신번호 등록 인증 시 유의사항</h1><br>
+                    · <b>휴대폰</b><br>
+                    - <b>가입자 명의 휴대폰 번호</b>만 본인인증 후 등록 가능<br>
+                    - <b>다른 명의의 휴대폰 번호</b> 등록 시 <b>서류인증</b>으로 신청해주세요.<br><br>
+                    · <b>서류인증</b><br>
+                    - 가입자 명의와 등록할 <b>발신번호의 명의가 동일한 경우 </b>해당 통신사의 <b>'통신가입사실확인서'</b>첨부<br>
+                    - 가입자 명의와 등록할 <b>발신번호의 명의가 다른 경우 </b>해당 통신사의 '통신가입사실확인서' 및 <b>관계를 증명할 수 있는 서류 첨부</b><br>
+                    개인-사업자 : 재직증명서 + 위임장<br>
+                    사업자-사업자 : 계약서 + 위임장
+                    개인-개인 : 관계 확인 서류(가족-가족관계증명서, 타인-위임장 등)"
+                    <i class="fa-solid fa-circle-question" style="margin-left:5px;"></i></label></label>
+            </div>
+            <div class="m_row_wrapper" style="margin-top:20px;">
+                <label class="label" style="margin-right:20px;">발신번호 이름</label>
+                <input class="ctrl-input" type="text" style="width:100%;" placeholder="(이름 혹은 회사명 입력)">
+            </div>
+            <div class="m_row_wrapper" style="margin-top:20px;">
+                <label class="label" style="margin-right:20px;">전화번호 입력</label>
+                <input class="ctrl-input"  type="text" style="width:100%;" placeholder="example@emfoplus.co.kr">
+            </div>
+            <div class="m_row_wrapper" style="margin-top:20px;">
+                <label class="label" style="margin-right:20px;">연락처</label>
+                <input class="ctrl-input" type="text" style="width:100%;" placeholder="01012341234">
+            </div>
+
+            <div class="m_row_wrapper" style="margin-top:20px;">
+                <label class="label" style="margin-right:20px;">파일 첨부</label>
+                <div class="m_row_wrapper" style="justify-content: flex-start; margin:0;">
+                    <div id="fileDrop" class="fileDrop" style="margin:0;">
+                        <h1>파일을 드래그해주세요.</h1>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="m_row_wrapper" style="margin-top:20px;">
+                <button class="btn" style="width:100px;" onclick="javascript:alert('발신번호 등록!');">등록</button>
+                <button class="btn" style="width:100px; margin-left:20px;" onclick="javascript:modal.style.display='none';">취소</button>
+            </div>
+
+        </div>
     </div>
 </div>

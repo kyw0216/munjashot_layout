@@ -16,6 +16,9 @@
 
     <script src='../javascript/base/util.js'></script>
 
+    <!-- Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="../stylesheet/external/font-awesome.css">
@@ -27,6 +30,18 @@
 
     <script type="text/javascript" src="../javascript/external/popper-1.16.0.min.js"></script>
     <script type="text/javascript" src="../javascript/external/tippy-5.1.1-bundle.iife.min.js"></script>
+
+    <!-- uiToast CDN -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/grid/latest/tui-grid.css" />
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.pagination/latest/tui-pagination.css" />
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css" />
+    <script src="https://uicdn.toast.com/tui.code-snippet/v1.5.0/tui-code-snippet.js"></script>
+    <script src="https://uicdn.toast.com/tui.pagination/latest/tui-pagination.js"></script>
+    <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+    <script src="https://uicdn.toast.com/grid/latest/tui-grid.js"></script>
+
+    <!-- Moment -->
+    <script src="../javascript/external/moment-2.29.1-locale.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -105,321 +120,17 @@
                                             </div>
 
                                             <div class="row_wrapper" style="justify-content: flex-end;">
-                                                <button class="btn" style="margin-left: 10px;">엑셀 다운로드</button>
+                                                <button class="btn" style="margin-left: 10px;" onclick="instance.export('xlsx');">엑셀 다운로드</button>
                                             </div>
                                             
                                             <div class="column_wrapper">
                                                 <div class="column_wrapper"
                                                     style="justify-content: flex-start; align-items: flex-start;">
                 
-                                                    <table class="stat_table" style="cursor: pointer;" onclick="javascript:location.href='myPage-stat-month-msg-detail.html';">
-                                                        <tr>
-                                                            <th>날짜</th>
-                                                            <th>SMS 성공</th>
-                                                            <th>LMS 성공</th>
-                                                            <th>MMS 성공</th>
-                                                            <th>문자 성공건 합계</th>
-                                                            <th>문자 실패건 합계</th>
-                                                            <th>총 건수</th>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-01</td>
-                                                            <td>0</td>
-                                                            <td>47</td>
-                                                            <td>0</td>
-                                                            <td>47</td>
-                                                            <td style="color:red">1</td>
-                                                            <td>48</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-02</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-03</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-04</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-05</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-06</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-07</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-08</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-09</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-10</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-11</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-12</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-13</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-14</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-15</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-16</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-17</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-18</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-19</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-20</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-21</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-22</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-23</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-24</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-24</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-25</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-26</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-27</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-28</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-29</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-30</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2022-05-31</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td style="color:red">0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                        <tr style="font-weight: bold;">
-                                                            <td>합계</td>
-                                                            <td>0</td>
-                                                            <td>47</td>
-                                                            <td>0</td>
-                                                            <td>47</td>
-                                                            <td style="color:red">1</td>
-                                                            <td>48</td>
-                                                        </tr>
-                                                    </table>
+                                                    <!-- <table class="stat_table" style="cursor: pointer;" onclick="javascript:location.href='myPage-stat-month-msg-detail.html';"> -->
+                                                    
+                                                    <div id="grid" style="width:100%;"></div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -1176,5 +887,213 @@
     <div id="footer"></div>
     <!-- <div data-include-path="footer.html"></div> -->
 </body>
+
+<script>
+
+    let gird_Date = moment("2022-05-01");
+    // console.log(gird_Date.format("YYYY-MM-DD"));
+    // console.log(gird_Date.add(1, "day").format("YYYY-MM-DD"));
+
+    const gridData = [];
+
+    (function() {
+        for(let i = 0; i < 30; i++){
+            gridData.push({
+                date: gird_Date.add(1, "day").format("YYYY-MM-DD"),
+                sms_success: i,
+                lms_success: i,
+                mms_success: i,
+                msg_success_sum: i,
+                msg_fail_sum: i,
+                all_sum: i,
+            });
+        }
+    })();
+
+    const Grid = tui.Grid;
+    const option = {
+        el: document.getElementById('grid'), // Container element
+        columns: [
+            {
+                header: '날짜',
+                name: 'date',
+                align: 'center',
+            },
+            {
+                header: 'SMS 성공',
+                name: 'sms_success',
+                align: 'center',
+            },
+            {
+                header: 'LMS 성공',
+                name: 'lms_success',
+                align: 'center',
+            },
+            {
+                header: 'MMS 성공',
+                name: 'mms_success',
+                align: 'center',
+            },
+            {
+                header: '문자 성공건 합계',
+                name: 'msg_success_sum',
+                align: 'center',
+            },
+            {
+                header: '문자 실패건 합계',
+                name: 'msg_fail_sum',
+                align: 'center',
+            },
+            {
+                header: '총 건수',
+                name: 'all_sum',
+                align: 'center',
+            },
+        ],
+        data: gridData,
+        contextMenu: ({ rowKey, columnName }) => (
+            [
+                [
+                    {
+                        name: 'export',
+                        label: 'Export',
+                        subMenu: [
+                            {
+                                name: 'default',
+                                label: '전체 export',
+                                subMenu: [
+                                    {
+                                        name: 'csvExport',
+                                        label: 'CSV export',
+                                        action: () => {
+                                            instance.export('csv');
+                                        }
+                                    },
+                                    {
+                                        name: 'excelExport',
+                                        label: 'Excel export',
+                                        action: () => {
+                                            instance.export('xlsx');
+                                        }
+                                    },
+                                ]
+                            },
+                            {
+                                name: 'includeHeader',
+                                label: '헤더를 제외하고 export',
+                                subMenu: [
+                                    {
+                                        name: 'csvExport',
+                                        label: 'CSV export',
+                                        action: () => {
+                                            instance.export('csv', { includeHeader: false });
+                                        }
+                                    },
+                                    {
+                                        name: 'excelExport',
+                                        label: 'Excel export',
+                                        action: () => {
+                                            instance.export('xlsx', { includeHeader: false });
+                                        }
+                                    },
+                                ]
+                            },
+                            {
+                                name: 'onlySelected',
+                                label: '선택한 영역 export',
+                                subMenu: [
+                                    {
+                                        name: 'csvExport',
+                                        label: 'CSV export',
+                                        action: () => {
+                                            instance.export('csv', { onlySelected: true });
+                                        }
+                                    },
+                                    {
+                                        name: 'excelExport',
+                                        label: 'Excel export',
+                                        action: () => {
+                                            instance.export('xlsx', { onlySelected: true });
+                                        }
+                                    },
+                                ]
+                            },
+                        ],
+                    }
+                ],
+            ]
+        ),
+        summary: {
+            height: 40,
+            position: 'bottom',
+            // align: 'center',
+            columnContent: {
+                date:{
+                    template(summary){
+                        return `합계`;
+                    }
+                },
+                sms_success:{
+                    template(summary){
+                        return summary.sum;
+                    }
+                },
+                lms_success:{
+                    template(summary){
+                        return summary.sum;
+                    }
+                },
+                mms_success:{
+                    template(summary){
+                        return summary.sum;
+                    }
+                },
+                msg_success_sum:{
+                    template(summary){
+                        return summary.sum;
+                    }
+                },
+                msg_fail_sum:{
+                    template(summary){
+                        return summary.sum;
+                    }
+                },
+                all_sum:{
+                    template(summary){
+                        return summary.sum;
+                    }
+                }
+            },
+            defaultContent: {
+                template(summary){
+                    return summary.sum;
+                }
+            }
+        }
+    }
+
+    const instance = new Grid(option);
+
+    // instance.resetData(newData); // Call API of instance's public method
+
+    Grid.applyTheme('striped'); // Call API of static method
+
+    // const rowData = [
+    //     {
+    //         date: "2022-05-01",
+    //         sms_success: 0,
+    //         lms_success: 0,
+    //         mms_success: 0,
+    //         msg_success_sum: 0,
+    //         msg_fail_sum: 0,
+    //         all_sum: 0,
+    //     }
+    // ];
+    //     rowData.forEach(row => {
+    //     instance.appendRow(row);
+    // });
+    
+</script>
+
 
 </html>

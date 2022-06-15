@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ToastUI 테스트</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src="javascript/external/jquery-3.5.1.min.js"></script>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='stylesheet/Common/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='stylesheet/Common/base.css'>
+
+    <script src='javascript/base/util.js'></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+
+    <!-- uiToast CDN -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/grid/latest/tui-grid.css" />
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.pagination/latest/tui-pagination.css" />
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css" />
+    <script src="https://uicdn.toast.com/tui.code-snippet/v1.5.0/tui-code-snippet.js"></script>
+    <script src="https://uicdn.toast.com/tui.pagination/latest/tui-pagination.js"></script>
+    <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+    <script src="https://uicdn.toast.com/grid/latest/tui-grid.js"></script>
+
+    <!-- moment -->
+    <script src="javascript/external/moment-2.29.1-locale.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#header").load("header.html"); //헤더 인클루드
+            $("#footer").load("footer.html"); //푸터부분 인클루드
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="" class="">
+
+
+    </div>
+
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- <div data-include-path="header.html"></div> -->
+
+    <!-- Body -->
+
+    <link rel='stylesheet' type='text/css' media='screen' href='stylesheet/Page/main.css'>
+
+    <div id="main-body-wrapper">
+        <div id="main-body">
+            <main class="body-section">
+
+                <div id="grid" style="width:100%;"></div>
+
+            </main>
+
+        </div>
+    </div>
+
+    <div id="modal" class="modal-overlay"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- <div data-include-path="footer.html"></div> -->
+
+</body>
+
+<script>
+
+    let gird_Date = moment("2022-05-01");
+
+    const gridData = [];
+
+    (function() {
+        for(let i = 0; i < 30; i++){
+            gridData.push({
+                date: gird_Date.add(1, "day").format("YYYY-MM-DD"),
+                sms_success: i,
+                lms_success: i,
+                mms_success: i,
+                msg_success_sum: i,
+                msg_fail_sum: i,
+                all_sum: i,
+            });
+        }
+    })();
+
+    const Grid = tui.Grid;
+    const option = {
+        el: document.getElementById('grid'), // Container element
+        scrollX: false,
+        scrollY: false,
+        minBodyHeight: 30,
+        pageOptions: {
+            useClient: true,
+            perPage: 5
+        },
+        columns: [
+            {
+                header: '날짜',
+                name: 'date',
+                align: 'center',
+            },
+            {
+                header: 'SMS 성공',
+                name: 'sms_success',
+                align: 'center',
+            },
+            {
+                header: 'LMS 성공',
+                name: 'lms_success',
+                align: 'center',
+            },
+            {
+                header: 'MMS 성공',
+                name: 'mms_success',
+                align: 'center',
+            },
+            {
+                header: '문자 성공건 합계',
+                name: 'msg_success_sum',
+                align: 'center',
+            },
+            {
+                header: '문자 실패건 합계',
+                name: 'msg_fail_sum',
+                align: 'center',
+            },
+            {
+                header: '총 건수',
+                name: 'all_sum',
+                align: 'center',
+            },
+        ],
+        data: gridData,
+        contextMenu: ({ rowKey, columnName }) => (
+            [
+                [
+                    {
+                        name: 'export',
+                        label: 'Export',
+                        subMenu: [
+                            {
+                                name: 'default',
+                                label: '전체 export',
+                                subMenu: [
+                                    {
+                                        name: 'csvExport',
+                                        label: 'CSV export',
+                                        action: () => {
+                                            instance.export('csv');
+                                        }
+                                    },
+                                    {
+                                        name: 'excelExport',
+                                        label: 'Excel export',
+                                        action: () => {
+                                            instance.export('xlsx');
+                                        }
+                                    },
+                                ]
+                            },
+                            {
+                                name: 'includeHeader',
+                                label: '헤더를 제외하고 export',
+                                subMenu: [
+                                    {
+                                        name: 'csvExport',
+                                        label: 'CSV export',
+                                        action: () => {
+                                            instance.export('csv', { includeHeader: false });
+                                        }
+                                    },
+                                    {
+                                        name: 'excelExport',
+                                        label: 'Excel export',
+                                        action: () => {
+                                            instance.export('xlsx', { includeHeader: false });
+                                        }
+                                    },
+                                ]
+                            },
+                            {
+                                name: 'onlySelected',
+                                label: '선택한 영역 export',
+                                subMenu: [
+                                    {
+                                        name: 'csvExport',
+                                        label: 'CSV export',
+                                        action: () => {
+                                            instance.export('csv', { onlySelected: true });
+                                        }
+                                    },
+                                    {
+                                        name: 'excelExport',
+                                        label: 'Excel export',
+                                        action: () => {
+                                            instance.export('xlsx', { onlySelected: true });
+                                        }
+                                    },
+                                ]
+                            },
+                        ],
+                    }
+                ],
+            ]
+        ),
+        summary: {
+            height: 40,
+            position: 'bottom',
+            // align: 'center',
+            columnContent: {
+                date:{
+                    template(summary){
+                        return `합계`;
+                    }
+                },
+                sms_success:{
+                    template(summary){
+                        return summary.sum;
+                    }
+                },
+                lms_success:{
+                    template(summary){
+                        return summary.sum;
+                    }
+                },
+                mms_success:{
+                    template(summary){
+                        return summary.sum;
+                    }
+                },
+                msg_success_sum:{
+                    template(summary){
+                        return summary.sum;
+                    }
+                },
+                msg_fail_sum:{
+                    template(summary){
+                        return summary.sum;
+                    }
+                },
+                all_sum:{
+                    template(summary){
+                        return summary.sum;
+                    }
+                }
+            },
+            defaultContent: {
+                template(summary){
+                    return summary.sum;
+                }
+            }
+        }
+    }
+
+    const instance = new Grid(option);
+
+</script>
+</html>

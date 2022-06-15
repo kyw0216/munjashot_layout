@@ -1173,6 +1173,54 @@
     vertical-align: middle;
 }
 
+#modal-callnum-add .label{
+    min-width: 120px;
+}
+
+#modal-callnum-add .type_label{
+    min-width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    padding:5px;
+    border-radius: 5px;
+    background-color: #bdbdbd;
+    cursor: pointer;
+}
+
+#modal-callnum-add .type_label.on{
+    background-color: #b2b2ff;
+}
+
+/* 드롭 반응 */
+#modal-callnum-add .fileDrop.active{
+    background: #eee;
+}
+
+#modal-callnum-add .fileDrop {
+    flex-grow:1;
+    height: 60px;
+     
+    margin: .6rem;
+    overflow: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius: 5px;
+    border: 4px dashed #ddd;
+    user-select: none;
+    transition: 0.4s;
+
+    background-color: white;
+}
+  
+#modal-callnum-add .fileDrop h1 {
+    font-size: 1rem;
+    color:rgb(116, 116, 116);
+}
+
+
 .m_row_wrapper{
     display: flex;
     flex-direction: row;

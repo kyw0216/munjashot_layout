@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>마이 페이지</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src="../javascript/external/jquery-3.5.1.min.js"></script>
+    <script src="../javascript/Common/modal.js"></script>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/base.css'>
+
+    <script src='../javascript/base/util.js'></script>
+
+    <!-- Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-regular.min.css">
+    <link rel="stylesheet" href="../stylesheet/external/font-awesome-solid.min.css">
+
+    <script src="../javascript/external/swiper-4.5.1.min.js"></script>
+    <link rel="stylesheet" href="../stylesheet/external/swiper-4.5.1.min.css">
+
+    <script type="text/javascript" src="../javascript/external/popper-1.16.0.min.js"></script>
+    <script type="text/javascript" src="../javascript/external/tippy-5.1.1-bundle.iife.min.js"></script>
+
+    <!-- uiToast CDN -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/grid/latest/tui-grid.css" />
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.pagination/latest/tui-pagination.css" />
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css" />
+    <script src="https://uicdn.toast.com/tui.code-snippet/v1.5.0/tui-code-snippet.js"></script>
+    <script src="https://uicdn.toast.com/tui.pagination/latest/tui-pagination.js"></script>
+    <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+    <script src="https://uicdn.toast.com/grid/latest/tui-grid.js"></script>
+
+    <!-- Moment -->
+    <script src="../javascript/external/moment-2.29.1-locale.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#header").load("header.html"); //헤더 인클루드
+            $("#footer").load("footer.html"); //푸터부분 인클루드
+            $("#leftBar_div").load("leftBar.html"); //푸터부분 인클루드
+            $("#rightBar_div").load("rightBar.html"); //푸터부분 인클루드
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- <div data-include-path="header.html"></div> -->
+
+    <!-- Body -->
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Page/myPage-resMng.css'>
+    <script src='../javascript/Page/myPage-resMng.js'></script>
+
+    <div id="main-body-wrapper" style="min-height: 50% !important;">
+        <div id="main-body" style="display: flex; justify-content: center; align-items: center;">
+            <main class="body-section">
+
+                <div class="main_content main_content1">
+                    <div class="wrapper clearfix">
+
+                        <div class="content_wrapper">
+
+                            <div class="column_wrapper">
+                                <div class="row_wrapper" style="justify-content: flex-start;">
+                                    <span style="font-size:24px;;">예약 관리</span>
+                                </div>
+                            </div>
+                            
+                            <div class="column_wrapper" style="align-items: flex-start; justify-content: center; line-height: normal;">
+                                <span style="font-size:20px; color:red;">예약취소는 발송시간 5분 전까지 가능합니다.</span>
+                                <span style="font-size:20px; color:red;">예약취소 작업 후 통신사 사정에 따라 취소가 안될 수 있으니 취소 후 꼭 취소 완료 여부 확인해주시기 바랍니다.</span>
+                                <span style="font-size:20px; color:red;">예약취소 작업 중 장애 발생 시 1599-2320으로 문의 주시기 바랍니다.</span>
+                            </div>
+
+                            <hr style="margin:12px;width: 100%;">
+
+                            <div class="column_wrapper">
+                                <div id="grid" style="width: 100%;"></div>
+                            <!-- <table class="res_table">
+                                <tr>
+                                    <th>예약일</th>
+                                    <th>예약건수</th>
+                                    <th>누계</th>
+                                    <th>취소</th>
+                                </tr>
+                                <tr>
+                                    <td class="date_td">2022년 05월 01일</td>
+                                    <td class="res_td" onclick="javascript:location.href='myPage-resMng-time.html';"><u>10</u></td>
+                                    <td>10</td>
+                                    <td><button class="btn">예약취소</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="date_td">2022년 05월 02일</td>
+                                    <td class="res_td" onclick="javascript:location.href='myPage-resMng-time.html';"><u>10</u></td>
+                                    <td>20</td>
+                                    <td><button class="btn">예약취소</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="date_td">2022년 05월 03일</td>
+                                    <td class="res_td" onclick="javascript:location.href='myPage-resMng-time.html';"><u>10</u></td>
+                                    <td>30</td>
+                                    <td><button class="btn">예약취소</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="date_td">2022년 05월 04일</td>
+                                    <td class="res_td" onclick="javascript:location.href='myPage-resMng-time.html';"><u>10</u></td>
+                                    <td>40</td>
+                                    <td><button class="btn">예약취소</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="date_td">2022년 05월 05일</td>
+                                    <td class="res_td" onclick="javascript:location.href='myPage-resMng-time.html';"><u>10</u></td>
+                                    <td>50</td>
+                                    <td><button class="btn">예약취소</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="date_td">2022년 05월 06일</td>
+                                    <td class="res_td" onclick="javascript:location.href='myPage-resMng-time.html';"><u>10</u></td>
+                                    <td>60</td>
+                                    <td><button class="btn">예약취소</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="date_td">2022년 05월 07일</td>
+                                    <td class="res_td" onclick="javascript:location.href='myPage-resMng-time.html';"><u>10</u></td>
+                                    <td>70</td>
+                                    <td><button class="btn">예약취소</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="date_td">2022년 05월 08일</td>
+                                    <td class="res_td" onclick="javascript:location.href='myPage-resMng-time.html';"><u>10</u></td>
+                                    <td>80</td>
+                                    <td><button class="btn">예약취소</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="date_td">2022년 05월 09일</td>
+                                    <td class="res_td" onclick="javascript:location.href='myPage-resMng-time.html';"><u>10</u></td>
+                                    <td>90</td>
+                                    <td><button class="btn">예약취소</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="date_td">2022년 05월 10일</td>
+                                    <td class="res_td" onclick="javascript:location.href='myPage-resMng-time.html';"><u>10</u></td>
+                                    <td>100</td>
+                                    <td><button class="btn">예약취소</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="date_td" style="font-weight: bold;">합계</td>
+                                    <td class="date_td" colspan="3">100 건</td>
+                                </tr>
+                            </table> -->
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <div id="modal" class="modal-overlay"></div>
+
+    <!-- leftBar -->
+    <div id="leftBar_div"></div>
+
+    <!-- rightBar -->
+    <div id="rightBar_div"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- <div data-include-path="footer.html"></div> -->
+</body>
+
+<script>
+
+    let grid_Date = moment("2022-05-01");
+
+    const gridData = [];
+
+    gridData.push({
+                reservation_date: grid_Date.format("YYYY년 MM월 DD일"),
+                reservation_count: `<span class="res_span" onclick="javascript:location.href='myPage-resMng-time-tui.html';"><u>10</u></span>`,
+                reservation_sum: `10`,
+                reservation_cancel: `<button class="btn" onclick="reservation_cancel();" style="padding:3px;">예약취소</button>`,
+            });
+            
+            (function() {
+                for(let i = 1; i < 30; i++){
+                    gridData.push({
+                        reservation_date: grid_Date.add(1, "day").format("YYYY년 MM월 DD일"),
+                        reservation_count: `<span class="res_span" onclick="javascript:location.href='myPage-resMng-time-tui.html';"><u>10</u></span>`,
+                        reservation_sum: `${10*(i+1)}`,
+                        reservation_cancel: `<button class="btn" onclick="reservation_cancel();" style="padding:3px;">예약취소</button>`,
+                    });
+                }
+            })();
+
+    class CustomTextEditor {
+        constructor(props) {
+            const el = document.createElement('input');
+            const { maxLength } = props.columnInfo.editor.options;
+
+            el.type = 'text';
+            el.maxLength = maxLength;
+            el.value = String(props.value);
+
+            this.el = el;
+        }
+
+        getElement() {
+            return this.el;
+        }
+
+        getValue() {
+            return this.el.value;
+        }
+
+        mounted() {
+            this.el.select();
+        }
+    }
+
+    class RowNumberRenderer {
+        constructor(props) {
+            const el = document.createElement('span');
+            el.innerHTML = `No.${props.formattedValue}`;
+            this.el = el;
+        }
+
+        getElement() {
+            return this.el;
+        }
+
+        render(props) {
+            this.el.innerHTML = `No.${props.formattedValue}`;
+        }
+    }
+    
+    class CheckboxRenderer {
+        constructor(props) {
+            const { grid, rowKey } = props;
+
+            const label = document.createElement('label');
+            label.className = 'checkbox tui-grid-row-header-checkbox';
+            label.setAttribute('for', String(rowKey));
+
+            const hiddenInput = document.createElement('input');
+            hiddenInput.className = 'hidden-input';
+            hiddenInput.id = String(rowKey);
+
+            const customInput = document.createElement('span');
+            customInput.className = 'custom-input';
+
+            label.appendChild(hiddenInput);
+            label.appendChild(customInput);
+
+            hiddenInput.type = 'checkbox';
+            label.addEventListener('click', (ev) => {
+                ev.preventDefault();
+
+                if (ev.shiftKey) {
+                    grid[!hiddenInput.checked ? 'checkBetween' : 'uncheckBetween'](rowKey);
+                    return;
+                }
+
+                grid[!hiddenInput.checked ? 'check' : 'uncheck'](rowKey);
+            });
+
+            this.el = label;
+
+            this.render(props);
+        }
+
+        getElement() {
+            return this.el;
+        }
+
+        render(props) {
+            const hiddenInput = this.el.querySelector('.hidden-input');
+            const checked = Boolean(props.value);
+
+            hiddenInput.checked = checked;
+        }
+    }
+
+
+    const Grid = tui.Grid;
+    const option = {
+        el: document.getElementById('grid'), // Container element
+        data: gridData,
+        scrollX: false,
+        scrollY: false,
+        minBodyHeight: 30,
+        rowHeaders: [
+        {
+            type: 'rowNum',
+            renderer: {
+                type: RowNumberRenderer
+            }
+        }],
+        pageOptions: {
+            useClient: true,
+            perPage: 10
+        },
+        columns: [
+            {
+                header: '예약일',
+                name: 'reservation_date',
+                align: 'center',
+            },
+            {
+                header: '예약건수',
+                name: 'reservation_count',
+                align: 'center',
+            },
+            {
+                header: '누계',
+                name: 'reservation_sum',
+                align: 'center',
+            },
+            {
+                header: '취소',
+                name: 'reservation_cancel',
+                align: 'center',
+            },
+        ],
+        contextMenu: ({ rowKey, columnName }) => (
+            [
+                [
+                    {
+                        name: 'export',
+                        label: 'Export',
+                        subMenu: [
+                            {
+                                name: 'default',
+                                label: '전체 export',
+                                subMenu: [
+                                    {
+                                        name: 'csvExport',
+                                        label: 'CSV export',
+                                        action: () => {
+                                            instance.export('csv');
+                                        }
+                                    },
+                                    {
+                                        name: 'excelExport',
+                                        label: 'Excel export',
+                                        action: () => {
+                                            instance.export('xlsx');
+                                        }
+                                    },
+                                ]
+                            },
+                            {
+                                name: 'includeHeader',
+                                label: '헤더를 제외하고 export',
+                                subMenu: [
+                                    {
+                                        name: 'csvExport',
+                                        label: 'CSV export',
+                                        action: () => {
+                                            instance.export('csv', { includeHeader: false });
+                                        }
+                                    },
+                                    {
+                                        name: 'excelExport',
+                                        label: 'Excel export',
+                                        action: () => {
+                                            instance.export('xlsx', { includeHeader: false });
+                                        }
+                                    },
+                                ]
+                            },
+                            {
+                                name: 'onlySelected',
+                                label: '선택한 영역 export',
+                                subMenu: [
+                                    {
+                                        name: 'csvExport',
+                                        label: 'CSV export',
+                                        action: () => {
+                                            instance.export('csv', { onlySelected: true });
+                                        }
+                                    },
+                                    {
+                                        name: 'excelExport',
+                                        label: 'Excel export',
+                                        action: () => {
+                                            instance.export('xlsx', { onlySelected: true });
+                                        }
+                                    },
+                                ]
+                            },
+                        ],
+                    }
+                ],
+            ]
+        )
+    }
+
+    const instance = new Grid(option);
+
+    // instance.resetData(newData); // Call API of instance's public method
+
+    Grid.applyTheme('striped'); // Call API of static method
+
+    // const rowData = [
+    //     {
+    //         date: "2022-05-01",
+    //         sms_success: 0,
+    //         lms_success: 0,
+    //         mms_success: 0,
+    //         msg_success_sum: 0,
+    //         msg_fail_sum: 0,
+    //         all_sum: 0,
+    //     }
+    // ];
+    //     rowData.forEach(row => {
+    //     instance.appendRow(row);
+    // });
+    
+
+    instance.on('check', function(ev) {
+        console.log('check', ev);
+    });
+
+    instance.on('uncheck', function(ev) {
+        console.log('uncheck', ev);
+    });
+
+</script>
+
+</html>
