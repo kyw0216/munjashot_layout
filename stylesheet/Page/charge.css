@@ -34,7 +34,7 @@ main .main_content1 {
     height: 500px;
 }
 
-main .main_content1 .text_area {}
+/* main .main_content1 .text_area {} */
 
 main .main_content2 {
     background: #f7f7f7;
@@ -199,7 +199,7 @@ main .main_content5 {
 
 .inquiry_box {
     width: 800px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -223,6 +223,15 @@ main .main_content5 {
     width: 100%;
     justify-content: center;
     align-items: center;
+}
+
+.input-area{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
 }
 
 

@@ -856,6 +856,7 @@ textarea.ctrl-input {
   -webkit-transform: scale(1.8); /* Safari and Chrome */
   -o-transform: scale(1.8); /* Opera */
   padding: 10px;
+  border: #0062ff;
 }
 
 
@@ -980,6 +981,240 @@ input[type='checkbox']:checked ~ .custom-input:after {
   visibility: initial;
 }
 /* 커스텀 체크박스 */
+
+/* 
+로그인페이지(모두 통합)----------------------------------------------------------
+
+파랑 버튼 & 박스 : 0062ff (메인컬러)
+회색 버튼 & 입력칸 : f3f3f3
+짙은 회색 버튼 : a3a3a3
+
+(아이디 비밀번호 찾기 / 회원가입) 회색 폰트 : a3a3a3
+검은색 폰트 : 383939
+회색 버튼 속 회색 폰트 : 888888
+짙은 회색 폰트 : 676767 
+*/
+
+/* 버튼 디자인 */
+.btn-default {
+  padding: 7px 12px;
+  border-radius: 5px;
+  color:white;
+  border: 0;
+  font-size: 13px;
+}
+
+.btn-blue {
+  padding: 7px 12px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #0062ff;
+  color:white;
+  font-size: 13px;
+}
+
+.btn-gray {
+  padding: 7px 12px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  color:#888888;
+  font-size: 13px;
+}
+
+.btn-dgray {
+  padding: 7px 12px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #a3a3a3;
+  color:white;
+  font-size: 13px;
+}
+/* 버튼 디자인 */
+
+/* input-text 디자인 */
+.gray-input {
+  width: 100%;
+  height: 40px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+  /* background-color: rgb(233, 233, 233); */
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+}
+
+.white-input {
+  width: 100%;
+  height: 40px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.default-input {
+  width: 100%;
+  font-size: 15px;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 5px;
+  background-color: inherit;
+  box-sizing: border-box;
+}
+
+.gray-input[type='text']::placeholder,
+.gray-input[type='email']::placeholder,
+.gray-input[type='password']::placeholder {
+  color: #c8c8c8;
+}
+
+.gray-input[type='text']:-ms-input-placeholder,
+.gray-input[type='email']:-ms-input-placeholder,
+.gray-input[type='password']:-ms-input-placeholder {
+  color: #c8c8c8;
+}
+
+.white-input[type='text']::placeholder,
+.white-input[type='email']::placeholder,
+.white-input[type='password']::placeholder {
+  color: #c8c8c8;
+}
+
+.white-input[type='text']:-ms-input-placeholder,
+.white-input[type='email']:-ms-input-placeholder,
+.white-input[type='password']:-ms-input-placeholder {
+  color: #c8c8c8;
+}
+
+.default-input[type='text']::placeholder,
+.default-input[type='email']::placeholder,
+.default-input[type='password']::placeholder {
+  color: #c8c8c8;
+}
+
+.default-input[type='text']:-ms-input-placeholder,
+.default-input[type='email']:-ms-input-placeholder,
+.default-input[type='password']:-ms-input-placeholder {
+  color: #c8c8c8;
+}
+/* input-text 디자인 */
+
+/* selectbox 디자인 */
+.white-select {
+  width: 100%;
+  /* height: 40px; */
+  height: auto;
+  font-size: 15px;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+/* selectbox 디자인 */
+
+/* textarea 디자인 */
+.white-textarea {
+  width: 100%;
+  height: 100px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+  resize: none;
+}
+/* textarea 디자인 */
+
+/* 강조문자 디자인 */
+.font-stress {
+  font-weight: bold;
+  color: #0062ff;
+}
+/* 강조문자 디자인 */
+
+/* input-area 디자인 */
+.input-area{
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.input-area-gray{
+  background-color: #f3f3f3;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px;
+}
+/* input-area 디자인 */
+
+/* 라벨 디자인 */
+.label-default {
+  padding: 7px 12px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 13px;
+  background-color: #f3f3f3;
+  color:#888888;
+  cursor: pointer;
+}
+
+/* .label-default.on{
+  background-color: #0062ff;
+  color:white;
+} */
+
+.label-blue {
+  padding: 7px 12px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #0062ff;
+  color:white;
+  font-size: 13px;
+}
+
+.label-gray {
+  padding: 7px 12px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  color:#888888;
+  font-size: 13px;
+}
+
+.label-dgray {
+  padding: 7px 12px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #a3a3a3;
+  color:white;
+  font-size: 13px;
+}
+/* 라벨 디자인 */
+
+.hid-radio{
+  display: none;
+}
+
+.hid-radio:checked + label{
+  background-color: #0062ff;
+  color:white;
+}
 
 @media (max-width: 1617px) {
   #modal .modal-window {

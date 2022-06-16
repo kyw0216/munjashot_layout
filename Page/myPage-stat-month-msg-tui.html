@@ -129,6 +129,7 @@
                 
                                                     <!-- <table class="stat_table" style="cursor: pointer;" onclick="javascript:location.href='myPage-stat-month-msg-detail.html';"> -->
                                                     
+                                                    <!-- <div id="grid" style="width:100%; cursor: pointer;" onclick="javascript:location.href='myPage-stat-month-msg-detail.html';"></div> -->
                                                     <div id="grid" style="width:100%;"></div>
 
                                                 </div>
@@ -896,16 +897,27 @@
 
     const gridData = [];
 
+    
+    gridData.push({
+        date: gird_Date.format("YYYY-MM-DD"),
+        sms_success: 1,
+        lms_success: 1,
+        mms_success: 1,
+        msg_success_sum: 1,
+        msg_fail_sum: 1,
+        all_sum: 1,
+    });
+
     (function() {
-        for(let i = 0; i < 30; i++){
+        for(let i = 1; i < 31; i++){
             gridData.push({
                 date: gird_Date.add(1, "day").format("YYYY-MM-DD"),
-                sms_success: i,
-                lms_success: i,
-                mms_success: i,
-                msg_success_sum: i,
-                msg_fail_sum: i,
-                all_sum: i,
+                sms_success: i+1,
+                lms_success: i+1,
+                mms_success: i+1,
+                msg_success_sum: i+1,
+                msg_fail_sum: i+1,
+                all_sum: i+1,
             });
         }
     })();

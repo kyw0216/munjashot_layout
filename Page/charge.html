@@ -129,7 +129,8 @@
                     </div>
                 </div>
 
-                <div class="main_content main_content5" style="display: none;">
+                <!-- <div class="main_content main_content5" style="display: none;"> -->
+                <div class="main_content main_content5">
                     <div class="wrapper clearfix">
                         <div class="text_area">
                             <span class="introduce_title">상담 신청</span>
@@ -140,37 +141,57 @@
                         <div class="inquiry_box">
                             <div class="column">
                                 <div class="row">
-                                    <label style="flex-basis: 150px;">상담 분류*</label>
-                                    <input class="ctrl-input" type="text" style="width:100%;">
+                                    <label class="font-stress" style="flex-basis: 150px;">상담 분류*</label>
+                                    <input class="white-input" type="text">
                                 </div>
                                 <div class="row">
-                                    <label style="flex-basis: 150px;">이름(회사명)*</label>
-                                    <input class="ctrl-input" type="text" style="width:100%;">
+                                    <label class="font-stress" style="flex-basis: 150px;">이름(회사명)*</label>
+                                    <input class="white-input" type="text" placeholder="이름 혹은 회사명 입력">
                                 </div>
                                 <div class="row">
-                                    <label style="flex-basis: 150px;">이메일 주소*</label>
-                                    <input class="ctrl-input" type="text" style="width:100%;">
+                                    <label class="font-stress" style="flex-basis: 150px;">이메일 주소*</label>
+                                    <div class="input-area">
+                                        <input class="white-input" type="text" id="email_first">@
+                                        <input class="white-input" type="text" id="email_second">
+                                        <select id="selectEmail" class="white-select">
+                                            <!-- <option>직접입력</option> -->
+                                            <option value="1">직접입력</option>
+                                            <option value="naver.com" selected>naver.com</option>
+                                            <option value="hanmail.net">hanmail.net</option>
+                                            <option value="hotmail.com">hotmail.com</option>
+                                            <option value="nate.com">nate.com</option>
+                                            <option value="yahoo.co.kr">yahoo.co.kr</option>
+                                            <option value="empas.com">empas.com</option>
+                                            <option value="dreamwiz.com">dreamwiz.com</option>
+                                            <option value="freechal.com">freechal.com</option>
+                                            <option value="lycos.co.kr">lycos.co.kr</option>
+                                            <option value="korea.com">korea.com</option>
+                                            <option value="gmail.com">gmail.com</option>
+                                            <option value="hanmir.com">hanmir.com</option>
+                                            <option value="paran.com">paran.com</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <label style="flex-basis: 150px;">연락처</label>
-                                    <input class="ctrl-input" type="text" style="width:100%;">
+                                    <input class="white-input" type="text" placeholder="연락처 입력">
                                 </div>
                                 <div class="row">
-                                    <label style="flex-basis: 150px;">문의 내용</label>
-                                    <textarea class="text_area" style="width:100%;height:100px;resize:none;"></textarea>
+                                    <label class="font-stress" style="flex-basis: 150px;">문의 내용*</label>
+                                    <textarea class="white-textarea" placeholder="문의 내용을 입력하세요."></textarea>
                                 </div>
                                 <div class="row" style="justify-content: left;">
                                     <label>개인정보 수집 및 이용 동의</label>
                                 </div>
                                 <div class="row">
-                                    <input class="ctrl-input" type="text" style="width:100%;" value="본문내용">
+                                    <textarea class="white-textarea" placeholder="본문내용"></textarea>
                                 </div>
                                 <div class="row" style="justify-content: right;">
                                     <input class="chk_box" id="agree_chk" type="checkbox">
                                     <label for="agree_chk" style="margin-left:10px;">개인정보 수집 및 이용에 동의합니다.</label>
                                 </div>
                                 <div class="row">
-                                    <button class="btn" onclick="javascript:util.alert('상담 신청 완료', 'success', '상담 신청이 접수 되었습니다. <br>문자샷 담당자가 신속하게 연락 드리겠습니다.');">상담 요청하기</button>
+                                    <button class="btn-blue" style="width: 100%; padding:20px; font-weight: bold;" onclick="javascript:util.alert('상담 신청 완료', 'success', '상담 신청이 접수 되었습니다. <br>문자샷 담당자가 신속하게 연락 드리겠습니다.');">상담 요청하기</button>
                                 </div>
 
                             </div>
@@ -187,6 +208,8 @@
             </main>
         </div>
     </div>
+
+    <div id="modal" class="modal-overlay"></div>
 
     <!-- Footer -->
     <div id="footer"></div>

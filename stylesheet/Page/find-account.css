@@ -35,8 +35,10 @@ main .main_content .text_area .introduce_content {
 }
 
 main .main_content1 .container {
-    width: 100%;
+    /* width: 100%; */
+    width: 400px;
     margin: 20px auto;
+    border-radius: 5px;
 }
 
 main .main_content1 .tab_title {
@@ -46,6 +48,8 @@ main .main_content1 .tab_title {
     float: left;
     cursor: pointer;
     text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 main .main_content1 .tab_title li {
@@ -56,19 +60,25 @@ main .main_content1 .tab_title li {
     padding: 15px 15px;
     cursor: pointer;
     text-align: center;
-    border: 1px solid #bebebe;
+    border-radius: inherit;
+    background-color: #f3f3f3;
+    color:#888888
+    /* border: 1px solid #bebebe; */
 }
 
 main .main_content1 .tab_title li.on {
-    background-color: #bebebe;
+    background-color: #0062ff;
     font-weight: bold;
+    color: white;
 }
 
 main .main_content1 .tab_cont {
     clear: both;
-    border: 1px solid #dedede;
+    /* border: 1px solid #dedede; */
     height: 100%;
-    background-color: #f7f7f7;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 5px 3px 10px #a3a3a3;
 }
 
 main .main_content1 .tab_cont .tab_in_content.on {
@@ -121,6 +131,12 @@ main .main_content1 .tab_cont .tab_in_content {
     height: 100%;
     justify-content: center;
     align-items: center;
+}
+
+.find-label{
+    font-size: 12px;
+    font-weight: bold;
+    color: #383939;
 }
 
 

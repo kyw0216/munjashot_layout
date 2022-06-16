@@ -1,18 +1,66 @@
-﻿.login_box {
-    width: 600px;
-    height: 300px;
-    border: 1px solid black;
-    padding: 40px;
+﻿/* 
+로그인페이지(모두 통합)----------------------------------------------------------
+
+파랑 버튼 & 박스 : 0062ff (메인컬러)
+회색 버튼 & 입력칸 : f3f3f3
+짙은 회색 버튼 : a3a3a3
+
+(아이디 비밀번호 찾기 / 회원가입) 회색 폰트 : a3a3a3
+검은색 폰트 : 383939
+회색 버튼 속 회색 폰트 : 888888
+짙은 회색 폰트 : 676767 
+*/
+
+.login_box {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    line-height: normal;
+    /* box-shadow: 5px 5px 5px 5px #a3a3a3; */
+    box-shadow: 5px 3px 10px #a3a3a3;
+}
+
+.login_box .welcome_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    background-color: #0062ff;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.login_box .login_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+}
+
+.login_box label{
+    color: #383939;
+    font-weight: bold;
+}
+
+.login_box .find-area{
+    margin-top:5px;
+    font-size: 12px;
+    color: #a3a3a3;
+    font-weight: bold;
 }
 
 .login_box .column {
     display: flex;
     flex-direction: column;
-    margin: 10px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -21,8 +69,8 @@
 .login_box .row {
     display: flex;
     flex-grow: 1;
-    margin: 10px;
     width: 100%;
     justify-content: center;
     align-items: center;
 }
+

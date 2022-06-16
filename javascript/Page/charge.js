@@ -87,7 +87,7 @@ function showsubimg(index) {
             $(this).removeClass('overcolor');
         }
     });
-    swiper_bottom_banner.slideTo(index + 3, 1000);
+    // swiper_bottom_banner.slideTo(index + 3, 1000);
 }
 
 $(document).ready(function () {
@@ -100,8 +100,26 @@ $(document).ready(function () {
         opacity: "1"
     }, 300); // 비활성화 된 슬라이드 애니메이션
 
+    selectEmail_Event();
+    
 });
 
 function inquiry_layout(){
     $(".main_content5").css("display", "flex");
+}
+
+//이메일 입력방식 선택
+function selectEmail_Event(){
+    $('#selectEmail').change(function(){
+
+        $("#selectEmail option:selected").each(function () {
+            if($(this).val() == '1'){ //직접입력일 경우
+                $("#email_second").val('');                     //값 초기화
+                $("#email_second").attr("disabled",false);      //활성화
+            }else{ //직접입력이 아닐경우
+                $("#email_second").val($(this).text());         //선택값 입력
+                $("#email_second").attr("disabled",true);       //비활성화
+            }
+        });
+    });
 }

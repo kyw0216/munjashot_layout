@@ -149,6 +149,10 @@
                                 <div id="grid" style="width: 100%;"></div>
                             </div>
 
+                            <div class="row_wrapper">
+                                <div id="grid2" style="width: 100%;"></div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -184,10 +188,12 @@
 <script>
 
     let grid_Date = moment("2022-05-01");
+    let grid_Date2 = moment("2022-05-01");
     // console.log(grid_Date.format("YYYY-MM-DD"));
     // console.log(grid_Date.add(1, "day").format("YYYY-MM-DD"));
 
     const gridData = [];
+    const gridData2 = [];
 
     gridData.push({
                 deduction_date: grid_Date.format("YYYY년 MM월 DD일"),
@@ -205,7 +211,24 @@
         }
     })();
 
+    gridData2.push({
+                deduction_date: grid_Date2.format("YYYY년 MM월 DD일"),
+                deduction_amount: `44,000`,
+                memo: `${grid_Date2.format("MM월")} 080번호 차감비용`,
+            });
+            
+            (function() {
+                for(let i = 1; i < 30; i++){
+            gridData2.push({
+                deduction_date: grid_Date.add(-1, "month").format("YYYY년 MM월 DD일"),
+                deduction_amount: `44,000`,
+                memo: `${grid_Date2.format("MM월")} 080번호 차감비용`,
+            });
+        }
+    })();
+
     const Grid = tui.Grid;
+    const Grid2 = tui.Grid;
     const option = {
         el: document.getElementById('grid'), // Container element
         data: gridData,
@@ -307,7 +330,109 @@
         )
     }
 
+    const option2 = {
+        el: document.getElementById('grid2'), // Container element
+        data: gridData2,
+        scrollX: false,
+        scrollY: false,
+        minBodyHeight: 30,
+        pageOptions: {
+            useClient: true,
+            perPage: 10
+        },
+        columns: [
+            {
+                header: '차감일',
+                name: 'deduction_date',
+                align: 'center',
+            },
+            {
+                header: '차감금액',
+                name: 'deduction_amount',
+                align: 'center',
+            },
+            {
+                header: '발신번호',
+                name: 'memo',
+                align: 'center',
+            },
+        ],
+        contextMenu: ({ rowKey, columnName }) => (
+            [
+                [
+                    {
+                        name: 'export',
+                        label: 'Export',
+                        subMenu: [
+                            {
+                                name: 'default',
+                                label: '전체 export',
+                                subMenu: [
+                                    {
+                                        name: 'csvExport',
+                                        label: 'CSV export',
+                                        action: () => {
+                                            instance2.export('csv');
+                                        }
+                                    },
+                                    {
+                                        name: 'excelExport',
+                                        label: 'Excel export',
+                                        action: () => {
+                                            instance2.export('xlsx');
+                                        }
+                                    },
+                                ]
+                            },
+                            {
+                                name: 'includeHeader',
+                                label: '헤더를 제외하고 export',
+                                subMenu: [
+                                    {
+                                        name: 'csvExport',
+                                        label: 'CSV export',
+                                        action: () => {
+                                            instance2.export('csv', { includeHeader: false });
+                                        }
+                                    },
+                                    {
+                                        name: 'excelExport',
+                                        label: 'Excel export',
+                                        action: () => {
+                                            instance2.export('xlsx', { includeHeader: false });
+                                        }
+                                    },
+                                ]
+                            },
+                            {
+                                name: 'onlySelected',
+                                label: '선택한 영역 export',
+                                subMenu: [
+                                    {
+                                        name: 'csvExport',
+                                        label: 'CSV export',
+                                        action: () => {
+                                            instance2.export('csv', { onlySelected: true });
+                                        }
+                                    },
+                                    {
+                                        name: 'excelExport',
+                                        label: 'Excel export',
+                                        action: () => {
+                                            instance2.export('xlsx', { onlySelected: true });
+                                        }
+                                    },
+                                ]
+                            },
+                        ],
+                    }
+                ],
+            ]
+        )
+    }
+
     const instance = new Grid(option);
+    const instance2 = new Grid(option2);
 
     // instance.resetData(newData); // Call API of instance's public method
 
