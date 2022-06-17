@@ -447,6 +447,25 @@ textarea.ctrl-input {
   font-weight: bold;
 }
 
+.row_wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  line-height: normal;
+}
+
+.column_wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  line-height: normal;
+}
+
 .main-subTabMenu {
   border-top: 1px solid #eaeaea;
   border-bottom: 1px solid #eaeaea;
@@ -794,6 +813,13 @@ textarea.ctrl-input {
 
   .main_content {
     min-width: 1320px;
+  }
+
+  main .main_content .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .main_content .title_area {
@@ -1207,6 +1233,7 @@ input[type='checkbox']:checked ~ .custom-input:after {
 }
 /* 라벨 디자인 */
 
+/* 라디오 디자인 */
 .hid-radio{
   display: none;
 }
@@ -1215,6 +1242,8 @@ input[type='checkbox']:checked ~ .custom-input:after {
   background-color: #0062ff;
   color:white;
 }
+/* 라디오 디자인 */
+
 
 @media (max-width: 1617px) {
   #modal .modal-window {

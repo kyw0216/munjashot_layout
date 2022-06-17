@@ -34,8 +34,6 @@ main .main_content1 {
     height: 500px;
 }
 
-/* main .main_content1 .text_area {} */
-
 main .main_content2 {
     background: #f7f7f7;
     padding: 50px 0;
@@ -173,7 +171,7 @@ main .main_content4 .wrapper .image_area .row_wrapper {
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    /* flex-grow: 1; */
+    flex-grow: 0;
     flex-basis: 600px;
 }
 
