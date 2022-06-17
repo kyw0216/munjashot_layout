@@ -291,7 +291,7 @@ header {
 
 
 
-.row_wrapper{
+header .row_wrapper{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -302,7 +302,7 @@ header {
     margin: 0 !important;
 }
 
-.column_wrapper{
+header .column_wrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
