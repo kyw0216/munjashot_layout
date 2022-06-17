@@ -62,7 +62,7 @@ main {
 }
 
 #main-body-wrapper {
-  margin-top:54.8px;
+  margin-top: 80px;
   position: relative;
   flex: 1 0 auto;
   min-height: 100%;

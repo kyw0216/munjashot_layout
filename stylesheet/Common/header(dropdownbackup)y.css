@@ -5,6 +5,30 @@ header {
     position: fixed;
 }
 
+
+/* .dropdown{
+    position : relative;
+    display : inline-block;
+}
+  
+.dropbtn_icon {
+    font-family : 'Material Icons';
+}
+
+.dropbtn {
+    border : 1px solid rgb(37, 37, 37);
+    border-radius : 4px;
+    background-color: #f5f5f5;
+    color : rgb(37, 37, 37);
+    padding : 12px;
+    width :200px;
+    text-align: left;
+    cursor : pointer;
+    font-size : 15px;
+    margin-left:20px;
+} */
+
+
 .menu-ul{
     position : relative;
     display : inline-block;
@@ -90,6 +114,88 @@ header {
     opacity: 1;
 }
 
+.dropbtn {
+    /* border : 1px solid rgb(37, 37, 37); */
+    border-radius : 4px;
+    background-color: #f5f5f5;
+    color : rgb(37, 37, 37);
+    padding : 12px;
+    /* width :200px; */
+    text-align: left;
+    cursor : pointer;
+    font-size : 15px;
+    margin-left:20px;
+}
+
+.dropdown-content{
+    display : none;
+    position : absolute;
+    /* top: 50px; */
+    margin-left:20px;
+    z-index : 1; /*다른 요소들보다 앞에 배치*/
+    font-weight: 400;
+    /* background-color: #f9f9f9; */
+    background-color: #0062ff;
+    color: white;
+    min-width : 140px;
+    border-radius: 10px;
+    /* padding : 10px; */
+}
+  
+.dropdown-content a{
+    display : block;
+    text-decoration : none;
+    font-size: 12px;
+    padding : 12px 20px;
+    border-radius: 10px;
+    transition: color 0.5s, background-color 0.5s;
+}
+  
+.dropdown-content a:hover{
+    background-color : #ececec;
+    color: #0062ff;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.row_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    line-height: normal;
+}
+
+.column_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    /* height: 100%; */
+    line-height: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .menu-ul2{
     position : relative;
     display : inline-block;
@@ -107,7 +213,7 @@ header {
     height: 80px;
     line-height: 80px;
     color: #000;
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: -0.55px;
     font-weight: 600;
     -webkit-transition: all 0.3s;
@@ -141,6 +247,12 @@ header {
     -webkit-box-shadow: 5px 5px 20px -3px rgb(0 0 0 / 40%);
     box-shadow: 5px 5px 20px -3px rgb(0 0 0 / 40%);
     background-color: #0062ff;
+}
+
+.subMenu-div2.open {
+    visibility: visible;
+    opacity: 1.0;
+    display: block;
 }
 
 .subMenu-ul2 {
@@ -190,128 +302,6 @@ header {
 
 
 
-
-
-
-
-
-.menu-ul3{
-    position : relative;
-    display : inline-block;
-}
-
-.menu-li3{
-    position : relative;
-    display : inline-block;
-}
-
-.menu-a3{
-    position: relative;
-    z-index: 100;
-    display: block;
-    height: 80px;
-    line-height: 80px;
-    color: #cacaca !important;
-    font-size: 14px;
-    letter-spacing: -0.55px;
-    font-weight: 600;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    margin-left:20px;
-}
-
-.subMenu-div3{
-    display: none;
-    position: absolute;
-    top: 68px;
-    left: -15px;
-    z-index: 99;
-    width: 152px;
-    text-align: left;
-    visibility: hidden;
-    opacity: 0;
-}
-
-.subMenu-div3:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0px;
-    right: 0px;
-    height: 100%;
-    opacity: 1.0;
-    filter: Alpha(opacity=100);
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    -webkit-box-shadow: 5px 5px 20px -3px rgb(0 0 0 / 40%);
-    box-shadow: 5px 5px 20px -3px rgb(0 0 0 / 40%);
-    background-color: #0062ff;
-}
-
-.subMenu-ul3 {
-    padding: 10px 0px;
-}
-
-.subMenu-li3 {
-    position: relative;
-    padding: 10px 30px;
-}
-
-.subMenu-a3 {
-    display: block;
-    color: #fff !important;
-    font-size: 14px;
-    font-weight: 400;
-    text-align: left;
-    line-height: 1.3;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    opacity: 0.5;
-}
-
-.menu-a3:hover{
-    color:#0062ff !important;
-}
-
-.menu-a3:hover + .subMenu-div3{
-    visibility: visible;
-    opacity: 1.0;
-    display: block;
-}
-
-.subMenu-div3:hover{
-    visibility: visible;
-    opacity: 1.0;
-    display: block; 
-}
-
-.subMenu-a3:hover{
-    opacity: 1;
-}
-
-
-
-.row_wrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    width: 100%;
-    line-height: normal;
-    margin: 0 !important;
-}
-
-.column_wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    /* height: 100%; */
-    line-height: normal;
-    margin: 0 !important;
-}
 
 
 

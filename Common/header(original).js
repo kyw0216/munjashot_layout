@@ -1,5 +1,17 @@
 ﻿$(function () {
 
+    var section = $(".menu-section");
+    var children = util.fetchChildElement(section);
+    section.find(".menu-category").each(function (i, v) {
+        v = $(v);
+        v.find("[data-menu]").each(function (i2, v2) {
+            v2 = $(v2);
+            v2.on("click", function () {
+                MenuSystem.setMenu("/", v2.data("menu"));
+            });
+        });
+    });
+
     var menu_section = $(".desktop_nav .menu-section");
     var desktop_subnav = $(".desktop_subnav");
 
@@ -13,7 +25,6 @@
             });
         }
     });
-
     $("header").on("mouseleave", function () {
         if (desktop_subnav.css("display") === "block") {
             desktop_subnav.animate({
