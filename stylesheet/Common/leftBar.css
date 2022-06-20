@@ -603,3 +603,13 @@
 .gs-left-bar-lnb .lnb-list-item-inner.open .lnb-tit p {
     color: #fff;
 }
+
+header {
+    background: #4a4adb;
+}
+
+@media (max-width: 1850px){
+    footer .wrapper{
+        margin-left: 270px;
+    }
+}

@@ -1,8 +1,12 @@
 ﻿/* Common Header Start */
 header {
     width: 100%;
-    background: white;
     position: fixed;
+}
+
+.desktop_nav{
+    background-color: #eee;
+    border-bottom-left-radius: 30px;
 }
 
 .menu-ul{
