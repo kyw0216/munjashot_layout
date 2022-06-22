@@ -223,13 +223,20 @@ function emphasizeType_chk(obj){
     // console.log($(".emphasizeType").val());
     console.log($(obj).val());
 
+    $(".guid_span").css("display", "none");
+    $(".subInfo_div").removeClass("flex_div");
+
     if($(obj).val() === "NONE"){
-
+        $(".templateEmphasizeTypeGuide").css("display", "block");
     } else if ($(obj).val() === "TEXT") {
-
+        $(".templateEmphasizeType_TEXT").css("display", "block");
+        $(".emphasizeText_div").toggleClass("flex_div");
     } else if ($(obj).val() === "IMAGE") {
-
+        $(".templateEmphasizeType_IMAGE").css("display", "block");
+        $(".emphasizeImg_div").toggleClass("flex_div");
     } else if ($(obj).val() === "ITEM_LIST" ) {
+        $(".templateEmphasizeType_ITEM_LIST").css("display", "block");
+        $(".emphasizeList_div").toggleClass("flex_div");
         
     }
 
@@ -242,3 +249,5 @@ function emphasizeType_chk(obj){
     //     }
     // });
 }
+
+

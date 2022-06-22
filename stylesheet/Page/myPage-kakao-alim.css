@@ -296,6 +296,21 @@ ul {
     transition: ease 1s;
 }
 
+.guid_span{
+    font-size: 12px;
+}
+
+.subInfo_div{
+    display: none;
+}
+
+.hidden_div{
+    display: none;
+}
+
+.flex_div{
+    display: flex !important;
+}
 
 @media (max-width: 1850px) {
     .main_content .wrapper {

@@ -6,9 +6,8 @@ main .main_content .wrapper {
     align-items: center;
 }
 
-main .main_content1 {
-    background: #bebebe;
-    padding: 50px 0;
+main .main_content1{
+    font-family: 'SCoreDream' !important;
 }
 
 main .main_content1 .slide {
@@ -33,7 +32,7 @@ main .main_content2 .text_area {
     margin: 30px 0;
 }
 
-main .main_content2 .text_area .introduce_content {
+main .main_content2 .text_area .introduce_title {
     font-weight: bold;
     display: block;
 }
@@ -47,35 +46,45 @@ main .main_content2 .tab_title {
     width: 100%;
     display: flex;
     list-style: none;
-    float: left;
     cursor: pointer;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 main .main_content2 .tab_title li {
     display: flex;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     justify-content: center;
     list-style: none;
-    padding: 15px 15px;
+    padding: 8px 15px;
     cursor: pointer;
     text-align: center;
-    border: 1px solid #bebebe;
+    width: 130px;
+    background-color: #f3f3f3;
+    color: #7c7c7c;
+    border-radius: 20px;
+}
+
+main .main_content2 .tab_title li:not(:first-child){
+    margin-left:20px;
+
 }
 
 main .main_content2 .tab_title li.on {
-    background-color: #bebebe;
+    background-color: #0062ff;
+    color:white;
     font-weight: bold;
+    box-shadow: 5px 3px 10px #a3a3a3;
 }
 
 main .main_content2 .tab_cont {
     clear: both;
-    border: 1px solid #dedede;
-    height: 400px;
-    background-color: #cecece;
+    /* background-color: #cecece; */
+    margin-top:20px;
 }
 
-main .main_content2 .tab_cont div {
+main .main_content2 .tab_cont .box_wrapper {
     display: none;
 }
 
@@ -83,12 +92,72 @@ main .main_content2 .tab_cont div.on {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    /* height: 100%; */
+}
+
+main .main_content2 .box_wrapper:not(:first-child) {
+    height: 500px;
+    background-color: #cecece;
+}
+
+main .main_content2 .box_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main_content2 .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 570px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px #a3a3a3;
+    justify-content: flex-start;
+}
+
+main .main_content2 .box > .row_wrapper {
+    flex-grow:0;
+    align-items: flex-start;
+}
+
+main .main_content2 .box:not(:first-child) {
+    margin-left:30px;
+}
+
+main .main_content2 .msg_box_wrapper {
+    margin-left:10px;
+    margin-top:30px;
+}
+
+main .main_content2 .msg_box {
+    background-color: #f3f3f3;
+    border-radius: 0px 10px 10px 10px;
+    padding:20px;
+    width: 100%;
+    font-size: 13px;
+}
+
+main .main_content2 .tab_cont .box_wrapper .msg_title {
+    color:#0062ff;
+    font-weight: bold;
+}
+
+main .main_content2 .tab_cont .box_wrapper .msg_timebar {
+    font-size: 12px;
+    color:#7c7c7c;
+    font-weight: bold;
 }
 
 main .main_content3 {
     padding: 50px 0;
-    background: #f7f7f7;
+    background: #0062ff;
+    color:white;
 }
 
 main .main_content3 .text_area {
@@ -110,12 +179,10 @@ main .main_content3 .wrapper .text_area {
 main .main_content3 .wrapper .text_area .introduce_title {
     font-size: 30px;
     font-weight: bold;
-    color: #3d3d3d;
     display: block;
 }
 
 main .main_content3 .wrapper .text_area .introduce_content {
-    font-weight: bold;
     display: block;
 }
 
@@ -152,6 +219,8 @@ main .main_content3 .wrapper .ai_table_div{
 main .main_content3 .wrapper .ai_table{
     width: 100%;
     table-layout:fixed;
+    border-spacing: 10px;
+    border-collapse: separate;
 }
 
 main .main_content3 .wrapper .ai_table th{
@@ -168,19 +237,25 @@ main .main_content3 .wrapper .ai_table th{
 main .main_content3 .wrapper .ai_table td{
     border: 1px solid #333;
     padding: 20px;
-    background-color: #fff;
     text-align: center;
-    border: 1px solid #bdbdbd;
+    border: 0;
     line-height: normal;
     white-space : nowrap;
     overflow: hidden; 
     text-overflow: ellipsis;
     vertical-align: middle;
     cursor: pointer;
+    color: #414141;
+    background-color: #a9cbff;
+    border-spacing: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px #4b4b4b;
 }
 
 main .main_content3 .wrapper .ai_table td.on{
-    background-color: #dedede;
+    color:#0062ff;
+    background-color: white;
 }
 
 main .main_content3 .wrapper .charge_table{
@@ -309,20 +384,13 @@ main .main_content5 {
     padding: 50px 0;
 }
 
-main .main_content5 .text_area {
+main .main_content5 .wrapper .text_area {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     margin: 40px 0;
-}
-
-main .main_content5 .wrapper .text_area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 main .main_content5 .wrapper .text_area .introduce_title {
@@ -344,25 +412,45 @@ main .main_content5 .wrapper .image_area {
     width: 100%;
 }
 
-main .main_content5 .wrapper .image_area .row_wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    flex-grow: 1;
+main .main_content5 .wrapper .image_area .box {
+    justify-content: flex-start;
+    background: #ebf3ff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 320px;
+    height: 320px;
+    position: relative
 }
 
-main .main_content5 .wrapper .image_area .box {
-    width: 100%;
-    height: 400px;
-    background: #888888;
-    margin: 20px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    font-size: 15px;
-    border-radius: 5px;
+main .main_content5 .wrapper .image_area .box .info_title {
+    justify-content: flex-start;
+    font-size:30px;
+    font-weight: bold;
+}
+
+main .main_content5 .wrapper .image_area .box .info_content {
+    margin-top:10px;
+    align-items: flex-start;
+    font-size:15px;
+}
+
+main .main_content5 .wrapper .image_area .box .icon_content {
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+main .main_content5 .wrapper .image_area .box .icon_content .icon_img {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+main .main_content5 .wrapper .image_area .box:not(:first-child)  {
+    margin-left: 30px;
+}
+
+main .main_content5 .wrapper .info_p {
+    font-size:20px;
 }
 
 main .main_content6 {
@@ -424,13 +512,25 @@ main .main_content7 .slide {
 main .main_content8 {
     padding: 50px 0;
     background: white;
-    /* height: 800px; */
+}
+
+main .main_content8 .wrapper .text_area {
+    justify-content: flex-start;
+}
+
+main .main_content8 .wrapper .text_area .introduce_title {
+    font-weight: bold;
+    font-size:30px;
+    color: #3d3d3d;
+    display: block;
+}
+
+main .main_content8 .wrapper .text_area .introduce_content {
+    font-weight: bold;
+    display: block;
 }
 
 main .main_content8 .wrapper .image_area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
 }
 
@@ -534,21 +634,6 @@ main .main_content8 .wrapper .row_wrapper .row3 .box4 {
     margin-left: 20px;
 }
 
-main .main_content8 .wrapper .text_area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-main .main_content8 .wrapper .text_area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
 
 main .main_content9 {
     background: #f7f7f7;
@@ -587,6 +672,103 @@ main .main_content9 .button_area .btn {
     padding: 10px 30px;
 }
 
+
+main .main_content10 {
+    background: #ebf3ff;
+    padding: 50px 0;
+}
+
+main .main_content10 .wrapper .text_area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: normal;
+}
+
+main .main_content10 .wrapper .text_area .introduce_title {
+    font-weight: bold;
+    font-size: 30px;
+    color: #3d3d3d;
+    display: block;
+}
+
+main .main_content10 .wrapper .text_area .introduce_content {
+    color:#7c7c7c;
+    display: block;
+}
+
+main .main_content10 .wrapper .image_area {
+    width: 100%;
+    margin-top: 30px;
+}
+
+main .main_content10 .wrapper .image_area .box {
+    background: white;
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    justify-content: flex-start;
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px #a3a3a3;
+}
+
+main .main_content10 .wrapper .image_area .box .charge_table {
+    width: 100%;
+    table-layout:fixed;
+    height: 300px;
+}
+
+main .main_content10 .wrapper .image_area .box caption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom:10px;
+}
+
+main .main_content10 .wrapper .image_area .box .charge_table th{
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+main .main_content10 .wrapper .image_area .box .charge_table td{
+    border: 1px solid #333;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    line-height: normal;
+    white-space : nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+main .main_content10 .wrapper .image_area .box .charge_table .msg_type{
+    color:#7c7c7c;
+}
+
+main .main_content10 .wrapper .image_area .box .charge_table .price{
+    font-weight: bold;
+    color:#0062ff;
+}
+
+main .main_content10 .wrapper .image_area .box:not(:first-child) {
+    margin-left: 50px;
+}
+
+main .main_content10 .wrapper .info_area {
+    margin-top:30px;
+    padding:10px;
+    border-radius: 10px;
+    align-items: flex-start;
+    background-color: white;
+    color:#7c7c7c;
+    width: 100%;
+}
+
 /* Common Introduction End */
 /* PC Introduction Start */
 @media screen and (min-width: 769px) {
@@ -610,7 +792,7 @@ main .main_content9 .button_area .btn {
         top: 530px;
     }
 
-    main .main_content2 .text_area .introduce_content {
+    main .main_content2 .text_area .introduce_title {
         font-size: 30px;
     }
 
@@ -663,5 +845,64 @@ main .main_content9 .button_area .btn {
     }
 
 }
+
+/* ****************** 사용자 메인 01 :: 메인 비주얼 ********************** */
+.area{ width:1200px; margin:0px auto;}
+
+.us-main-visual{padding-top: 80px; width:100%; height:485px; background-color: #0062ff; }
+.us-main-visual-inner{overflow:hidden; width: 100%; height: 100%; position:relative;}
+.us-main-visual-con .slick-track,
+.us-main-visual-con .slick-list {
+	-webkit-perspective: 2000;
+	-webkit-backface-visibility: hidden;
+}
+.us-main-visual-con, 
+.us-main-visual-con .slick-list,  
+.us-main-visual-con .slick-track, 
+.us-main-visual-item{
+	height:100%;
+}
+.us-main-visual-con{z-index:1;}
+
+/* 메인 비주얼 :: 이미지 */
+.us-main-visual-item{position:relative;}
+.us-main-visual-img{
+	width:100%; height:100%;
+	-webkit-transform: translateX(30px); transform: translateX(30px); opacity: 0;
+	-webkit-transition:all 0.5s ease-in-out;
+    transition:all 0.5s ease-in-out;	
+}
+.us-main-visual-img .area{position: relative; height: 100%;}
+.us-main-visual-img img{position: absolute; top: 50%; margin-top: -50px; right: 0px; -webkit-transform: translateY(-50%); transform: translateY(-50%);}
+.us-main-visual-txt{
+	position:absolute; opacity: 0;
+	top:50%; margin-top: -50px; left:0px; 
+	width:100%; 
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%); -webkit-transition: opacity 0.3s; transition: opacity 0.3s;
+}
+.main-wrap .us-main-visual-txt .area{padding: 0 40px; -webkit-box-sizing: border-box; box-sizing: border-box; padding-bottom: 60px;}
+.us-main-visual-txt .txt01{font-size:24px; font-weight: 300; letter-spacing:-0.2px; color:#fff; margin-bottom:15px;}
+.us-main-visual-txt .txt02{font-size:42px; line-height: 50px; font-weight: 400; letter-spacing:-0.2px; color:#fff;}
+.us-main-visual-txt .txt02 b{font-weight: 600;}
+.us-main-visual-txt .txt03{margin-top: 20px; font-size: 16px; font-weight: 400; letter-spacing: -0.65px; color: rgba(255,255,255,0.5);}
+
+/* 메인 비주얼 :: active효과 */
+.us-main-visual-item.active-item .us-main-visual-txt{opacity: 1;}
+.us-main-visual-item.active-item .us-main-visual-img{-webkit-transform: translateX(0); transform: translateX(0); opacity: 1;}
+.us-main-visual-item.active-item .us-main-visual-img{ -webkit-animation-delay:0.3s; animation-delay:0.3s;}
+
+/* 메인 비주얼 :: Dots */
+.us-main-visual-con .slick-dots-wrapper{position:absolute; left:0; top: 50%; margin-top: 60px; width:100%; text-align:left; z-index:11;}
+.us-main-visual-con .slick-dots-wrapper .area{padding: 0 40px; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.us-main-visual-con .slick-dots{display:inline-block; vertical-align:top; *display:inline;*zoom:1; }
+.us-main-visual-con .slick-dots li{float:left; margin-left:12px;}
+.us-main-visual-con .slick-dots li:first-child{margin-left:0}
+.us-main-visual-con .slick-dots li button{cursor:pointer; margin:0px; padding:0px; background:none; vertical-align:top; width:92px; height:10px; font-size:0; border: 1px solid rgba(255,255,255,0.2);}
+.us-main-visual-con .slick-dots li button:before{display: block; content: ''; width: 0; height: 100%; background-color: rgba(255,255,255,0.5);}
+.us-main-visual-con .slick-dots li.slick-active button{border: 1px solid rgba(255,255,255,0.5);}
+.us-main-visual-con .slick-dots li.slick-active button:before{width:100%; animation:ProgressDots 4s both;}
+@-webkit-keyframes ProgressDots{from{width:0px;}to{width:100%;}}
+@keyframes ProgressDots{from{width:0px;}to{width:100%;}}
 
 /* PC Introduction End */

@@ -38,7 +38,6 @@ main .main_content .content_wrapper {
     align-items: center;
     width: 100%;
     padding: 40px;
-    /* background-color: #f7f7f7; */
 }
 
 main .main_content .container {
@@ -390,11 +389,4 @@ ul {
 .fileDrop2 h1 {
     font-size: 1.5rem;
     color:rgb(116, 116, 116);
-}
-
-
-@media (max-width: 1850px) {
-    .main_content .wrapper {
-        margin-left: 270px;
-    }
 }

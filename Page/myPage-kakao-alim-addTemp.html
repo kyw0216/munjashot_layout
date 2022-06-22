@@ -134,59 +134,14 @@
                                                     </select>
                                                 </div>
                                                 <div class="temp_info">
-                                                    <span name="templateEmphasizeTypeGuide" class="guid_span">유형에 따라 이미지, 목록을 추가할 수 있습니다.</span>
-                                                    <span name="templateEmphasizeType_NONE" class="guid_span" style="display:none;">유형에 따라 이미지, 목록을 추가할 수 있습니다.</span>
-                                                    <span name="templateEmphasizeType_TEXT" class="guid_span" style="display:none;">템플릿 본문 중, 강조가 필요한 내용을 상단에 추가로 표시합니다.</span>
-                                                    <span name="templateEmphasizeType_IMAGE" class="guid_span" style="display:none;">템플릿 상단에 본문과 연관된 이미지를 추가합니다.</span>
-                                                    <span name="templateEmphasizeType_ITEM_LIST" class="guid_span" style="display:none;">이미지, 헤더, 썸네일, 목록형 텍스트를 추가합니다.</span>
+                                                    <span class="guid_span templateEmphasizeTypeGuide">유형에 따라 이미지, 목록을 추가할 수 있습니다.</span>
+                                                    <span class="guid_span templateEmphasizeType_NONE" style="display:none;">유형에 따라 이미지, 목록을 추가할 수 있습니다.</span>
+                                                    <span class="guid_span templateEmphasizeType_TEXT" style="display:none;">템플릿 본문 중, 강조가 필요한 내용을 상단에 추가로 표시합니다.</span>
+                                                    <span class="guid_span templateEmphasizeType_IMAGE" style="display:none;">템플릿 상단에 본문과 연관된 이미지를 추가합니다.</span>
+                                                    <span class="guid_span templateEmphasizeType_ITEM_LIST" style="display:none;">이미지, 헤더, 썸네일, 목록형 텍스트를 추가합니다.</span>
                                                 </div>
                                             </div>
-    
-                                            <div class="row" style="margin: 0;">
-                                                <div class="column" style="margin: 0;">
-                                                    <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
-                                                        <div class="temp_title">
-                                                            <span style="font-weight: bold;">강조 표기 타이틀 *</span>
-                                                        </div>
-                                                        <div class="temp_content">
-                                                            <input id="emphasize_title_input" type="text" placeholder="최대 23자, 변수 가능, 본문에 있는 내용만 입력 가능." class="ctrl-input" maxlength="23" onkeyup="">
-                                                            <label id="emphasize_title_cnt" style="min-width: 80px; margin-left: 10px; color: black;">0/23자</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
-                                                        <div class="temp_title">
-                                                            <span style="font-weight: bold;">강조 표기 문구 *</span>
-                                                        </div>
-                                                        <div class="temp_content">
-                                                            <input id="emphasize_content_input" type="text" placeholder="최대 18자, 변수 불가, 본문에 있는 내용만 입력 가능." class="ctrl-input" maxlength="23" onkeyup="">
-                                                            <label id="emphasize_content_cnt" style="min-width: 80px; margin-left: 10px; color: black;">0/18자</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
-                                                <div class="temp_title">
-                                                    <span style="font-weight: bold;">이미지 첨부 *</span>
-                                                </div>
-                                                <div class="temp_content">
-                                                    <div class="column" style="margin:0;">
-                                                        <div class="row" style="margin:0; justify-content: flex-start;">
-                                                            <button class="btn">이미지가이드</button>
-                                                            <button class="btn" style="margin-left:10px;">파일선택</button>
-                                                        </div>
-                                                        <div class="column" style="margin:0; margin-top:10px; align-items: flex-start;line-height: normal; font-size: 12px;">
-                                                            <span style="color:red;">이미지 가이드를 확인하고 리소스 파일을 활용하시기 바랍니다.</span>
-                                                            <span>* 내용 : 정보성, 본문 내용을 포함하거나 연관성 필수</span>
-                                                            <span>* 구성 : 배경색상(#F9F9F9), 레이아웃 제작 가이드 준수</span>
-                                                            <span>* 권장 사이즈 : 800px*400px (가로 500px 이상, 가로:세로 비율 2:1 이상 3:4 이하인 경우 불가)</span>
-                                                            <span>* 파일형식 및 크기 : jpg, png / 최대 500KB</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row" style="margin: 0;">
+                                            <div class="row emphasizeList_div subInfo_div" style="margin: 0;">
                                                 <div class="column" style="margin: 0;">
                                                     <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
                                                         <div class="temp_title">
@@ -283,6 +238,50 @@
                                                                     <td colspan="4">아이템을 추가할 수 있습니다.</td>
                                                                 </tr>
                                                             </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row emphasizeText_div subInfo_div" style="margin: 0;">
+                                                <div class="column" style="margin: 0;">
+                                                    <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
+                                                        <div class="temp_title">
+                                                            <span style="font-weight: bold;">강조 표기 타이틀 *</span>
+                                                        </div>
+                                                        <div class="temp_content">
+                                                            <input id="emphasize_title_input" type="text" placeholder="최대 23자, 변수 가능, 본문에 있는 내용만 입력 가능." class="ctrl-input" maxlength="23" onkeyup="">
+                                                            <label id="emphasize_title_cnt" style="min-width: 80px; margin-left: 10px; color: black;">0/23자</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
+                                                        <div class="temp_title">
+                                                            <span style="font-weight: bold;">강조 표기 문구 *</span>
+                                                        </div>
+                                                        <div class="temp_content">
+                                                            <input id="emphasize_content_input" type="text" placeholder="최대 18자, 변수 불가, 본문에 있는 내용만 입력 가능." class="ctrl-input" maxlength="23" onkeyup="">
+                                                            <label id="emphasize_content_cnt" style="min-width: 80px; margin-left: 10px; color: black;">0/18자</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row emphasizeImg_div subInfo_div" style="border-bottom: 1px solid #bdbdbd; margin: 0; justify-content: flex-start; padding: 10px 0px;">
+                                                <div class="temp_title">
+                                                    <span style="font-weight: bold;">이미지 첨부 *</span>
+                                                </div>
+                                                <div class="temp_content">
+                                                    <div class="column" style="margin:0;">
+                                                        <div class="row" style="margin:0; justify-content: flex-start;">
+                                                            <button class="btn">이미지가이드</button>
+                                                            <button class="btn" style="margin-left:10px;">파일선택</button>
+                                                        </div>
+                                                        <div class="column" style="margin:0; margin-top:10px; align-items: flex-start;line-height: normal; font-size: 12px;">
+                                                            <span style="color:red;">이미지 가이드를 확인하고 리소스 파일을 활용하시기 바랍니다.</span>
+                                                            <span>* 내용 : 정보성, 본문 내용을 포함하거나 연관성 필수</span>
+                                                            <span>* 구성 : 배경색상(#F9F9F9), 레이아웃 제작 가이드 준수</span>
+                                                            <span>* 권장 사이즈 : 800px*400px (가로 500px 이상, 가로:세로 비율 2:1 이상 3:4 이하인 경우 불가)</span>
+                                                            <span>* 파일형식 및 크기 : jpg, png / 최대 500KB</span>
                                                         </div>
                                                     </div>
                                                 </div>
