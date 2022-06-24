@@ -39,6 +39,9 @@ var banner_swiper3;
 
 function swiper_banner2() {
     banner_swiper2 = new Swiper('.swiper-container7', {
+        // slidesPerView : 4, // 동시에 보여줄 슬라이드 갯수
+        slidesPerView : 3, // 동시에 보여줄 슬라이드 갯수
+        spaceBetween : 30, // 슬라이드간 간격
         observer: true,
         observeParents: true,
         direction: 'horizontal',
@@ -48,6 +51,10 @@ function swiper_banner2() {
             delay: 4000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
         },
         navigation: {
             nextEl: '.swiper-button-next',
@@ -106,14 +113,15 @@ $(document).ready(function () {
         $(".tab_cont > div").eq(idx).css("display", "flex");
     });
 
-    $(".main_content8 .image_area .row_wrapper .row3 .box").click(function () {
+    // $(".main_content8 .image_area .row_wrapper .row3 .box").click(function () {
+    $(".main_content8 .image_area .content_list_wrapper").click(function () {
 
         var idx = $(this).index();
 
         console.log(idx);
 
-        $(".main_content8 .image_area .row_wrapper .row2 .content").removeClass("on").hide();
-        $(".main_content8 .image_area .row_wrapper .row2 .content").eq(idx).addClass("on").fadeIn(300);
+        $(".main_content8 .image_area .row_wrapper .content").removeClass("on").hide();
+        $(".main_content8 .image_area .row_wrapper .content").eq(idx).addClass("on").fadeIn(300);
 
     });
 

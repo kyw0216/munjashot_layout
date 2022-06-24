@@ -5,7 +5,7 @@ header {
 }
 
 .desktop_nav{
-    background-color: #eee;
+    background-color: #0062ff;
     border-bottom-left-radius: 30px;
 }
 
@@ -110,7 +110,8 @@ header {
     display: block;
     height: 80px;
     line-height: 80px;
-    color: #000;
+    color: white !important;
+    /* color: #000; */
     font-size: 18px;
     letter-spacing: -0.55px;
     font-weight: 600;
@@ -144,7 +145,8 @@ header {
     border-radius: 10px;
     -webkit-box-shadow: 5px 5px 20px -3px rgb(0 0 0 / 40%);
     box-shadow: 5px 5px 20px -3px rgb(0 0 0 / 40%);
-    background-color: #0062ff;
+    /* background-color: #0062ff; */
+    background-color: white;
 }
 
 .subMenu-ul2 {
@@ -158,7 +160,8 @@ header {
 
 .subMenu-a2 {
     display: block;
-    color: #fff !important;
+    /* color: #fff !important; */
+    color: black !important;
     font-size: 14px;
     font-weight: 400;
     text-align: left;
@@ -215,10 +218,10 @@ header {
     display: block;
     height: 80px;
     line-height: 80px;
-    color: #cacaca !important;
+    /* color: #cacaca !important; */
+    color: #f3f3f3 !important;
     font-size: 14px;
     letter-spacing: -0.55px;
-    font-weight: 600;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     margin-left:20px;
@@ -249,7 +252,8 @@ header {
     border-radius: 10px;
     -webkit-box-shadow: 5px 5px 20px -3px rgb(0 0 0 / 40%);
     box-shadow: 5px 5px 20px -3px rgb(0 0 0 / 40%);
-    background-color: #0062ff;
+    /* background-color: #0062ff; */
+    background-color: white;
 }
 
 .subMenu-ul3 {
@@ -263,7 +267,8 @@ header {
 
 .subMenu-a3 {
     display: block;
-    color: #fff !important;
+    /* color: #fff !important; */
+    color: black !important;
     font-size: 14px;
     font-weight: 400;
     text-align: left;
@@ -274,7 +279,8 @@ header {
 }
 
 .menu-a3:hover{
-    color:#0062ff !important;
+    /* color:#0062ff !important; */
+    color:white !important;
 }
 
 .menu-a3:hover + .subMenu-div3{
@@ -327,124 +333,6 @@ header .column_wrapper{
         min-width: 1320px;
         z-index: 2;
     }
-
-    /* header .mobile_nav {
-        display: none;
-    }
-
-    header .desktop_nav {
-        padding: 12px 0;
-        box-shadow: -1px -3px 5px 5px #838383;
-    }
-
-    header .desktop_nav .wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    header .desktop_nav .logo_img {
-        width: 168px;
-        height: auto;
-    }
-
-    header .desktop_nav .menu-section {
-        display: flex;
-        margin: 0;
-        margin-left: auto;
-        padding: 0;
-        list-style-type: none;
-    }
-
-    header .desktop_nav span {
-        cursor: pointer;
-        width: 100px;
-        padding: 5px 0;
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        background: none;
-        transition: color 0.5s, background-color 0.5s;
-    }
-
-    header .desktop_nav .menu-category {
-        list-style-type: none;
-        margin-left: 30px;
-        font-weight: bold;
-        line-height: 1.3;
-        color: #363636;
-    }
-
-    header .desktop_nav span:hover {
-        color: #34b5a3;
-    }
-
-    header .desktop_nav .login_btn {
-        border-radius: 20px;
-        border-radius: 20px !important;
-        color: white !important;
-        background: #6ccbbc !important;
-    }
-
-    header .desktop_nav .login_btn:hover {
-        background: #41bda6 !important;
-    }
-
-    header .desktop_subnav {
-        display: none;
-        height: 0;
-        width: 100%;
-        position: absolute;
-        background: white;
-        box-shadow: 0px 8px 5px -5px #838383;
-        z-index: 2;
-        min-width: 1320px;
-    }
-
-    header .desktop_subnav .wrapper {
-        border-top: 1px solid #bebebe;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    header .desktop_subnav .menu-section {
-        display: flex;
-        margin: 0;
-        margin-left: auto;
-        padding: 0;
-        list-style-type: none;
-    }
-
-    header .desktop_subnav span {
-        cursor: pointer;
-        width: 100px;
-        padding: 5px 0;
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        background: none;
-        transition: color 0.5s, background-color 0.5s;
-    }
-
-    header .desktop_subnav .menu-category {
-        margin-left: 30px;
-        font-weight: bold;
-        line-height: 1.3;
-        color: #363636;
-    }
-
-    header .desktop_subnav .submenu-section {
-        margin-top: 10px;
-    }
-
-    header .desktop_subnav span:hover {
-        color: #34b5a3;
-    }
-
-    header .desktop_subnav .submenu-category {
-        line-height: normal;
-        color: #858585;
-    } */
 }
 
 /* PC Header End */
