@@ -157,23 +157,11 @@ main .main_content2 .tab_cont .box_wrapper .msg_timebar {
 main .main_content3 {
     padding: 50px 0;
     background: #0062ff;
-    color:white;
-}
-
-main .main_content3 .text_area {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0;
+    /* color:white; */
 }
 
 main .main_content3 .wrapper .text_area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    color:white;
 }
 
 main .main_content3 .wrapper .text_area .introduce_title {
@@ -182,30 +170,27 @@ main .main_content3 .wrapper .text_area .introduce_title {
     display: block;
 }
 
+main .main_content3 .wrapper .text_area .introduce_title2 {
+    color:black;
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    align-items: flex-start;
+}
+
 main .main_content3 .wrapper .text_area .introduce_content {
+    font-size: 16px;
     display: block;
 }
 
 main .main_content3 .wrapper .row_wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
     flex-grow: 1;
-    vertical-align: middle;
-    line-height: normal;
     width: 100%;
     height: 100%;
 }
 
 main .main_content3 .wrapper .column_wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
     flex-grow: 1;
-    vertical-align: middle;
-    line-height: normal;
     width: 100%;
     height: 100%;
 }
@@ -264,7 +249,12 @@ main .main_content3 .wrapper .charge_table{
 }
 
 main .main_content3 .wrapper .charge_table td{
-    background-color: #dedede;
+    text-align: left;
+    line-height: normal;
+    white-space : nowrap;
+    /* overflow: hidden;  */
+    /* text-overflow: ellipsis; */
+    vertical-align: middle;
 }
 
 main .main_content3 .wrapper .btn_label{
@@ -286,38 +276,64 @@ main .main_content3 .wrapper .ai_result_div{
     display: none;
 }
 
-main .main_content3 .wrapper .ai_result_scroll_div{
-    border: 1px solid #bdbdbd;
-    height:300px;
-    overflow-y: scroll;
+main .main_content3 .wrapper .ai_result_div .ai_result_box{
+    padding: 20px;
+    background-color: #f7f7f7;
+    margin-top:20px;
+    border-radius: 10px;
 }
 
-main .main_content3 .wrapper .ai_result_scroll_element{
-    display: flex;
-    flex-direction: column;
-    padding:10px;
-    border-bottom: 1px solid #bdbdbd;
-    line-height: normal;
+main .main_content3 .wrapper .ai_result_element{
+    align-items: flex-start;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px #a3a3a3;
 }
 
-main .main_content3 .wrapper .ai_result_scroll_element .title{
+main .main_content3 .wrapper .ai_result_element:not(:first-child){
+    margin-top:20px;
+}
+
+main .main_content3 .wrapper .ai_result_element .title{
     font-size: 24px;
     font-weight: bold;
 }
-  
-main .main_content3 .wrapper .ai_result_scroll_element .content{
+
+main .main_content3 .wrapper .ai_result_element .content{
     font-size: 16px;
 }
 
-/* main .main_content3 .wrapper {
-    display: block !important;
+main .main_content3 .swiper-container3 {
+    width: 600px;
+}
+
+
+main .main_content3 .swiper-container3 .slide {}
+
+/* 영역별 크기 설정 */
+main .main_content3 .swiper-container3 .swiper-slide-next,
+main .main_content3 .swiper-container3 .swiper-slide-prev,
+main .main_content3 .swiper-container3 .swiper-slide-duplicate-next,
+main .main_content3 .swiper-container3 .swiper-slide-duplicate-prev {opacity:0.5; transform: scale(0.9); z-index: 50;}
+main .main_content3 .swiper-container3 .swiper-slide-active,
+main .main_content3 .swiper-container3 .swiper-slide-duplicate-active {opacity: 1; transform: scale(1); z-index: 100;}
+
+/* main .main_content3 .swiper-container3 .swiper-slide-prev,
+main .main_content3 .swiper-container3 .swiper-slide-duplicate-prev {
+    transform: translateX(20%) scale(0.9);
+    transition-duration: 0ms;
+}
+
+main .main_content3 .swiper-container3 .swiper-slide-next,
+main .main_content3 .swiper-container3 .swiper-slide-duplicate-next {
+    transform: translateX(-20%) scale(0.9);
+    transition-duration: 0ms;
 } */
 
-main .main_content3 .slide {
-    width: 100%;
-    font-size: 30px;
-    text-align: center;
-    vertical-align: middle;
+main .main_content3 .swiper-container3 .slide .slide_img {
+    width: 200px;
+    height: auto;
 }
 
 main .main_content4 {
@@ -569,8 +585,10 @@ main .main_content7 .wrapper .swiper-button-next, .swiper-container-rtl .swiper-
     background-image: url("../../image/button/next.png");
 }
 
-main .main_content7 .wrapper .box .pagination_div .swiper-pagination-bullet { width: 12px; height: 12px; background: transparent; border: 1px solid pink; opacity: 1; }
-main .main_content7 .wrapper .box .pagination_div .swiper-pagination-bullet-active { width: 40px; transition: width .5s; border-radius: 5px; background: pink; border: 1px solid transparent; }
+/* main .main_content7 .wrapper .box .pagination_div .swiper-pagination-bullet { width: 12px; height: 12px; background: transparent; border: 1px solid pink; opacity: 1; } */
+/* main .main_content7 .wrapper .box .pagination_div .swiper-pagination-bullet-active { width: 40px; transition: width .5s; border-radius: 5px; background: pink; border: 1px solid transparent; } */
+main .main_content7 .wrapper .box .pagination_div .swiper-pagination-bullet { width: 10px; height: 10px; background: transparent; background-color: #3d3d3d; opacity: 0.5; }
+main .main_content7 .wrapper .box .pagination_div .swiper-pagination-bullet-active { width: 30px; transition: width .5s; border-radius: 5px; background: white; border: 1px solid transparent; opacity: 1;}
 
 main .main_content8 {
     padding: 50px 0;

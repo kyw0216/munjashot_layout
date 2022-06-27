@@ -14,28 +14,8 @@ function _defineProperty(obj, key, value) {
     return obj;
 }
 
-var banner_swiper;
 var banner_swiper2;
 var banner_swiper3;
-
-// function swiper_banner() {
-//     banner_swiper = new Swiper('.main_content1', {
-//         observer: true,
-//         observeParents: true,
-//         direction: 'horizontal',
-//         loop: true,
-//         speed: 1200,
-//         autoplay: {
-//             delay: 4000,
-//             disableOnInteraction: false,
-//             pauseOnMouseEnter: true
-//         },
-//         pagination: {
-//             el: '.swiper-pagination',
-//             clickable: true
-//         }
-//     });
-// }
 
 function swiper_banner2() {
     banner_swiper2 = new Swiper('.swiper-container7', {
@@ -65,6 +45,10 @@ function swiper_banner2() {
 
 function swiper_banner3() {
     banner_swiper3 = new Swiper('.swiper-container3', {
+        grabCursor: true,
+        slidesPerView : 3, // 동시에 보여줄 슬라이드 갯수
+        spaceBetween : 10, // 슬라이드간 간격
+        centeredSlides: true,
         observer: true,
         observeParents: true,
         direction: 'horizontal',
@@ -74,10 +58,6 @@ function swiper_banner3() {
             delay: 4000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
         },
     });
 }
@@ -93,15 +73,11 @@ function fn_close_ai_Result(){
 
 $(document).ready(function () {
     // 배너 슬라이드 실행
-    // swiper_banner();
     swiper_banner2();
     swiper_banner3();
 
     $(".tab_title li").click(function () {
         var idx = $(this).index();
-
-        console.log(idx);
-        console.log($(".tab_title li").eq(idx));
 
         $(".tab_title li").removeClass("on");
         $(".tab_title li").eq(idx).addClass("on");
@@ -113,10 +89,9 @@ $(document).ready(function () {
         $(".tab_cont > div").eq(idx).css("display", "flex");
     });
 
-    // $(".main_content8 .image_area .row_wrapper .row3 .box").click(function () {
     $(".main_content8 .image_area .content_list_wrapper").click(function () {
 
-        var idx = $(this).index();
+        var idx = $(this).index() + 1;
 
         console.log(idx);
 
@@ -136,16 +111,6 @@ $(document).ready(function () {
             $(this).addClass("on");
         }
     });
-
-
-
-
-
-
-
-
-
-
 
 });
 
