@@ -55,38 +55,42 @@
                         
                         <div class="content_wrapper">
 
-                            <div class="column_wrapper" style="background-color: #f7f7f7; line-height: normal; font-size:30px;">
-                                <span>회원가입을 위해</span>
-                                <span>본인 인증을 해주시기 바랍니다.</span>
+                            <div class="column_wrapper text_area">
+                                <p class="introduce_title">회원가입을 위해</p>
+                                <p class="introduce_title">본인 인증을 해주시기 바랍니다.</p>
                             </div>
 
-                            <div class="column_wrapper" style="line-height: normal; font-size:30px;">
-                                <img src="../image/phone_auth.png">
+                            <div class="row_wrapper" style="margin-top: 30px;">
+                                <img src="../image/signup/signup_auth.png">
                             </div>
 
-                            <div class="column_wrapper" style="background-color: #f7f7f7; padding:20px; line-height: normal; font-size:30px; cursor: pointer;" onclick="javascript:location.href='signup-info-private.html';">
-                                <span>확인</span>
-                            </div>
+                            <div class="column_wrapper term_div">
+                                <div class="column_wrapper term_box_wrapper">
+                                    <div class="row_wrapper term_title">
+                                        <span>휴대폰 인증</span>
+                                    </div>
 
+                                    <div class="row_wrapper" style="margin-top: 30px;">
+                                        <img src="../image/signup/signup_phone_auto.png">
+                                    </div>
+
+                                    <div class="row_wrapper text_box">
+                                        <span>본인 명의로 된 휴대폰으로만 인증이 가능합니다. 본인 명의의 휴대폰을 사용하고 있지 않은 경우, 아이핀 정보로 인ㅈ으을 진행시키기 바랍니다.</span>
+                                    </div>
+                                </div>
+
+                                <div class="row_wrapper" style="margin-top:20px;">
+                                    <button class="btn-blue" style="width: 150px; padding:10px;" onclick="javascript:location.href='signup-info-private.html';">휴대폰 인증</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </main>
         </div>
     </div>
 
-    <div id="modal" class="modal-overlay">
-        <div class="modal-window">
-            <div class="title">
-                <h2>모달</h2>
-            </div>
-            <div class="close-area">X</div>
-            <div class="content" style="display: flex; justify-content: center; align-items: center;">
-                <p>모달입니다.</p>
-            </div>
-        </div>
-    </div>
+    <div id="modal" class="modal-overlay"></div>
 
     <!-- Footer -->
     <div id="footer"></div>

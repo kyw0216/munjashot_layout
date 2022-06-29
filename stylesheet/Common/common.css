@@ -1041,6 +1041,10 @@ input[type='checkbox']:checked ~ .custom-input:after {
 .default-input[type='password']:-ms-input-placeholder {
   color: #c8c8c8;
 }
+
+.gray-input.h_30,
+.white-input.h_30,
+.default-input.h_30 { height: 30px;}
 /* input-text 디자인 */
 
 /* selectbox 디자인 */
@@ -1054,6 +1058,21 @@ input[type='checkbox']:checked ~ .custom-input:after {
   outline: none;
   padding-left: 10px;
   box-sizing: border-box;
+}
+.default-select {
+  width: 100%;
+  /* height: 40px; */
+  height: auto;
+  font-size: 15px;
+  border: 1;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.default-select.h_30{
+  height: 30px;
 }
 /* selectbox 디자인 */
 
@@ -1104,13 +1123,14 @@ input[type='checkbox']:checked ~ .custom-input:after {
   background-color: #ebf3ff;
 }
 .bgc-gray {
-  color: #f3f3f3;
+  /* background-color: #f3f3f3; */
+  background-color: #f5f5f5;
 }
 .bgc-dgray {
-  color: #7c7c7c;
+  background-color: #7c7c7c;
 }
 .bgc-white {
-  color: white;
+  background-color: white;
 }
 /* 배경 색상표 */
 

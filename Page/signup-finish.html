@@ -55,35 +55,38 @@
                         
                         <div class="content_wrapper">
 
-                            <div class="column_wrapper" style="background-color: #f7f7f7; line-height: normal; font-size:30px;">
-                                <span>회원가입을 축하합니다</span>
+                            <div class="column_wrapper text_area">
+                                <p class="introduce_title">회원가입을 축하합니다.</p>
                             </div>
 
+                            <div class="row_wrapper" style="margin-top: 30px;">
+                                <img src="../image/signup/signup_finish.png">
+                            </div>
 
                             <div class="column_wrapper signup-finish_div info_div">
-                                <span style="text-align: center;">
-                                    문자샷 가입을 환영합니다.<br><br>
+                                <p style="text-align: center;">
+                                    <span style="font-size: 20px; font-weight: bold;">문자샷 가입을 환영합니다.</span><br><br>
 
                                     가입 축하 1,000 point 를 적립해드렸으니 자유롭게 사용해보세요.<br><br>
 
-                                    등록하신 발신번호로의 본인인증 전화 후 문자 발송이 가능합니다.<br><br>
+                                    등록하신 발신번호로의 본인인증 전화 후 문자 발송이 가능합니다.<br>
                                     (영업시간 기준 24시간 이내 처리)<br><br>
 
                                     감사합니다.
-                                </span>
+                                </p>
                             </div>
                             
                             <div class="column_wrapper callback_info_div info_div" style="display:none;">
-                                <span style="text-align: center;">
-                                    발신번호 등록시 필요서류 안내<br><br>
+                                <p>
+                                    <span style="color:#0062ff; font-weight: bold;">발신번호 등록시 필요서류 안내</span><br><br>
 
-                                    1. 기업 회원<br>
+                                    <b>1. 기업 회원</b><br>
                                     - 가입 사업자 명의 : 통신서비스 이용 증명원<br>
                                     - 타 사업자 명의 : 통신서비스 이용 증명원, 위임장, 발신번호 소유주의 사업자등록증<br>
                                     - 개인명의(재직자) : 통신서비스 이용 증명원, 재직증명서<br>
                                     - 개인명의(비재직자) : 통신서비스 이용 증명원, 위임장, 발신번호 소유주의 신분증 사본(주민등록 번호 뒷자리 마킹)<br><br>
 
-                                    2. 개인 회원<br>
+                                    <b>2. 개인 회원</b><br>
                                     - 가입자 본인 명의 : 통신서비스 이용 증명원<br>
                                     - 타인 명의 : 통신서비스 이용 증명원, 위임장, 타인의 신분증 사본(주민등록 번호 뒷자리 마킹)<br>
                                     - 사업자 명의(재직자) : 통신서비스 이용 증명원, 재직증명서, 발신번호 소유주의 사업자등록증<br>
@@ -98,7 +101,7 @@
                                     ㆍ 모바일 서비스 고객센터 : 114, 080-011-6000, 1599-0011<br>
                                     ㆍ 유선 서비스 고객센터 : 080-816-2000, 1600-2000<br><br>
 
-                                    KT [바로가기<br>
+                                    KT [바로가기]<br>
                                     ㆍ 홈페이지 발급방법 : 로그인 > 가입정보 > 조회/변경 > 가입증명원 인쇄<br>
                                     ㆍ 모바일서비스 고객센터 : 114, 1588-0010<br>
                                     ㆍ 유선서비스 고객센터 : 100<br><br>
@@ -111,30 +114,37 @@
                                     한 번 발신번호를 등록하시면 등록된 번호로 간편하고 빠르게 문자 발송이 가능합니다.<br>
                                     상기 내용을 꼼꼼히 확인 후, 필요 서류를 등록 해주시길 바랍니다.<br>
                                     * 발신번호 등록 승인 까지는 영업일 기준 최대 1~2일 소요됩니다.<br>
-                                </span>
+                                </p>
+                                
+                                <button class="btn-blue back-btn" onclick="signup_finish();"><i class="fa-solid fa-angle-left" style="vertical-align: middle;"></i></button>
+
                             </div>
 
                             <div class="column_wrapper add_info_div info_div" style="display:none;">
                                 <img src="../image/광고문자 발송규칙 안내.jpg">
+                                <button class="btn-blue back-btn" onclick="signup_finish();"><i class="fa-solid fa-angle-left" style="vertical-align: middle;"></i></button>
                             </div>
 
-                            <div class="row_wrapper" style="background-color: #888888; border-radius: 5px; padding:10px; margin: 0;">
-                                <div class="menu_select_div">
+                            <div class="row_wrapper menu_select_div">
+                                <div class="column_wrapper menu_select_box">
+                                    
                                     <input type="radio" id="callback" name="menu_select" class="menu_radio_box"  value="callback"></input>
-                                    <label class="menu_label" for="callback">
-                                        발신번호 등록시 필요서류 안내
+                                    <label class="column_wrapper menu_label" for="callback">
+                                        <img src="../image/signup/signup_docsInfo.png">
+                                        <span style="margin-top:20px;">발신번호 등록시 필요서류 안내</span>
                                     </label>
                                 </div>
-                                <div class="menu_select_div" style="border-left: 1px solid black;">
-                                    <input type="radio" id="add" name="menu_select" class="menu_radio_box" value="add"></input
-                                    ><label class="menu_label" for="add">
-                                        광고문자 발송규칙 안내
+                                <div class="column_wrapper menu_select_box">
+                                    <input type="radio" id="add" name="menu_select" class="menu_radio_box" value="add"></input>
+                                    <label class="column_wrapper menu_label" for="add">
+                                        <img src="../image/signup/signup_addInfo.png">
+                                        <span style="margin-top:20px;">광고문자 발송규칙 안내</span>
                                     </label>
                                 </div>
                             </div>
 
-                            <div class="column_wrapper" style="background-color: #f7f7f7; padding:20px; line-height: normal; font-size:30px; cursor: pointer;" onclick="javascript:location.href='login.html';">
-                                <span>로그인하러 가기</span>
+                            <div class="row_wrapper" style="margin-top:30px;" onclick="javascript:location.href='login.html';">
+                                <button class="btn-blue" style="font-size: 18px; width: 200px;">로그인하러 가기</button>
                             </div>
 
                         </div>

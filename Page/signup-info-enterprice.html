@@ -55,187 +55,268 @@
                         
                         <div class="content_wrapper">
 
-                            <div class="column_wrapper" style="background-color: #f7f7f7; line-height: normal; font-size:30px; padding:20px;">
+                            <!-- <div class="column_wrapper" style="background-color: #f7f7f7; line-height: normal; font-size:30px; padding:20px;">
                                 <span>회원 정보를 기입해주세요</span>
-                            </div>
-
-                            <!-- <div class="column_wrapper" style="line-height: normal; font-size:30px;">
-                                <img src="../image/회원가입_기업.png">
                             </div> -->
 
+                            <div class="column_wrapper text_area">
+                                <p class="introduce_title">회원정보를 기입해주세요.</p>
+                            </div>
+
+                            <div class="row_wrapper" style="margin-top: 30px;">
+                                <img src="../image/signup/signup_info.png">
+                            </div>
+
+                            <div class="column_wrapper term_div">
+                                <div class="column_wrapper term_box_wrapper">
+<!-- 
                             <div class="row_wrapper" style="margin:0; padding:20px; background-color: #bdbdbd;">
-                                <div class="column_wrapper" style="margin:0;">
+                                <div class="column_wrapper" style="margin:0;"> -->
 
+                                    <div class="row_wrapper term_title">
+                                        <span>기업회원</span>
+                                    </div>
+                                    <div class="row_wrapper term_content" style="margin-top:10px;">
+                                        <span>표시된 항목은 필수 입력 사항입니다.</span>
+                                    </div>
 
-                                    <table class="info_table">
-                                        <tr>
-                                            <th>아이디</th>
-                                            <td><input class="ctrl-input" type="text" value=""></td>
-                                        </tr>
-                                        <tr>
-                                            <th>비밀번호</th>
-                                            <td><input class="ctrl-input" type="text" value=""></td>
-                                        </tr>
-                                        <tr>
-                                            <th>비밀번호 확인</th>
-                                            <td><input class="ctrl-input" type="text" value=""></td>
-                                        </tr>
-                                    </table>
+                                    <div class="column_wrappper" style="width: 100%;">
+                                        <div class="column_wrapper table_box">
+                                            <table class="info_table">
+                                                <caption>기본 정보</caption>
+                                                <tr>
+                                                    <th>아이디 <i class="fa-solid fa-star fc-main"></i></th>
+                                                    <td>
+                                                        <input class="gray-input h_30" type="text" value="" style="width: auto;">
+                                                        <button class="btn-dgray">중복확인</button>
+                                                        <label>6~12자 이내 영문소문자, 숫자</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>비밀번호 <i class="fa-solid fa-star fc-main"></i></th>
+                                                    <td><input class="gray-input h_30" type="password" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>비밀번호 확인 <i class="fa-solid fa-star fc-main"></i></th>
+                                                    <td><input class="gray-input h_30" type="password" value=""></td>
+                                                </tr>
+                                            </table>
+                                        </div>
                                     
+                                        <div class="column_wrapper table_box">
+                                            <table class="info_table">
+                                                <caption>필수 제출 서류</caption>
+                                                <tr>
+                                                    <th>사업자등록증 <i class="fa-solid fa-star fc-main"></i></th>
+                                                    <td>
+                                                        <div id="fileDrop" class="fileDrop">
+                                                            <h1>파일을 드래그해주세요.</h1>
+                                                        </div>
+                                                    </td>
+                                                </tr>
 
-                                    <div class="row_wrapper" style="justify-content: flex-start; ">
-                                        <label class="label_info" style="width:200px; background-color: rgb(167, 208, 106); text-align: center;">필수 제출 서류</label>
-                                    </div>
-
-                                    <div class="row_wrapper" style="justify-content: flex-start; ">
-                                        <label class="label_info" style="width:200px; text-align: center;">사업자등록증</label>
-                                        <div id="fileDrop" class="fileDrop">
-                                            <h1>파일을 드래그해주세요.</h1>
+                                                <tr>
+                                                    <th>재직증명서 <i class="fa-solid fa-star fc-main"></i></th>
+                                                    <td>
+                                                        <div id="fileDrop2" class="fileDrop2">
+                                                            <h1>파일을 드래그해주세요.</h1>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
                                         </div>
-                                    </div>
 
-                                    <div class="row_wrapper" style="justify-content: flex-start; ">
-                                        <label class="label_info" style="width:200px; text-align: center;">재직증명서</label>
-                                        <div id="fileDrop2" class="fileDrop2">
-                                            <h1>파일을 드래그해주세요.</h1>
+                                        <div class="column_wrapper table_box">
+                                            <table class="info_table2">
+                                                <caption>사업자 정보 입력</caption>
+                                                <tr>
+                                                    <th>법인명</th>
+                                                    <td><input class="gray-input h_30" type="text" value=""></td>
+                                                    <th>업태</th>
+                                                    <td><input class="gray-input h_30" type="text" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>대표자</th>
+                                                    <td><input class="gray-input h_30" type="text" value=""></td>
+                                                    <th>종목</th>
+                                                    <td><input class="gray-input h_30" type="text" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>사업자등록번호</th>
+                                                    <!-- <td colspan="3"> -->
+                                                    <td>
+                                                        <input class="gray-input h_30" type="text" value="" style="width:80px;"> - 
+                                                        <input class="gray-input h_30" type="text" value="" style="width:80px;"> - 
+                                                        <input class="gray-input h_30" type="text" value="" style="width:80px;">
+                                                    </td>
+                                                    <th>법인번호</th>
+                                                    <!-- <td colspan="3"> -->
+                                                    <td>
+                                                        <input class="gray-input h_30" type="text" value="" style="width:80px;"> - 
+                                                        <input class="gray-input h_30" type="text" value="" style="width:80px;">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>주소</th>
+                                                    <td colspan="3">
+                                                        <input class="gray-input h_30" type="text" value="" style="width:200px; margin-bottom: 7px;">
+                                                        <button class="btn-blue" onclick="javascript:alert('우편번호 검색 API 팝업');">주소찾기</button> <br>
+                                                            <input class="gray-input h_30" type="text" value="" style="margin-bottom: 7px;">
+                                                            <input class="gray-input h_30" type="text" value="">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>대표번호</th>
+                                                    <td><input class="gray-input h_30" type="text" value=""></td>
+                                                    <th>FAX</th>
+                                                    <td><input class="gray-input h_30" type="text" value=""></td>
+                                                </tr>
+                                            </table>
                                         </div>
+
+                                        <div class="column_wrapper table_box">
+                                            <table class="info_table2">
+                                                <caption>계정 관리 담당자 정보</caption>
+                                                <tr>
+                                                    <th>성함 <i class="fa-solid fa-star fc-main"></i></th>
+                                                    <td><input class="gray-input h_30" type="text" value=""></td>
+                                                    <th>직위 <i class="fa-solid fa-star fc-main"></i></th>
+                                                    <td><input class="gray-input h_30" type="text" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>연락처 <i class="fa-solid fa-star fc-main"></i></th>
+                                                    <td>
+                                                        <input class="gray-input h_30" type="text" value="" style="width:80px;"> - 
+                                                        <input class="gray-input h_30" type="text" value="" style="width:80px;"> - 
+                                                        <input class="gray-input h_30" type="text" value="" style="width:80px;">
+                                                    </td>
+                                                    <th>소속부서 <i class="fa-solid fa-star fc-main"></i></th>
+                                                    <td><input class="gray-input h_30" type="text" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>이메일 <i class="fa-solid fa-star fc-main"></i></th>
+                                                    <td colspan="3">
+                                                        <div class="input-area">
+                                                            <input class="gray-input h_30" type="text" id="email_first">@
+                                                            <input class="gray-input h_30" type="text" id="email_second">
+                                                            <select id="selectEmail" class="default-select h_30" style="margin-left:10px;">
+                                                                <!-- <option>직접입력</option> -->
+                                                                <option value="1">직접입력</option>
+                                                                <option value="naver.com" selected>naver.com</option>
+                                                                <option value="hanmail.net">hanmail.net</option>
+                                                                <option value="hotmail.com">hotmail.com</option>
+                                                                <option value="nate.com">nate.com</option>
+                                                                <option value="yahoo.co.kr">yahoo.co.kr</option>
+                                                                <option value="empas.com">empas.com</option>
+                                                                <option value="dreamwiz.com">dreamwiz.com</option>
+                                                                <option value="freechal.com">freechal.com</option>
+                                                                <option value="lycos.co.kr">lycos.co.kr</option>
+                                                                <option value="korea.com">korea.com</option>
+                                                                <option value="gmail.com">gmail.com</option>
+                                                                <option value="hanmir.com">hanmir.com</option>
+                                                                <option value="paran.com">paran.com</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="column_wrapper" style="align-items: flex-start; margin-top:10px;">
+                                                            <label>
+                                                                <input type="checkbox" class="chk_box" style="margin-right: 10px;">
+                                                                E-mail 수신 동의
+                                                            </label>
+                                                            <p>- 비밀번호 찾기, 세금계산기 발송시 이용되므로 정확히 입력해 주세요,</p>
+                                                            <p>- 엠포플러스(주) 서비스 안내 메일 수신에 대한 동의 항목입니다.</p>
+                                                            <p>- 비밀번호 찾기 등의 항목은 사전 동의 없이 메일로 발송 될 수 있습니다.</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                        <div class="column_wrapper table_box">
+                                            <table class="info_table2">
+                                                <caption>세금계산서 담당자 정보 입력</caption>
+                                                <tr>
+                                                    <th>성함 <i class="fa-solid fa-star fc-main"></i></th>
+                                                    <td><input class="gray-input h_30" type="text" value=""></td>
+                                                    <th>직위 <i class="fa-solid fa-star fc-main"></i></th>
+                                                    <td><input class="gray-input h_30" type="text" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>연락처 <i class="fa-solid fa-star fc-main"></i></th>
+                                                    <td>
+                                                        <input class="gray-input h_30" type="text" value="" style="width:80px;"> - 
+                                                        <input class="gray-input h_30" type="text" value="" style="width:80px;"> - 
+                                                        <input class="gray-input h_30" type="text" value="" style="width:80px;">
+                                                    </td>
+                                                    <th>소속부서 <i class="fa-solid fa-star fc-main"></i></th>
+                                                    <td><input class="gray-input h_30" type="text" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>이메일 <i class="fa-solid fa-star fc-main"></i></th>
+                                                    <td colspan="3">
+                                                        <div class="input-area">
+                                                            <input class="gray-input h_30" type="text" id="email_first2">@
+                                                            <input class="gray-input h_30" type="text" id="email_second2">
+                                                            <select id="selectEmail2" class="default-select h_30" style="margin-left:10px;">
+                                                                <!-- <option>직접입력</option> -->
+                                                                <option value="1">직접입력</option>
+                                                                <option value="naver.com" selected>naver.com</option>
+                                                                <option value="hanmail.net">hanmail.net</option>
+                                                                <option value="hotmail.com">hotmail.com</option>
+                                                                <option value="nate.com">nate.com</option>
+                                                                <option value="yahoo.co.kr">yahoo.co.kr</option>
+                                                                <option value="empas.com">empas.com</option>
+                                                                <option value="dreamwiz.com">dreamwiz.com</option>
+                                                                <option value="freechal.com">freechal.com</option>
+                                                                <option value="lycos.co.kr">lycos.co.kr</option>
+                                                                <option value="korea.com">korea.com</option>
+                                                                <option value="gmail.com">gmail.com</option>
+                                                                <option value="hanmir.com">hanmir.com</option>
+                                                                <option value="paran.com">paran.com</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="column_wrapper" style="align-items: flex-start; margin-top:10px;">
+                                                            <label>
+                                                                <input type="checkbox" class="chk_box" style="margin-right: 10px;">
+                                                                E-mail 수신 동의
+                                                            </label>
+                                                            <p>- 비밀번호 찾기, 세금계산기 발송시 이용되므로 정확히 입력해 주세요,</p>
+                                                            <p>- 엠포플러스(주) 서비스 안내 메일 수신에 대한 동의 항목입니다.</p>
+                                                            <p>- 비밀번호 찾기 등의 항목은 사전 동의 없이 메일로 발송 될 수 있습니다.</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                        <div class="column_wrapper table_box">
+                                            <table class="info_table2">
+                                                <tr>
+                                                    <th>마케팅 정보 수신동의 <i class="fa-solid fa-star fc-main"></i></th>
+                                                    <td>
+                                                        <div class="column_wrapper" style="align-items: flex-start;">
+                                                            <span>엠포플러스(주)에서 제공하는 서비스 (문자서비스, 문자샷, 모아카드, 오차트, RFID, 체크온 및 신규 서비스 등) 이벤트 정보 및 참여기회 제공, 광고성 정보를 이메일, 유선안내 및 문자메시지로 제공을 받아보시려면 이 옵션을 체크해주세요.</span>
+                                                            <label style="margin-top:10px;">
+                                                                <input type="checkbox" class="chk_box" style="margin-right: 10px;">
+                                                                마케팅 정보 수신에 동의합니다.
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                        <div class="row_wrapper" style="margin-top:20px;">
+                                            <button class="btn-blue" style="font-size:24px; width:200px;" onclick="javascript:location.href='signup-finish.html';">가입 신청</button>
+                                        </div>
+
                                     </div>
-
-                                    <div class="row_wrapper" style="justify-content: flex-start; ">
-                                        <label class="label_info" style="width:200px; text-align: center;">사업자 정보 입력</label>
-                                    </div>
-
-                                    <table class="info_table2">
-                                        <tr>
-                                            <th>법인명</th>
-                                            <td><input class="ctrl-input" type="text" value=""></td>
-                                            <th>대표자</th>
-                                            <td><input class="ctrl-input" type="text" value=""></td>
-                                        </tr>
-                                        <tr>
-                                            <th>사업자등록번호</th>
-                                            <td><input class="ctrl-input" type="text" value="" style="width: 60px;"> - <input class="ctrl-input" type="text"
-                                                    value="" style="width: 50px;"> - <input class="ctrl-input" type="text" value=""
-                                                    style="width: 60px;"></td>
-                                            <th>법인번호</th>
-                                            <td><input class="ctrl-input" type="text" value="" style="width: 80px;"> - <input class="ctrl-input" type="text"
-                                                    value="" style="width: 80px;"></td>
-                                        </tr>
-                                        <tr>
-                                            <th>업태</th>
-                                            <td><input class="ctrl-input" type="text" value=""></td>
-                                            <th>종목</th>
-                                            <td><input class="ctrl-input" type="text" value=""></td>
-                                        </tr>
-                                        <tr>
-                                            <th>사업장주소</th>
-                                            <td colspan="3">
-                                                <input class="ctrl-input" type="text" value="" style="width: 100px;margin-bottom: 5px;">
-                                                <button onclick="javascript:alert('우편번호 검색 API 팝업');">우편번호
-                                                    검색</button> <br>
-                                                <input class="ctrl-input" type="text" value="">
-                                                <input class="ctrl-input" type="text" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>* 대표전화</th>
-                                            <td><input class="ctrl-input" type="text" value=""></td>
-                                            <th>* FAX</th>
-                                            <td><input class="ctrl-input" type="text" value=""></td>
-                                        </tr>
-                                    </table>
-
-                                    <div class="row_wrapper" style="justify-content: flex-start; ">
-                                        <label class="label_info">계정 관리 담당자 정보</label>
-                                    </div>
-
-                                    <table class="info_table2">
-                                        <tr>
-                                            <th>*성함</th>
-                                            <td><input class="ctrl-input" type="text" value=""></td>
-                                            <th>*이메일</th>
-                                            <td><input class="ctrl-input" type="text" value=""></td>
-                                        </tr>
-                                        <tr>
-                                            <th>*연락처</th>
-                                            <td><input class="ctrl-input" type="text" value="" style="width: 60px;"> - <input class="ctrl-input" type="text"
-                                                    value="" style="width: 50px;"> - <input class="ctrl-input" type="text" value=""
-                                                    style="width: 60px;"></td>
-                                            <th>*소속부서</th>
-                                            <td><input class="ctrl-input" type="text" value=""></td>
-                                        </tr>
-                                        <tr>
-                                            <th>*직위</th>
-                                            <td colspan="3"><input class="ctrl-input" type="text" value=""></td>
-                                        </tr>
-                                    </table>
 
                                     <!-- <hr style="margin:12px;width: 100%;"> -->
 
-                                    <div class="Term_Wrap" style="margin-top:15px; background-color: white; border: 1px solid black;">
-                                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px; padding:5px;">
-                                            <div style="float:right;">
-                                                <span style="font-weight:bold;font-size:17px;">마케팅 정보 수신 동의</span>
-                                            </div>
-                                            
-                                            <div class="text_label" style="display:flex;align-items:center;">
-                                                <input id="Terms_Fourth" type="checkbox" name="Terms_Fourth" value="Terms_Fourth" class="Terms_Checkbox chk_box">
-                                                <label for="Terms_Fourth" class="chk_label" style="margin-left:5px;">동의합니다</label>
-                                            </div>
-                                        </div>
-                                        <div class="tableWrapper" style="height:100px;margin-bottom:0px!important;border: 1px solid #bcbcbc; overflow-y:auto;padding:0 10px 0 10px;">
-                                            <div class="row">
-                                                <pre style="white-space: pre-wrap;color:#666666;">
-개인정보 제공 동의
-토스페이먼츠(이하 회사라 함)는 전자금융거래 서비스의 제공을 위하여 개인정보가 제3자 제공되는 경우는 이용 서비스 및 결제수단별로 다음과 같습니다.
-
-1. 개인정보를 제공받는 자, 제공하는 목적 및 항목
-가. 전자결제지급대행 서비스 제공을 위한 결제정보 제공
-
-제공목적	제공받는 자	제공하는 항목
-신용카드	[신용카드사] KB카드, 비씨카드, 롯데카드, 삼성카드, NH농협카드, 현대카드, 신한카드, KEB하나카드, 우리카드
-[은행] 경남은행, 광주은행, 국민은행, 기업은행, 농협은행, 대구은행, 부산은행, KDB산업은행, 새마을금고, 수협은행, 신한은행, 신협, 우리은행, 우체국, 전북은행, 제주은행, KEB하나은행, 씨티은행, SC제일은행, 산림조합중앙회, 케이뱅크, 카카오뱅크
-[VAN사] (㈜코밴, ㈜코세스 ,㈜다우데이타, 퍼스트데이터 코리아, ㈜에스피씨네트웍스, ㈜엑심베이	[거래정보] 카드번호, 고객명, 생년월일, 전화번호
-[비인증결제의 경우 거래정보] 카드번호, 유효기간, 생년월일, 카드 비밀번호 앞 2자리)
-해외카드 결제	VISA, MASTER, JCB, AMEX, Diners, 유니온페이 인터내셔널	카드번호, 유효기간, 전화번호, 회원ID, 카드 비밀번호
-간편결제	㈜비바리퍼블리카, ㈜에스에스지닷컴, 롯데멤버스㈜, 삼성전자㈜, LG전자㈜, 엔에이치엔페이코㈜	전화번호, 상품명
-신용카드 ARS결제	㈜엘지유플러스	카드번호, 전화번호, 유효기간
-계좌이체 결제	[은행] NH농협, KB은행, 우리은행, 신한은행, 기업은행, 경남은행, 광주은행, 대구은행, 부산은행, KDB산업은행, 새마을금고, 수협은행, 신협, 우체국, 전북은행, 제주은행, KEB하나은행, 씨티은행, SC제일은행
-[증권사] 유안타, 미래에셋, 삼성, 한국투자, 한화	계좌번호, 고객명, 생년월일, 보안카드, OTP, (공인인증서 서명 검증 및 신원확인 시) 주민등록번호
-가상계좌 결제	[은행] 국민은행, 농협은행, 우리은행, 신한은행, KEB하나은행, 기업은행, 우체국, 부산은행, 경남은행, 대구은행, 수협은행	가상계좌번호
-휴대폰 결제	[통신사] SK텔레콤㈜, ㈜케이티, ㈜엘지유플러스
-[중개사] ㈜다날, 갤럭시아커뮤니케이션즈㈜, 페이레터	이통사정보, 휴대폰번호, 생년월일, 성별, IP
-유선전화 결제	㈜케이티	전화번호, 생년월일, 성별
-상품권 결제	㈜한국문화진흥, 티알엔	‘구매자ID, 비밀번호’(또는 상품권번호)
-자체 간편결제 (신용카드)	[신용카드사] 신한카드, KB카드, 하나카드, BC카드, 삼성카드, NH농협카드, 현대카드, 롯데카드, 우리카드, 씨티카드	CI, 생년월일, 성별, 단말기 고유번호, 카드번호, 카드 CVC, 카드 유효기간, 카드 비밀번호
-자체 간편결제 (계좌이체)	금융결제원, [은행] NH농협은행, 농협중앙회, KB은행, KDB산업은행, 우리은행, 신한은행, 기업은행, 경남은행, 광주은행, 대구은행, 부산은행, 새마을금고, 수협, 수협중앙회, 신협, 우체국, 전북은행, 제주은행, KEB하나은행, 씨티은행, SC제일은행, 카카오뱅크, K뱅크, 산림조합중앙회 [증권사] 교보증권, 미래에셋대우, 삼성증권, 신한금융투자, 유진투자증권, 이베스트투자증권, 키움증권, 하이투자증권, 한국투자증권, 한화투자증권, 현대차증권, KB증권, NH투자증권, SK증권, 메리츠증권, 대신증권, DB금융투자	휴대전화번호, 이름, 계좌번호, 계좌 비밀번호, 주민번호
-글로벌서비스	알리페이	전화번호, 회원ID, 비밀번호
-현금영수증서비스	국세청, 제이티넷	[현금영수증 발급정보] 주민등록번호, 사업자번호, 휴대폰번호, 현금영수증 등록카드번호
-신용카드 유효성 검증 서비스	[신용카드사] KB카드, 비씨카드, 롯데카드, 삼성카드, NH농협카드, 현대카드, 신한카드, KEB하나카드, 우리카드	카드번호, 고객명, 생년월일, 전화번호
-※ BC카드는 IP주소 포함
-계좌 유효성확인 서비스	[은행] 경남은행, 광주은행, 국민은행, 기업은행, 농협은행, 대구은행, 부산은행, KDB산업은행, 새마을금고, 수협, 신한은행, 신협, 외환은행, 우리은행, 우체국, 전북은행, 제주은행, 하나은행, 씨티은행, SC제일은행	계좌번호, 고객명, 생년월일
-휴대폰 본인확인 서비스	㈜케이티, ㈜엘지유플러스, KMC㈜	성명, 생년월일, 성별, 휴대폰번호, 내외국인 식별정보, CI, DI
-오픈뱅킹 서비스(출금이체, 입금이체, 잔액조회) 제공	금융결제원	이름, 생년월일, 휴대전화번호, 금융기관명 및 계좌번호, 암호화된 동일인 식별정보(CI), 이메일
-관련 법령에 따른 의무 이행	금융정보분석원, 국세청	실명번호, 거래목적, 자금원천
-※ 회사는 개인정보를 위의 목적으로 제3자 제공하며, 동의받은 목적 이외의 제3자에게 제공하지 처리하지 않습니다.
-
-2. 개인정보의 보유 및 이용기간
-개인정보는 원칙적으로 개인정보의 수집·이용 목적이 달성되면 지체없이 파기합니다. 단, 다른 법령에 특별한 규정이 있는 경우 관련 법령에서 정하는 기간동안 보유합니다.
-
-3. 이용자는 회사의 개인정보 제3자 제공에 대한 동의를 거부할 권리가 있습니다.
-다만, 개인정보의 제3자 제공 동의를 거부할 경우 전자결제지급대행 서비스의 이용이 제한될 수 있음을 알려드립니다.
-                                                </pre>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                 </div>
-
                             </div>
 
-                            <div class="column_wrapper" style="background-color: #f7f7f7; padding:20px; line-height: normal; font-size:30px; cursor: pointer;" onclick="javascript:location.href='signup-finish.html';">
-                                <span>가입 신청</span>
-                            </div>
+                            
 
                         </div>
                     </div>

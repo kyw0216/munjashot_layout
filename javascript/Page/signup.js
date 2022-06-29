@@ -2,25 +2,26 @@
 
 $(document).ready(function () {
 
-
-    console.log($("input:radio[name=menu_select]").val());
+    selectEmail_Event();
+    allChk();
 
     $("input:radio[name=menu_select]").change(function () {
 
-        console.log($("input:radio[name=menu_select]:checked").val());
-
+        $(".menu_select_box").removeClass("on");
+        
         if ($("input:radio[name=menu_select]:checked").val() === "callback") {
             $(".callback_info_div").css("display", "flex");
             $(".signup-finish_div").css("display", "none");
             $(".add_info_div").css("display", "none");
+            $(this).parent(".menu_select_box").toggleClass("on")
         } else {
             $(".callback_info_div").css("display", "none");
             $(".add_info_div").css("display", "flex");
             $(".signup-finish_div").css("display", "none");
+            $(this).parent(".menu_select_box").toggleClass("on")
         }
 
     });
-
 
     const $drop = document.querySelector(".fileDrop");
     const $drop2 = document.querySelector(".fileDrop2");
@@ -91,7 +92,13 @@ $(document).ready(function () {
 });
 
 
-
+function signup_finish() {
+    $(".callback_info_div").css("display", "none");
+    $(".add_info_div").css("display", "none");
+    $(".menu_select_box").removeClass("on");
+    $("input:radio[name=menu_select]").prop("checked", false);
+    $(".signup-finish_div").css("display", "flex");
+}
 
 
 SignUpManager.createCaptcha = function( )
@@ -186,3 +193,56 @@ $( function( )
             }
         } );
 } );
+
+
+//이메일 입력방식 선택
+function selectEmail_Event(){
+    $('#selectEmail').change(function(){
+
+        $("#selectEmail option:selected").each(function () {
+            if($(this).val() == '1'){ //직접입력일 경우
+                $("#email_second").val('');                     //값 초기화
+                $("#email_second").attr("disabled",false);      //활성화
+            }else{ //직접입력이 아닐경우
+                $("#email_second").val($(this).text());         //선택값 입력
+                $("#email_second").attr("disabled",true);       //비활성화
+            }
+        });
+    });
+
+    $('#selectEmail2').change(function(){
+
+        $("#selectEmail2 option:selected").each(function () {
+            if($(this).val() == '1'){ //직접입력일 경우
+                $("#email_second2").val('');                     //값 초기화
+                $("#email_second2").attr("disabled",false);      //활성화
+            }else{ //직접입력이 아닐경우
+                $("#email_second2").val($(this).text());         //선택값 입력
+                $("#email_second2").attr("disabled",true);       //비활성화
+            }
+        });
+    });
+}
+
+// 전체 선택/해제
+function allChk() {
+    $("#all_chk").click(function () {
+        if ($("#all_chk").prop("checked")) {
+            $("input[name=term_chk]").prop("checked", true);
+        } else {
+            $("input[name=term_chk]").prop("checked", false);
+        }
+    });
+
+    $("input[name=term_chk]").change(function() {
+		var total = $("input[name=term_chk]").length;
+		var checked = $("input[name=term_chk]:checked").length;
+
+		if(total != checked) $("#all_chk").prop("checked", false);
+		else $("#all_chk").prop("checked", true);  
+    });
+    
+    
+
+    // console.log($("input[name=term_chk]").prop("checked"));
+}
