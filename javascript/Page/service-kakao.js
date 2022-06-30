@@ -14,23 +14,62 @@ function _defineProperty(obj, key, value) {
     return obj;
 }
 
-var banner_swiper;
+var banner_swiper1;
+var banner_swiper2;
 
-function swiper_banner() {
-    banner_swiper = new Swiper('.swiper-container4', {
+var bullet = [
+    `<p class="title">알림톡</p>
+    <p class="content">1,000자 이내 정보성 메시지</p>`,
+    `<p class="title">친구톡</p>
+    <p class="content">1,000자 이내 광고성 메시지</p>`,
+    `<p class="title">친구톡 이미지</p>
+    <p class="content">400자 이내 이미지 포함 메시지</p>`,
+    `<p class="title">MMS</p>
+    <p class="content">2,000byte 이내 바코드/QR코드 포함 문자</p>`
+];
+
+function swiper_banner1() {
+    banner_swiper1 = new Swiper('.swiper-container1', {
+        effect: "fade",
+        fadeEffect: { 
+        crossFade: true 
+        },
+        observer: true,
+        observeParents: true,
+        direction: 'horizontal',
+        loop: true,
+        speed: 500,
+        autoplay: {
+            delay: 4000000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+        },
+        pagination: {
+            el: '.swiper-pagination-custom',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return `<div class="colmun_wrapper pg_box ${className}">${bullet[index]}</div>`
+                // return '<span class="' + className + '">' + (index + 1) + '</span>';
+            }
+        },
+    });
+}
+
+function swiper_banner2() {
+    banner_swiper2 = new Swiper('.swiper-container4', {
         observer: true,
         observeParents: true,
         direction: 'horizontal',
         loop: true,
         speed: 1200,
         autoplay: {
-            delay: 4000,
+            delay: 400000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true
         },
         pagination: {
             el: '.swiper-pagination',
-            clickable: true
+            clickable: true,
         },
         navigation: {
             nextEl: '.swiper-button-next',
@@ -41,5 +80,6 @@ function swiper_banner() {
 
 $(document).ready(function () {
     // 배너 슬라이드 실행
-    swiper_banner();
+    swiper_banner1();
+    swiper_banner2();
 });
