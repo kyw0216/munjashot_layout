@@ -48,51 +48,167 @@
 
                 <!-- Slider main container -->
                 <div class="main_content main_content1">
-                    <div class="wrapper clearfix">
-                        <div class="text_area">
-                            <span class="introduce_title">문자샷은 업계 최저가를 제공합니다.</span>
-                            <span class=" introduce_content" style="margin-top:16px;">나에게 맞는 유형의 요금제를 확인해보세요.</span>
+                    <div class="background_div">
+                        <div class="wrapper clearfix">
+                            <div class="text_area">
+                                <p class="introduce_title">문자샷</p>
+                                <p class="introduce_title"><span class="fc-main">업계 최저가</span>를 제공합니다.</p>
+                                <p class="introduce_content">나에게 맞는 유형의 요금제를 확인해보세요.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="main_content main_content2">
                     <div class="wrapper clearfix">
-                        <div class="row_wrapper">
-                            <div class="contents" onclick="showsubimg(0)">
-                                <span class="introduce_title">기업</span>
-                            </div>
 
-                            <div class="contents" onclick="showsubimg(1)">
-                                <span class="introduce_title">개인</span>
-                            </div>
+                        <div class="row_wrapper swiper-pagination-custom"></div>
 
-                            <div class="contents" onclick="showsubimg(2)">
-                                <span class="introduce_title">대량발송</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <div class="row_wrapper" style="margin-top:30px;">
 
-                <div class="main_content main_content3">
-                    <div class="banner-bottom-area">
-                        <div class="banner-bottom-container swiper-container">
-                            <!-- Slider main container -->
-                            <!-- Additional required wrapper -->
-                            <div class="banner-bottom-wrapper swiper-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide banner-bottom-slide">
-                                    <img class="banner-bottom-img" src="../image/banner_bottom/security.png"></img>
+                            <div class="column_wrapper left_area">
+                                <div class="column_wrapper text_area">
+                                    <p class="introduce_title">합리적인</p>
+                                    <p class="introduce_title">개인 요금제</p>
                                 </div>
-                                <div class="swiper-slide banner-bottom-slide">
-                                    <img class="banner-bottom-img" src="../image/banner_bottom/convenience.png"></img>
-                                </div>
-                                <div class="swiper-slide banner-bottom-slide">
-                                    <img class="banner-bottom-img" src="../image/banner_bottom/communication.png"></img>
+                                <div class="row_wrapper page_area">
+                                    <!-- If we need navigation buttons -->
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-pause"><i class="fa-solid fa-pause"></i></div>
+                                    <div class="swiper-button-next"></div>
                                 </div>
                             </div>
-                            <!-- If we need pagination -->
-                            <!-- <div class="swiper-pagination"></div> -->
+
+
+                            <div class="column_wrapper swiper_container_wrapper">
+                                <!-- Slider main container -->
+                                <div class="swiper-container swiper-container2">
+                                    <!-- Additional required wrapper -->
+    
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide">
+                                            <div class="slide column_wrapper">
+                                                <table class="charge_table">
+                                                    <caption>기업 요금제</caption>
+                                                    <tr rowspan="5">
+                                                        <th rowspan="5">문자메시지</th>
+                                                        <td class="msg_type">SMS</td>
+                                                        <td class="price">00원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="msg_type">LMS</td>
+                                                        <td class="price">00원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="msg_type">MMS</td>
+                                                        <td class="price">00원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="msg_type">바코드</td>
+                                                        <td class="price">00원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="msg_type">해외문자</td>
+                                                        <td class="price">00원 ~ 00원</td>
+                                                    </tr>
+
+                                                    <tr rowspan="2">
+                                                        <th rowspan="2">인터넷 팩스</th>
+                                                        <td class="msg_type">발신</td>
+                                                        <td class="price">00원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="msg_type">수신</td>
+                                                        <td class="price">4,500원/월</td>
+                                                    </tr>
+                                                </table>
+                                                <div class="row_wrapper notice">※ 부가세 별도 가격입니다.</div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="slide column_wrapper">
+                                                <table class="charge_table">
+                                                    <caption>개인 요금제</caption>
+                                                    <tr rowspan="5">
+                                                        <th rowspan="5">문자메시지</th>
+                                                        <td class="msg_type">SMS</td>
+                                                        <td class="price">00원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="msg_type">LMS</td>
+                                                        <td class="price">00원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="msg_type">MMS</td>
+                                                        <td class="price">00원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="msg_type">바코드</td>
+                                                        <td class="price">00원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="msg_type">해외문자</td>
+                                                        <td class="price">00원 ~ 00원</td>
+                                                    </tr>
+
+                                                    <tr rowspan="2">
+                                                        <th rowspan="2">인터넷 팩스</th>
+                                                        <td class="msg_type">발신</td>
+                                                        <td class="price">00원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="msg_type">수신</td>
+                                                        <td class="price">4,500원/월</td>
+                                                    </tr>
+                                                </table>
+                                                <div class="row_wrapper notice">※ 부가세 별도 가격입니다.</div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="slide column_wrapper">
+                                                <table class="charge_table">
+                                                    <caption>대량발송 요금제</caption>
+                                                    <tr rowspan="5">
+                                                        <th rowspan="5">문자메시지</th>
+                                                        <td class="msg_type">SMS</td>
+                                                        <td class="price">00원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="msg_type">LMS</td>
+                                                        <td class="price">00원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="msg_type">MMS</td>
+                                                        <td class="price">00원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="msg_type">바코드</td>
+                                                        <td class="price">00원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="msg_type">해외문자</td>
+                                                        <td class="price">00원 ~ 00원</td>
+                                                    </tr>
+
+                                                    <tr rowspan="2">
+                                                        <th rowspan="2">인터넷 팩스</th>
+                                                        <td class="msg_type">발신</td>
+                                                        <td class="price">00원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="msg_type">수신</td>
+                                                        <td class="price">4,500원/월</td>
+                                                    </tr>
+                                                </table>
+                                                <div class="row_wrapper notice">※ 부가세 별도 가격입니다.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -104,26 +220,24 @@
                         </div>
 
                         <div class="image_area">
-                            <div class="row_wrapper">
-                                <div class="box box1">
-                                    080 수신거부 서비스
+                            <div class="row_wrapper select_box_wrapper" style="margin-top:30px;">
+                                <div class="row_wrapper select_box fax_receive">
+                                    <span>080 수신거부 서비스</span>
                                 </div>
-                                <div class="box box2">
-                                    팩스 수신 서비스
+                                <div class="row_wrapper select_box refuse_080" style="margin-left:30px;">
+                                    <span>팩스 수신 서비스</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="text_area">
-                            <span class="introduce_title" style="font-size:22px;">회원가입 시 무료로 1,000 포인트를 지급해 드리고
-                                있습니다.</span>
-                            <span class="introduce_content" style="font-size:16px;margin-top:8px;">지금 바로 회원가입하고 무료 메시지를
-                                발송해보세요.</span>
+                        <div class="text_area" style="margin-top:30px;">
+                            <p class="introduce_title" style="font-size:22px;">회원가입 시 무료로 1,000 포인트를 지급해 드리고  있습니다.</p>
+                            <p class="introduce_content" style="font-size:16px;margin-top:8px;">지금 바로 회원가입하고 무료 메시지를 발송해보세요.</p>
                         </div>
 
                         <div class="button_area">
-                            <button class="btn" onclick='javascript:location.href="signup.html";'>회원가입</button>
-                            <button class="btn" style="margin-left:20px;" onclick="inquiry_layout();">대량발송 단가협의</button>
+                            <button class="btn-skyblue" style="font-size: 16px; width: 200px; padding:15px;" onclick='javascript:location.href="signup.html";'>회원가입</button>
+                            <button class="btn-skyblue" style="font-size: 16px; width: 200px; padding:15px; margin-left:20px;" onclick="inquiry_layout();">대량발송 단가협의</button>
                         </div>
 
                     </div>
@@ -142,7 +256,12 @@
                             <div class="column">
                                 <div class="row">
                                     <label class="font-stress" style="flex-basis: 150px;">상담 분류*</label>
-                                    <input class="white-input" type="text">
+                                    <!-- <input class="white-input" type="text"> -->
+                                    <select class="white-select h_40">
+                                        <option>이용문의</option>
+                                        <option>요금문의</option>
+                                        <option>기타문의</option>
+                                    </select>
                                 </div>
                                 <div class="row">
                                     <label class="font-stress" style="flex-basis: 150px;">이름(회사명)*</label>
@@ -193,18 +312,10 @@
                                 <div class="row">
                                     <button class="btn-blue" style="width: 100%; padding:20px; font-weight: bold;" onclick="javascript:util.alert('상담 신청 완료', 'success', '상담 신청이 접수 되었습니다. <br>문자샷 담당자가 신속하게 연락 드리겠습니다.');">상담 요청하기</button>
                                 </div>
-
-                            </div>
-
-                            <div class="column">
-
                             </div>
                         </div>
-
                     </div>
                 </div>
-
-
             </main>
         </div>
     </div>

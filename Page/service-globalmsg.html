@@ -43,138 +43,141 @@
         <div id="main-body">
             <main class="body-section">
 
-                <!-- Slider main container -->
                 <div class="main_content main_content1">
                     <div class="wrapper clearfix">
+
                         <div class="content_wrapper">
                             <div class="text_area">
                                 <span class="introduce_title">전세계 244개국으로 발송하는</span>
                                 <span class="introduce_title">해외 문자</span>
-                                <span class="introduce_content" style="font-size:26px;">각국의 언어로 발송 가능</span>
+                                <span class="introduce_content">각국의 언어로 발송 가능</span>
                             </div>
 
-                            <div class="image_area">
-                                <div class="row_wrapper">
-                                    <div class="box_wrapper box_wrapper1">
-                                        <div class="box box1">
-                                        </div>
-                                        <div class="text_area" style="margin:10px 0;">
-                                            <span class="introduce_title">-샘플 메시지(미국)-</span>
-                                            <span class="introduce_content">Happy New Year!
-                                                I wish you the best of everything this year.
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="box_wrapper box_wrapper2">
-                                        <div class="box box2">
-                                        </div>
-                                        <div class="text_area" style="margin:10px 0;">
-                                            <span class="introduce_title">-샘플 메시지(일본)-</span>
-                                            <span class="introduce_content">私の過ちをおわびいたします。Eメールで、連絡ください
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="box_wrapper box_wrapper3">
-                                        <div class="box box3">
-                                        </div>
-                                        <div class="text_area" style="margin:10px 0;">
-                                            <span class="introduce_title">-샘플 메시지(중국)-</span>
-                                            <span class="introduce_content">今天天气非常好。一到了就给我打电话。谢谢你。
-                                            </span>
-                                        </div>
-                                    </div>
+                            <div class="row_wrapper">
+                                <div class="column_wrapper phone_frame">
+                                    <p>Happy New Year!</p><br>
+                                    <p>I wish you the best of everything this year.</p>
+                                </div>
+                                <div class="column_wrapper phone_frame">
+                                    <p>私の過ちをおわびいたします。</p>
+                                    <p>Eメールで、連絡ください</p>
+                                </div>
+                                <div class="column_wrapper phone_frame">
+                                    <p>今天天气非常好。</p>
+                                    <p>一到了就给我打电话。谢谢你。</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
+                
                 <div class="main_content main_content2">
-                    <div class="wrapper clearfix">
-
-                        <div class="content_wrapper">
+                    <div class="background_div">
+                        <div class="wrapper clearfix">
                             <div class="text_area">
-                                <span class="introduce_title">문자샷에서만 가능합니다</span>
+                                <span class="introduce_title">문자샷에서만 가능합니다.</span>
                             </div>
 
-                            <div class="image_area">
+                            <div class="row_wrapper image_area">
 
-                                <img class="service-global-img" src="../image/service/globalmsg_img.png"></img>
-                                <div class="row_wrapper">
-                                    <div class="box box1">
-                                        높은 도달 성공률
-                                    </div>
-                                    <div class="box box2">
-                                        발송 실패 건 자동환급
-                                    </div>
-                                    <div class="box box3">
-                                        국가별 언어 전송 가능
+                                <div class="column_wrapper swiper_container_wrapper">
+                                    <!-- Slider main container -->
+                                    <div class="swiper-container swiper-container2">
+                                        <!-- Additional required wrapper -->
+
+                                        <div class="swiper-wrapper">
+                                            <!-- Slides -->
+                                            <div class="swiper-slide">
+                                                <div class="slide big_box">
+                                                    <img src="../image/service/banner_high_rate.png" class="image">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="slide big_box">
+                                                    <img src="../image/service/banner_fail_refund.png" class="image">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="slide big_box">
+                                                    <img src="../image/service/banner_global_language.png" class="image">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <div class="row_wrapper swiper-pagination-custom"></div>
+
                             </div>
                         </div>
-
                     </div>
                 </div>
 
                 <div class="main_content main_content3">
                     <div class="wrapper clearfix">
-                        <div class="content_wrapper">
-                            <div class="text_area">
-                                <span class="introduce_title">발송 가능한 국가를 확인해보세요.</span>
-                                <span class="introduce_content">선택하신 국가로의 1건당 단가가 표시됩니다.</span>
+                        <div class="text_area">
+                            <span class="introduce_title">발송 가능한 국가를 확인해보세요.</span>
+                            <span class="introduce_content">선택하신 국가로의 1건당 단가가 표시됩니다.</span>
+                        </div>
+
+                        <div class="row_wrapper select_global_bar">
+                            <div class="row_wrapper" style="justify-content: flex-start;">
+                                <label>국가</label>
+                                <select class="white-select h_30" style="width: 78%">
+                                    <option>대한민국</option>
+                                    <option>미국</option>
+                                    <option>일본</option>
+                                    <option>중국</option>
+                                </select>
                             </div>
+                            <div class="row_wrapper" style="justify-content: flex-start;">
+                                <label>단가</label>
+                                <input type="input" class="white-input h_30" value="00원" readonly style="text-align: right; padding-right:20px;">
+                            </div>
+                        </div>
 
-                            <div class="image_area">
-                                <div class="column">
-                                    <div class="row" style="justify-content: flex-start;">
-                                        <span class="introduce_content">■ 국가별 단가 한눈에 보기</span>
-                                    </div>
+                        <div class="image_area">
 
+                            <div class="column_wrapper table_wrapper">
+                                <div class="row_wrapper table_title">국가별 단가 한눈에 보기</div>
+                                <div class="table_border">
                                     <table class="charge_table">
-                                        <thead>
-                                            <tr class="tr">
-                                                <th class="th">국가</th>
-                                                <th class="th">단가</th>
-                                                <th class="th">국가</th>
-                                                <th class="th">단가</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="tr">
-                                                <td class="td">미국</th>
-                                                <td class="td">30원</th>
-                                                <td class="td">A그룹 국가</td>
-                                                <td class="td">80원</td>
-                                            </tr>
-                                            <tr class="tr">
-                                                <td class="td">일본</th>
-                                                <td class="td">60원</th>
-                                                <td class="td">B그룹 국가</td>
-                                                <td class="td">80원</td>
-                                            </tr>
-                                            <tr class="tr">
-                                                <td class="td">중국</th>
-                                                <td class="td">60원</th>
-                                                <td class="td">C그룹 국가</td>
-                                                <td class="td">110원</td>
-                                            </tr>
-                                        </tbody>
+                                        <tr>
+                                            <th class="top_left">국가</th>
+                                            <th>단가</th>
+                                            <th>국가</th>
+                                            <th class="top_right">단가</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="country">미국</td>
+                                            <td class="price">30원</td>
+                                            <td class="country">A그룹 국가</td>
+                                            <td class="price">80원</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="country">일본</td>
+                                            <td class="price">60원</td>
+                                            <td class="country">B그룹 국가</td>
+                                            <td class="price">80원</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="country bottom_left">중국</td>
+                                            <td class="price">60원</td>
+                                            <td class="country">C그룹 국가</td>
+                                            <td class="price bottom_right">110원</td>
+                                        </tr>
                                     </table>
                                 </div>
+                                <div class="row_wrapper notice">※ 부가세 별도 금액입니다.</div>
                             </div>
-
-                            <div class="row" style="justify-content: flex-end; margin-top:20px;">
-                                ※ 부가세 별도
-                            </div>
-
                         </div>
+                        
                     </div>
                 </div>
 
                 <div class="main_content main_content4">
-                    <div class="wrapper clearfix">
+                    <div class="wrapper clearfix swiper-button-div">
 
                         <div class="text_area">
                             <span class="introduce_title">자주 묻는 질문</span>
@@ -184,38 +187,77 @@
                         <div class="swiper-container swiper-container4">
                             <!-- Additional required wrapper -->
 
-                            <!-- If we need pagination -->
-                            <div class="swiper-pagination"></div>
-
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
                                 <div class="swiper-slide">
-                                    <div class="slide">슬라이드1</div>
+                                    <div class="column_wrapper slide">
+                                        <div class="row_wrapper question">
+                                            <p>메시지 조합기능은 무엇인가요?</p>
+                                        </div>
+
+                                        <hr style="margin:20px 0;width: 100%; height: 2px; border:0; background: #ccc;">
+
+                                        <div class="row_wrapper answer">
+                                            <p>주소록에 저장되어 있는 이름, 메모 메모2의 내용을 메시지 내용에 포함시켜 전송하려고 할 때 사용하는 기능으로 [이름], [메모1], [메모2]가 표시된 부분에 주소록에 저장되어 있는 각각의 해당 내용이 자동응로 표시되어 전송됩니다.</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="slide">슬라이드2</div>
+                                    <div class="column_wrapper slide">
+                                        <div class="row_wrapper question">
+                                            <p>받는사람에 중복된 전화번호가 있으면 중복검사를 하나요?</p>
+                                        </div>
+
+                                        <hr style="margin:20px 0;width: 100%; height: 2px; border:0; background: #ccc;">
+
+                                        <div class="row_wrapper answer">
+                                            <p>기본적으로 받는 사람에 중복 전화번호가 있는 경우 1건만 전송이 됩니다. 발송 페이지 내에서 별도 설정하실 경우 중복 허용도 가능합니다.</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="slide">슬라이드3</div>
+                                    <div class="column_wrapper slide">
+                                        <div class="row_wrapper question">
+                                            <p>한번에 몇 명까지 전송할 수 있나요?</p>
+                                        </div>
+
+                                        <hr style="margin:20px 0;width: 100%; height: 2px; border:0; background: #ccc;">
+
+                                        <div class="row_wrapper answer">
+                                            <p>한번에 전송할 수 있는 제한건수는 없습니다. 주소록 또는 엑셀에 등록된 모든 전화번호를 한번에 모두 전송하실 수 있습니다.</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="slide">슬라이드4</div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="slide">슬라이드5</div>
+                                    <div class="column_wrapper slide">
+                                        <div class="row_wrapper question">
+                                            <p>별도로 보관중인 엑셀파일에 입력된 전화번호를 이용해서 전송하려면 어떻게 하나요?</p>
+                                        </div>
+
+                                        <hr style="margin:20px 0;width: 100%; height: 2px; border:0; background: #ccc;">
+
+                                        <div class="row_wrapper answer">
+                                            <p>주소록 관리 메뉴에서 엑셀파일을 주소록으로 등록 후 발송하시면 됩니다. 주소록은 개수에 제한없이 등록 가능합니다.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
-
-                            <!-- If we need navigation buttons -->
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
 
                             <!-- If we need scrollbar -->
                             <!-- <div class="swiper-scrollbar"></div> -->
                         </div>
-                    </div>
 
+                        <div class="row_wrapper" style="margin-top: 30px;">
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+
+                        <!-- If we need pagination -->
+                        <div class="row_wrapper" style="margin-top: 30px;">
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
                 </div>
 
             </main>
