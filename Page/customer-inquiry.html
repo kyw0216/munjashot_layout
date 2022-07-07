@@ -9,6 +9,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <script src="../javascript/external/jquery-3.5.1.min.js"></script>
+    <script src="../javascript/external/jquery-ui.min.js"></script>
     <script src="../javascript/Common/modal.js"></script>
 
     <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/common.css'>
@@ -52,86 +53,55 @@
                 <div class="main_content main_content1">
                     <div class="wrapper clearfix">
 
-                        <div class="column" style="background-color:#f7f7f7;margin:0;">
+                        <div class="column_wrapper">
 
                             <div class="text_area">
                                 <span class="introduce_title">문의하기</span>
                             </div>
 
-                            <div class="row" style="margin:0;">
-                                <span class="introduce_content" style="text-align: center;padding:10px;">궁금하신 점을 검색해주세요.</span>
-                            </div>
-
-                            <div class="inquiry_box">
-                                <div class="column" style="margin:0;">
-                                    <div class="row">
-                                        <input class="ctrl-input" type="text" placeholder="(제목 혹은 내용 입력)">
-                                        <button class="btn" style="width:80px; margin-left:10px;">검색</button>
+                            <div class="inquiry_main_box column_wrapper">
+                                <div class="column_wrapper">
+                                    
+                                    <div class="row_wrapper">
+                                        <input class="gray-input" type="text" placeholder="궁금하신 점을 검색해주세요" style="border-radius: 20px;">
+                                        <button class="btn-blue" style="min-width:150px; margin-left:10px; font-size: 18px; border-radius: 20px;"><i class="fa-solid fa-magnifying-glass"></i></button>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="row box1" style="margin:0;" onclick="javascript:location.href='customer-inquiry-list.html'">
-                                            <div class="column" style="margin:0;">
-                                                <div class="icon_div">아이콘</div>
-                                                <span style="margin-top:10px;">1:1 문의</span>
+                                    <div class="row_wrapper box_wrapper">
+                                        <div class="column_wrapper">
+                                            <div class="row_wrapper box s_box" onclick="javascript:location.href='customer-inquiry-list.html'">
+                                                <p class="title">1:1 문의</p>
+                                                <img src="../image/customer/icon_inquiry.png" class="icon_img">
+                                            </div>
+                                            <div class="row_wrapper box s_box" onclick="javascript:location.href='customer-faq.html'">
+                                                <p class="title">FAQ</p>
+                                                <img src="../image/customer/FAQ.png" class="icon_img">
                                             </div>
                                         </div>
-                                        <div class="row box2" style="margin:0; margin-left:20px;" onclick="javascript:location.href='customer-faq.html'">
-                                            <div class="column" style="margin:0;">
-                                                <div class="icon_div">아이콘</div>
-                                                <span style="margin-top:10px;">FAQ</span>
+                                        <div class="column_wrapper box b_box">
+                                            <p class="title">지금 많이 하는 질문</p>
+                                            <div class="column_wrapper content_area">
+                                                <p class="content">1.</p>
+                                                <p class="content">2.</p>
+                                                <p class="content">3.</p>
+                                                <p class="content">4.</p>
+                                                <p class="content">5.</p>
                                             </div>
+                                        </div>
+                                        <div class="column_wrapper box b_box">
+                                            <div class="column_wrapper" style="align-items: flex-start; justify-content: flex-start;">
+                                                <p class="title">전화문의</p>
+                                                <p class="content">1599-2320 (내선번호 1)</p>
+                                            </div>
+                                            <div class="column_wrapper" style="align-items: flex-start; justify-content: flex-end;">
+                                                <p class="content">평일 09시 ~ 18시</p>
+                                                <p class="content">점심 12시 ~ 13시</p>
+                                            </div>
+                                            <img src="../image/customer/icon_customer.png" class="icon_img">
                                         </div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="column" style="margin:0;">
-                                            <div class="row" style="margin:0;">
-                                                <span style="margin-bottom:10px;">지금 많이 하는 질문</span>
-                                            </div>
-                                            <div class="row box1" style="margin:0; height:260px;">
-                                                <table class="question_table">
-                                                    <tr>
-                                                        <th>top1</th>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>top2</th>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>top3</th>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>top4</th>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>top5</th>
-                                                        <td></td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
-
-                                        <div class="column" style="margin:0;">
-                                            <div class="row" style="margin:0;">
-                                                <span style="margin-bottom:10px;">전화문의</span>
-                                            </div>
-                                            <div class="row box2" style="margin:0; margin-left:20px; height:260px;">
-                                                <div class="column" style="margin:0;">
-                                                    <span>1599-2320 (내선번호 1)</span><br>
-                                                    <span>평일 09~18시</span>
-                                                    <span>점심 12시~1시</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                  
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -140,17 +110,7 @@
         </div>
     </div>
 
-    <div id="modal" class="modal-overlay">
-        <div class="modal-window">
-            <div class="title">
-                <h2>모달</h2>
-            </div>
-            <div class="close-area">X</div>
-            <div class="content" style="display: flex; justify-content: center; align-items: center;">
-                <p>모달입니다.</p>
-            </div>
-        </div>
-    </div>
+    <div id="modal" class="modal-overlay"></div>
 
     <!-- Footer -->
     <div id="footer"></div>

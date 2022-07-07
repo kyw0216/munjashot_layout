@@ -9,6 +9,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <script src="../javascript/external/jquery-3.5.1.min.js"></script>
+    <script src="../javascript/external/jquery-ui.min.js"></script>
     <script src="../javascript/Common/modal.js"></script>
 
     <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/common.css'>
@@ -57,27 +58,145 @@
                             <span class="introduce_title">공지사항</span>
                         </div>
 
-                        <div class="row" style="justify-content: flex-start; padding: 12px; border:1px solid black;">
-                            <span class="introduce_content">카테고리 유형</span>
-                        </div>
+                        <div class="container">
+                            <ul class="tab_title">
+                                <li class="on">전체</li>
+                                <li>서비스</li>
+                                <li>정책/약관</li>
+                                <li>기타</li>
+                            </ul>
+                            <div class="tab_cont">
+                                <div class="tab_in_content all on">
+                                    <div class="column_wrapper">
+                                        <div class="row_wrapper box_wrapper">
+                                            <div class="notice_box">
+                                                <p class="category">서비스</p>
+                                                <p class="content">저렴한 발송단가</p>
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                        </div>
 
-                        <div class="column">
-                            <div class="row">
-                                <div class="notice_box"></div>
-                                <div class="notice_box" style="margin:0 20px;"></div>
-                                <div class="notice_box"></div>
+                                        <div class="row_wrapper box_wrapper">
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                        </div>
+
+                                        <div class="row_wrapper paging_area">
+                                            <button class="page_btn active">1</button>
+                                            <button class="page_btn">2</button>
+                                            <button class="page_btn">3</button>
+                                            <button class="page_btn">4</button>
+                                            <button class="page_btn">5</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row_wrapper tab_in_content service">
+                                    <div class="column_wrapper">
+                                        <div class="row_wrapper box_wrapper">
+                                            <div class="notice_box">
+                                                <p class="category">서비스</p>
+                                                <p class="content">저렴한 발송단가</p>
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                        </div>
+
+                                        <div class="row_wrapper box_wrapper">
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row_wrapper tab_in_content policy">
+                                    <div class="column_wrapper">
+                                        <div class="row_wrapper box_wrapper">
+                                            <div class="notice_box">
+                                                <p class="category">정책/약관</p>
+                                                <p class="content">저렴한 발송단가</p>
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                        </div>
+
+                                        <div class="row_wrapper box_wrapper">
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row_wrapper tab_in_content etc">
+                                    <div class="column_wrapper">
+                                        <div class="row_wrapper box_wrapper">
+                                            <div class="notice_box">
+                                                <p class="category">기타</p>
+                                                <p class="content">저렴한 발송단가</p>
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                        </div>
+
+                                        <div class="row_wrapper box_wrapper">
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                            <div class="notice_box">
+                                                <img src="../image/customer/icon_big_cross.png" class="more_btn_img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="row">
-                                <div class="notice_box"></div>
-                                <div class="notice_box" style="margin:0 20px;"></div>
-                                <div class="notice_box"></div>
-                            </div>
                         </div>
-
-                        <div class="row" style="width:auto;border:1px solid black;padding:10px;">
-                            <span class="introduce_content">&lt; 1 / 2 / 3 / 4 / 5 &gt;</span>
-                        </div>
-
                     </div>
                 </div>
 

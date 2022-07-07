@@ -442,7 +442,7 @@ textarea.ctrl-input {
   width: 100%;
 }
 
-#main-menu-body .customer-support-faq-list>.header {
+/* #main-menu-body .customer-support-faq-list>.header {
   display: flex;
   align-items: center;
   padding: 16px;
@@ -531,7 +531,7 @@ textarea.ctrl-input {
 #main-menu-body .customer-support-faq-page-list>.item.selected {
   background-color: #646464;
   color: white;
-}
+} */
 
 
 /* 
@@ -1229,6 +1229,58 @@ input[type='checkbox']:checked ~ .custom-input:after {
 }
 /* 라디오 디자인 */
 
+
+/* 파일 업로드 디자인 */
+
+.filebox {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+}
+
+
+.filebox label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5em .75em;
+  line-height: normal;
+  cursor: pointer;
+  background-color: #0062ff;
+  color: white;
+  border-radius: 10px;
+  width: 150px;
+  margin-left: 10px;
+}
+
+/* named upload */
+.filebox .upload-name {
+  padding: .5em .75em;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  line-height: normal;
+  /* background-color: #f5f5f5; */
+  background-color: white;
+  color: #c8c8c8;
+  border: 0;
+  border-radius: 5px;
+  -webkit-appearance: none; /* 네이티브 외형 감추기 */
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: 0.4s;
+}
+
+.filebox .upload-name.active {
+  background-color: #f5f5f5;
+}
+
+/* 파일 업로드 디자인 */
 
 @media (max-width: 1617px) {
   #modal .modal-window {

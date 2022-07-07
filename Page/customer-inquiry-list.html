@@ -9,6 +9,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <script src="../javascript/external/jquery-3.5.1.min.js"></script>
+    <script src="../javascript/external/jquery-ui.min.js"></script>
     <script src="../javascript/Common/modal.js"></script>
 
     <link rel='stylesheet' type='text/css' media='screen' href='../stylesheet/Common/common.css'>
@@ -52,23 +53,19 @@
                 <div class="main_content main_content1">
                     <div class="wrapper clearfix">
 
-                        <div class="column" style="background-color:#f7f7f7;">
+                        <div class="column_wrapper">
 
                             <div class="text_area">
-                                <span class="introduce_title">1:1 문의</span>
+                                <span class="introduce_title">문의하기</span>
                             </div>
 
-                            <div class="inquiry_box">
+                            <div class="row_wrapper">
+                                <button class="btn-gray" style="min-width:150px; margin-right:10px; font-size: 18px; border-radius: 20px;" onclick="javascript:location.href='customer-inquiry-apply.html';">문의등록</button>
+                                <input class="gray-input" type="text" placeholder="검색어를 입력하세요." style="border-radius: 20px;">
+                                <button class="btn-blue" style="min-width:150px; margin-left:10px; font-size: 18px; border-radius: 20px;"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
 
-                                <div class="row" style="margin:0; margin-bottom:20px;">
-                                    <div class="row" style="margin:0; justify-content: flex-start;">
-                                        <button class="btn" style="width:200px;" onclick="javascript:location.href='customer-inquiry-apply.html';">문의 등록</button>
-                                    </div>
-                                    <div class="row" style="margin:0; justify-content: flex-end;">
-                                        <input type="text" class="ctrl-input" style="width:200px;" placeholder="제목 또는 내용 검색">
-                                        <button class="btn" style="width:80px;margin-left:10px;">검색</button>
-                                    </div>
-                                </div>
+                            <div class="inquiry_list_box column_wrapper">
 
                                 <div id="main-menu-body" class="customer-support-faq">
 
@@ -78,11 +75,11 @@
                                                 답변여부
                                             </div>
 
-                                            <div class="item">
+                                            <div class="item category">
                                                 내용
                                             </div>
 
-                                            <div class="item">
+                                            <div class="item date_item">
                                                 날짜
                                             </div>
                                         </div>
@@ -106,20 +103,23 @@
                                             </div>
 
                                             <div class="answer" style="display: none;">
-                                                <div class="column" style="margin:0;">
-                                                    <div class="row" style="margin:0; border: 1px solid black;">
-                                                        <div class="answer_category">문의<br>(일반상담)</div>
+                                                <div class="column_wrapper">
+                                                    <div class="row_wrapper answer_wrapper">
+                                                        <div class="answer_category">문의 (일반상담)</div>
                                                         <div class="answer_content">카드 한도가 궁금합니다.</div>
                                                     </div>
-                                                    <div class="row" style="margin:0; border: 1px solid black;">
+                                                    <div class="row_wrapper answer_wrapper">
                                                         <div class="answer_category">답변</div>
                                                         <div class="answer_content">
-                                                            문자샷 고객센터 입니다.
+                                                            OOO 고객님 안녕하세요! 문자샷 고객센터 입니다.<br>
+                                                            OOO 고객님의 카드 한도는 OOOO입니다.<br>
+                                                            감사합니다.
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="item">
                                             <div class="header">
 
@@ -139,111 +139,12 @@
                                             </div>
 
                                             <div class="answer" style="display: none;">
-                                                <div class="column" style="margin:0;">
-                                                    <div class="row" style="margin:0; border: 1px solid black;">
-                                                        <div class="answer_category">문의<br>(일반상담)</div>
+                                                <div class="column_wrapper">
+                                                    <div class="row_wrapper answer_wrapper">
+                                                        <div class="answer_category">문의 (일반상담)</div>
                                                         <div class="answer_content">카드 한도가 궁금합니다.</div>
                                                     </div>
-                                                    <div class="row" style="margin:0; border: 1px solid black;">
-                                                        <div class="answer_category">답변</div>
-                                                        <div class="answer_content">
-                                                            문자샷 고객센터 입니다.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="header">
-
-                                                <div class="answer_status">
-                                                    <p>답변완료</p>
-                                                </div>
-
-                                                <div class="inquiry_content">
-                                                    <p>카드결제 카드한도 문의</p>
-                                                </div>
-
-                                                <div class="inquiry_date">
-                                                    <p>2022-01-01</p>
-                                                </div>
-
-                                                <i class="fas fa-caret-down icon"></i>
-                                            </div>
-
-                                            <div class="answer" style="display: none;">
-                                                <div class="column" style="margin:0;">
-                                                    <div class="row" style="margin:0; border: 1px solid black;">
-                                                        <div class="answer_category">문의<br>(일반상담)</div>
-                                                        <div class="answer_content">카드 한도가 궁금합니다.</div>
-                                                    </div>
-                                                    <div class="row" style="margin:0; border: 1px solid black;">
-                                                        <div class="answer_category">답변</div>
-                                                        <div class="answer_content">
-                                                            문자샷 고객센터 입니다.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="header">
-
-                                                <div class="answer_status">
-                                                    <p>답변완료</p>
-                                                </div>
-
-                                                <div class="inquiry_content">
-                                                    <p>카드결제 카드한도 문의</p>
-                                                </div>
-
-                                                <div class="inquiry_date">
-                                                    <p>2022-01-01</p>
-                                                </div>
-
-                                                <i class="fas fa-caret-down icon"></i>
-                                            </div>
-
-                                            <div class="answer" style="display: none;">
-                                                <div class="column" style="margin:0;">
-                                                    <div class="row" style="margin:0; border: 1px solid black;">
-                                                        <div class="answer_category">문의<br>(일반상담)</div>
-                                                        <div class="answer_content">카드 한도가 궁금합니다.</div>
-                                                    </div>
-                                                    <div class="row" style="margin:0; border: 1px solid black;">
-                                                        <div class="answer_category">답변</div>
-                                                        <div class="answer_content">
-                                                            문자샷 고객센터 입니다.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="header">
-
-                                                <div class="answer_status">
-                                                    <p>답변완료</p>
-                                                </div>
-
-                                                <div class="inquiry_content">
-                                                    <p>카드결제 카드한도 문의</p>
-                                                </div>
-
-                                                <div class="inquiry_date">
-                                                    <p>2022-01-01</p>
-                                                </div>
-
-                                                <i class="fas fa-caret-down icon"></i>
-                                            </div>
-
-                                            <div class="answer" style="display: none;">
-                                                <div class="column" style="margin:0;">
-                                                    <div class="row" style="margin:0; border: 1px solid black;">
-                                                        <div class="answer_category">문의<br>(일반상담)</div>
-                                                        <div class="answer_content">카드 한도가 궁금합니다.</div>
-                                                    </div>
-                                                    <div class="row" style="margin:0; border: 1px solid black;">
+                                                    <div class="row_wrapper answer_wrapper">
                                                         <div class="answer_category">답변</div>
                                                         <div class="answer_content">
                                                             문자샷 고객센터 입니다.
@@ -253,7 +154,10 @@
                                             </div>
                                         </div>
 
-                                    <div class="customer-support-faq-page-list" style="margin-bottom:10px;">
+
+                                    </div>
+
+                                    <!-- <div class="customer-support-faq-page-list" style="margin-bottom:10px;">
                                         <button class="btn previous" data-type="previous">
                                             <i class="fas fa-chevron-left"></i>
                                             이전
@@ -263,9 +167,19 @@
                                             <i class="fas fa-chevron-right"></i>
                                             다음
                                         </button>
+                                    </div> -->
+
+
+                                    <div class="row_wrapper paging_area">
+                                        <button class="page_btn active">1</button>
+                                        <button class="page_btn">2</button>
+                                        <button class="page_btn">3</button>
+                                        <button class="page_btn">4</button>
+                                        <button class="page_btn">5</button>
                                     </div>
 
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -274,17 +188,7 @@
         </div>
     </div>
 
-    <div id="modal" class="modal-overlay">
-        <div class="modal-window">
-            <div class="title">
-                <h2>모달</h2>
-            </div>
-            <div class="close-area">X</div>
-            <div class="content" style="display: flex; justify-content: center; align-items: center;">
-                <p>모달입니다.</p>
-            </div>
-        </div>
-    </div>
+    <div id="modal" class="modal-overlay"></div>
 
     <!-- Footer -->
     <div id="footer"></div>
