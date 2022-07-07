@@ -55,6 +55,5 @@ function goEnterpriseAuthTab() {
 }
 
 function goEnterprisePasswordTab() {
-    console.log("asdf");
     $(".enterprisePWChangeTab_div").css("display", "flex");
 }
